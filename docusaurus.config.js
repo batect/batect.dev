@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Batect',
-  tagline: 'The tagline of my site',
   url: 'https://batect.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',

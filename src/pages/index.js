@@ -8,46 +8,62 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: 'Fast',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Tasks start quickly due to parallelisation and run quickly thanks to caching.
+        We've seen 17% quicker execution than Docker Compose.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: 'Consistent',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Batect uses Docker to create a clean, isolated environment every time you run a task.
+        No more "works on my machine".
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: 'Everywhere',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Your machine, your colleagues' machines and CI: everyone runs exactly the same thing, every time.
+        Works on macOS, Linux and even Windows.
+      </>
+    ),
+  },
+  {
+    title: 'Reusable',
+    description: (
+      <>
+        Share tasks between projects with bundles. And use existing bundles to get up and running quickly.
+      </>
+    ),
+  },
+  {
+    title: 'Automated',
+    description: (
+      <>
+        Free your team from manual setup and maintenance of tools and dependencies: everyone automatically
+        uses the same configuration.
+      </>
+    ),
+  },
+  {
+    title: 'Simple',
+    description: (
+      <>
+        No installation required, just drop the script in your project and run <code>./batect</code>.
       </>
     ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
@@ -58,13 +74,13 @@ function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <p className="hero__subtitle">
+            The <strong>fast</strong>, <strong>consistent</strong> way to run your development and testing tasks <strong>everywhere</strong>.
+          </p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
