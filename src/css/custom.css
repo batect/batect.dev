@@ -1,20 +1,23 @@
-/* stylelint-disable docusaurus/copyright-header */
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Zilla+Slab&family=Source+Code+Pro:ital@0;1&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+  /*--ifm-color-primary: #25c2a0;*/
+  /*--ifm-color-primary-dark: rgb(33, 175, 144);*/
+  /*--ifm-color-primary-darker: rgb(31, 165, 136);*/
+  /*--ifm-color-primary-darkest: rgb(26, 136, 112);*/
+  /*--ifm-color-primary-light: rgb(70, 203, 174);*/
+  /*--ifm-color-primary-lighter: rgb(102, 212, 189);*/
+  /*--ifm-color-primary-lightest: rgb(146, 224, 208);*/
+
+  --ifm-font-family-base: Lato, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ifm-heading-font-family: 'Zilla Slab', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ifm-heading-font-weight: 500;
+  --ifm-font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Not sure why this isn't the default - Infima defines this variable but doesn't use it... */
+  font-family: var(--ifm-heading-font-family);
 }
 
 .docusaurus-highlight-code-line {
@@ -22,4 +25,10 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  font-size: 200%;
 }
