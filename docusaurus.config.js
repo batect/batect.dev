@@ -1,3 +1,4 @@
+let copyright = `Copyright © 2017-${new Date().getFullYear()} Charles Korn.`;
 module.exports = {
   title: "Batect",
   url: "https://batect.dev",
@@ -93,7 +94,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2017-${new Date().getFullYear()} Charles Korn. Built with Docusaurus.`,
+      copyright,
     },
   },
   presets: [
@@ -107,6 +108,10 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/batect/batect.dev/edit/master/",
+          feedOptions: {
+            type: "all",
+            copyright,
+          },
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
