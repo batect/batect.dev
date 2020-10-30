@@ -37,3 +37,30 @@ h6 {
   font-weight: var(--ifm-heading-font-weight);
   font-size: 200%;
 }
+
+.menu > ul.menu__list > li.menu__list-item > a {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  font-size: 130%;
+
+  padding-left: var(--ifm-menu-link-padding-horizontal);
+  margin-top: calc(6 * var(--ifm-menu-link-padding-vertical));
+  color: black;
+}
+
+.menu > ul.menu__list > li.menu__list-item:first-of-type > a {
+  margin-top: 0;
+}
+
+.menu__list .menu__list {
+  margin-left: 0;
+}
+
+.menu__list .menu__list .menu__list {
+  margin-left: var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__list-item {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
