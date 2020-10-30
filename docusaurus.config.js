@@ -7,6 +7,9 @@ module.exports = {
   organizationName: "batect",
   projectName: "batect.dev",
   themeConfig: {
+    colorMode: {
+      disableSwitch: true,
+    },
     navbar: {
       title: "Batect",
       logo: {
