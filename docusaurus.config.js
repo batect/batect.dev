@@ -20,10 +20,25 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          to: 'bundles/',
+          activeBasePath: 'bundles',
+          label: 'Bundles',
+          position: 'left',
+        },
+        {
+          to: 'blog',
+          label: 'Blog',
+          position: 'left',
+        },
         {
           href: 'https://github.com/batect/batect',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://spectrum.chat/batect',
+          label: 'Chat',
           position: 'right',
         },
       ],
@@ -84,13 +99,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/batect/batect.dev/edit/master/website/',
+          editUrl: 'https://github.com/batect/batect.dev/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/batect/batect.dev/edit/master/website/blog/',
+          editUrl: 'https://github.com/batect/batect.dev/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
