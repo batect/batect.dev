@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Zilla+Slab&family=Source+Code+Pro:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Zilla+Slab&family=Source+Code+Pro:ital@0;1&display=swap");
 
 :root {
   /*--ifm-color-primary: #25c2a0;*/
@@ -9,13 +9,18 @@
   /*--ifm-color-primary-lighter: rgb(102, 212, 189);*/
   /*--ifm-color-primary-lightest: rgb(146, 224, 208);*/
 
-  --ifm-font-family-base: Lato, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --ifm-heading-font-family: 'Zilla Slab', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ifm-font-family-base: Lato, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-heading-font-family: "Zilla Slab", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --ifm-heading-font-weight: 500;
-  --ifm-font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-family-monospace: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* Not sure why this isn't the default - Infima defines this variable but doesn't use it... */
   font-family: var(--ifm-heading-font-family);
 }

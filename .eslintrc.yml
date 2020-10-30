@@ -3,12 +3,12 @@ env:
   es2021: true
 
 extends:
-  - 'eslint:recommended'
-  - 'plugin:react/recommended'
-  - 'plugin:react-hooks/recommended'
-  - 'plugin:@typescript-eslint/recommended'
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "plugin:react-hooks/recommended"
+  - "plugin:@typescript-eslint/recommended"
 
-parser: '@typescript-eslint/parser'
+parser: "@typescript-eslint/parser"
 
 parserOptions:
   ecmaFeatures:
@@ -18,10 +18,10 @@ parserOptions:
 
 plugins:
   - react
-  - '@typescript-eslint'
+  - "@typescript-eslint"
 
 rules:
-  '@typescript-eslint/explicit-module-boundary-types': 'off'
+  "@typescript-eslint/explicit-module-boundary-types": "off"
 
 settings:
   react:

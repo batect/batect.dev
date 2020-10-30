@@ -1,91 +1,91 @@
 module.exports = {
-  title: 'Batect',
-  url: 'https://batect.dev',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
-  organizationName: 'batect',
-  projectName: 'batect.dev',
+  title: "Batect",
+  url: "https://batect.dev",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  favicon: "img/favicon.ico",
+  organizationName: "batect",
+  projectName: "batect.dev",
   themeConfig: {
     navbar: {
-      title: 'Batect',
+      title: "Batect",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "My Site Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
         },
         {
-          to: 'bundles/',
-          activeBasePath: 'bundles',
-          label: 'Bundles',
-          position: 'left',
+          to: "bundles/",
+          activeBasePath: "bundles",
+          label: "Bundles",
+          position: "left",
         },
         {
-          to: 'blog',
-          label: 'Blog',
-          position: 'left',
+          to: "blog",
+          label: "Blog",
+          position: "left",
         },
         {
-          href: 'https://github.com/batect/batect',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/batect/batect",
+          label: "GitHub",
+          position: "right",
         },
         {
-          href: 'https://spectrum.chat/batect',
-          label: 'Chat',
-          position: 'right',
+          href: "https://spectrum.chat/batect",
+          label: "Chat",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: "Style Guide",
+              to: "docs/",
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: "Second Doc",
+              to: "docs/doc2/",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: "Blog",
+              to: "blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/batect/batect',
+              label: "GitHub",
+              href: "https://github.com/batect/batect",
             },
           ],
         },
@@ -95,18 +95,18 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.ts'),
-          editUrl: 'https://github.com/batect/batect.dev/edit/master/',
+          sidebarPath: require.resolve("./sidebars.ts"),
+          editUrl: "https://github.com/batect/batect.dev/edit/master/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/batect/batect.dev/edit/master/',
+          editUrl: "https://github.com/batect/batect.dev/edit/master/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
