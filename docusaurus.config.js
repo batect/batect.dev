@@ -52,6 +52,37 @@ module.exports = {
     footer: {
       style: "dark",
       copyright,
+      links: [
+        {
+          title: "Docs",
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Bundles",
+              to: "/bundles",
+            },
+            {
+              label: "GitHub",
+              to: "https://github.com/batect",
+            },
+            {
+              label: "Chat",
+              to: "https://spectrum.chat/batect",
+            },
+          ],
+        },
+        {
+          title: "Legal",
+          items: [
+            {
+              label: "Privacy",
+              to: "/privacy",
+            },
+          ],
+        },
+      ],
     },
   },
   presets: [
