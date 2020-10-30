@@ -98,7 +98,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           editUrl: 'https://github.com/batect/batect.dev/edit/master/',
         },
         blog: {
