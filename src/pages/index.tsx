@@ -6,13 +6,18 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const features = [
+interface FeatureDetails {
+    title: string;
+    description: JSX.Element;
+}
+
+const features: FeatureDetails[] = [
   {
     title: 'Fast',
     description: (
       <>
         Tasks start quickly due to parallelisation and run quickly thanks to caching.
-        We've seen 17% quicker execution than Docker Compose.
+        We&rsquo;ve seen 17% quicker execution than Docker Compose.
       </>
     ),
   },
@@ -21,7 +26,7 @@ const features = [
     description: (
       <>
         Batect uses Docker to create a clean, isolated environment every time you run a task.
-        No more "works on my machine".
+        No more &ldquo;works on my machine&rdquo;.
       </>
     ),
   },
@@ -29,7 +34,7 @@ const features = [
     title: 'Everywhere',
     description: (
       <>
-        Your machine, your colleagues' machines and CI: everyone runs exactly the same thing, every time.
+        Your machine, your colleagues&rsquo; machines and CI: everyone runs exactly the same thing, every time.
         Works on macOS, Linux and even Windows.
       </>
     ),
@@ -61,7 +66,7 @@ const features = [
   },
 ];
 
-function Feature({title, description}) {
+function Feature({title, description}: FeatureDetails) {
   return (
     <div className={clsx('col col--4', styles.feature)}>
       <h3>{title}</h3>
