@@ -9,7 +9,7 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'none'; img-src 'self'; script-src 'self' 'sha256-zkIfJey2QJSMWsoE/xLvQ6GebR1o8N9s0f9cjTQ7mS0='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; report-uri https://batect.report-uri.com/r/d/csp/enforce"
+    Content-Security-Policy = "default-src 'none'; img-src 'self'; script-src 'self' 'sha256-zkIfJey2QJSMWsoE/xLvQ6GebR1o8N9s0f9cjTQ7mS0=' 'sha256-89KcKgfTBcZGVgFSRIvKzNaD5//3nT8F7ZLk30dExQM=' 'https://www.google-analytics.com/analytics.js'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; report-uri https://batect.report-uri.com/r/d/csp/enforce"
     Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://batect.report-uri.com/a/d/g"}],"include_subdomains":true}'
     NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
     Expect-CT = 'max-age=604800, report-uri="https://batect.report-uri.com/r/d/ct/enforce"'
