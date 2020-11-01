@@ -90,17 +90,17 @@ commands:
 ...and then reuse it in each job:
 
 ```yaml
-  build:
-    machine: true
-    image: ubuntu-2004:202010-01
-    steps:
-      - batect:
-          task: build
+build:
+  machine: true
+  image: ubuntu-2004:202010-01
+  steps:
+    - batect:
+        task: build
 
-  test:
-    machine: true
-    image: ubuntu-2004:202010-01
-    steps:
-      - batect:
-          task: test
+test:
+  machine: true
+  image: ubuntu-2004:202010-01
+  steps:
+    - batect:
+        task: test
 ```
