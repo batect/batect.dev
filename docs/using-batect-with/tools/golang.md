@@ -52,7 +52,7 @@ The Golang compiler caches intermediate build output (such as built libraries) i
 Just like for `GOPATH`, the contents of `GOCACHE` will be lost when the task finishes and the container is removed, which means that Golang will have to recompile
 all code for your project, even if it has not changed. This can also significantly slow down the build.
 
-Again, the solution is to mount a [cache](../tips/Performance.md#cache-volumes) into your container for your `GOCACHE`.
+Again, the solution is to mount a [cache](../../concepts/caches.md) into your container for your `GOCACHE`.
 
 The [official Golang Docker images](https://hub.docker.com/_/golang) do not set a default for `GOCACHE`, so you will need to set this yourself.
 
@@ -70,7 +70,7 @@ By default, it stores this cache at `~/.cache/golangci-lint/`.
 Without a mounted cache, this directory would be lost every time Batect starts a new container, causing `golangci-lint` to need to rebuild your application
 every time you run it.
 
-The solution to this is to mount a [cache](../tips/Performance.md#cache-volumes) into your container for `~/.cache/golangci-lint/`.
+The solution to this is to mount a [cache](../../concepts/caches.md) into your container for `~/.cache/golangci-lint/`.
 For example, assuming the home directory for your container's user is `/home/container-user`:
 
 ```yaml {5-7}
