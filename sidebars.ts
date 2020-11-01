@@ -4,11 +4,11 @@ const sidebar = [
     label: "Getting started",
     items: [
       "getting-started/hello-world",
-      "getting-started/tutorial",
       "getting-started/requirements",
       "getting-started/installation",
-      "getting-started/shell-tab-completion",
+      "getting-started/tutorial",
       "getting-started/sample-projects",
+      "getting-started/shell-tab-completion",
     ],
   },
   {
@@ -42,6 +42,7 @@ const sidebar = [
     type: "category",
     label: "Using Batect with other tools and ecosystems",
     items: [
+      "using-batect-with/tools/index",
       "using-batect-with/tools/docker",
       "using-batect-with/tools/golang",
       "using-batect-with/tools/gradle",

@@ -25,6 +25,24 @@ h6 {
   font-family: var(--ifm-heading-font-family);
 }
 
+ol {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+}
+
+ol > li {
+  counter-increment: item;
+  padding-left: var(--ifm-list-left-padding);
+}
+
+ol > li:before {
+  margin-left: calc(-1 * var(--ifm-list-left-padding));
+  content: counter(item)'.';
+  position: absolute;
+  font-weight: var(--ifm-font-weight-bold);
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
