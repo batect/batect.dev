@@ -12,7 +12,7 @@ It should take 15-20 minutes to complete.
 
 ## Installation
 
-Before you begin, follow the [setup instructions](Setup.md) to setup Batect in an empty directory.
+Before you begin, follow the [installation instructions](installation.md) to setup Batect in an empty directory.
 
 ## First task
 
@@ -345,7 +345,7 @@ isolated environments. Take a look at the [sample projects](sample-projects.md) 
 
 ## First prerequisite
 
-The final major feature of Batect that we'll explore is the concept of [prerequisites](config/Tasks.md#prerequisites).
+The final major feature of Batect that we'll explore is the concept of [prerequisites](../reference/config/tasks.md#prerequisites).
 
 These allow you to declare that one task requires another to run first. For example, maybe your application needs to be compiled before
 it is run, some data needs to be generated before the tests are executed, or a number of tasks should be run as part of a pre-commit check.
