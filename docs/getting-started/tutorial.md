@@ -20,10 +20,10 @@ Let's start by defining our very first task. As is tradition, we'll be creating 
 
 In Batect, there are two major concepts:
 
-* **Tasks** define commands to run and how to run them - for example, building your application, running tests or deploying your
+- **Tasks** define commands to run and how to run them - for example, building your application, running tests or deploying your
   application.
 
-* **Containers** define the environment tasks run in - for example, the Docker image used, the folders mounted from your local
+- **Containers** define the environment tasks run in - for example, the Docker image used, the folders mounted from your local
   machine and the ports exposed back to your local machine.
 
 Both tasks and containers are defined in a YAML configuration file, normally called `batect.yml`. Let's start by defining our build
@@ -72,10 +72,10 @@ Congratulations! You've successfully configured and run your first Batect task.
 
 It's worth spending a moment to explain what Batect just did:
 
-* First, Batect loaded our configuration from `batect.yml`.
-* It then checked if the `node:14.3.0` image had already been pulled, and if it was not already pulled, pulled it.
-* Next, it started our `build-env` container, which ran our hello world command.
-* Once the container finished, Batect then removed up the container, leaving nothing running.
+- First, Batect loaded our configuration from `batect.yml`.
+- It then checked if the `node:14.3.0` image had already been pulled, and if it was not already pulled, pulled it.
+- Next, it started our `build-env` container, which ran our hello world command.
+- Once the container finished, Batect then removed up the container, leaving nothing running.
 
 There's one more thing we can check: `./batect --list-tasks`. `--list-tasks` doesn't run a task - instead, it prints all the available
 tasks in our configuration file, including any [`description`](../reference/config/tasks.md#description) or [`group`](../reference/config/tasks.md#group).
@@ -394,10 +394,10 @@ way, and others can quickly start working with our project just by running `./ba
 
 ## Where next?
 
-* The [sample projects](sample-projects.md) show Batect in a number of real-world scenarios
-* If you're using Docker Compose, the [migrating from Docker Compose guide](../how-to/migrate-from-docker-compose.md) contains
+- The [sample projects](sample-projects.md) show Batect in a number of real-world scenarios
+- If you're using Docker Compose, the [migrating from Docker Compose guide](../how-to/migrate-from-docker-compose.md) contains
   advice and links to a tool that can help you migrate
-* If you're adopting Batect in an existing codebase, the [migrating an existing codebase guide](../how-to/migrate-existing-codebase.md)
+- If you're adopting Batect in an existing codebase, the [migrating an existing codebase guide](../how-to/migrate-existing-codebase.md)
   contains advice on how to approach this
-* There are a number of guides for particular tools and ecosystems in the [Using Batect with other tools and ecosystems section](../using-batect-with/tools)
-* The [configuration file reference](../reference/config/overview.md) provides detailed information on every available configuration option
+- There are a number of guides for particular tools and ecosystems in the [Using Batect with other tools and ecosystems section](../using-batect-with/tools)
+- The [configuration file reference](../reference/config/overview.md) provides detailed information on every available configuration option

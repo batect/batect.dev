@@ -38,7 +38,7 @@ ol > li {
 
 ol > li:before {
   margin-left: calc(-1 * var(--ifm-list-left-padding));
-  content: counter(item)'.';
+  content: counter(item) ".";
   position: absolute;
   font-weight: var(--ifm-font-weight-bold);
 }
@@ -86,7 +86,7 @@ ol > li:before {
 .alert {
   border-left-width: 40px;
   color: var(--ifm-font-color-base);
-  padding-bottom: calc(var(--ifm-alert-padding-vertical) - 3px)
+  padding-bottom: calc(var(--ifm-alert-padding-vertical) - 3px);
 }
 
 .alert--secondary,
