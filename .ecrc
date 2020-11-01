@@ -3,6 +3,7 @@
         ".docusaurus",
         ".idea",
         "build",
-        "node_modules"
+        "node_modules",
+        "*.md"
     ]
 }
