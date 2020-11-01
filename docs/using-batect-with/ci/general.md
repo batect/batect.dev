@@ -31,6 +31,9 @@ much easier to persist these caches between CI runs.
 To use directory mounts for caches, either pass the `--cache-type=directory` CLI flag, or set the `BATECT_CACHE_TYPE` environment variable to `directory`.
 Batect will then create directories in `.batect/caches`, and these can be cached by your CI tool between CI runs.
 
+The [CircleCI](circleci.md#caching-between-builds), [GitHub Actions](github-actions.md#caching-between-builds) and [Travis CI](travis-ci.md#caching-between-builds)
+pages contain specific set up instructions for these tools.
+
 ## Long-lived agents
 
 :::tip
