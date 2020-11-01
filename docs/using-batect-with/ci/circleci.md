@@ -49,7 +49,7 @@ jobs:
       - checkout
       - restore_cache:
           key: batect-caches-{{ arch }}-{{ checksum "path to a file that uniquely identifies the contents of the caches" }}
-      - # ...other build steps
+      -  # ...other build steps
       - save_cache:
           key: batect-caches-{{ arch }}-{{ checksum "path to a file that uniquely identifies the contents of the caches" }}
           paths:

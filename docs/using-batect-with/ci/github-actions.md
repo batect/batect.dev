@@ -42,7 +42,7 @@ jobs:
           path: .batect/caches
           key: batect-caches-${{ hashFiles('path to a file that uniquely identifies the contents of the caches') }}
 
-      - # ...other build steps
+      -  # ...other build steps
 ```
 
 The `key` should be a value that changes when the contents of the cache change, and remains constant otherwise. A good candidate is the hash of a dependency lockfile,

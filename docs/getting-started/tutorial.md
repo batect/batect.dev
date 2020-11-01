@@ -128,7 +128,9 @@ source code with the container soon as well.
 
 Let's mount our project directory into `build-env` with [`volumes`](../reference/config/containers.md#volumes):
 
-```yaml title="batect.yml" {4-8}
+```yaml title="batect.yml" {6-10}
+# ... other configuration omitted for clarity
+
 containers:
   build-env:
     image: node:14.3.0
@@ -137,8 +139,6 @@ containers:
         container: /code
         options: cached
     working_directory: /code
-
-# ... tasks omitted for clarity
 ```
 
 With this change, when `build-env` starts, the project directory (the directory containing `batect.yml`) will be mounted into the
@@ -198,7 +198,9 @@ dependencies.
 
 Let's run our application and see it in action. Add a `run` task to `batect.yml`:
 
-```yaml title="batect.yml" {8-15}
+```yaml title="batect.yml" {10-17}
+# ... other configuration omitted for clarity
+
 tasks:
   shell:
     description: Start a shell in the development environment
@@ -214,8 +216,6 @@ tasks:
       ports:
         - local: 8080
           container: 8080
-
-# ... other configuration omitted for clarity
 ```
 
 Our `command` uses Yarn and `ts-node` to run our TypeScript application, and maps port 8080 on our local machine to port 8080 on the
@@ -236,15 +236,15 @@ However, there's one more thing we should do to make it easy for others to start
 using our project will need to run `./batect shell` and then run `yarn install` to download the NPM packages we're using. It would be
 much better if there was a Batect task they could run that did this for them, so let's add one:
 
-```yaml title="batect.yml" {2-6}
+```yaml title="batect.yml" {4-8}
+# ... other configuration omitted for clarity
+
 tasks:
   setup:
     description: Install dependencies needed to build and run the application
     run:
       container: build-env
       command: yarn install
-
-# ... other configuration omitted for clarity
 ```
 
 Now, when someone wants to start using our project, they just need to run `./batect setup` once, then `./batect run` to start the
@@ -269,7 +269,9 @@ containers:
 We'll also need to tell Batect to start `joke-service` when it runs our application. We can do this by adding it as a dependency for the
 `run` task:
 
-```yaml title="batect.yml" {4-5}
+```yaml title="batect.yml" {5-6}
+# ... other configuration omitted for clarity
+
 tasks:
   run:
     description: Run the application
