@@ -87,6 +87,9 @@ module.exports = {
     googleAnalytics: {
       trackingID: "UA-63947227-2",
     },
+    prism: {
+      theme: require("prism-react-renderer/themes/github"),
+    },
   },
   presets: [
     [
