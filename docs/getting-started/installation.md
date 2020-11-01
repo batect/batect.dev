@@ -28,7 +28,7 @@ Follow these steps to set up Batect for the first time:
       advice and links to a tool that can help you migrate
     * If you're adopting Batect in an existing codebase, the [migrating an existing codebase guide](../how-to/migrate-existing-codebase.md)
       contains advice on how to approach this
-    * There are a number of guides for particular tools and ecosystems in the [Using Batect with other tools and ecosystems section](../using-batect-with/tools/index.md)
+    * There are a number of guides for particular tools and ecosystems in the [Using Batect with other tools and ecosystems section](../using-batect-with/tools)
     * The [configuration file reference](../reference/config/overview.md) provides detailed information on every available configuration option
 
 4. To enable tab completion in your shell, [set up shell tab completion](shell-tab-completion.md).
