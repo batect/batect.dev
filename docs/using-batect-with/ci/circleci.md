@@ -18,7 +18,7 @@ with CircleCI is to configure it to use one of those machine executor images.
 Adding the following to your `.circleci/config.yml` file instructs CircleCI to use a machine executor with the `ubuntu-2004:202010-01` image,
 which contains everything Batect requires:
 
-```yaml
+```yaml title=".circleci/config.yml"
 version: 2
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
 
 If you're using [caches](../../concepts/caches.md), you can persist these between builds with the following configuration:
 
-```yaml
+```yaml title=".circleci/config.yml"
 version: 2
 
 jobs:
@@ -60,7 +60,7 @@ The `key` should be a value that changes when the contents of the cache change, 
 such as `Gemfile.lock`, `package-lock.json`, `yarn.lock` or `go.sum`. [CircleCI's documentation for caching](https://circleci.com/docs/2.0/caching/) has
 more details on `key`.
 
-## Simplifying configuration with CircleCI
+## Simplifying configuration
 
 CircleCI supports [defining reusable commands](https://circleci.com/docs/2.0/reusing-config/#authoring-reusable-commands) within your configuration file.
 This can be useful if you find yourself running the same series of commands over and over again.
@@ -68,7 +68,7 @@ This can be useful if you find yourself running the same series of commands over
 For example, if you have a series of jobs, each of which checks out your code, restores the cache, runs a Batect task and then saves the cache, you can define a
 command that contains all of these steps:
 
-```yaml
+```yaml title=".circleci/config.yml"
 commands:
   batect:
     description: "Run a Batect task"
@@ -89,7 +89,7 @@ commands:
 
 ...and then reuse it in each job:
 
-```yaml
+```yaml title=".circleci/config.yml"
 build:
   machine: true
   image: ubuntu-2004:202010-01

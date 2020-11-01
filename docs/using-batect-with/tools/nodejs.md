@@ -9,7 +9,7 @@ The [Node.js bundle](https://github.com/batect/node-bundle) provides a container
 
 ## Example configuration
 
-```yaml
+```yaml title="batect.yml"
 containers:
   build-env:
     image: node:15.0.1

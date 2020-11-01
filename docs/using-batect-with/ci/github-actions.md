@@ -8,7 +8,7 @@ with everything needed to run batect. We recommend using Ubuntu 20.04.
 
 To use the Ubuntu 20.04 runner, specify `runs-on: ubuntu:20.04` in your configuration file. For example:
 
-```yaml
+```yaml title=".github/workflows/build.yml"
 jobs:
   build:
     name: "Build"
@@ -25,7 +25,7 @@ You can see a full example of using Batect with CircleCI in [the TypeScript samp
 
 If you're using [caches](../../concepts/caches.md), you can persist these between builds with the following configuration:
 
-```yaml
+```yaml title=".github/workflows/build.yml"
 jobs:
   build:
     name: "Build"

@@ -89,6 +89,7 @@ module.exports = {
     },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
+      additionalLanguages: ["docker"],
     },
   },
   presets: [

@@ -14,7 +14,7 @@ You can launch an instance of Seq with the following Batect configuration:
 This simple configuration has a flaw explained [below](#preventing-the-loss-of-logs-on-startup).
 :::
 
-```yaml
+```yaml title="batect.yml"
 containers:
   sqelf:
     image: datalust/sqelf:2.0.288
@@ -39,7 +39,7 @@ logs to Seq using the GELF protocol on UDP port 12201.
 You can combine this with Docker's GELF log driver to automatically send logs from your application to Seq. For example, to send
 all logs from the `app` container to Seq:
 
-```yaml
+```yaml title="batect.yml"
 containers:
   sqelf:
     # ... configuration as above
@@ -70,7 +70,7 @@ If you use the configuration above, depending on how quickly your application st
 The solution to this is to [specify a healthcheck](../../how-to/wait-for-dependencies.md) for the Seq container. For example, you can
 replace the image with this Dockerfile to add a healthcheck:
 
-```dockerfile
+```dockerfile title=".batect/seq/Dockerfile"
 FROM datalust/seq:2020.3.4761
 
 RUN apt-get update && apt-get install -y --no-install-recommends curl
@@ -80,7 +80,7 @@ HEALTHCHECK --interval=2s CMD curl "http://localhost/api" --fail --show-error --
 
 And then reference that Dockerfile (saved as `.batect/seq/Dockerfile`) in your Batect configuration:
 
-```yaml
+```yaml title="batect.yml"
 containers:
   # ... other containers
 

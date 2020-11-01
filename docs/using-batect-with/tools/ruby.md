@@ -6,7 +6,7 @@ You can see an example of configuring and using Ruby and Bundler with Batect in 
 
 ## Example configuration
 
-```yaml
+```yaml title="batect.yml"
 containers:
   build-env:
     image: ruby:2.7.2

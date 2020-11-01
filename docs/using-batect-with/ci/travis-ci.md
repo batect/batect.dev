@@ -7,7 +7,7 @@ so all that needs to be done to use Batect with Travis CI is to configure this e
 
 Adding the following to your `.travis.yml` file selects the Ubuntu 20.04 environment and enables Docker:
 
-```yaml
+```yaml title=".travis.yml"
 dist: focal
 
 services:
@@ -20,7 +20,7 @@ You can see a full example of using Batect with Travis CI in [the Java sample pr
 
 If you're using [caches](../../concepts/caches.md), you can persist these between builds with the following configuration:
 
-```yaml
+```yaml title=".travis.yml"
 dist: focal
 
 services:

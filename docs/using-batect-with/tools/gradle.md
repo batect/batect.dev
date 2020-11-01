@@ -8,7 +8,7 @@ The [Java bundle](https://github.com/batect/java-bundle) provides a container wi
 
 ## Example configuration
 
-```yaml
+```yaml title="batect.yml"
 containers:
   build-env:
     image: openjdk:13.0.2-jdk

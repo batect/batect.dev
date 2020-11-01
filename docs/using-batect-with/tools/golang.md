@@ -8,7 +8,7 @@ The [Golang bundle](https://github.com/batect/golang-bundle) provides a containe
 
 ## Example configuration
 
-```yaml
+```yaml title="batect.yml"
 containers:
   build-env:
     image: golang:1.15.3-stretch
@@ -73,7 +73,7 @@ every time you run it.
 The solution to this is to mount a [cache](../../concepts/caches.md) into your container for `~/.cache/golangci-lint/`.
 For example, assuming the home directory for your container's user is `/home/container-user`:
 
-```yaml {5-7}
+```yaml title="batect.yml" {5-7}
 containers:
   build-env:
     # ... other configuration omitted for clarity
