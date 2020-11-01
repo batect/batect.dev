@@ -97,6 +97,16 @@ ol > li:before {
   --ifm-alert-background-color: white;
 }
 
+.alert a {
+  color: var(--ifm-link-color);
+  text-decoration: var(--ifm-link-decoration);
+}
+
+.alert a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: var(--ifm-link-hover-decoration);
+}
+
 .admonition {
   display: flex;
 }
