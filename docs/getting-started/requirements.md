@@ -1,5 +1,5 @@
 ---
-title: Requirements
+title: System requirements
 ---
 
 The following software must be installed to use Batect on [Linux and macOS](#linux-and-macos) or [Windows](#windows):

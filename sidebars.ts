@@ -14,7 +14,7 @@ const sidebar = [
   {
     type: "category",
     label: "Concepts",
-    items: ["concepts/tasks", "concepts/containers", "concepts/includes-and-bundles", "concepts/task-lifecycle"],
+    items: ["concepts/tasks", "concepts/containers", "concepts/caches", "concepts/includes-and-bundles", "concepts/task-lifecycle"],
   },
   {
     type: "category",
