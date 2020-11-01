@@ -11,7 +11,7 @@ The [Golang bundle](https://github.com/batect/golang-bundle) provides a containe
 ```yaml
 containers:
   build-env:
-    image: golang:1.14.0-stretch
+    image: golang:1.15.3-stretch
     volumes:
       - local: .
         container: /code
