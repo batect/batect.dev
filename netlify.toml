@@ -13,3 +13,137 @@
     Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://batect.report-uri.com/a/d/g"}],"include_subdomains":true}'
     NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
     Expect-CT = 'max-age=604800, report-uri="https://batect.report-uri.com/r/d/ct/enforce"'
+
+# This set of redirects was generated with the help of this command (run from docs/content in the batect/batect repo):
+# find . -name '*.md' | sed 's/\.md$/.html/g' | sed 's#^\./#/#g' | awk '{print "[[redirects]]"; print "  from = \""$1"\""; print "  to = \"/docs/\""; print ""; }'
+[[redirects]]
+from = "/tools/Golang.html"
+to = "/docs/using-batect-with/tools/golang"
+
+[[redirects]]
+from = "/tools/Gradle.html"
+to = "/docs/using-batect-with/tools/gradle"
+
+[[redirects]]
+from = "/tools/Seq.html"
+to = "/docs/using-batect-with/tools/seq"
+
+[[redirects]]
+from = "/tools/Node.html"
+to = "/docs/using-batect-with/tools/nodejs"
+
+[[redirects]]
+from = "/tools/Buildkite.html"
+to = "/docs/using-batect-with/ci/buildkit"
+
+[[redirects]]
+from = "/tools/CIGeneral.html"
+to = "/docs/using-batect-with/ci"
+
+[[redirects]]
+from = "/tools/CircleCI.html"
+to = "/docs/using-batect-with/ci/circleci"
+
+[[redirects]]
+from = "/tools/TravisCI.html"
+to = "/docs/using-batect-with/ci/travis-ci"
+
+[[redirects]]
+from = "/tools/GitHubActions.html"
+to = "/docs/using-batect-with/ci/github-actions"
+
+[[redirects]]
+from = "/tools/Ruby.html"
+to = "/docs/using-batect-with/tools/ruby"
+
+[[redirects]]
+from = "/tools/Shells.html"
+to = "/docs/getting-started/shell-tab-completion"
+
+[[redirects]]
+from = "/tools/Docker.html"
+to = "/docs/using-batect-with/tools/docker"
+
+[[redirects]]
+from = "/tools/DotNetCore.html"
+to = "/docs/using-batect-with/tools/net-core"
+
+[[redirects]]
+from = "/Comparison.html"
+to = "/docs/comparison"
+
+[[redirects]]
+from = "/Setup.html"
+to = "/docs/installation"
+
+[[redirects]]
+from = "/config/Overview.html"
+to = "/docs/"
+
+[[redirects]]
+from = "/config/Tasks.html"
+to = "/docs/reference/config"
+
+[[redirects]]
+from = "/config/Includes.html"
+to = "/docs/reference/config/includes"
+
+[[redirects]]
+from = "/config/Containers.html"
+to = "/docs/reference/config/containers"
+
+[[redirects]]
+from = "/config/ConfigVariables.html"
+to = "/docs/reference/config/config-variables"
+
+[[redirects]]
+from = "/config/Expressions.html"
+to = "/docs/reference/config/expressions"
+
+[[redirects]]
+from = "/Privacy.html"
+to = "/privacy"
+
+[[redirects]]
+from = "/TaskLifecycle.html"
+to = "/docs/concepts/task-lifecycle"
+
+[[redirects]]
+from = "/GettingStarted.html"
+to = "/docs/getting-started/tutorial"
+
+[[redirects]]
+from = "/Bundles.html"
+to = "/bundles"
+
+[[redirects]]
+from = "/SampleProjects.html"
+to = "/docs/getting-started/sample-projects"
+
+[[redirects]]
+from = "/index.html"
+to = "/"
+
+[[redirects]]
+from = "/tips/Proxies.html"
+to = "/docs/how-to/proxies"
+
+[[redirects]]
+from = "/tips/BuildArtifactsOwnedByRoot.html"
+to = "/docs/how-to/build-artefacts-owned-by-root"
+
+[[redirects]]
+from = "/tips/IDEIntegration.html"
+to = "/docs/how-to/ide-integration"
+
+[[redirects]]
+from = "/tips/Performance.html"
+to = "/docs/how-to/performance"
+
+[[redirects]]
+from = "/tips/WaitingForDependenciesToBeReady.html"
+to = "/docs/how-to/wait-for-dependencies"
+
+[[redirects]]
+from = "/CLIReference.html"
+to = "/docs/reference/cli"
