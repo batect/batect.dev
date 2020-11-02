@@ -79,7 +79,6 @@ const sidebar = [
       "how-to/migrate-existing-codebase",
       "how-to/migrate-from-docker-compose",
       "how-to/build-artefacts-owned-by-root",
-      "how-to/windows",
       "how-to/wait-for-dependencies",
       "how-to/proxies",
     ],
