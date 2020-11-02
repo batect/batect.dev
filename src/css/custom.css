@@ -37,10 +37,12 @@ ol > li {
 }
 
 ol > li:before {
-  margin-left: calc(-1 * var(--ifm-list-left-padding));
+  margin-left: calc(-1 * var(--ifm-list-left-padding) - 11px);
   content: counter(item) ".";
   position: absolute;
   font-weight: var(--ifm-font-weight-bold);
+  width: calc(var(--ifm-list-left-padding));
+  text-align: right;
 }
 
 .docusaurus-highlight-code-line {
