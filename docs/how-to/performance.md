@@ -4,10 +4,10 @@ title: Improve performance
 
 Unfortunately, using Docker does add some overhead in some scenarios. This guide provides guidance on a number of common problem areas:
 
-* [Image build performance](#image-build-performance)
-* [I/O performance](#io-performance)
-* [Database schema migrations and test data setup](#database-schema-migrations-and-test-data-setup)
-* [Shutdown / cleanup time](#shutdown--cleanup-time)
+- [Image build performance](#image-build-performance)
+- [I/O performance](#io-performance)
+- [Database schema migrations and test data setup](#database-schema-migrations-and-test-data-setup)
+- [Shutdown / cleanup time](#shutdown--cleanup-time)
 
 ## Image build performance
 
@@ -15,8 +15,8 @@ If your container is using a build directory and Dockerfile rather than a pre-ex
 
 There are two things you can try to improve image build times:
 
-* [Order build steps to take advantage of Docker's image build cache](#order-build-steps-to-take-advantage-of-dockers-image-build-cache)
-* [Use BuildKit](#use-buildkit)
+- [Order build steps to take advantage of Docker's image build cache](#order-build-steps-to-take-advantage-of-dockers-image-build-cache)
+- [Use BuildKit](#use-buildkit)
 
 ### Order build steps to take advantage of Docker's image build cache
 
@@ -85,8 +85,8 @@ code changes still requires the compiler to examine each dependency file to ensu
 
 There are two ways to improve the performance of file I/O when using Batect:
 
-* Use [a Batect cache backed by a Docker volume](#cache-volumes) wherever possible
-* Otherwise, use [the `cached` mount mode](#mounts-in-cached-mode)
+- Use [a Batect cache backed by a Docker volume](#cache-volumes) wherever possible
+- Otherwise, use [the `cached` mount mode](#mounts-in-cached-mode)
 
 ### Cache volumes
 
