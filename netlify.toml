@@ -78,11 +78,11 @@ to = "/docs/installation"
 
 [[redirects]]
 from = "/config/Overview.html"
-to = "/docs/"
+to = "/docs/reference/config"
 
 [[redirects]]
 from = "/config/Tasks.html"
-to = "/docs/reference/config"
+to = "/docs/reference/config/tasks"
 
 [[redirects]]
 from = "/config/Includes.html"
