@@ -13,7 +13,7 @@ Unfortunately, using Docker does add some overhead in some scenarios. This guide
 
 If your container is using a build directory and Dockerfile rather than a pre-existing image, building this image can sometimes take quite a while.
 
-There are two things you can try to improve image build times:
+If using a pre-built image is not an option, there are two things you can try to improve image build times:
 
 - [Order build steps to take advantage of Docker's image build cache](#order-build-steps-to-take-advantage-of-dockers-image-build-cache)
 - [Use BuildKit](#use-buildkit)
