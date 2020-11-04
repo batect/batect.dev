@@ -9,6 +9,7 @@ const sidebar = [
       "getting-started/tutorial",
       "getting-started/sample-projects",
       "getting-started/shell-tab-completion",
+      "getting-started/comparison",
     ],
   },
   {
