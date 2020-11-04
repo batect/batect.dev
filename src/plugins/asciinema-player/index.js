@@ -1,7 +1,7 @@
 const utils = require("@docusaurus/core/lib/webpack/utils");
-const staticDirectory = "/thirdparty/asciinema-2.6.1";
+const paths = require("./paths");
 
-module.exports = function () {
+const plugin = function () {
   return {
     name: "asciinema-player",
 
@@ -14,18 +14,9 @@ module.exports = function () {
           {
             tagName: "link",
             attributes: {
-              href: `${staticDirectory}/asciinema-player.css`,
+              href: paths.css,
               rel: "stylesheet",
               type: "text/css",
-            },
-          },
-        ],
-        postBodyTags: [
-          {
-            tagName: "script",
-            attributes: {
-              charset: "utf-8",
-              src: `${staticDirectory}/asciinema-player.js`,
             },
           },
         ],
@@ -47,3 +38,5 @@ module.exports = function () {
     },
   };
 };
+
+module.exports = plugin;
