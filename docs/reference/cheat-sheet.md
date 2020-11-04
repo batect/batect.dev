@@ -6,8 +6,6 @@ title: Cheat sheet
 
 ## Caching
 
-
-
 ## CI
 
 ### Use directories for caches instead of volumes
