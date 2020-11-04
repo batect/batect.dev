@@ -1,4 +1,5 @@
-let copyright = `Copyright © 2017-${new Date().getFullYear()} Charles Korn.`;
+const path = require("path");
+const copyright = `Copyright © 2017-${new Date().getFullYear()} Charles Korn.`;
 
 module.exports = {
   title: "Batect",
@@ -114,4 +115,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [path.resolve(__dirname, "src/plugins/asciinema-player")],
 };
