@@ -60,8 +60,8 @@ Use this option to instruct Batect to use a different storage mechanism.
 
 Supported values are:
 
-* `volume`: use Docker volumes
-* `directory`: use directories mounted from the project's `.batect/caches` directory
+- `volume`: use Docker volumes
+- `directory`: use directories mounted from the project's `.batect/caches` directory
 
 The `BATECT_CACHE_TYPE` environment variable can also be used to set the default cache type. If both the environment
 variable and the `--cache-type` option are set, the value given with `--cache-type` takes precedence.
@@ -160,8 +160,8 @@ Example:
 
 If your Docker daemon requires TLS, Batect needs three files in order to connect to it:
 
-* the CA certificate that can be used to verify certificates presented by the Docker daemon (`--docker-tls-ca-cert`)
-* the certificate that can be used to prove your identity to the Docker daemon (`--docker-tls-cert`) and corresponding private key (`--docker-tls-key`)
+- the CA certificate that can be used to verify certificates presented by the Docker daemon (`--docker-tls-ca-cert`)
+- the certificate that can be used to prove your identity to the Docker daemon (`--docker-tls-cert`) and corresponding private key (`--docker-tls-key`)
 
 By default, these files are stored in `~/.docker` and are named `ca.pem`, `cert.pem` and `key.pem` respectively.
 
@@ -291,9 +291,9 @@ Example:
 By default, Batect will automatically cleanup all containers and other resources it creates while running a task.
 However, sometimes it can be useful to leave all the created containers running to diagnose issues running a task.
 
-* Use `--no-cleanup-after-failure` to not clean up if any task fails to start for any reason.
-* Use `--no-cleanup-after-success` to not clean up the containers and other resources created for the main task (the one specified on the command line) if it succeeds.
-* Use `--no-cleanup` to enable both of the above.
+- Use `--no-cleanup-after-failure` to not clean up if any task fails to start for any reason.
+- Use `--no-cleanup-after-success` to not clean up the containers and other resources created for the main task (the one specified on the command line) if it succeeds.
+- Use `--no-cleanup` to enable both of the above.
 
 Example:
 
@@ -359,31 +359,31 @@ Example:
 
 Batect offers four styles of output:
 
-* `fancy` is best for interactive use, providing very clean output about the current state of execution and showing output from only the task container
+- `fancy` is best for interactive use, providing very clean output about the current state of execution and showing output from only the task container
 
-    <asciinema-player src={require("../assets/outputstyles/fancy.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5"></asciinema-player>
+  <asciinema-player src={require("../assets/outputstyles/fancy.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5"></asciinema-player>
 
-* `simple` is best for non-interactive use (eg. on CI), providing a log of what happened and showing output from only the task container
+- `simple` is best for non-interactive use (eg. on CI), providing a log of what happened and showing output from only the task container
 
-    <asciinema-player src={require("../assets/outputstyles/simple.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5"></asciinema-player>
+  <asciinema-player src={require("../assets/outputstyles/simple.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5"></asciinema-player>
 
-* `all` displays output from all containers
+- `all` displays output from all containers
 
-    <asciinema-player src={require("../assets/outputstyles/interleaved.cast").default} cols="204" rows="20" preload="true" poster="npt:4"></asciinema-player>
+  <asciinema-player src={require("../assets/outputstyles/interleaved.cast").default} cols="204" rows="20" preload="true" poster="npt:4"></asciinema-player>
 
-* `quiet` displays only the output from the task and error messages from Batect
+- `quiet` displays only the output from the task and error messages from Batect
 
-    <asciinema-player src={require("../assets/outputstyles/quiet.cast").default} cols="204" rows="20" preload="true" poster="npt:7"></asciinema-player>
+  <asciinema-player src={require("../assets/outputstyles/quiet.cast").default} cols="204" rows="20" preload="true" poster="npt:7"></asciinema-player>
 
 There are some differences between these output styles to be aware of:
 
-Output style                 | `fancy`                                                  | `simple`                                        | `quiet`                     | `all`
----------------------------- | -------------------------------------------------------- | ----------------------------------------------- | --------------------------- | -----------------------------------------------
-Progress information         | Detailed (eg. download % completed, health check status) | Basic (eg. image pull started, container ready) | Errors only                 | Basic (eg. image pull started, container ready)
-Displays output from         | Task container only                                      | Task container only                             | Task container only         | All containers
-stdin connected (if present) | Yes, to task container only                              | Yes, to task container only                     | Yes, to task container only | No
-TTY connected (if present)   | Yes, to task container only                              | Yes, to task container only                     | Yes, to task container only | No
-Image build output shown     | Only on build failure                                    | Only on build failure                           | Only on build failure       | Always
+| Output style                 | `fancy`                                                  | `simple`                                        | `quiet`                     | `all`                                           |
+| ---------------------------- | -------------------------------------------------------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------- |
+| Progress information         | Detailed (eg. download % completed, health check status) | Basic (eg. image pull started, container ready) | Errors only                 | Basic (eg. image pull started, container ready) |
+| Displays output from         | Task container only                                      | Task container only                             | Task container only         | All containers                                  |
+| stdin connected (if present) | Yes, to task container only                              | Yes, to task container only                     | Yes, to task container only | No                                              |
+| TTY connected (if present)   | Yes, to task container only                              | Yes, to task container only                     | Yes, to task container only | No                                              |
+| Image build output shown     | Only on build failure                                    | Only on build failure                           | Only on build failure       | Always                                          |
 
 By default, Batect will automatically pick an output style that it believes is appropriate for the environment it is running in -
 `fancy` if it believes your environment supports it, or `simple` otherwise.

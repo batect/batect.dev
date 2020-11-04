@@ -1,7 +1,7 @@
 const utils = require("@docusaurus/core/lib/webpack/utils");
 const staticDirectory = "/thirdparty/asciinema-2.6.1";
 
-module.exports = function (context, options) {
+module.exports = function () {
   return {
     name: "asciinema-player",
 
