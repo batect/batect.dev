@@ -363,19 +363,43 @@ Batect offers four styles of output:
 
 - `fancy` is best for interactive use, providing very clean output about the current state of execution and showing output from only the task container
 
-  <AsciinemaPlayer src={require("../assets/outputstyles/fancy.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5" />
+  <AsciinemaPlayer
+    src={require("../assets/outputstyles/fancy.cast").default}
+    cols="204"
+    rows="20"
+    preload="true"
+    poster="npt:2.5"
+  />
 
 - `simple` is best for non-interactive use (eg. on CI), providing a log of what happened and showing output from only the task container
 
-  <AsciinemaPlayer src={require("../assets/outputstyles/simple.cast").default} cols="204" rows="20" preload="true" poster="npt:2.5" />
+  <AsciinemaPlayer
+    src={require("../assets/outputstyles/simple.cast").default}
+    cols="204"
+    rows="20"
+    preload="true"
+    poster="npt:2.5"
+  />
 
 - `all` displays output from all containers
 
-  <AsciinemaPlayer src={require("../assets/outputstyles/interleaved.cast").default} cols="204" rows="20" preload="true" poster="npt:4" />
+  <AsciinemaPlayer
+    src={require("../assets/outputstyles/interleaved.cast").default}
+    cols="204"
+    rows="20"
+    preload="true"
+    poster="npt:4"
+  />
 
 - `quiet` displays only the output from the task and error messages from Batect
 
-  <AsciinemaPlayer src={require("../assets/outputstyles/quiet.cast").default} cols="204" rows="20" preload="true" poster="npt:7" />
+  <AsciinemaPlayer
+    src={require("../assets/outputstyles/quiet.cast").default}
+    cols="204"
+    rows="20"
+    preload="true"
+    poster="npt:7"
+  />
 
 There are some differences between these output styles to be aware of:
 
