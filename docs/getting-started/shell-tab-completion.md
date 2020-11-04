@@ -2,7 +2,7 @@
 title: Shell tab completion
 ---
 
-Shell tab completion makes it faster to work with Batect. Rather than having to remember [CLI options](../reference/cli.md) or task names, you can type the
+Shell tab completion makes it faster to work with Batect. Rather than having to remember [CLI options](../reference/cli.mdx) or task names, you can type the
 start of the name, press <kbd>Tab</kbd>, and the name will be filled in for you automatically.
 
 :::info

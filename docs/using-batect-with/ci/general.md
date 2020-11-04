@@ -55,7 +55,7 @@ frequency will depend on your usage pattern, but once a day is usually more than
 
 :::tip
 **tl;dr**: Disable binding of ports on the host system by running tasks with the
-[`--disable-ports`](../../reference/cli.md#disable-port-binding-on-the-host-machine-disable-ports) flag
+[`--disable-ports`](../../reference/cli.mdx#disable-port-binding-on-the-host-machine-disable-ports) flag
 :::
 
 If a single host machine can run multiple build jobs at the same time, and those build jobs run tasks that attempt to bind to the same port,
