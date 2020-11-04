@@ -43,6 +43,10 @@ const sidebar = [
         type: "doc",
         id: "reference/cli",
       },
+      {
+        type: "doc",
+        id: "reference/cheat-sheet",
+      },
     ],
   },
   {
