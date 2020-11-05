@@ -13,8 +13,8 @@ declare namespace asciinema {
 
       // This is only a subset of the available options - these are the only ones that we use.
       interface PlayerOptions {
-        cols: number;
-        rows: number;
+        width: number;
+        height: number;
         preload: boolean;
         poster: string;
       }
