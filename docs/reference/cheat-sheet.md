@@ -94,6 +94,8 @@ title: Cheat sheet
 
 ### Cache a directory between task invocations
 
+### Clean all caches for the current project
+
 ## CI
 
 ### Use directories for caches instead of volumes
