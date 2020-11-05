@@ -38,7 +38,7 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--enable-buildkit`](#--enable-buildkit): Use BuildKit to build images
 - [`--help`](#--help): Get help for Batect's CLI
 - [`--linux-cache-init-image`](#--linux-cache-init-image): Set cache initialisation image
-- [`--list-tasks` or `-T`](#--list-tasks-or--T): See a list of available tasks
+- [`--list-tasks` or `-T`](#--list-tasks-or--t): See a list of available tasks
 - [`--log-file`](#--log-file): Create a debugging log
 - [`--no-color`](#--no-color): Disable coloured output
 - [`--no-cleanup`, `--no-cleanup-after-failure` and `--no-cleanup-after-success`](#--no-cleanup---no-cleanup-after-failure-and---no-cleanup-after-success): Disable cleaning up
@@ -82,7 +82,7 @@ Example:
 
 Running `./batect --clean` will remove all caches created for this project.
 
-This command respects the value of the [`--cache-type`](#customise-cache-storage-mechanism-cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
+This command respects the value of the [`--cache-type`](#--cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
 
 ### `--config-file` or `-f`
 
@@ -102,7 +102,7 @@ if it exists.
 
 Use `--config-vars-file` to specify a different file to use instead of `batect.local.yml`.
 
-Values provided with [`--config-var`](#set-a-config-variable-config-var) take precedence over values provided in any file.
+Values provided with [`--config-var`](#--config-var) take precedence over values provided in any file.
 
 Example:
 
@@ -124,7 +124,7 @@ Use `--config-vars` to specify values for an individual [config variable](config
 Values must be in the format `<variable name>=<variable value>`.
 
 Values provided with `--config-var` take precedence over values provided in a file (either explicitly with
-[`--config-vars-file`](#set-config-variables-from-a-file-config-vars-file) or from the default `batect.local.yml` file)
+[`--config-vars-file`](#--config-vars-file) or from the default `batect.local.yml` file)
 and default values defined in the configuration file.
 
 Example:
@@ -248,7 +248,7 @@ Utility tasks:
 - shell: Start a shell in the development environment.
 ```
 
-When combined with [`--output=quiet`](#force-a-particular-output-style-output-or-o), Batect produces output suitable for parsing by other applications.
+When combined with [`--output=quiet`](#--output-or--o), Batect produces output suitable for parsing by other applications.
 Tasks are listed in alphabetical order, with one task per line. Each task is followed by a tab character, then
 its description.
 
@@ -335,7 +335,7 @@ Batect automatically checks for updates at most once every 24 hours and displays
 
 Passing this flag will disable both the update check and notification.
 
-This flag is automatically enabled if [`--output`](#force-a-particular-output-style-output-or-o) is set to `quiet`.
+This flag is automatically enabled if [`--output`](#--output-or--o) is set to `quiet`.
 
 ### `--no-wrapper-cache-cleanup`
 
@@ -422,9 +422,9 @@ Example:
 ./batect --output simple the-task
 ```
 
-Passing `--output=quiet` implies [`--no-update-notification`](#disable-update-notification-no-update-notification).
+Passing `--output=quiet` implies [`--no-update-notification`](#--no-update-notification).
 
-Passing `--output=quiet` also modifies the output of [`--list-tasks`](#see-a-list-of-available-tasks-list-tasks-or-t)
+Passing `--output=quiet` also modifies the output of [`--list-tasks`](#--list-tasks-or--t)
 to make it easier to parse with other applications.
 
 ### `--permanently-disable-telemetry`
