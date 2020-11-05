@@ -16,6 +16,7 @@ const sidebar = [
     type: "category",
     label: "Concepts",
     items: [
+      "concepts/projects",
       "concepts/tasks",
       "concepts/containers",
       "concepts/caches",
