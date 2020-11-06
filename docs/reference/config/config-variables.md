@@ -58,6 +58,10 @@ containers:
 
 Then the directory `/my-project/scripts` will be mounted into the `my-container` container at `/code/scripts`.
 
+## Names
+
+Config variable names must start with a letter and contain only letters, digits, dashes (`-`), periods (`.`) and underscores (`_`). They must not start with `batect`.
+
 ## Definition
 
 Each config variable definition is made up of:

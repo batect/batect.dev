@@ -23,3 +23,7 @@ or take advantage of [publicly-available bundles](/bundles).
 
 A bundle can be any Git repository containing a Batect configuration file. By default, this file is called `batect-bundle.yml` and follows the same
 format as an ordinary configuration file.
+
+## See also
+
+- [Configuration reference for `includes`](../reference/config/includes.md)

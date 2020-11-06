@@ -8,3 +8,7 @@ A fresh container is created each time a [task](tasks.md) starts, and is destroy
 environment to operate in.
 
 Containers are never reused between tasks, even if both a task and one of its [prerequisites](../reference/config/tasks.md#prerequisites) needs the same container.
+
+## See also
+
+- [Configuration reference for `containers`](../reference/config/containers.md)

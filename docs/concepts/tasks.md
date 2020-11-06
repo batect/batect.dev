@@ -13,3 +13,7 @@ container declares a [dependency](../reference/config/containers.md#dependencies
 
 If one task must be run before another, this is called a [prerequisite](../reference/config/tasks.md#prerequisites). For example, a task that starts your
 application might rely on having compiled it first.
+
+## See also
+
+- [Configuration reference for `tasks`](../reference/config/tasks.md)
