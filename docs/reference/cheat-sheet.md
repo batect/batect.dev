@@ -102,6 +102,16 @@ title: Cheat sheet
 
 ### Avoiding port conflicts
 
+## Config variables
+
+### Defining a config variable
+
+### Referencing a config variable
+
+### Overriding a config variable on the command line
+
+### Overriding a config variable with a file
+
 ## Other
 
 ### Avoiding build artefacts being owned by `root`
