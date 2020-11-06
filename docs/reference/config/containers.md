@@ -40,8 +40,8 @@ Each container definition is made up of the following fields:
 - [`entrypoint`](#entrypoint): entrypoint to use to run the container's command
 - [`environment`](#environment): environment variables for the container
 - [`health_check`](#health_check): health check configuration for the container
-- [`image_pull_policy`](#image_pull_policy): when to pull the image used by this container
 - [`image`](#image): image to use for this container.
+- [`image_pull_policy`](#image_pull_policy): when to pull the image used by this container
 - [`log_driver`](#log_driver): Docker log driver to use when running the container
 - [`log_options`](#log_options): additional options for the log driver in use
 - [`ports`](#ports): ports to expose from the container to the host machine
@@ -54,8 +54,6 @@ Each container definition is made up of the following fields:
 One of [`build_directory`](#build_directory) or [`image`](#image) is required.
 
 ### `additional_hostnames`
-
-<small>**Equivalent Docker CLI option**: `--network-alias` to `docker run`, **equivalent Docker Compose option**: `extra_hosts`</small>
 
 List of hostnames to associate with this container, in addition to the default hostname (the name of the container).
 
@@ -70,8 +68,6 @@ containers:
 
 ### `additional_hosts`
 
-<small>**Equivalent Docker CLI option**: `--add-host` to `docker run`, **equivalent Docker Compose option**: `networks.aliases`</small>
-
 Additional hostnames to add to `/etc/hosts` in the container. Equivalent to `--add-host` option for `docker run`.
 
 For example, to configure processes inside `my-container` to resolve `database.example.com` to `1.2.3.4`:
@@ -85,15 +81,9 @@ containers:
 
 ### `build_args`
 
-<small>**Equivalent Docker CLI option**: `--build-arg` to `docker build`, **equivalent Docker Compose option**: `build.args`</small>
-
 List of build args (in `name: value` format) to use when building the image in [`build_directory`](#build_directory). Values can be [expressions](expressions.md).
 
 Each build arg must be defined in the Dockerfile with an `ARG` instruction otherwise the value provided will have no effect.
-
-:::caution
-Use caution when using build args for secret values. Build arg values can be revealed by anyone with a copy of the image with the `docker history` command.
-:::
 
 For example, to set the `message` build arg to `hello`:
 
@@ -104,12 +94,14 @@ containers:
       message: hello
 ```
 
+:::caution
+Use caution when using build args for secret values. Build arg values can be revealed by anyone with a copy of the image with the `docker history` command.
+:::
+
 ### `build_directory`
 
-<small>**Equivalent Docker CLI option**: argument to `docker build`, **equivalent Docker Compose option**: `build` or `build.context`</small>
-
 Path (relative to the configuration file's directory) to a directory containing a Dockerfile to build and use as an image for this container.
-**One of `image` or `build_directory` is required.**
+One of `image` or `build_directory` is required.
 
 Value can be an [expression](expressions.md).
 
@@ -131,8 +123,6 @@ containers:
 
 ### `capabilities_to_add` and `capabilities_to_drop`
 
-<small>**Equivalent Docker CLI option**: `--cap-add` / `--cap-drop` to `docker run`, **equivalent Docker Compose option**: `cap_add` / `cap_drop`</small>
-
 List of [capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html) to add or drop for the container.
 
 For example:
@@ -147,8 +137,6 @@ containers:
 ```
 
 ### `command`
-
-<small>**Equivalent Docker CLI option**: argument to `docker run`, **equivalent Docker Compose option**: `command`</small>
 
 Command to run when the container starts.
 
@@ -204,8 +192,6 @@ Note that for both options 3 and 4, you must quote the command so that it is pas
 
 ### `dependencies`
 
-<small>**Equivalent Docker CLI option**: none, **equivalent Docker Compose option**: `depends_on` (behaviour differs)</small>
-
 List of other containers that should be started and healthy before starting this container.
 
 If a dependency's image does not contain a [health check](https://docs.docker.com/engine/reference/builder/#healthcheck), then as soon as it has started,
@@ -230,8 +216,6 @@ containers:
 
 ### `devices`
 
-<small>**Equivalent Docker CLI option**: `--device` to `docker run`, **equivalent Docker Compose option**: `devices`</small>
-
 List of device mounts to create for the container.
 
 Two formats are supported:
@@ -254,8 +238,6 @@ Note that the `local` device mounts will be different for Windows and Unix-like 
 
 ### `dockerfile`
 
-<small>**Equivalent Docker CLI option**: `--file` to `docker build`, **equivalent Docker Compose option**: `build.dockerfile`</small>
-
 Dockerfile (relative to [`build_directory`](#build_directory)) to use when building the image in [`build_directory`](#build_directory). Defaults to `Dockerfile` if not set.
 
 The Dockerfile must be within [`build_directory`](#build_directory).
@@ -272,8 +254,6 @@ containers:
 ```
 
 ### `enable_init_process`
-
-<small>**Equivalent Docker CLI option**: `--init` to `docker run`, **equivalent Docker Compose option**: `init`</small>
 
 Set to `true` to pass the [`--init`](https://docs.docker.com/engine/reference/run/#specify-an-init-process) flag when running the container.
 Defaults to `false`.
@@ -293,8 +273,6 @@ containers:
 ```
 
 ### `entrypoint`
-
-<small>**Equivalent Docker CLI option**: `--entrypoint` to `docker run`, **equivalent Docker Compose option**: `entrypoint`</small>
 
 Entrypoint to use to run [command](#command) or the image's default command if `command` is not provided.
 
@@ -316,8 +294,6 @@ containers:
 ```
 
 ### `environment`
-
-<small>**Equivalent Docker CLI option**: `--env` to `docker run`, **equivalent Docker Compose option**: `environment`</small>
 
 List of environment variables (in `name: value` format) for the container.
 
@@ -368,8 +344,6 @@ See [this page](../../how-to/proxies.mdx) for more information on using batect w
 
 ### `health_check`
 
-<small>**Equivalent Docker CLI option**: `--health-cmd`, `--health-interval`, `--health-retries` and `--health-start-period` to `docker run`, **equivalent Docker Compose option**: `healthcheck`</small>
-
 Overrides the [health check configuration](https://docs.docker.com/engine/reference/builder/#healthcheck) specified in the image:
 
 #### `command`
@@ -412,9 +386,7 @@ containers:
 
 ### `image`
 
-<small>**Equivalent Docker CLI option**: argument to `docker run`, **equivalent Docker Compose option**: `image`</small>
-
-Image name (in standard Docker image reference format) to use for this container. **One of `image` or `build_directory` is required.**
+Image name (in standard Docker image reference format) to use for this container. One of `image` or `build_directory` is required.
 
 If the image has not already been pulled, batect will pull it before starting the container.
 
@@ -434,8 +406,6 @@ everywhere. For example, use `alpine:3.7`, not `alpine` or `alpine:latest`.
 :::
 
 ### `image_pull_policy`
-
-<small>**Equivalent Docker CLI option**: `--pull` to `docker build` or re-running `docker pull`, **equivalent Docker Compose option**: none</small>
 
 Controls when to pull the image used by this container.
 
@@ -460,8 +430,6 @@ It is highly recommended that you use `IfNotPresent`. Using `Always` can incur a
 :::
 
 ### `log_driver`
-
-<small>**Equivalent Docker CLI option**: `--log-driver` to `docker run`, **equivalent Docker Compose option**: `logging.driver`</small>
 
 The Docker log driver to use when running the container.
 
@@ -491,8 +459,6 @@ will run to completion as per normal.
 
 ### `log_options`
 
-<small>**Equivalent Docker CLI option**: `--log-opt` to `docker run`, **equivalent Docker Compose option**: `logging.options`</small>
-
 Options to provide to the Docker log driver used when running the container.
 
 For example, to set [the tag used to identify the container in logs](https://docs.docker.com/config/containers/logging/log_tags/):
@@ -508,8 +474,6 @@ The options available for each log driver are described in the Docker documentat
 [this page](https://docs.docker.com/config/containers/logging/json-file/) for the `json-file` driver.
 
 ### `ports`
-
-<small>**Equivalent Docker CLI option**: `--publish` to `docker run`, **equivalent Docker Compose option**: `ports`</small>
 
 List of ports to make available to the host machine.
 
@@ -578,8 +542,6 @@ without port 2000 being listed in `ports` (or an `EXPOSE` Dockerfile instruction
 
 ### `privileged`
 
-<small>**Equivalent Docker CLI option**: `--privileged` to `docker run`, **equivalent Docker Compose option**: `privileged`</small>
-
 Set to `true` to run the container in [privileged mode](https://docs.docker.com/engine/reference/commandline/run/#full-container-capabilities---privileged). Defaults to `false`.
 
 See also [`capabilities_to_add` and `capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop).
@@ -593,8 +555,6 @@ containers:
 ```
 
 ### `run_as_current_user`
-
-<small>**Equivalent Docker CLI option**: none, **equivalent Docker Compose option**: none</small>
 
 Run the container with the same UID and GID as the user running batect (rather than the user the Docker daemon runs as, which is root
 on Linux). This means that any files created by the container will be owned by the user running batect, rather than root.
@@ -634,8 +594,6 @@ containers:
 ```
 
 ### `setup_commands`
-
-<small>**Equivalent Docker CLI option**: none, **equivalent Docker Compose option**: none</small>
 
 List of commands to run inside the container after it has become healthy but before dependent containers start.
 
@@ -687,8 +645,6 @@ Once the image for `database` is ready, `database` will start and launch the com
 Once `database` reports as healthy, it will run `./apply-migrations.sh` and wait for it to finish before then starting `application`.
 
 ### `volumes`
-
-<small>**Equivalent Docker CLI option**: `--volume` to `docker run`, **equivalent Docker Compose option**: `volumes`</small>
 
 List of volume mounts to create for the container.
 
@@ -754,8 +710,6 @@ The following fields are supported:
 
 ### `working_directory`
 
-<small>**Equivalent Docker CLI option**: `--workdir` to `docker run`, **equivalent Docker Compose option**: `working_dir`</small>
-
 Working directory to start the container in.
 
 If not provided, the default working directory for the image will be used.
@@ -770,3 +724,71 @@ containers:
   my-container:
     working_directory: /somewhere
 ```
+
+## Equivalent options in other tools
+
+Many of the fields above have equivalent options in other tools.
+
+### Docker CLI
+
+| Batect container field                                                  | Docker CLI option                                      |
+| ----------------------------------------------------------------------- | ------------------------------------------------------ |
+| [`additional_hostnames`](#additional_hostnames)                         | `--network-alias` to `docker run`                      |
+| [`additional_hosts`](#additional_hosts)                                 | `--add-host` to `docker run`                           |
+| [`build_args`](#build_args)                                             | `--build-arg` to `docker build`                        |
+| [`build_directory`](#build_directory)                                   | argument to `docker build`                             |
+| [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `--cap-add` to `docker run`                            |
+| [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `--cap-drop` to `docker run`                           |
+| [`command`](#command)                                                   | argument to `docker run`                               |
+| [`dependencies`](#dependencies)                                         | (none)                                                 |
+| [`devices`](#devices)                                                   | `--device` to `docker run`                             |
+| [`dockerfile`](#dockerfile)                                             | `--file` to `docker build`                             |
+| [`enable_init_process`](#enable_init_process)                           | `--init` to `docker run`                               |
+| [`entrypoint`](#entrypoint)                                             | `--entrypoint` to `docker run`                         |
+| [`environment`](#environment)                                           | `--env` to `docker run`                                |
+| [`health_check.command`](#command-1)                                    | `--health-cmd` to `docker run`                         |
+| [`health_check.interval`](#interval)                                    | `--health-interval` to `docker run`                    |
+| [`health_check.retries`](#retries)                                      | `--health-retries` to `docker run`                     |
+| [`health_check.start_period`](#start_period)                            | `--health-start-period` to `docker run`                |
+| [`image`](#image)                                                       | argument to `docker run`                               |
+| [`image_pull_policy`](#image_pull_policy)                               | `--pull` to `docker build` or re-running `docker pull` |
+| [`log_driver`](#log_driver)                                             | `--log-driver` to `docker run`                         |
+| [`log_options`](#log_options)                                           | `--log-opt` to `docker run`                            |
+| [`ports`](#ports)                                                       | `--publish` to `docker run`                            |
+| [`privileged`](#privileged)                                             | `--privileged` to `docker run`                         |
+| [`run_as_current_user`](#run_as_current_user)                           | (none)                                                 |
+| [`setup_commands`](#setup_commands)                                     | (none)                                                 |
+| [`volumes`](#volumes)                                                   | `--volume` to `docker run`                             |
+| [`working_directory`](#working_directory)                               | `--workdir` to `docker run`                            |
+
+### Docker Compose
+
+| Batect container field                                                  | Docker Compose field             |
+| ----------------------------------------------------------------------- | -------------------------------- |
+| [`additional_hostnames`](#additional_hostnames)                         | `extra_hosts`                    |
+| [`additional_hosts`](#additional_hosts)                                 | `networks.aliases`               |
+| [`build_args`](#build_args)                                             | `build.args`                     |
+| [`build_directory`](#build_directory)                                   | `build` or `build.context`       |
+| [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `cap_add`                        |
+| [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `cap_drop`                       |
+| [`command`](#command)                                                   | `command`                        |
+| [`dependencies`](#dependencies)                                         | `depends_on` (behaviour differs) |
+| [`devices`](#devices)                                                   | `devices`                        |
+| [`dockerfile`](#dockerfile)                                             | `build.dockerfile`               |
+| [`enable_init_process`](#enable_init_process)                           | `init`                           |
+| [`entrypoint`](#entrypoint)                                             | `entrypoint`                     |
+| [`environment`](#environment)                                           | `environment`                    |
+| [`health_check.command`](#command-1)                                    | `healthcheck.test`               |
+| [`health_check.interval`](#interval)                                    | `healthcheck.interval`           |
+| [`health_check.retries`](#retries)                                      | `healthcheck.retries`            |
+| [`health_check.start_period`](#start_period)                            | `healthcheck.start_period`       |
+| [`image`](#image)                                                       | `image`                          |
+| [`image_pull_policy`](#image_pull_policy)                               | (none)                           |
+| [`log_driver`](#log_driver)                                             | `logging.driver`                 |
+| [`log_options`](#log_options)                                           | `logging.options`                |
+| [`ports`](#ports)                                                       | `ports`                          |
+| [`privileged`](#privileged)                                             | `privileged`                     |
+| [`run_as_current_user`](#run_as_current_user)                           | (none)                           |
+| [`setup_commands`](#setup_commands)                                     | (none)                           |
+| [`volumes`](#volumes)                                                   | `volumes`                        |
+| [`working_directory`](#working_directory)                               | `working_dir`                    |
