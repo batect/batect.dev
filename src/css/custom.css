@@ -13,6 +13,11 @@
   --ifm-heading-font-family: "Zilla Slab", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --ifm-heading-font-weight: 500;
   --ifm-font-family-monospace: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --ifm-h2-font-size: 1.85rem;
+  --ifm-h3-font-size: 1.7rem;
+  --ifm-h4-font-size: 1.3rem;
+  --ifm-h5-font-size: 1.2rem;
 }
 
 h1,
