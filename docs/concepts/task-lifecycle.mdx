@@ -53,7 +53,7 @@ For our sample configuration above, prerequisite relationship between tasks and 
 <TasksAndContainers />
 
 Once the container dependency relationships have been determined, Batect then begins executing the task. It creates a Docker network for the task,
- and runs [cache initialisation](../how-to/performance.md#cache-volumes) if required. In parallel to setting up the network and caches, for every container that makes up the task:
+and runs [cache initialisation](../how-to/performance.md#cache-volumes) if required. In parallel to setting up the network and caches, for every container that makes up the task:
 
 1. It builds or pulls the image required for this container
 2. It waits for the task network to be ready
