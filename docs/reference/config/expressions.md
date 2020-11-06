@@ -13,7 +13,7 @@ Expressions are supported in:
 
 ## Environment variables
 
-You can pass environment variables from the host (ie. where you run Batect) to the container by using any of the following formats:
+You can use environment variables from the host (ie. where you run Batect) by using any of the following formats:
 
 - `$name` or `${name}`: use the value of `name` from the host as the value inside the container.
 
