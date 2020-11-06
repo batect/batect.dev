@@ -85,13 +85,13 @@ If you would like to use shell syntax features in your command, you have four op
 
 3. Set the entrypoint in the image to a shell. For example:
 
-   ```dockerfile
+   ```dockerfile title="Dockerfile"
    ENTRYPOINT ["/bin/sh", "-c"]
    ```
 
 4. Set the [entrypoint](#entrypoint) for the container to a shell. For example:
 
-   ```yaml
+   ```yaml title="batect.yml"
    containers:
      container-1:
        command: "'echo hello && echo world'"
@@ -182,7 +182,7 @@ In the example below, running the `build` task will start both `main-container` 
   - `OVERRIDDEN_VAR`: `overridden value from task`
   - `NEW_VAR`: `new value from task`
 
-```yaml
+```yaml title="batect.yml"
 containers:
   main-container:
     image: ...
@@ -253,7 +253,7 @@ For more examples and real-world scenarios, take a look at the [sample projects]
 
 ### Minimal configuration
 
-```yaml
+```yaml title="batect.yml"
 tasks:
   start-app:
     run:
@@ -267,7 +267,7 @@ given for the container definition).
 
 ### Task with prerequisites
 
-```yaml
+```yaml title="batect.yml"
 tasks:
   build:
     run:
@@ -287,7 +287,7 @@ If the command `build.sh` exits with a non-zero exit code, `start-app` will not 
 
 ### Task with dependencies
 
-```yaml
+```yaml title="batect.yml"
 tasks:
   start-app:
     run:
@@ -307,7 +307,7 @@ Running the task `start-app` will do the following:
 
 ### Task with environment variables
 
-```yaml
+```yaml title="batect.yml"
 tasks:
   start-app:
     run:
@@ -334,7 +334,7 @@ Running the task `start-app` will start the `app` container with the following e
 
 ### Task with port mappings
 
-```yaml
+```yaml title="batect.yml"
 tasks:
   start-app:
     run:
