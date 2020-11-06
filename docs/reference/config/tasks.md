@@ -26,17 +26,16 @@ Task names must meet the following requirements:
 
 ## Definition
 
-Each task definition is made up of the following fields.
+Each task definition is made up of the following fields:
+
+- [`customise`](#customise)
+- [`dependencies`](#dependencies)
+- [`description`](#description)
+- [`group`](#group)
+- [`prerequisites`](#prerequisites)
+- [`run`](#run)
 
 At least one of [`run`](#run) or [`prerequisites`](#prerequisites) is required.
-
-### `description`
-
-Description shown when running `batect --list-tasks`.
-
-### `group`
-
-Group name used to group tasks when running `batect --list-tasks`.
 
 ### `run`
 
@@ -137,11 +136,27 @@ Overrides any working directory on the container definition and the image's defa
 [the working directory specified on the container definition](containers.md#working_directory) is used if there is one, otherwise the image's default
 working directory is used.
 
-### `dependencies`
+### `prerequisites`
 
-List of other containers (not tasks) that should be started and healthy before starting the task container given in [`run`](#run), in addition to those defined on the container itself.
+List of other tasks that should be run to completion before running this task. Names are case-sensitive.
 
-The behaviour is the same as if the dependencies were specified for the [`dependencies`](containers.md#dependencies) on the main task container's definition.
+If a prerequisite task finishes with a non-zero exit code, then neither this task nor any other prerequisites will be run.
+
+The tasks are run in the same order that they are declared in, unless reordering is required to satisfy the prerequisites of this task's prerequisites. If a
+task is listed explicitly and also matches a wildcard, the first occurrence of the task is used.
+
+Passing the [`--skip-prerequisites`](../cli.mdx#--skip-prerequisites) command line flag skips all defined prerequisites and runs only the task specified on the command line.
+
+#### Wildcards
+
+Prerequisite names can include wildcards, denoted by `*`. For example, rather than listing `lint:bar` and `lint:foo`, you can give just `lint:*`, and batect will automatically run both `lint:bar` and
+`lint:foo`.
+
+A single `*` matches zero or more characters. For example, giving `lint:*` as a prerequisite would match the tasks `lint:a`, `lint:foo` and `lint:`.
+
+To avoid YAML syntax issues with `*` characters, it's recommended you enclose names containing wildcards in quotes (eg. use `"lint:*"` rather than `lint:*`).
+
+If a wildcard matches multiple tasks, the tasks are returned in alphabetic order. If a wildcard does not match any tasks, no error is raised.
 
 ### `customise`
 
@@ -218,27 +233,19 @@ Override the working directory used by the container.
 Takes precedence over [the working directory specified on the container definition](containers.md#working_directory) (if any) and the
 default working directory in the image.
 
-### `prerequisites`
+### `dependencies`
 
-List of other tasks that should be run to completion before running this task. Names are case-sensitive.
+List of other containers (not tasks) that should be started and healthy before starting the task container given in [`run`](#run), in addition to those defined on the container itself.
 
-If a prerequisite task finishes with a non-zero exit code, then neither this task nor any other prerequisites will be run.
+The behaviour is the same as if the dependencies were specified for the [`dependencies`](containers.md#dependencies) on the main task container's definition.
 
-The tasks are run in the same order that they are declared in, unless reordering is required to satisfy the prerequisites of this task's prerequisites. If a
-task is listed explicitly and also matches a wildcard, the first occurrence of the task is used.
+### `description`
 
-Passing the [`--skip-prerequisites`](../cli.mdx#--skip-prerequisites) command line flag skips all defined prerequisites and runs only the task specified on the command line.
+Description shown when running `batect --list-tasks`.
 
-#### Wildcards
+### `group`
 
-Prerequisite names can include wildcards, denoted by `*`. For example, rather than listing `lint:bar` and `lint:foo`, you can give just `lint:*`, and batect will automatically run both `lint:bar` and
-`lint:foo`.
-
-A single `*` matches zero or more characters. For example, giving `lint:*` as a prerequisite would match the tasks `lint:a`, `lint:foo` and `lint:`.
-
-To avoid YAML syntax issues with `*` characters, it's recommended you enclose names containing wildcards in quotes (eg. use `"lint:*"` rather than `lint:*`).
-
-If a wildcard matches multiple tasks, the tasks are returned in alphabetic order. If a wildcard does not match any tasks, no error is raised.
+Group name used to group tasks when running `batect --list-tasks`.
 
 ## Examples
 
