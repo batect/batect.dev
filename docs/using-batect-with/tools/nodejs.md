@@ -27,13 +27,20 @@ containers:
 ## Caching dependencies
 
 :::tip
-**tl;dr**: Mount a [cache](../../concepts/caches.md) into your container for the `node_modules` directory, otherwise you'll experience poor performance on macOS and Windows.
+**tl;dr**: Mount a [cache](../../concepts/caches.md) into your container for the `node_modules` and `~/.cache/yarn` directories, otherwise you'll experience poor performance on macOS and Windows.
 :::
 
-Both NPM and Yarn download and store dependencies in the `node_modules` directory in your application's directory. However, when running on macOS and Windows,
-Docker exhibits poor I/O performance for directories mounted from the macOS or Windows host, as discussed in the section on [caches](../../concepts/caches.md).
+Both NPM and Yarn download and store dependencies in the `node_modules` directory in your application's directory. Yarn also caches downloaded dependencies in `~/.cache/yarn`.
+However, when running on macOS and Windows, Docker exhibits poor I/O performance for directories mounted from the macOS or Windows host, as discussed in the section on
+[caches](../../concepts/caches.md).
 
-The solution to this is to mount a [cache](../../concepts/caches.md) that persists between builds into your container for `node_modules`.
+The solution to this is to mount a [cache](../../concepts/caches.md) into your container for `node_modules` and `~/.cache/yarn`.
+
+Note that you can't use `~` in the container path for a volume mount:
+
+- If you're using [run as current user mode](../../concepts/run-as-current-user-mode.md), use the home directory you specified for [`home_directory`](../../reference/config/containers.md#run_as_current_user).
+- If you're not using [run as current user mode](../../concepts/run-as-current-user-mode.md), use `/root` as the home directory, as the vast majority of containers
+  default to the root user and use this as the root user's home directory.
 
 ## Issues with signals not being handled correctly
 
