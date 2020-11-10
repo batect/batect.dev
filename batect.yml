@@ -50,6 +50,16 @@ tasks:
       container: node-build-env
       command: yarn lintFix
 
+  start:
+    description: Start the site locally.
+    group: Testing tasks
+    run:
+      container: node-build-env
+      command: yarn start --host 0.0.0.0
+      ports:
+        - local: 3000
+          container: 3000
+
 include:
   - type: git
     repo: https://github.com/batect/node-bundle.git
