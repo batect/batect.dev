@@ -1,6 +1,7 @@
 node_modules/
 build/
 
+.batect/caches/
 .docusaurus/
 .idea/
 

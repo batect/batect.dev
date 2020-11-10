@@ -1,0 +1,56 @@
+project_name: batect.dev
+
+tasks:
+  setup:
+    description: Install dependencies.
+    group: Setup tasks
+    run:
+      container: node-build-env
+      command: yarn install
+
+  shell:
+    description: Start a shell in the build environment.
+    group: Utility tasks
+    run:
+      container: node-build-env
+      command: bash
+
+  build:
+    description: Build the site.
+    group: Build tasks
+    run:
+      container: node-build-env
+      command: yarn build
+
+  check-format:
+    description: Check for formatting issues.
+    group: Linting and formatting tasks
+    run:
+      container: node-build-env
+      command: yarn checkFormat
+
+  fix-format:
+    description: Fix formatting issues.
+    group: Linting and formatting tasks
+    run:
+      container: node-build-env
+      command: yarn fixFormat
+
+  lint:
+    description: Check for linting issues.
+    group: Linting and formatting tasks
+    run:
+      container: node-build-env
+      command: yarn lint
+
+  fix-lint:
+    description: Fix linting issues.
+    group: Linting and formatting tasks
+    run:
+      container: node-build-env
+      command: yarn lintFix
+
+include:
+  - type: git
+    repo: https://github.com/batect/node-bundle.git
+    ref: 0.2.0
