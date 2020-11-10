@@ -1,9 +1,10 @@
 const path = require("path");
 const copyright = `Copyright © 2017-${new Date().getFullYear()} Charles Korn.`;
+const url = process.env["SITE_URL"] || "https://batect.dev";
 
 module.exports = {
   title: "Batect",
-  url: "https://batect.dev",
+  url: url,
   baseUrl: "/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",

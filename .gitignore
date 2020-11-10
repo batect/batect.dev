@@ -1,5 +1,6 @@
 node_modules/
 build/
+build-local/
 
 .batect/caches/
 .docusaurus/
