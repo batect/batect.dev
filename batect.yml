@@ -1,5 +1,20 @@
 project_name: batect.dev
 
+containers:
+  linkcheck:
+    build_directory: .batect/linkcheck
+    volumes:
+      - local: ./linkcheck-ignore.txt
+        container: /linkcheck-ignore.txt
+        options: ro
+
+  docs-server:
+    build_directory: .batect/docs-server
+    volumes:
+      - local: ./build-linkcheck
+        container: /usr/share/nginx/html
+        options: ro
+
 tasks:
   setup:
     description: Install dependencies.
@@ -22,26 +37,14 @@ tasks:
       container: node-build-env
       command: yarn build
 
-  build-local:
-    description: Build a production-like version of the site suitable for local serving.
+  build-linkcheck:
+    description: Build a production-like version of the site suitable for checking links.
     group: Build tasks
     run:
       container: node-build-env
-      command: yarn build --out-dir build-local
+      command: yarn build --out-dir build-linkcheck
       environment:
-        SITE_URL: http://0.0.0.0:3000
-
-  serve:
-    description: Serve a production build of the site.
-    group: Testing tasks
-    prerequisites:
-      - build-local
-    run:
-      container: node-build-env
-      command: yarn serve --dir build-local --host 0.0.0.0
-      ports:
-        - local: 3000
-          container: 3000
+        SITE_URL: http://docs-server
 
   check-format:
     description: Check for formatting issues.
@@ -80,6 +83,17 @@ tasks:
       ports:
         - local: 3000
           container: 3000
+
+  check-links:
+    description: Check the site for broken links.
+    group: Testing tasks
+    prerequisites:
+      - build-linkcheck
+    dependencies:
+      - docs-server
+    run:
+      container: linkcheck
+      command: linkcheck --external http://docs-server --skip-file /linkcheck-ignore.txt
 
 include:
   - type: git
