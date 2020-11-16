@@ -2,6 +2,8 @@
 title: Cheat sheet
 ---
 
+import AsciinemaPlayer from "../../src/components/AsciinemaPlayer";
+
 ## Skeleton configuration file
 
 ```yaml title="batect.yml"
@@ -246,13 +248,61 @@ Reference: [`ports`](config/tasks.md#ports)
 
 ### See output from all containers when running a task
 
+Use `--output=all`:
+
+```shell
+./batect --output=all my-task
+```
+
+This produces output similar to the following:
+
+<AsciinemaPlayer
+  src={require("../assets/outputstyles/interleaved.cast").default}
+  width={204}
+  height={20}
+  preload={true}
+  poster="npt:4"
+/>
+
+Reference: [`--output`](cli.mdx#--output-or--o)
+
 ### Disable cleanup of containers when a task finishes
+
+Use `--no-cleanup`, `--no-cleanup-after-failure` or `--no-cleanup-after-success`:
+
+```shell
+./batect --no-cleanup my-task
+```
+
+Reference: [`--no-cleanup`, `--no-cleanup-after-failure` and `--no-cleanup-after-success`](cli.mdx#--no-cleanup---no-cleanup-after-failure-and---no-cleanup-after-success)
 
 ## Docker
 
 ### Access the host machine's Docker daemon from within a container
 
-### Connect to a Docker daemon not using default connection settings
+Mount the Docker daemon socket into the container, and then use the `docker` CLI tool like normal:
+
+```yaml title="batect.yml"
+containers:
+  docker-env:
+    volumes:
+      - local: /var/run/docker.sock
+        container: /var/run/docker.sock
+```
+
+Note that local settings like registry credentials will not be forwarded to the container - the container will need to be configured with these.
+
+### Connect to a Docker daemon using non-default connection settings
+
+Use `--docker-host` (or set the `DOCKER_HOST` environment variable):
+
+```shell
+./batect --docker-host=unix:///var/run/other-docker.sock
+```
+
+This option accepts Unix sockets (on macOS and Linux), named pipes (on Windows) and TCP addresses (on all platforms).
+
+Reference: [`--docker-host`](cli.mdx#--docker-host)
 
 ## Includes and bundles
 
