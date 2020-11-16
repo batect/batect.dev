@@ -395,7 +395,21 @@ Reference: [`--clean`](cli.mdx#--clean)
 
 ### Use directories for caches instead of volumes
 
+Use the `--cache-type=directory` option, or set the `BATECT_CACHE_TYPE` environment variable to `directory`:
+
+```shell
+./batect --cache-type=directory my-task
+```
+
+Reference: [`--cache-type`](cli.mdx#--cache-type)
+
 ### Avoiding port conflicts
+
+```shell
+./batect --disable-ports my-task
+```
+
+Reference: [`--disable-ports`](cli.mdx#--disable-ports)
 
 ## Config variables
 
