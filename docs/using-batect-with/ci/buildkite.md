@@ -2,7 +2,7 @@
 title: Buildkite
 ---
 
-Batect can run on any Buildkite agent that meets Batect's [system requirements](../../getting-started/requirements.md#what-are-batects-system-requirements) - chiefly Docker and a JVM.
+Batect can run on any Buildkite agent that meets Batect's [system requirements](../../getting-started/requirements.md) - chiefly Docker and a JVM.
 
 ## Running with command evaluation disabled
 

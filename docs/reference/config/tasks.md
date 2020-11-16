@@ -63,10 +63,6 @@ Command to run for this task.
 Overrides any [command](containers.md#command) specified on the container definition and the image's default command. If no command is provided here,
 [the command specified on the container definition](containers.md#command) is used if there is one, otherwise the image's default command is used.
 
-Just like when specifying a command for a container, this command is passed to the image's `ENTRYPOINT`, if there is one. This can prevent
-shell syntax features like `$MY_ENVIRONMENT_VARIABLE` and `&&` from working. See the
-[note about entrypoints in the documentation for containers](containers.md#command-entrypoint-note) for more information.
-
 :::note
 This command is passed to the image's `ENTRYPOINT`, just like it would when using `docker run <image> <command>` directly.
 

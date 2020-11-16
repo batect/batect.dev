@@ -47,5 +47,5 @@ jobs:
 
 The `key` should be a value that changes when the contents of the cache change, and remains constant otherwise. A good candidate is the hash of a dependency lockfile,
 such as `Gemfile.lock`, `package-lock.json`, `yarn.lock` or `go.sum`. The
-[documentation for caching](https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows#using-the-cache-action) has
+[documentation for caching](https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows#using-the-cache-action) has
 more details on `key`.

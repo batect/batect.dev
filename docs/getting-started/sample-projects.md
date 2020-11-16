@@ -12,4 +12,4 @@ There are a number of projects that demonstrate the use of Batect:
 - [batect-sample-seq](https://github.com/batect/batect-sample-seq): demonstrates a setup using **Seq** to capture and display logs from containers
 - [batect-sample-typescript](https://github.com/batect/batect-sample-typescript): demonstrates a setup for **TypeScript** and **GitHub Actions**
 - [batect-terraform-gcp](https://github.com/yearofthedan/batect-terraform-gcp): demonstrates a setup for provisioning resources on **GCP** with **Terraform** and deploying an app to Kubernetes
-- [weekly-meetups](https://github.com/safiranugroho/weekly-meetups): demonstrates a setup for **Clojure** and **Leiningen**
+- [weekly-meetups](https://github.com/safiratw/weekly-meetups): demonstrates a setup for **Clojure** and **Leiningen**

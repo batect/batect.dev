@@ -8,7 +8,7 @@ Expressions are supported in:
 
 - [`build_args`](containers.md#build_args) on containers
 - [`build_directory`](containers.md#build_directory) on containers
-- `environment` on [containers](containers.md#environment), [tasks](tasks.md#environment) and [customisations](tasks.md#environment_1)
+- `environment` on [containers](containers.md#environment), [tasks](tasks.md#environment) and [customisations](tasks.md#environment-1)
 - the local path in [volume mounts](containers.md#volumes) on containers
 
 ## Environment variables

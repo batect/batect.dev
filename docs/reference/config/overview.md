@@ -183,6 +183,6 @@ value in `map-1` is used.)
 
 ## Examples
 
-Examples are provided in the reference for [`config_variables`](config-variables.md#examples), [`containers`](containers.md#examples), [`includes`](includes.md#examples) and [`tasks`](tasks.md#examples).
+Examples are provided in the reference for [`config_variables`](config-variables.md#examples), [`containers`](containers.md), [`includes`](includes.md#examples) and [`tasks`](tasks.md#examples).
 
 For further examples and real-world scenarios, take a look at the [sample projects](../../getting-started/sample-projects.md).

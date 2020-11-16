@@ -110,7 +110,7 @@ with users running on other operating systems, using Unix-style paths is recomme
 
 The image can be overridden when running a task with [`--override-image`](../cli.mdx#--override-image).
 
-The [Docker build cache](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#build-cache) is used during the build process,
+The [Docker build cache](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache) is used during the build process,
 so if the image definition has not changed since the last build, the image will not be rebuilt, saving time.
 
 For example, running the container `my_container` from the following configuration will first build the Dockerfile in the `.batect/my-container` directory, then run the resulting image:
@@ -123,7 +123,7 @@ containers:
 
 ### `capabilities_to_add` and `capabilities_to_drop`
 
-List of [capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html) to add or drop for the container.
+List of [capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html) to add or drop for the container.
 
 For example:
 

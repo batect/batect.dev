@@ -5,11 +5,11 @@ title: IDE integration
 ## Editing `batect.yml`
 
 :::tip
-**tl;dr**: If your editor supports [schemastore.org](http://schemastore.org/json/) for YAML files, you'll get code completion
+**tl;dr**: If your editor supports [schemastore.org](https://www.schemastore.org/json/) for YAML files, you'll get code completion
 and other nice features when editing `batect.yml`
 :::
 
-Batect has a schema published on [schemastore.org](http://schemastore.org/json/), which means that if your editor supports
+Batect has a schema published on [schemastore.org](https://www.schemastore.org/json/), which means that if your editor supports
 schemastore.org for YAML files, you'll get code completion, validation and other nice features automatically.
 
 Editors known to support schemastore.org when editing YAML files include:
@@ -29,8 +29,8 @@ Some solutions for this include:
 
 - Some of the JetBrains family of products natively supports using a SDK or runtime from a container (PyCharm and RubyMine
   are known to work, although notably IntelliJ does not currently support this). There's more information on how to configure
-  this in the [PyCharm docs](https://www.jetbrains.com/help/pycharm/configuring-remote-interpreters-via-docker.html) and
-  [RubyMine docs](https://www.jetbrains.com/help/ruby/configuring-remote-interpreters-via-docker.html).
+  this in the [PyCharm docs](https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html) and
+  [RubyMine docs](https://www.jetbrains.com/help/ruby/using-docker-as-a-remote-interpreter.html).
 
 - The [Visual Studio Code Remote - Containers extension](https://code.visualstudio.com/docs/remote/containers) gives the option to
   use the local filesystem and code in a Docker container with your chosen language's runtime and other tools. All extensions
