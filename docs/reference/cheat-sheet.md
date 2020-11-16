@@ -56,40 +56,6 @@ title: Cheat sheet
 
 ### Require one task to run to completion before another (create a prerequisite)
 
-## Configurability
-
-### Use an environment variable from the host machine
-
-### Define and use a config variable
-
-## Docker
-
-### Access the host machine's Docker daemon from within a container
-
-### Connect to a Docker daemon not using default connection settings
-
-## Debugging
-
-### See output from all containers when running a task
-
-### Disable cleanup of containers when a task finishes
-
-## Networking
-
-### Expose a port to the host machine
-
-### Expose a port to other containers in the task
-
-### Add another hostname to a container
-
-### Add extra hostnames to `/etc/hosts`
-
-## Includes and bundles
-
-### Split a configuration file into multiple files
-
-### Reference a bundle
-
 ## Caching
 
 ### Cache a directory between task invocations
@@ -111,6 +77,40 @@ title: Cheat sheet
 ### Overriding a config variable on the command line
 
 ### Overriding a config variable with a file
+
+## Configurability
+
+### Use an environment variable from the host machine
+
+### Define and use a config variable
+
+## Debugging
+
+### See output from all containers when running a task
+
+### Disable cleanup of containers when a task finishes
+
+## Docker
+
+### Access the host machine's Docker daemon from within a container
+
+### Connect to a Docker daemon not using default connection settings
+
+## Includes and bundles
+
+### Split a configuration file into multiple files
+
+### Reference a bundle
+
+## Networking
+
+### Expose a port to the host machine
+
+### Expose a port to other containers in the task
+
+### Add another hostname to a container
+
+### Add extra hostnames to `/etc/hosts`
 
 ## Other
 
