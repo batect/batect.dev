@@ -415,17 +415,64 @@ Reference: [`--disable-ports`](cli.mdx#--disable-ports)
 
 ### Defining a config variable
 
+```yaml
+config_variables:
+  log_level:
+    description: Log level to use for application
+    default: debug
+```
+
+Reference: [`config_variables`](config/config-variables.md)
+
 ### Referencing a config variable
+
+Use an [expression](config/expressions.md) like `<{log_level}` on supported properties.
 
 ### Overriding a config variable on the command line
 
+```shell
+./batect --config-var log_level=warning my-task
+```
+
+Reference: [`--config-var`](config/cli.mdx#--config-var)
+
 ### Overriding a config variable with a file
+
+Create a YAML file in `variable_name: value` format, for example:
+
+```yaml title="my-vars.yml"
+log_level: warning
+host: myawesomeapp.com
+```
+
+Then use `--config-vars-file` to tell Batect to use that file:
+
+```shell
+./batect --config-vars-file=my-vars.yml my-task
+```
+
+Batect will automatically use config variables from a file called `batect.local.yml` if it exists and `--config-vars-file` is not specified.
+
+Reference: [`--config-vars-file`](config/cli.mdx#--config-vars-file)
 
 ## Configurability
 
 ### Use an environment variable from the host machine
 
-### Define and use a config variable
+Use an [expression](config/expressions.md) like `$MY_ENVIRONMENT_VARIABLE` on supported properties.
+
+### Defining and using a config variable
+
+```yaml
+config_variables:
+  log_level:
+    description: Log level to use for application
+    default: debug
+```
+
+Then use an [expression](config/expressions.md) like `<{log_level}` on supported properties.
+
+Reference: [`config_variables`](config/config-variables.md)
 
 ## Debugging
 
