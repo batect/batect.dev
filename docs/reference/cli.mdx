@@ -274,6 +274,19 @@ Example:
 ./batect --log-file /tmp/debugging-log.json the-task
 ```
 
+### `--max-parallelism`
+
+By default, Batect will try to run all setup and cleanup steps in parallel, as described in [the task lifecycle](../concepts/task-lifecycle.mdx).
+On some machines, this can overwhelm the Docker daemon, leading to timeouts and other issues. Use this option to limit the number of setup or cleanup steps to run in parallel.
+
+Note that this does not limit the number of containers that can run in parallel.
+
+Example:
+
+```shell
+./batect --max-parallelism=4 the-task
+```
+
 ### `--no-color`
 
 By default, Batect will produce coloured output if it detects that your console supports it. However, sometimes Batect may incorrectly
