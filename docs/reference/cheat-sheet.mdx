@@ -434,7 +434,7 @@ Use an [expression](config/expressions.md) like `<{log_level}` on supported prop
 ./batect --config-var log_level=warning my-task
 ```
 
-Reference: [`--config-var`](config/cli.mdx#--config-var)
+Reference: [`--config-var`](cli.mdx#--config-var)
 
 ### Overriding a config variable with a file
 
@@ -453,7 +453,7 @@ Then use `--config-vars-file` to tell Batect to use that file:
 
 Batect will automatically use config variables from a file called `batect.local.yml` if it exists and `--config-vars-file` is not specified.
 
-Reference: [`--config-vars-file`](config/cli.mdx#--config-vars-file)
+Reference: [`--config-vars-file`](cli.mdx#--config-vars-file)
 
 ## Configurability
 
@@ -544,12 +544,67 @@ Reference: [`--docker-host`](cli.mdx#--docker-host)
 
 ### Expose a port to the host machine
 
+This makes port 5678 on the container accessible at port 1234 on the host machine:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    ports:
+      - local: 1234
+        container: 5678
+```
+
+Reference: [`ports`](config/containers.md#ports)
+
 ### Expose a port to other containers in the task
+
+There is no configuration required to expose a port from a container to another container running in the same task.
+
+Use the name of the container as its hostname. For example, to make a HTTP request to port 8080 on `my-container` from another container,
+use `http://my-container:8080`.
 
 ### Add another hostname to a container
 
+This allows other containers to reference `my-container` by using `other-name`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    additional_hostnames:
+      - other-name
+```
+
+Reference: [`additional_hostnames`](config/containers.md#additional_hostnames)
+
 ### Add extra hostnames to `/etc/hosts`
+
+To configure processes inside `my-container` to resolve `database.example.com` to `1.2.3.4`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    additional_hosts:
+      database.example.com: 1.2.3.4
+```
+
+Reference: [`additional_hosts`](config/containers.md#additional_hosts)
 
 ## Other
 
 ### Avoiding build artefacts being owned by `root`
+
+Use [run as current user mode](../concepts/run-as-current-user-mode.md):
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    run_as_current_user:
+      enabled: true
+      home_directory: /home/container-user
+```
+
+Reference: [`run_as_current_user`](config/containers.md#run_as_current_user)
