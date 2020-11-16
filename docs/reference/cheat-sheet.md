@@ -132,13 +132,69 @@ Reference: [`dockerfile`](config/containers.md#dockerfile)
 
 ### Define a task
 
+```yaml title="batect.yml"
+tasks:
+  say-hello:
+    run:
+      container: my-container
+```
+
+Reference: [`tasks`](config/tasks.md)
+
 ### Override the command for the task container
+
+```yaml title="batect.yml"
+tasks:
+  say-hello:
+    description: Say hello to the nice person reading the Batect documentation
+    run:
+      container: my-container
+      command: echo 'Hello there!'
+```
+
+Reference: [`command`](config/tasks.md#command)
 
 ### Override the working directory for the task container
 
+```yaml title="batect.yml"
+tasks:
+  say-hello:
+    description: Say hello to the nice person reading the Batect documentation
+    run:
+      container: my-container
+      working_directory: /some/other/directory
+```
+
+Reference: [`working_directory`](config/tasks.md#working_directory)
+
 ### Set an environment variable for the task container
 
+```yaml title="batect.yml"
+tasks:
+  say-hello:
+    description: Say hello to the nice person reading the Batect documentation
+    run:
+      container: my-container
+      environment:
+        MY_ENVIRONMENT_VARIABLE: "the value"
+```
+
+Reference: [`environment`](config/tasks.md#environment)
+
 ### Expose additional ports on the task container
+
+```yaml title="batect.yml"
+tasks:
+  say-hello:
+    description: Say hello to the nice person reading the Batect documentation
+    run:
+      container: my-container
+      ports:
+        - local: 8080
+          container: 8080
+```
+
+Reference: [`ports`](config/tasks.md#ports)
 
 ## Task lifecycle
 
