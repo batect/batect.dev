@@ -4,27 +4,129 @@ title: Cheat sheet
 
 ## Skeleton configuration file
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    image: alpine:3.11.3
+
+tasks:
+  say-hello:
+    description: Say hello to the nice person reading the Batect documentation
+    run:
+      container: my-container
+      command: echo 'Hello world!'
+```
+
 ## Container basics
 
 ### Define a container
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    image: alpine:3.11.3
+    command: echo "Hello world"
+```
+
+Reference: [`containers`](config/containers.md)
+
 ### Set the default command to run in a container
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    command: echo "Hello world"
+```
+
+Reference: [`command`](config/containers.md#command)
 
 ### Set the default working directory for a container
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    working_directory: /my/working/dir
+```
+
+Reference: [`working_directory`](config/containers.md#working_directory)
+
 ### Set an environment variable for a container
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    environment:
+      MY_ENVIRONMENT_VARIABLE: "the value"
+```
+
+Reference: [`environment`](config/containers.md#environment)
+
 ### Mount a file or directory into a container
+
+Mount the project directory into the container at `/code`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    volumes:
+      - local: .
+        container: /code
+```
+
+Reference: [`volumes`](config/containers.md#volumes)
 
 ### Docker images
 
 #### Use an existing Docker image for a container
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    image: alpine:3.11.3
+```
+
+Reference: [`image`](config/containers.md#image)
+
 #### Build a local Dockerfile to use as the image for a container
+
+Use the Dockerfile from the `images/my-container` directory:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: images/my-container
+```
+
+Reference: [`build_directory`](config/containers.md#build_directory)
 
 #### Pass a build arg to a Dockerfile
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: images/my-container
+    build_args:
+      MY_BUILD_ARG: "some value"
+```
+
+Reference: [`build_args`](config/containers.md#build_args)
+
 #### Use a custom Dockerfile file name
+
+Use the file `AnotherDockerfile` from the `images/my-container` directory:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: images/my-container
+    dockerfile: AnotherDockerfile
+```
+
+Reference: [`dockerfile`](config/containers.md#dockerfile)
 
 ## Task basics
 
