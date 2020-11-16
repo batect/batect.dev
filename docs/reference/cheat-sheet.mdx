@@ -371,7 +371,25 @@ Reference: [`prerequisites`](config/tasks.md#prerequisites)
 
 ### Cache a directory between task invocations
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    volumes:
+      - type: cache
+        name: my_cache
+        container: /caches/my_cache
+```
+
+Reference: [`volumes`](config/containers.md#volumes) and [caches](../concepts/caches.md)
+
 ### Clean all caches for the current project
+
+```shell
+./batect --clean
+```
+
+Reference: [`--clean`](cli.mdx#--clean)
 
 ## CI
 
