@@ -538,7 +538,51 @@ Reference: [`--docker-host`](cli.mdx#--docker-host)
 
 ### Split a configuration file into multiple files
 
+If `/my-project/a.yml` contains:
+
+```yaml title="/my-project/a.yml"
+containers:
+  my-container:
+    image: my-image:1.2.3
+
+include:
+  - includes/b.yml
+```
+
+And `/my-project/includes/b.yml` contains:
+
+```yaml title="/my-project/includes/b.yml"
+tasks:
+  my-task:
+    run:
+      container: my-container
+```
+
+Then the resulting configuration is as if `/my-project/a.yml` was:
+
+```yaml
+containers:
+  my-container:
+    image: my-image:1.2.3
+
+tasks:
+  my-task:
+    run:
+      container: my-container
+```
+
+Reference: [`include`](config/includes.md)
+
 ### Reference a bundle
+
+```yaml
+include:
+  - type: git
+    repo: https://github.com/batect/hello-world-bundle.git
+    ref: 0.2.0
+```
+
+Reference: [`include`](config/includes.md)
 
 ## Networking
 
