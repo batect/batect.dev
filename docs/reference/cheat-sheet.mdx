@@ -136,7 +136,7 @@ Reference: [`dockerfile`](config/containers.md#dockerfile)
 
 ```yaml title="batect.yml"
 tasks:
-  say-hello:
+  my-task:
     run:
       container: my-container
 ```
@@ -147,8 +147,7 @@ Reference: [`tasks`](config/tasks.md)
 
 ```yaml title="batect.yml"
 tasks:
-  say-hello:
-    description: Say hello to the nice person reading the Batect documentation
+  my-task:
     run:
       container: my-container
       command: echo 'Hello there!'
@@ -160,8 +159,7 @@ Reference: [`command`](config/tasks.md#command)
 
 ```yaml title="batect.yml"
 tasks:
-  say-hello:
-    description: Say hello to the nice person reading the Batect documentation
+  my-task:
     run:
       container: my-container
       working_directory: /some/other/directory
@@ -173,8 +171,7 @@ Reference: [`working_directory`](config/tasks.md#working_directory)
 
 ```yaml title="batect.yml"
 tasks:
-  say-hello:
-    description: Say hello to the nice person reading the Batect documentation
+  my-task:
     run:
       container: my-container
       environment:
@@ -187,8 +184,7 @@ Reference: [`environment`](config/tasks.md#environment)
 
 ```yaml title="batect.yml"
 tasks:
-  say-hello:
-    description: Say hello to the nice person reading the Batect documentation
+  my-task:
     run:
       container: my-container
       ports:
@@ -204,17 +200,172 @@ Reference: [`ports`](config/tasks.md#ports)
 
 #### Require one container to start before another (create a dependency)
 
+This can be configured in two ways: on the container, or on a per-task basis.
+
+To specify that a container must always start before another container:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    dependencies:
+      - other-container
+```
+
+To specify that a container must start before the main task container for a single task:
+
+```yaml title="batect.yml"
+tasks:
+  my-task:
+    run:
+      container: my-container
+    dependencies:
+      - other-container
+```
+
+Reference: container: [`dependencies`](config/containers.md#dependencies), task: [`dependencies`](config/tasks.md#dependencies)
+
 #### Wait for a container to be ready to accept requests before starting containers that depend on it
+
+Batect will automatically use a health check defined in the container's image's Dockerfile:
+
+```dockerfile title="Dockerfile"
+FROM my-image:1.2.3
+
+HEALTHCHECK --interval=2s --retries=10 CMD /tools/health-check.sh
+```
+
+Alternatively, specify the health check settings on the container:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    health_check:
+      command: /tools/health-check.sh
+      retries: 10
+      interval: 2s
+```
+
+The `command` must exit with a non-zero exit code when the container is not ready, and exit with a zero exit code when the container is ready.
+
+Reference: [`HEALTHCHECK`](https://docs.docker.com/engine/reference/builder/#healthcheck), [`health_check`](config/containers.md#health_check)
 
 #### Run a command in a container before starting containers that depend on it
 
+```yaml title="batect.yml"
+containers:
+  my-container:
+    # ...other config
+    setup_commands:
+      - command: /tools/setup.sh
+```
+
+Reference: [`setup_commands`](config/containers.md#setup_commands)
+
 #### Customise the environment variables of a dependency container
+
+```yaml title="batect.yml"
+tasks:
+  my-task:
+    dependencies:
+      - other-container
+    run:
+      container: my-container
+    customise:
+      other-container:
+        environment:
+          OVERRIDDEN_VAR: overridden value from task
+          NEW_VAR: new value from task
+
+containers:
+  main-container:
+    image: ...
+
+  other-container:
+    image: ...
+    environment:
+      CONTAINER_VAR: set on container
+      OVERRIDDEN_VAR: won't be used
+```
+
+When the task `my-task` is run, `other-container` will start with the environment variables:
+
+- `CONTAINER_VAR`: `set on container`
+- `OVERRIDDEN_VAR`: `overridden value from task`
+- `NEW_VAR`: `new value from task`
+
+Reference: [`customise`](config/tasks.md#customise)
 
 #### Expose additional ports on a dependency container
 
+```yaml title="batect.yml"
+tasks:
+  my-task:
+    dependencies:
+      - other-container
+    run:
+      container: my-container
+    customise:
+      other-container:
+        ports:
+          - 3000:4000
+
+containers:
+  main-container:
+    image: ...
+
+  other-container:
+    image: ...
+    ports:
+      - 1000:2000
+```
+
+When the task `my-task` is run, `other-container` will start with container ports `2000` and `4000` exposed as ports `1000` and `3000` on the host machine.
+
+Reference: [`customise`](config/tasks.md#customise)
+
 #### Customise the working directory of a dependency container
 
+```yaml title="batect.yml"
+tasks:
+  my-task:
+    dependencies:
+      - other-container
+    run:
+      container: my-container
+    customise:
+      other-container:
+        working_directory: /customised
+
+containers:
+  main-container:
+    image: ...
+
+  other-container:
+    image: ...
+    working_directory: /wont-be-used
+```
+
+When the task `my-task` is run, `other-container` will in `/customised`.
+
+Reference: [`customise`](config/tasks.md#customise)
+
 ### Require one task to run to completion before another (create a prerequisite)
+
+```yaml title="batect.yml"
+tasks:
+  my-task:
+    prerequisites:
+      - my-other-task
+    run:
+      container: my-container
+
+  my-other-task:
+    # ...config for task
+```
+
+Reference: [`prerequisites`](config/tasks.md#prerequisites)
 
 ## Caching
 

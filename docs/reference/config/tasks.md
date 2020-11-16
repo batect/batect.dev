@@ -195,7 +195,7 @@ containers:
 tasks:
   build:
     dependencies:
-      - dependency
+      - container-a
     run:
       container: build-env
     customise:
