@@ -14,7 +14,12 @@ interface FeatureDetails {
 const features: FeatureDetails[] = [
   {
     title: "Fast",
-    description: <>Tasks start quickly due to parallelisation and run quickly thanks to caching. We&rsquo;ve seen 17% quicker execution than Docker Compose.</>,
+    description: (
+      <>
+        Tasks start quickly due to <a href="/docs/concepts/task-lifecycle">parallelisation</a> and run quickly thanks to{" "}
+        <a href="/docs/concepts/caches">caching</a>. We&rsquo;ve seen 17% quicker execution than Docker Compose.
+      </>
+    ),
   },
   {
     title: "Consistent",
@@ -28,7 +33,12 @@ const features: FeatureDetails[] = [
   },
   {
     title: "Reusable",
-    description: <>Share tasks between projects with bundles. And use existing bundles to get up and running quickly.</>,
+    description: (
+      <>
+        Share tasks between projects with <a href="/docs/concepts/includes-and-bundles">bundles</a>. And use <a href="/bundles">existing bundles</a> to get up
+        and running quickly.
+      </>
+    ),
   },
   {
     title: "Automated",
@@ -38,7 +48,7 @@ const features: FeatureDetails[] = [
     title: "Simple",
     description: (
       <>
-        No installation required, just drop the script in your project and run <code>./batect</code>.
+        No installation required, just <a href="/docs/getting-started/installation">drop the script in your project</a> and run <code>./batect</code>.
       </>
     ),
   },
