@@ -2,6 +2,9 @@ const path = require("path");
 const copyright = `Copyright © 2017-${new Date().getFullYear()} Charles Korn.`;
 const url = process.env["SITE_URL"] || "https://batect.dev";
 
+const plugins = ["asciinema-player", "yaml-loader"];
+const pluginPaths = plugins.map((plugin) => path.resolve(__dirname, `src/plugins/${plugin}`));
+
 module.exports = {
   title: "Batect",
   url: url,
@@ -116,5 +119,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [path.resolve(__dirname, "src/plugins/asciinema-player")],
+  plugins: pluginPaths,
 };

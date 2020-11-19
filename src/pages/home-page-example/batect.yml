@@ -1,0 +1,10 @@
+containers:
+  my-container:
+    image: alpine:3.12.1
+
+tasks:
+  say-hello:
+    description: Say hello to everyone
+    run:
+      container: my-container
+      command: echo 'Hello world!'
