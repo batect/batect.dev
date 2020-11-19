@@ -62,12 +62,8 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Getting started",
-              to: "/docs/getting-started",
-            },
-            {
               label: "Config file reference",
-              to: "/docs/reference/config-file",
+              to: "/docs/reference/config",
             },
             {
               label: "CLI reference",
