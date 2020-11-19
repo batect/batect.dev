@@ -60,6 +60,24 @@ module.exports = {
       links: [
         {
           title: "Docs",
+          items: [
+            {
+              label: "Getting started",
+              to: "/docs/getting-started",
+            },
+            {
+              label: "Config file reference",
+              to: "/docs/reference/config-file",
+            },
+            {
+              label: "CLI reference",
+              to: "/docs/reference/cli",
+            },
+            {
+              label: "Cheat sheet",
+              to: "/docs/reference/cheat-sheet",
+            },
+          ],
         },
         {
           title: "Community",
