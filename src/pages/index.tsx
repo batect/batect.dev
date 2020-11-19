@@ -57,13 +57,13 @@ function Home() {
     },
     {
       title: "Automated",
-      description: <>Free your team from manual setup and maintenance of tools and dependencies: everyone automatically uses the same configuration.</>,
+      description: <>Free your team from manual setup and maintenance of tools and dependencies: orchestrate integration tests with a single command.</>,
     },
     {
       title: "Simple",
       description: (
         <>
-          No installation required, just <Link to={useBaseUrl("/docs/getting-started/installation")}>drop the script in your project</Link> and run{" "}
+          No installation required. Just <Link to={useBaseUrl("/docs/getting-started/installation")}>drop the script in your project</Link> and run{" "}
           <code>./batect</code>.
         </>
       ),
@@ -98,7 +98,7 @@ function Home() {
 
         <section className={styles.example}>
           <div className="container">
-            <h2>Hello world in 60 seconds</h2>
+            <h2>Hello world in less than 30 seconds</h2>
             <div className="row">
               <div className="col col--6">
                 <CodeBlock className="language-yaml" metastring='title="batect.yml"'>
@@ -106,7 +106,7 @@ function Home() {
                 </CodeBlock>
               </div>
               <div className="col col--6">
-                <AsciinemaPlayer src={require("./home-page-example/recording.cast").default} width={200} height={20} preload={true} poster="npt:24" />
+                <AsciinemaPlayer src={require("./home-page-example/recording.cast").default} width={200} height={19} preload={true} poster="npt:24" />
               </div>
             </div>
           </div>
