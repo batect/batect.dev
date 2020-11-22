@@ -48,7 +48,7 @@ jobs:
 
       - name: Deploy
         run: ./batect deploy
-        if: github.event_name == 'push' && github.repository == 'batect/batect'
+        if: github.event_name == 'push' && github.repository == 'batect/batect.dev'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEPLOY_DESCRIPTION: "Deploy commit ${{ github.sha }} from GitHub Actions"
