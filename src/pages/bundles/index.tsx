@@ -66,7 +66,7 @@ const bundles: Bundle[] = [
 const OfficialBadge = () => <span className="badge badge--success">Official</span>;
 
 const BundleDisplay = (bundle: Bundle) => (
-  <div className="col col--3">
+  <div className={clsx("col col--3", styles.bundleCardContainer)}>
     <div className={clsx("card shadow--md", styles.bundleCard)}>
       <div className="card__header">
         <h3>{bundle.name}</h3>
