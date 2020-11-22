@@ -3,6 +3,7 @@ const sidebar = [
     type: "category",
     label: "Getting started",
     items: [
+      "getting-started/introduction",
       "getting-started/hello-world",
       "getting-started/requirements",
       "getting-started/installation",

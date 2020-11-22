@@ -1,5 +1,4 @@
 ---
-slug: /
 title: Hello world
 ---
 
