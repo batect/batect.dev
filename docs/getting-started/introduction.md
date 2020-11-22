@@ -10,9 +10,9 @@ Docker containers, run those tasks quickly and consistently everywhere, and easi
 
 ## What is Batect not?
 
-* a build tool - instead, use your chosen language's existing tooling (eg. Gradle, Rake, CMake or Cargo) from within a Batect task
-* a deployment tool - instead, use your target environment's existing tooling (eg. kubectl) from within a Batect task
-* a CI tool - instead, use your existing CI tool and have it run Batect
+- a build tool - instead, use your chosen language's existing tooling (eg. Gradle, Rake, CMake or Cargo) from within a Batect task
+- a deployment tool - instead, use your target environment's existing tooling (eg. kubectl) from within a Batect task
+- a CI tool - instead, use your existing CI tool and have it run Batect
 
 ## Why would I use Batect?
 
@@ -36,16 +36,16 @@ number of variables that lead to a huge amount of wasted time spent debugging is
 
 Batect helps solve these problems by:
 
-* allowing you to entirely automate the setup of your build and testing environments
-* storing this automation alongside your application code, so that it is versioned and updated just like any other part of
+- allowing you to entirely automate the setup of your build and testing environments
+- storing this automation alongside your application code, so that it is versioned and updated just like any other part of
   your application
-* ensuring that every single command invocation starts with a completely fresh environment based on your configuration file,
+- ensuring that every single command invocation starts with a completely fresh environment based on your configuration file,
   making it impossible to get out-of-sync from the desired state
-* providing an easy mechanism for developers to discover what tasks are available: `./batect --list-tasks`
-* making use of Docker to do all of this in an isolated and low-overhead way
-* using some smart dependency management logic, parallelism and Docker's caching features to do all of this very, very quickly
-* taking advantage of Docker's networking features to set up an isolated network for every command
-* enabling you to use existing Docker images as-is (or easily use custom Dockerfiles) to quickly get up and running
+- providing an easy mechanism for developers to discover what tasks are available: `./batect --list-tasks`
+- making use of Docker to do all of this in an isolated and low-overhead way
+- using some smart dependency management logic, parallelism and Docker's caching features to do all of this very, very quickly
+- taking advantage of Docker's networking features to set up an isolated network for every command
+- enabling you to use existing Docker images as-is (or easily use custom Dockerfiles) to quickly get up and running
 
 ## Where does the name come from?
 
