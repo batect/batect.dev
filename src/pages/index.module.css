@@ -4,7 +4,8 @@
   overflow: hidden;
 }
 
-.features, .example {
+.features,
+.example {
   display: flex;
   align-items: center;
   padding: 2rem 0;
@@ -20,7 +21,8 @@
     padding: 2rem;
   }
 
-  .features, .example {
+  .features,
+  .example {
     padding-left: 2rem;
     padding-right: 2rem;
   }
