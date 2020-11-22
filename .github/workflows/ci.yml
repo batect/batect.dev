@@ -45,3 +45,10 @@ jobs:
 
       - name: Check for broken links
         run: ./batect check-links
+
+      - name: Deploy
+        run: ./batect deploy
+        if: github.event_name == 'push' && github.repository == 'batect/batect'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          DEPLOY_DESCRIPTION: "Deploy commit ${{ github.sha }} from GitHub Actions"

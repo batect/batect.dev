@@ -95,6 +95,16 @@ tasks:
       container: linkcheck
       command: linkcheck --external http://docs-server --skip-file /linkcheck-ignore.txt
 
+  deploy:
+    description: Deploy the site.
+    group: Deployment tasks
+    run:
+      container: node-build-env
+      command: sh -c './node_modules/.bin/netlify deploy --prod --message "$DEPLOY_DESCRIPTION"'
+      environment:
+        NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
+        DEPLOY_DESCRIPTION: $DEPLOY_DESCRIPTION
+
 include:
   - type: git
     repo: https://github.com/batect/node-bundle.git

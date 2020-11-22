@@ -1,6 +1,6 @@
 [build]
   publish = "build/"
-  command = "yarn ci"
+  command = "echo 'Netlify is not used to deploy this site' && exit 1"
 
 [[headers]]
   for = "/*"
