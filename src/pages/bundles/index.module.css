@@ -1,0 +1,18 @@
+.bundles {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.bundleCard {
+  margin-bottom: 1rem;
+}
+
+.legend {
+  margin-bottom: 1rem;
+}
+
+.toolInfoButton {
+  margin-top: calc(0.5 * var(--ifm-card-vertical-spacing));
+}
