@@ -70,9 +70,46 @@ There are also a number of third-party add-ons that can block Google Analytics o
 Send a request to [privacy@batect.dev](mailto:privacy@batect.dev). Your data will be deleted using the Google Analytics
 [User Deletion API](https://developers.google.com/analytics/devguides/config/userdeletion/v3) within 14 days.
 
+## Documentation site error reporting
+
+This documentation site ([batect.dev](https://batect.dev)) collects anonymous error information using [Report URI](https://report-uri.com).
+
+### What data is collected
+
+Report URI is used to collect information about [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP#Enabling_reporting),
+[Certificate Transparency (CT)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT) and
+[Network Error Logging (NEL)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging) related errors,
+as well as warnings captured through [the Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi).
+
+Depending on the nature of the issue, all or some of the following data is collected:
+
+- the page you were viewing when the issue was detected
+- the nature of the issue (eg. CSP violation)
+- additional diagnostic information related to the problem (eg. what kind of CSP violation occurred and where in the page it occurred)
+- the date and time the issue was encountered
+- technical information such as the browser version and operating system version
+
+Personally identifiable information is not collected. Information such as IP addresses may be captured by Report URI for their diagnostic purposes,
+but it is not linked to the error reports produced by Report URI.
+
+### How and why the data is used
+
+The data is used to identify issues with the site, including configuration errors or other issues that may prevent users from accessing the site or
+using its functionality.
+
+Only the primary maintainer of Batect, [Charles Korn](https://github.com/charleskorn) has access to the Report URI console for this site.
+
+### How to opt-out
+
+This data collection is managed by your browser, and can be disabled in your browser's settings.
+
+### How to request for your data to be deleted
+
+As your data is not linked to users in any way, it is not possible to delete data for a single user.
+
 ## Documentation site hosting
 
-This documentation site ([batect.dev](https://batect.dev)) is hosted using GitHub Pages and Cloudflare. Both of these services collect data
+This documentation site ([batect.dev](https://batect.dev)) is hosted using Netlify and Cloudflare. Both of these services collect data
 to enable them to operate their services, and their respective privacy policies apply to this data.
 
 ## In-app update notifications
