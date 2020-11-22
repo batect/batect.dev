@@ -1,0 +1,47 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-20.04
+    env:
+      TERM: xterm-256color
+      BATECT_CACHE_TYPE: directory
+      BATECT_ENABLE_TELEMETRY: true
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2.3.4
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Cache batect
+        uses: actions/cache@v2
+        with:
+          path: ~/.batect/cache
+          key: batect-${{ hashFiles('batect') }}
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: .batect/caches
+          key: batect-caches-${{ hashFiles('yarn.lock') }-${{ hashFiles('batect.yml') }
+
+      - name: Download dependencies
+        run: ./batect setup
+
+      - name: Build
+        run: ./batect build
+
+      - name: Check formatting
+        run: ./batect check-format
+
+      - name: Check for linting issues
+        run: ./batect lint
+
+      - name: Check for broken links
+        run: ./batect check-links
