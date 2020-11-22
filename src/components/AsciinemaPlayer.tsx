@@ -1,6 +1,7 @@
 import React, { Component, Ref } from "react";
 import paths from "../plugins/asciinema-player/paths";
 import useScript from "../utils/useScript";
+import styles from "./AsciinemaPlayer.module.css";
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 declare namespace asciinema {
@@ -56,9 +57,9 @@ const AsciinemaPlayerWrapper = (props: AsciinemaPlayerProps) => {
     case "ready":
       return <AsciinemaPlayer {...props} />;
     case "loading":
-      return <div>Loading...</div>;
+      return <div className={styles.loading}>Loading...</div>;
     case "error":
-      return <div>Loading player failed.</div>;
+      return <div className={styles.loading}>Loading player failed.</div>;
     default:
       throw new Error(`Unknown script status: ${status}`);
   }
