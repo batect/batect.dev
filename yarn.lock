@@ -1363,7 +1363,7 @@
     "@francoischalifour/autocomplete-preset-algolia" "^1.0.0-alpha.28"
     algoliasearch "^4.0.0"
 
-"@docusaurus/core@2.0.0-alpha.68":
+"@docusaurus/core@2.0.0-alpha.68", "@docusaurus/core@^2.0.0-alpha.68":
   version "2.0.0-alpha.68"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-alpha.68.tgz#7773c43dfd5b92ee97e3221b0062ba17197bff88"
   integrity sha512-zh6zca9sAISK6sAJprOQMFmWZU3UVQLohcvO65KaueWoV5B0L1sxVUz4F/zcmVzbiNwCJzqK7QGT2zOD1BBY2w==
@@ -1585,7 +1585,7 @@
     joi "^17.2.1"
     sitemap "^3.2.2"
 
-"@docusaurus/preset-classic@2.0.0-alpha.68":
+"@docusaurus/preset-classic@^2.0.0-alpha.68":
   version "2.0.0-alpha.68"
   resolved "https://registry.yarnpkg.com/@docusaurus/preset-classic/-/preset-classic-2.0.0-alpha.68.tgz#1c807f648c2ac3efc8ff06326074097a06fe7b5a"
   integrity sha512-Sf5rRh9HSW5ANsy0HuZbzVxJgec6WqnEIdhqU/1x3H13cLRCl4N5KMZn/8EWzzy11ynFeJ9y88nM/2Eh8bcitg==
@@ -8700,10 +8700,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
-  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+prettier@^2.1.2:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
+  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
 
 pretty-error@^2.1.1:
   version "2.1.2"
