@@ -22,6 +22,7 @@ plugins:
 
 rules:
   "@typescript-eslint/explicit-module-boundary-types": "off"
+  "@typescript-eslint/no-var-requires": "off"
 
 settings:
   react:
@@ -33,7 +34,3 @@ overrides:
       node: true
       browser: false
       es2021: false
-
-  - files: ["docusaurus.config.js", "src/plugins/**/*.js"]
-    rules:
-      "@typescript-eslint/no-var-requires": "off"
