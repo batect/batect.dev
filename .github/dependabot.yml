@@ -8,3 +8,8 @@ updates:
       interval: daily
     directory: /
     open-pull-requests-limit: 10
+  - package-ecosystem: github-actions
+    schedule:
+      interval: daily
+    directory: /
+    open-pull-requests-limit: 10
