@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Zilla+Slab&family=Source+Code+Pro:ital@0;1&display=swap");
 
 :root {
-  --ifm-color-primary: #7aa000;
-  --ifm-color-primary-dark: #6e9000;
-  --ifm-color-primary-darker: #688800;
-  --ifm-color-primary-darkest: #557000;
-  --ifm-color-primary-light: #86b000;
-  --ifm-color-primary-lighter: #8cb800;
-  --ifm-color-primary-lightest: #9fd000;
+  --ifm-color-primary: #89b400;
+  --ifm-color-primary-dark: #7ba200;
+  --ifm-color-primary-darker: #749900;
+  --ifm-color-primary-darkest: #607e00;
+  --ifm-color-primary-light: #97c600;
+  --ifm-color-primary-lighter: #9ecf00;
+  --ifm-color-primary-lightest: #b2ea00;
   --ifm-link-color: #628000;
 
   --ifm-font-family-base: Lato, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

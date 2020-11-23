@@ -10,7 +10,7 @@ module.exports = {
   url: url,
   baseUrl: "/",
   onBrokenLinks: "throw",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
   organizationName: "batect",
   projectName: "batect.dev",
   themeConfig: {
@@ -19,9 +19,9 @@ module.exports = {
     },
     sidebarCollapsible: false,
     navbar: {
-      title: "Batect",
+      title: "", // The site title is embedded in the logo.
       logo: {
-        alt: "My Site Logo",
+        alt: "Batect",
         src: "img/logo.svg",
       },
       items: [
