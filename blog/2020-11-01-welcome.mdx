@@ -9,6 +9,8 @@ tags: [website, docs]
 draft: true
 ---
 
+import Logo from "../static/img/logo.svg";
+
 Welcome to the (long-overdue) refreshed [batect.dev](https://batect.dev). This site has been reimagined from the ground up to
 better serve you. Some of the most exciting changes include:
 
@@ -28,13 +30,10 @@ As always, I'm keen to hear your feedback on these changes. Please [open an issu
 
 Batect now has a shiny new logo:
 
-TODO: logo here
+<Logo style={{"margin": "1rem auto", "display": "block"}} />
 
-I'm always a bit skeptical when an organisation launches a new logo and tries to explain how it fits in with how they see themselves.
-"This amorphous blob represents the synergy and strength of our people and products"... blergh.
-
-I'm not going to do that. Instead, I'll point out the none-too-subtle meanings of the rocket (speed), windows (launching developers to
-greater heights) and containers (~~synergy~~ containers).
+Much like Batect itself, I've tried to keep it simple. (You'll be pleased to hear I discarded ideas including a dolphin juggling containers
+on a unicycle and a rocket with a bunch of containers strapped to the side.)
 
 Oh, and you'll notice that I've embraced the capital letter: the 'official' spelling is now Batect, not batect. The lowercase letter
 always felt awkward, and others writing about Batect seemed to use the lowercase spelling only around 50% of the time. So, rather than try to fight
@@ -56,11 +55,11 @@ longer pages.
 
 The documentation has been reorganised to better address the needs of different groups of users:
 
-- "I'm new here, show me what Batect is and why I care": quick hello world example and sample projects
-- "Help me get up and running with Batect": deeper getting started tutorial and installation instructions, as well as conceptual explanations
-- "What's the name of the configuration option to do X?": configuration file and CLI reference
+- "I'm new here, show me what Batect is and why I care": quick [hello world example](/docs/getting-started/hello-world) and [sample projects](/docs/getting-started/sample-projects)
+- "Help me get up and running with Batect": deeper [getting started tutorial](/docs/getting-started/tutorial) and [installation instructions](/docs/getting-started/introduction), as well as conceptual explanations
+- "What's the name of the configuration option to do X?": [configuration file](/docs/reference/config) and [CLI reference](/docs/reference/cli), as well as a [cheat sheet](/docs/reference/cheat-sheet)
 - "I'm trying to use Batect with Y, what's the best way to set that up?": guides for using Batect with different tools and ecosystems
-- "I've got a problem": specific guidance for common issues and how to solve them
+- "I've got a problem": specific how-to guides for common issues and how to solve them
 
 On top of this reorganisation, each page has been reviewed, updated and clarified, and diagrams have been added in places to aid explanations.
 
@@ -91,3 +90,8 @@ tutorials or ideas and make announcements. I'm looking forward to being able to 
 Batect is no longer just a small project used by a single team - it now has hundreds of users all around the globe. These users (you!) recommend Batect
 to their friends and colleagues, but the old home page that greeted them was a huge wall of text that didn't do a great job of highlighting Batect's
 best features to those who haven't used it. The new home page is much simpler and gets to the point.
+
+## In closing
+
+I'm always working to make Batect easier to use and great documentation is a key part of that. If you run into any issues with the new site
+or have any recommendations on how to improve it, please don't hesitate to let me know.
