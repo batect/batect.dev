@@ -76,7 +76,8 @@ function Home() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">
-            The <strong>fast</strong>, <strong>consistent</strong> way to run your development and testing tasks <strong>everywhere</strong>.
+            Keep your builds green and developers happy with the <strong>fast</strong>, <strong>consistent</strong> way to run your development and testing
+            tasks <strong>everywhere</strong>.
           </p>
           <div className={styles.buttons}>
             <Link className={clsx("button button--secondary button--lg", styles.getStarted)} to={useBaseUrl("docs/")}>
