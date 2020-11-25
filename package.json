@@ -30,7 +30,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.68",
+    "@docusaurus/module-type-aliases": "^2.0.0-alpha.69",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^17.0.0",
     "@types/react-helmet": "^6.1.0",
