@@ -106,6 +106,10 @@ module.exports = {
     googleAnalytics: {
       trackingID: "UA-63947227-2",
     },
+    algolia: {
+      apiKey: "041dbc371e946a12ac2bab6efb07d9bd",
+      indexName: "batect",
+    },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       additionalLanguages: ["bash", "docker"],
