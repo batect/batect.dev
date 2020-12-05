@@ -35,11 +35,11 @@ to = "/docs/using-batect-with/tools/nodejs"
 
 [[redirects]]
 from = "/tools/Buildkite.html"
-to = "/docs/using-batect-with/ci/buildkit"
+to = "/docs/using-batect-with/ci/buildkite"
 
 [[redirects]]
 from = "/tools/CIGeneral.html"
-to = "/docs/using-batect-with/ci"
+to = "/docs/using-batect-with/ci/general"
 
 [[redirects]]
 from = "/tools/CircleCI.html"
@@ -71,11 +71,11 @@ to = "/docs/using-batect-with/tools/net-core"
 
 [[redirects]]
 from = "/Comparison.html"
-to = "/docs/comparison"
+to = "/docs/getting-started/comparison"
 
 [[redirects]]
 from = "/Setup.html"
-to = "/docs/installation"
+to = "/docs/getting-started/installation"
 
 [[redirects]]
 from = "/config/Overview.html"

@@ -15,6 +15,13 @@ containers:
         container: /usr/share/nginx/html
         options: ro
 
+  redirect-check:
+    build_directory: .batect/redirect-check
+    volumes:
+      - local: .
+        container: /code
+        options: ro
+
 tasks:
   setup:
     description: Install dependencies.
@@ -104,6 +111,17 @@ tasks:
       environment:
         NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
         DEPLOY_DESCRIPTION: $DEPLOY_DESCRIPTION
+
+  check-redirects:
+    description: Check the site for broken redirects.
+    group: Testing tasks
+    prerequisites:
+      - build-linkcheck
+    dependencies:
+      - docs-server
+    run:
+      container: redirect-check
+      command: /scripts/redirect-check.py http://docs-server /code/netlify.toml
 
 include:
   - type: git
