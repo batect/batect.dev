@@ -15,12 +15,12 @@
     "fixFormat": "prettier --write ."
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.68",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.69",
-    "@mdx-js/react": "^1.6.22",
-    "clsx": "^1.1.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "@docusaurus/core": "2.0.0-alpha.69",
+    "@docusaurus/preset-classic": "2.0.0-alpha.69",
+    "@mdx-js/react": "1.6.22",
+    "clsx": "1.1.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "browserslist": [
     ">0.2%",
@@ -28,22 +28,22 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.69",
-    "@tsconfig/docusaurus": "^1.0.2",
-    "@types/react": "^17.0.0",
-    "@types/react-helmet": "^6.1.0",
-    "@types/react-router-dom": "^5.1.6",
-    "@typescript-eslint/eslint-plugin": "^4.9.0",
-    "@typescript-eslint/parser": "^4.9.0",
-    "editorconfig-checker": "^3.3.0",
-    "eslint": "^7.12.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "netlify-cli": "^2.69.0",
-    "prettier": "^2.2.1",
-    "raw-loader": "^4.0.2",
-    "typescript": "^4.0.5"
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.69",
+    "@tsconfig/docusaurus": "1.0.2",
+    "@types/react": "17.0.0",
+    "@types/react-helmet": "6.1.0",
+    "@types/react-router-dom": "5.1.6",
+    "@typescript-eslint/eslint-plugin": "4.9.0",
+    "@typescript-eslint/parser": "4.9.0",
+    "editorconfig-checker": "3.3.0",
+    "eslint": "7.14.0",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "netlify-cli": "2.69.0",
+    "prettier": "2.2.1",
+    "raw-loader": "4.0.2",
+    "typescript": "4.1.2"
   }
 }
