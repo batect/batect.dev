@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "config:base",
-    ":prHourlyLimitNone",
-    ":prConcurrentLimitNone"
-  ],
-  "reviewers": [
-    "charleskorn"
-  ],
+  "extends": ["config:base", ":prHourlyLimitNone", ":prConcurrentLimitNone"],
+  "reviewers": ["charleskorn"],
   "automerge": false,
   "labels": ["is:dependency-update"],
   "rebaseWhen": "behind-base-branch"
