@@ -759,6 +759,7 @@ Many of the fields above have equivalent options in other tools.
 | [`health_check.interval`](#interval)                                    | `--health-interval` to `docker run`                    |
 | [`health_check.retries`](#retries)                                      | `--health-retries` to `docker run`                     |
 | [`health_check.start_period`](#start_period)                            | `--health-start-period` to `docker run`                |
+| [`health_check.timeout`](#timeout)                                      | `--health-timeout` to `docker run`                     |
 | [`image`](#image)                                                       | argument to `docker run`                               |
 | [`image_pull_policy`](#image_pull_policy)                               | `--pull` to `docker build` or re-running `docker pull` |
 | [`log_driver`](#log_driver)                                             | `--log-driver` to `docker run`                         |
@@ -791,6 +792,7 @@ Many of the fields above have equivalent options in other tools.
 | [`health_check.interval`](#interval)                                    | `healthcheck.interval`           |
 | [`health_check.retries`](#retries)                                      | `healthcheck.retries`            |
 | [`health_check.start_period`](#start_period)                            | `healthcheck.start_period`       |
+| [`health_check.timeout`](#timeout)                                      | `healthcheck.timeout`            |
 | [`image`](#image)                                                       | `image`                          |
 | [`image_pull_policy`](#image_pull_policy)                               | (none)                           |
 | [`log_driver`](#log_driver)                                             | `logging.driver`                 |
