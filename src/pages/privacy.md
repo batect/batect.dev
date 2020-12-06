@@ -10,9 +10,11 @@ This privacy policy details the data that is collected when you interact with Ba
 ## General principles
 
 As an open source project, the Batect project does not have the resources to run detailed user studies to understand best how to design features or
-prioritise work, and instead relies on community feedback and data. We collect data only for the purpose of understanding how Batect and its related
-services are used, maintaining Batect and its related services, monitoring the security and performance of its related services, and improving Batect
-and its related services.
+prioritise work, and instead relies on community feedback and data. We collect data only for the purpose of:
+
+- understanding how the Batect application and its related services ("Batect") are used
+- maintaining and improving Batect
+- monitoring the security, availability and performance of Batect
 
 Data is not:
 
@@ -110,7 +112,12 @@ As your data is not linked to users in any way, it is not possible to delete dat
 ## Documentation site hosting
 
 This documentation site ([batect.dev](https://batect.dev)) is hosted using Netlify and Cloudflare. Both of these services collect data
-to enable them to operate their services, and their respective privacy policies apply to this data.
+to enable them to operate and improve their services, and their respective privacy policies apply to this data.
+
+## Documentation site search
+
+This documentation site ([batect.dev](https://batect.dev)) uses Algolia DocSearch to provide search functionality. Algolia collects data
+to enable them to operate and improve their services, and [their privacy policy](https://www.algolia.com/policies/privacy/) applies to this data.
 
 ## In-app update notifications
 
