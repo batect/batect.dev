@@ -31,40 +31,44 @@ function Home() {
       title: "Fast",
       description: (
         <>
-          Tasks start quickly due to <Link to={useBaseUrl("/docs/concepts/task-lifecycle")}>parallelisation</Link> and run quickly thanks to{" "}
-          <Link to={useBaseUrl("/docs/concepts/caches")}>caching</Link>. We&rsquo;ve seen 17% quicker execution than Docker Compose.
+          <p>
+            Tasks are fast to start due to <Link to={useBaseUrl("/docs/concepts/task-lifecycle")}>parallelisation</Link> and fast to run thanks to{" "}
+            <Link to={useBaseUrl("/docs/concepts/caches")}>caching</Link>. We&rsquo;ve seen 17% quicker execution than Docker Compose.
+          </p>
+          <p>
+            Save time and share tasks between projects with <Link to={useBaseUrl("/docs/concepts/includes-and-bundles")}>bundles</Link>, and use{" "}
+            <Link to={useBaseUrl("/bundles")}>existing bundles</Link> to get up and running quickly.
+          </p>
         </>
       ),
     },
     {
       title: "Consistent",
-      description: <>Batect uses Docker to create a clean, isolated environment every time you run a task. No more &ldquo;works on my machine&rdquo;.</>,
-    },
-    {
-      title: "Everywhere",
-      description: (
-        <>Your machine, your colleagues&rsquo; machines and CI: everyone runs exactly the same thing, every time. Works on macOS, Linux and even Windows.</>
-      ),
-    },
-    {
-      title: "Reusable",
       description: (
         <>
-          Share tasks between projects with <Link to={useBaseUrl("/docs/concepts/includes-and-bundles")}>bundles</Link>. And use{" "}
-          <Link to={useBaseUrl("/bundles")}>existing bundles</Link> to get up and running quickly.
+          <p>
+            Free yourself from manual setup and maintenance of tools and dependencies: run builds and integration tests with a single command whether it&rsquo;s
+            the first time you&rsquo;re using the project or the fiftieth.
+          </p>
+          <p>
+            And because Batect uses Docker to create a clean, isolated environment{" "}
+            <Link to={useBaseUrl("/docs/concepts/task-lifecycle")}>every time you run a task</Link>, there&rsquo;s no more &ldquo;works on my machine&rdquo;.
+          </p>
         </>
       ),
     },
     {
-      title: "Automated",
-      description: <>Free your team from manual setup and maintenance of tools and dependencies: orchestrate integration tests with a single command.</>,
-    },
-    {
-      title: "Simple",
+      title: "Everywhere",
       description: (
         <>
-          No installation required. Just <Link to={useBaseUrl("/docs/getting-started/installation")}>drop the script in your project</Link> and run{" "}
-          <code>./batect</code>.
+          <p>
+            Your machine, your colleagues&rsquo; machines and CI: everyone runs exactly the same thing, every time. Works on{" "}
+            <Link to={useBaseUrl("/docs/getting-started/requirements")}>macOS, Linux and even Windows.</Link>
+          </p>
+          <p>
+            No installation required. Just <Link to={useBaseUrl("/docs/getting-started/installation")}>drop the script in your project</Link> and run{" "}
+            <code>./batect</code>.
+          </p>
         </>
       ),
     },
