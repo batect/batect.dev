@@ -50,3 +50,7 @@ Batect helps solve these problems by:
 ## Where does the name come from?
 
 Batect is an acronym: **B**uild **a**nd **t**esting **e**nvironments as **c**ode **t**ool
+
+## How do I pronounce 'Batect'?
+
+'Batect' rhymes with 'protect'.
