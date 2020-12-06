@@ -143,6 +143,9 @@ function Home() {
                 <div className={styles.seeMoreLink}>
                   <Link to="https://github.com/batect/batect-sample-ruby">See the full sample project and try it for yourself &rarr;</Link>
                 </div>
+                <div className={styles.seeMoreLink}>
+                  <Link to={useBaseUrl("/docs/getting-started/sample-projects")}>Explore all sample projects &rarr;</Link>
+                </div>
               </div>
             </div>
           </div>
