@@ -31,3 +31,7 @@
 .buttons {
   display: flex;
 }
+
+.seeMoreLink {
+  margin-top: 10px;
+}

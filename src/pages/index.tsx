@@ -6,7 +6,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./index.module.css";
-import exampleYaml from "./home-page-example/batect.yml";
+import helloWorldExampleYaml from "./home-page-examples/hello-world/batect.yml";
 import AsciinemaPlayer from "../components/AsciinemaPlayer";
 
 interface FeatureDetails {
@@ -107,11 +107,42 @@ function Home() {
             <div className="row">
               <div className="col col--6">
                 <CodeBlock className="language-yaml" metastring='title="batect.yml"'>
-                  {exampleYaml}
+                  {helloWorldExampleYaml}
                 </CodeBlock>
               </div>
               <div className="col col--6">
-                <AsciinemaPlayer src={require("./home-page-example/recording.cast").default} width={200} height={19} preload={true} poster="npt:24" />
+                <AsciinemaPlayer
+                  src={require("./home-page-examples/hello-world/recording.cast").default}
+                  width={200}
+                  height={19}
+                  preload={true}
+                  poster="npt:24"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.example}>
+          <div className="container">
+            <h2>Local integration testing in less than 30 seconds</h2>
+            <div className="row">
+              <div className="col col--6">
+                <AsciinemaPlayer
+                  src={require("./home-page-examples/integration-testing/recording.cast").default}
+                  width={200}
+                  height={19}
+                  preload={true}
+                  poster="npt:8"
+                />
+              </div>
+              <div className="col col--6">
+                <div>
+                  This project builds and tests a small service. Batect is configured to build the service, start a local version of the service&rsquo;s
+                  dependencies (a database and an external service), then test the service.
+                </div>
+                <div className={styles.seeMoreLink}>
+                  <Link to="https://github.com/batect/batect-sample-ruby">See the full sample project and try it for yourself &rarr;</Link>
+                </div>
               </div>
             </div>
           </div>

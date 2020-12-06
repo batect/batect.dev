@@ -3,7 +3,7 @@ build/
 build-local/
 build-linkcheck/
 
-.batect/caches/
+**/.batect/caches/
 .docusaurus/
 .idea/
 

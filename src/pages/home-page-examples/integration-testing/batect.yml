@@ -1,0 +1,6 @@
+# This is a bit of a hack - we just want to use the Ruby sample app as an example but don't want to duplicate it here.
+include:
+  - type: git
+    repo: https://github.com/batect/batect-sample-ruby
+    ref: 2bb1934
+    path: batect.yml
