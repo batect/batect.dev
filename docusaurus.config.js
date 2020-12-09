@@ -88,7 +88,7 @@ module.exports = {
             },
             {
               label: "Chat",
-              to: "https://spectrum.chat/batect",
+              to: "https://github.com/batect/batect/discussions",
             },
           ],
         },

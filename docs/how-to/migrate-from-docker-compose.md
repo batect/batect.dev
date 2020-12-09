@@ -50,4 +50,4 @@ There's also a huge number of [sample projects](../getting-started/sample-projec
 ## Ask the community
 
 If you need help or run into a problem, don't be afraid to ask for help. You can [open an issue on GitHub](https://github.com/batect/batect/issues)
-or [start a conversation on Spectrum](https://spectrum.chat/batect).
+or [start a discussion](https://github.com/batect/batect/discussions).
