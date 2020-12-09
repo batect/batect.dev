@@ -48,7 +48,7 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://spectrum.chat/batect",
+          href: "https://github.com/batect/batect/discussions",
           label: "Chat",
           position: "right",
         },
