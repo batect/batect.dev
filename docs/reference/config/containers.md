@@ -458,7 +458,7 @@ containers:
 ```
 
 :::warning
-Some log drivers do not support streaming container output to the console, as described in
+If you are running Docker 19.03 or earlier, some log drivers do not support streaming container output to the console, as described in
 [the limitations section of Docker's logging documentation](https://docs.docker.com/config/containers/logging/configure/#limitations-of-logging-drivers).
 
 If the selected log driver does not support streaming container output to the console, you will see error messages similar to
