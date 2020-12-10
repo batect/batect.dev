@@ -3,5 +3,16 @@
   "reviewers": ["charleskorn"],
   "automerge": false,
   "labels": ["is:dependency-update"],
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "packageRules": [
+    {
+      "datasources": ["npm"],
+      "packagePatterns": ["^netlify-cli$", "^@typescript-eslint/", "^eslint$"],
+      "automerge": true
+    },
+    {
+      "datasources": ["docker"],
+      "automerge": true
+    }
+  ]
 }
