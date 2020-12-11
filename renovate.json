@@ -7,7 +7,12 @@
   "packageRules": [
     {
       "datasources": ["npm"],
-      "packagePatterns": ["^netlify-cli$", "^@typescript-eslint/", "^eslint$"],
+      "packagePatterns": [
+        "^netlify-cli$",
+        "^@typescript-eslint/",
+        "^eslint$",
+        "^typescript$"
+      ],
       "automerge": true
     },
     {
