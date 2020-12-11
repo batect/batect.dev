@@ -2,3 +2,4 @@ https://www.google-analytics.com
 https://github.com/kudulab/dojo#image-requirements-and-best-practices
 https://github.com/batect/batect/releases/latest
 http://localhost:\d{4}
+https://.*.algolia.net/
