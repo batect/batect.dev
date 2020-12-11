@@ -18,7 +18,7 @@ function Feature({ title, description }: FeatureDetails) {
   return (
     <div className={clsx("col col--4", styles.feature)}>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <div>{description}</div>
     </div>
   );
 }
