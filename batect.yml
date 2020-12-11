@@ -22,6 +22,16 @@ containers:
         container: /code
         options: ro
 
+  docsearch-scraper:
+    build_directory: .batect/docsearch-scraper
+    volumes:
+      - local: tools/algolia
+        container: /config
+        options: ro
+    environment:
+      APPLICATION_ID: 7ZUQMR16DB
+      API_KEY: $API_KEY
+
 tasks:
   setup:
     description: Install dependencies.
@@ -122,6 +132,12 @@ tasks:
     run:
       container: redirect-check
       command: /scripts/redirect-check.py http://docs-server /code/netlify.toml
+
+  update-search-index:
+    description: Update the Algolia search index.
+    group: Deployment tasks
+    run:
+      container: docsearch-scraper
 
 include:
   - type: git
