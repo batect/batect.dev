@@ -18,6 +18,10 @@
     {
       "datasources": ["docker"],
       "automerge": true
+    },
+    {
+      "packagePatterns": ["^batect/batect$"],
+      "automerge": true
     }
   ]
 }
