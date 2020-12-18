@@ -110,7 +110,7 @@ tasks:
       - docs-server
     run:
       container: linkcheck
-      command: linkcheck --external http://docs-server --skip-file /linkcheck-ignore.txt
+      command: linkcheck --external http://docs-server --skip-file /linkcheck-ignore.txt --no-show-redirects --connection-failures-as-warnings
 
   deploy:
     description: Deploy the site.
