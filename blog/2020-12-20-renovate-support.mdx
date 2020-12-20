@@ -1,0 +1,32 @@
+---
+title: Keep Batect and your configuration up-to-date automatically with Renovate
+author: Charles Korn
+author_title: Maintainer
+author_url: https://github.com/charleskorn
+author_image_url: /img/charles.jpg
+tags: [features]
+---
+
+_tl;dr: [Renovate](https://renovatebot.com/) now supports Batect, which means it can automatically send you PRs to update Batect itself as well
+as any images or bundles you reference in your configuration files._
+
+Keeping dependencies and tools up-to-date is a necessary but tedious task for any codebase. Tools like [Dependabot](https://dependabot.com/)
+and [Renovate](https://renovatebot.com) help to automate this process by scanning your repository for dependencies, identifying which ones are out of date
+and then sending you PRs to update them.
+
+I'm pleased to announce that Renovate has accepted a series of PRs that add support for Batect to Renovate. These cover all three scenarios required
+to keep Batect and your configuration up-to-date:
+
+- updating Batect itself (equivalent to running `./batect --upgrade`)
+- updating any Docker [image references](/docs/reference/config/containers#image) in your configuration files
+- updating any [bundle references](/docs/reference/config/includes#git-includes) in your configuration files
+
+If you use Dockerfiles to build images for use with Batect, Renovate already has you covered as well - updating base image references in Dockerfiles has been
+supported by Renovate for a while.
+
+No configuration is required to activate this. If you're already using Renovate's hosted service, you'll start receiving update PRs automatically.
+If you host Renovate yourself, update to [24.2.0](https://github.com/renovatebot/renovate/releases/tag/24.2.0) or later.
+
+By default, Renovate will only update image or bundle references in files named `batect.yml` or `batect-bundle.yml`. If you use
+[file includes](/docs/reference/config/includes#file-includes) to split your configuration over multiple files, you'll need to configure which files
+to search with `fileMatch` in your `renovate.json`. Take a look at [the documentation](/docs/using-batect-with/tools/renovate) for more information.

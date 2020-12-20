@@ -62,6 +62,7 @@ const sidebar = [
       "using-batect-with/tools/gradle",
       "using-batect-with/tools/net-core",
       "using-batect-with/tools/nodejs",
+      "using-batect-with/tools/renovate",
       "using-batect-with/tools/ruby",
       "using-batect-with/tools/seq",
     ],
@@ -83,6 +84,7 @@ const sidebar = [
     items: [
       "how-to/ide-integration",
       "how-to/performance",
+      "how-to/keep-batect-up-to-date",
       "how-to/migrate-existing-codebase",
       "how-to/migrate-from-docker-compose",
       "how-to/build-artefacts-owned-by-root",

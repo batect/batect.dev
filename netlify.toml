@@ -148,3 +148,7 @@ to = "/docs/how-to/wait-for-dependencies"
 [[redirects]]
 from = "/CLIReference.html"
 to = "/docs/reference/cli"
+
+[[redirects]]
+from = "/blog/welcome"
+to = "/blog/2020/12/06/welcome"

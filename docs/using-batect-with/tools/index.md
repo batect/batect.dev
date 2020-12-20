@@ -18,6 +18,7 @@ We have specific guidance for working with:
 - [Gradle](gradle.md)
 - [.NET Core](net-core.md)
 - [Node.js](nodejs.md)
+- [Renovate](renovate.md)
 - [Ruby](ruby.md)
 - [Seq](seq.md)
 

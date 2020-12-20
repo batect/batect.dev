@@ -1,0 +1,38 @@
+---
+title: Keep Batect and your configuration up-to-date
+---
+
+import Renovate from "../using-batect-with/tools/renovate.md";
+
+A single Batect project is made up of many components that are versioned independently:
+
+- Batect itself
+- the images your project uses
+- the bundles your project uses
+
+Each of these need to be kept up to date to take advantage of bug fixes, new features and performance and security improvements.
+
+## Automating updates
+
+### Renovate
+
+<Renovate />
+
+## Manually checking for updates
+
+### Batect itself
+
+Batect automatically checks for updates to itself in the background, and prompts you at the start of a task if a new version is
+available, for example:
+
+```
+Version 1.2.3 of Batect is now available (you have 1.1.4).
+To upgrade to the latest version, run './batect --upgrade'.
+For more information, visit https://github.com/batect/batect/releases/1.2.3.
+```
+
+To update (or check for updates immediately), run `./batect --upgrade`.
+
+### Image and bundle references
+
+There is no built-in support for identifying out-of-date image or bundle references.
