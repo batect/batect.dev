@@ -4,7 +4,8 @@
   "sitemap_urls": ["https://batect.dev/sitemap.xml"],
   "stop_urls": [
     "https://batect.dev/blog/tags.*",
-    "https://batect.dev/cdn-cgi/l/email-protection"
+    "https://batect.dev/cdn-cgi/l/email-protection",
+    "https://batect.dev/search.*"
   ],
   "strip_chars": "#",
   "selectors": {
