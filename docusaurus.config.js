@@ -122,11 +122,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
-          editUrl: "https://github.com/batect/batect.dev/edit/main/",
+          editUrl: "https://github.com/batect/batect.dev/blob/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/batect/batect.dev/edit/main/",
+          editUrl: "https://github.com/batect/batect.dev/blob/main/",
           feedOptions: {
             type: "all",
             copyright,
