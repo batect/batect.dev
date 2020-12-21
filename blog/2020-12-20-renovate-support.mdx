@@ -27,6 +27,10 @@ supported by Renovate for a while.
 No configuration is required to activate this. If you're already using Renovate's hosted service, you'll start receiving update PRs automatically.
 If you host Renovate yourself, update to [24.2.0](https://github.com/renovatebot/renovate/releases/tag/24.2.0) or later.
 
-By default, Renovate will only update image or bundle references in files named `batect.yml` or `batect-bundle.yml`. If you use
+By default, Renovate will only update image or bundle references in files named `batect.yml` or `batect-bundle.yml`. ~~If you use
 [file includes](/docs/reference/config/includes#file-includes) to split your configuration over multiple files, you'll need to configure which files
-to search with `fileMatch` in your `renovate.json`. Take a look at [the documentation](/docs/using-batect-with/tools/renovate) for more information.
+to search with `fileMatch` in your `renovate.json`.~~
+**Update 22/12**: if your configuration is split over multiple files with file includes, no further configuration is required - Renovate will
+now automatically detect image and bundle references in files included in your main configuration file.
+
+Take a look at [the documentation](/docs/using-batect-with/tools/renovate) for more information.
