@@ -21,5 +21,8 @@
     "lvl4": "article h4",
     "lvl5": "article h5",
     "text": "article p, article li"
+  },
+  "custom_settings": {
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"]
   }
 }
