@@ -148,7 +148,8 @@ ol > li:before {
   color: var(--ifm-color-danger);
 }
 
-.DocSearch-Button {
+.DocSearch-Button,
+input[type="search"] {
   font-family: var(--ifm-font-family-base);
 }
 
