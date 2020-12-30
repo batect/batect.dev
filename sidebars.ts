@@ -57,6 +57,7 @@ const sidebar = [
     label: "Using Batect with other tools and ecosystems",
     items: [
       "using-batect-with/tools/index",
+      "using-batect-with/tools/cypress",
       "using-batect-with/tools/docker",
       "using-batect-with/tools/golang",
       "using-batect-with/tools/gradle",

@@ -13,6 +13,7 @@ set up a [cache](../../concepts/caches.md) so that these dependencies are not lo
 
 We have specific guidance for working with:
 
+- [Cypress](cypress.md)
 - [Docker](docker.md)
 - [Golang](golang.md)
 - [Gradle](gradle.md)
