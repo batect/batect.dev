@@ -777,6 +777,7 @@ Many of the fields above have equivalent options in other tools.
 | [`privileged`](#privileged)                                             | `--privileged` to `docker run`                         |
 | [`run_as_current_user`](#run_as_current_user)                           | (none)                                                 |
 | [`setup_commands`](#setup_commands)                                     | (none)                                                 |
+| [`shm_size`](#shm_size)                                                 | `--shm-size` to `docker run`                           |
 | [`volumes`](#volumes)                                                   | `--volume` to `docker run`                             |
 | [`working_directory`](#working_directory)                               | `--workdir` to `docker run`                            |
 
@@ -810,5 +811,6 @@ Many of the fields above have equivalent options in other tools.
 | [`privileged`](#privileged)                                             | `privileged`                     |
 | [`run_as_current_user`](#run_as_current_user)                           | (none)                           |
 | [`setup_commands`](#setup_commands)                                     | (none)                           |
+| [`shm_size`](#shm_size)                                                 | `shm_size`                       |
 | [`volumes`](#volumes)                                                   | `volumes`                        |
 | [`working_directory`](#working_directory)                               | `working_dir`                    |
