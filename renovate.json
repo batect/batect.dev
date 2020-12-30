@@ -11,7 +11,8 @@
         "^netlify-cli$",
         "^@typescript-eslint/",
         "^eslint$",
-        "^typescript$"
+        "^typescript$",
+        "^@types/"
       ],
       "automerge": true
     },
