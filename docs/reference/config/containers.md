@@ -48,6 +48,7 @@ Each container definition is made up of the following fields:
 - [`privileged`](#privileged): enable privileged mode for the container
 - [`run_as_current_user`](#run_as_current_user): configuration for ['run as current user' mode](../../concepts/run-as-current-user-mode.md)
 - [`setup_commands`](#setup_commands): commands to run inside the container after it has become healthy but before dependent containers start
+- [`shm_size`](#shm_size): size of `/dev/shm` (shared memory for IPC) for the container
 - [`volumes`](#volumes): volume mounts to create for the container
 - [`working_directory`](#working_directory): working directory for the container's command
 
@@ -652,6 +653,14 @@ Running the container `application` will first build or pull the images for both
 
 Once the image for `database` is ready, `database` will start and launch the command specified in the Dockerfile, then batect will wait for the container to report as healthy.
 Once `database` reports as healthy, it will run `./apply-migrations.sh` and wait for it to finish before then starting `application`.
+
+### `shm_size`
+
+Size of `/dev/shm` (shared memory for IPC) for the container.
+
+If not set, uses Docker's default value, which is currently 64 MB.
+
+Accepts values such as `2000` (2000 bytes), `3k` (3 KB), `5m` (5 MB) or `1g` (1 GB).
 
 ### `volumes`
 
