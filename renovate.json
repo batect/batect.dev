@@ -25,8 +25,8 @@
       "automerge": true
     },
     {
-    	"packagePatterns": ["^@docusaurus/"],
-    	"allowedVersions": "!/\\d+\\.\\d+\\.\\d+-alpha\\.[0-9a-f]{7,}/"
+      "packagePatterns": ["^@docusaurus/"],
+      "allowedVersions": "!/\\d+\\.\\d+\\.\\d+-alpha\\.[0-9a-f]{7,}/"
     }
   ]
 }
