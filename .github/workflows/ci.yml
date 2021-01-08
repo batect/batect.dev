@@ -43,8 +43,8 @@ jobs:
       - name: Check for linting issues
         run: ./batect lint
 
-      - name: Check for broken links
-        run: ./batect check-links
+      # - name: Check for broken links
+      #   run: ./batect check-links
 
       - name: Check for broken redirects
         run: ./batect check-redirects
