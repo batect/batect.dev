@@ -20,6 +20,9 @@ containers:
       - type: cache
         name: node_modules
         container: /code/node_modules
+      - type: cache
+        name: yarn_cache
+        container: /root/.cache/yarn # Or .cache/yarn in home_directory if run as current user mode is enabled
     working_directory: /code
     enable_init_process: true
 ```
