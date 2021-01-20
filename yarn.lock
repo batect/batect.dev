@@ -9654,10 +9654,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-3.2.3.tgz#33d3fcba4f637de188c50c1dc85f046d6ba57f15"
-  integrity sha512-D9aYSL8Zv87pFpFZfhDoDk+jLdG+PSJgjlADP7R5AaY/Tpq9xRaELndyeMxOCJ0vVwbX3rcDbivXXIB5khQD8w==
+netlify-cli@3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-3.2.4.tgz#f878e6f6b7d66e9b5edfc7adfaa7509b1c372375"
+  integrity sha512-DRWGdzRikIj9RoT3p9Q4J0fTGJ+lZZpeF78zydT6nZzscUYOl171clol6aXZxYNVmf//QrEgN2DYpvuiD+5BSQ==
   dependencies:
     "@netlify/build" "^8.0.5"
     "@netlify/config" "^3.0.1"
@@ -9736,7 +9736,6 @@ netlify-cli@3.2.3:
     raw-body "^2.4.1"
     resolve "^1.12.0"
     safe-join "^0.1.3"
-    semver "^7.3.4"
     static-server "^2.2.1"
     strip-ansi-control-characters "^2.0.0"
     to-readable-stream "^2.1.0"
@@ -12557,13 +12556,6 @@ semver@^7.1.3, semver@^7.2.1, semver@^7.3.2:
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
-
-semver@^7.3.4:
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
-  integrity sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
-  dependencies:
-    lru-cache "^6.0.0"
 
 semver@~2.3.1:
   version "2.3.2"
