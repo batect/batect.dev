@@ -32,8 +32,9 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--config-vars-file`](#--config-vars-file): Set config variables from a file
 - [`--config-var`](#--config-var): Set a config variable
 - [`--disable-ports`](#--disable-ports): Disable port binding on the host machine
-- [`--docker-host`](#--docker-host): Use a non-standard Docker host
 - [`--docker-cert-path`, `--docker-tls-ca-cert`, `--docker-tls-cert` and `--docker-tls-key`](#--docker-cert-path---docker-tls-ca-cert---docker-tls-cert-and---docker-tls-key): Customise certificates used to provide authentication to daemon and to verify daemon's identity
+- [`--docker-config`](#--docker-config): Path to directory containing Docker client configuration files.
+- [`--docker-host`](#--docker-host): Use a non-standard Docker host
 - [`--docker-tls` and `--docker-tls-verify`](#--docker-tls-and---docker-tls-verify): Connect to Docker over TLS
 - [`--enable-buildkit`](#--enable-buildkit): Use BuildKit to build images
 - [`--help`](#--help): Get help for Batect's CLI
@@ -148,6 +149,34 @@ Example:
 ./batect --disable-ports the-task
 ```
 
+### `--docker-cert-path`, `--docker-tls-ca-cert`, `--docker-tls-cert` and `--docker-tls-key`
+
+If your Docker daemon requires TLS, Batect needs three files in order to connect to it:
+
+- the CA certificate that can be used to verify certificates presented by the Docker daemon (`--docker-tls-ca-cert`)
+- the certificate that can be used to prove your identity to the Docker daemon (`--docker-tls-cert`) and corresponding private key (`--docker-tls-key`)
+
+By default, these files are stored in [the Docker client configuration directory](#--docker-config) and are named `ca.pem`, `cert.pem` and `key.pem` respectively.
+
+You can instruct Batect use a non-default location for any of these files with the options mentioned above, or override the default directory for these
+files with `--docker-cert-path`. If the `DOCKER_CERT_PATH` environment variable is set, Batect will use that as the default directory, or otherwise
+use the value specified with `--docker-config` / `DOCKER_CONFIG`.
+
+If both `--docker-cert-path` (or `DOCKER_CERT_PATH`) and a path for an individual file is provided, the path for the individual file takes precedence.
+
+These options mirror the behaviour of the `docker` CLI's `--tlscacert`, `--tlscert` and `--tlskey` options.
+
+### `--docker-config`
+
+By default, Batect will look for Docker client configuration files in the directory provided by the `DOCKER_CONFIG` environment variable,
+or `~/.docker` if `DOCKER_CONFIG` is not set. Use this option to instruct Batect to use a different directory.
+
+Example:
+
+```shell
+./batect --docker-config ~/.my-other-docker-config the-task
+```
+
 ### `--docker-host`
 
 By default, Batect will connect to the Docker daemon using the path provided in the `DOCKER_HOST` environment variable, or
@@ -158,22 +187,6 @@ Example:
 ```shell
 ./batect --docker-host unix:///var/run/other-docker.sock the-task
 ```
-
-### `--docker-cert-path`, `--docker-tls-ca-cert`, `--docker-tls-cert` and `--docker-tls-key`
-
-If your Docker daemon requires TLS, Batect needs three files in order to connect to it:
-
-- the CA certificate that can be used to verify certificates presented by the Docker daemon (`--docker-tls-ca-cert`)
-- the certificate that can be used to prove your identity to the Docker daemon (`--docker-tls-cert`) and corresponding private key (`--docker-tls-key`)
-
-By default, these files are stored in `~/.docker` and are named `ca.pem`, `cert.pem` and `key.pem` respectively.
-
-You can instruct Batect use a non-default location for any of these files with the options mentioned above, or override the default directory for these
-files with `--docker-cert-path`. If the `DOCKER_CERT_PATH` environment variable is set, Batect will use that as the default directory.
-
-If both `--docker-cert-path` (or `DOCKER_CERT_PATH`) and a path for an individual file is provided, the path for the individual file takes precedence.
-
-These options mirror the behaviour of the `docker` CLI's `--tlscacert`, `--tlscert` and `--tlskey` options.
 
 ### `--docker-tls` and `--docker-tls-verify`
 
