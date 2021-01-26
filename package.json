@@ -41,7 +41,7 @@
     "eslint": "7.18.0",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "netlify-cli": "3.4.2",
+    "netlify-cli": "3.4.3",
     "prettier": "2.2.1",
     "raw-loader": "4.0.2",
     "typescript": "4.1.3"
