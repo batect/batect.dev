@@ -8,10 +8,11 @@
     {
       "datasources": ["npm"],
       "packagePatterns": [
-        "^netlify-cli$",
-        "^@typescript-eslint/",
         "^eslint$",
+        "^netlify-cli$",
         "^typescript$",
+        "^@babel/",
+        "^@typescript-eslint/",
         "^@types/"
       ],
       "automerge": true
