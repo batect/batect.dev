@@ -44,6 +44,6 @@
     "netlify-cli": "3.8.5",
     "prettier": "2.2.1",
     "raw-loader": "4.0.2",
-    "typescript": "4.1.5"
+    "typescript": "4.2.2"
   }
 }
