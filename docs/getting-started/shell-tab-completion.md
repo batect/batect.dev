@@ -21,5 +21,8 @@ Otherwise, you can install support for Batect's tab completion using [Fisher](ht
 
 If you're using [Homebrew](https://brew.sh), install support for Batect's tab completion with `brew install batect/batect/batect-zsh-completion`.
 
+If you're using [Oh My Zsh](https://ohmyz.sh/), follow the instructions in the [zsh-completion readme](https://github.com/batect/zsh-completion#with-oh-my-zsh)
+to install support for Batect's tab completion.
+
 Otherwise, you'll need to manually install the completion script, which is available in the
-[`zsh-completion` repository on GitHub](https://github.com/batect/zsh-completion/tree/main/completions).
+[`zsh-completion` repository on GitHub](https://github.com/batect/zsh-completion/tree/main/_batect).
