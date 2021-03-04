@@ -15,6 +15,7 @@ other configuration such as environment variables.
 Container names must be valid Docker references:
 
 - they must contain only:
+
   - lowercase letters
   - digits
   - dashes (`-`)

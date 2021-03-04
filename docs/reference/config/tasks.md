@@ -15,6 +15,7 @@ They are an operation you can do: compiling your application, running the tests,
 Task names must meet the following requirements:
 
 - they must contain only:
+
   - uppercase or lowercase letters
   - digits
   - dashes (`-`)

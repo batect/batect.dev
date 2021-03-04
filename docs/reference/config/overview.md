@@ -63,6 +63,7 @@ file is `/home/alex/projects/my-cool-app/batect.yml` and you do not provide a pr
 Project names must be valid Docker references:
 
 - they must contain only:
+
   - lowercase letters
   - digits
   - dashes (`-`)
@@ -86,6 +87,7 @@ Definitions for each [container](../../concepts/containers.md), in `name: option
 Container names must be valid Docker references:
 
 - they must contain only:
+
   - lowercase letters
   - digits
   - dashes (`-`)
@@ -111,6 +113,7 @@ Definitions for each [task](../../concepts/tasks.md), in `name: options` format.
 Task names must meet the following requirements:
 
 - they must contain only:
+
   - uppercase or lowercase letters
   - digits
   - dashes (`-`)
