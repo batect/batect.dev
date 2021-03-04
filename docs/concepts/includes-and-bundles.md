@@ -8,7 +8,7 @@ Includes allow you to import configuration defined elsewhere into your [project]
 - to share [tasks](tasks.md) and [containers](containers.md) between projects
 - to take advantage of tasks and containers built and maintained by others, saving you time and effort
 
-There are two main forms of includes: [file includes](#file-includes) and [Git includes](#git-includes]. Git includes allow you to include a bundle
+There are two main forms of includes: [file includes](#file-includes) and [Git includes](#git-includes). Git includes allow you to include a bundle
 of configuration.
 
 ## File includes

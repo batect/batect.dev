@@ -31,7 +31,7 @@ tasks:
 
 Run it with `./batect say-hello`:
 
-```
+```text
 $ ./batect say-hello
 Running say-hello...
 my-container: running echo 'Hello world!'
@@ -43,7 +43,7 @@ say-hello finished with exit code 0 in 1.2s.
 
 Get a list of available tasks with `./batect --list-tasks`:
 
-```
+```text
 $ ./batect --list-tasks
 Available tasks:
 - say-hello: Say hello to the nice person reading the Batect documentation
@@ -68,6 +68,7 @@ Project names must be valid Docker references:
   - dashes (`-`)
   - single consecutive periods (`.`)
   - one or two consecutive underscores (`_`)
+
 - they must not start or end with dashes, periods or underscores
 
 ### `config_variables`
@@ -90,6 +91,7 @@ Container names must be valid Docker references:
   - dashes (`-`)
   - single consecutive periods (`.`)
   - one or two consecutive underscores (`_`)
+
 - they must not start or end with dashes, periods or underscores
 
 [Detailed reference for `containers`](containers.md)
@@ -115,7 +117,9 @@ Task names must meet the following requirements:
   - periods (`.`)
   - underscores (`_`)
   - colons (`:`)
+
 - they must start with a letter or digit
+
 - they must end with a letter or digit
 
 [Detailed reference for `tasks`](tasks.md)

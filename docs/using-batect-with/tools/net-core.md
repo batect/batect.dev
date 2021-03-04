@@ -41,6 +41,7 @@ persisted between builds.
 Note that you can't use `~` in the container path for a volume mount:
 
 - If you're using [run as current user mode](../../concepts/run-as-current-user-mode.md), use the home directory you specified for [`home_directory`](../../reference/config/containers.md#run_as_current_user).
+
 - If you're not using [run as current user mode](../../concepts/run-as-current-user-mode.md), use `/root` as the home directory, as the vast majority of containers
   default to the root user and use this as the root user's home directory.
 

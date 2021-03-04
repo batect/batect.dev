@@ -329,7 +329,7 @@ We now have a dependency on the `node-fetch` package, so run `yarn add node-fetc
 Finally, we can run the application with `./batect run`, and then open [http://localhost:8080](http://localhost:8080) to see our new message,
 complete with joke:
 
-```
+```text
 Hello from the API! The joke of the day is: I made a belt out of watches once... It was a waist of time.
 ```
 
@@ -379,7 +379,7 @@ tasks:
           container: 8080
 ```
 
-Voila! Running `./batect run` now runs the `build` task, then starts `run` to use our freshly built code.
+Voilà! Running `./batect run` now runs the `build` task, then starts `run` to use our freshly built code.
 
 :::note
 We're using `yarn exec` to start `node` in `run` to workaround issues with `node` not responding to signals such as Ctrl+C when running
@@ -397,9 +397,13 @@ way, and others can quickly start working with our project just by running `./ba
 ## Where next?
 
 - The [sample projects](sample-projects.md) show Batect in a number of real-world scenarios
+
 - If you're using Docker Compose, the [migrating from Docker Compose guide](../how-to/migrate-from-docker-compose.md) contains
   advice and links to a tool that can help you migrate
+
 - If you're adopting Batect in an existing codebase, the [migrating an existing codebase guide](../how-to/migrate-existing-codebase.md)
   contains advice on how to approach this
+
 - There are a number of guides for particular tools and ecosystems in the [Using Batect with other tools and ecosystems section](../using-batect-with/tools)
+
 - The [configuration file reference](../reference/config/overview.md) provides detailed information on every available configuration option

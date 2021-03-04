@@ -21,7 +21,9 @@ Task names must meet the following requirements:
   - periods (`.`)
   - underscores (`_`)
   - colons (`:`)
+
 - they must start with a letter or digit
+
 - they must end with a letter or digit
 
 ## Definition
@@ -172,7 +174,9 @@ Customisations do not apply to containers started as part of prerequisite tasks.
 In the example below, running the `build` task will start both `main-container` and `container-a`. `container-a` will run with the following configuration:
 
 - [Working directory](#working_directory-1): `/customised`
+
 - [Exposed ports](#ports-1): both `1000:2000` and `3000:4000`
+
 - [Environment variables](#environment-1):
   - `CONTAINER_VAR`: `set on container`
   - `OVERRIDDEN_VAR`: `overridden value from task`
@@ -296,9 +300,12 @@ tasks:
 Running the task `start-app` will do the following:
 
 1. Build or pull the images for the `app`, `database` and `auth-service-fake` containers, as appropriate
+
 2. Start the `database` and `auth-service-fake` containers
+
 3. Wait for the `database` and `auth-service-fake` containers to report themselves as healthy
    ([if they have health checks defined](../../how-to/wait-for-dependencies.md))
+
 4. Start the `app` container
 
 ### Task with environment variables

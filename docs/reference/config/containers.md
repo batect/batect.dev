@@ -20,6 +20,7 @@ Container names must be valid Docker references:
   - dashes (`-`)
   - single consecutive periods (`.`)
   - one or two consecutive underscores (`_`)
+
 - they must not start or end with dashes, periods or underscores
 
 ## Definition
@@ -697,6 +698,7 @@ In both formats, the following fields are supported:
   with users running on other operating systems, using Unix-style paths is recommended.
 
 - `container`: path to mount the local file or directory at inside the container. Required.
+
 - `options`: standard Docker mount options (such as `ro` for read-only). Optional.
 
 Using `options: cached` may improve performance when running on macOS and Windows hosts - see [this page](../../how-to/performance.md#io-performance) for further explanation.

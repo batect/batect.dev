@@ -87,7 +87,7 @@ commands:
             - node_modules/
 ```
 
-...and then reuse it in each job:
+This can then be reused in each job:
 
 ```yaml title=".circleci/config.yml"
 build:

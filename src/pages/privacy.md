@@ -47,9 +47,12 @@ personally identifiable information. Data is always collected over HTTPS.
 The following Google Analytics features are _not_ enabled:
 
 - [Remarketing](https://support.google.com/analytics/answer/2611268?hl=en-GB&utm_id=ad)
+
 - [Advertising Features](https://support.google.com/analytics/answer/3450482?hl=en-GB&utm_id=ad), which includes information such as age, gender
   and interests
+
 - [User-ID](https://support.google.com/analytics/answer/3123662?hl=en-GB&utm_id=ad), which tracks users across devices
+
 - [Google Signals](https://support.google.com/analytics/answer/7532985?hl=en-GB&utm_id=ad), which provides similar features to the above features
 
 ### How and why the data is used
@@ -203,7 +206,7 @@ This information does not include personal or sensitive information such as the 
 | Number of containers started for each task                                                                                                                                                                         | 3                                                                | Helps understand usage behaviour and helps plan and prioritise possible future features (eg. performance improvements for very large projects)                                                                                                                                          |
 | Time taken to load the configuration for the project                                                                                                                                                               | 0.05 seconds                                                     | Helps understand usage and application behaviour and helps plan and prioritise possible future features (eg. performance improvements for very large projects)                                                                                                                          |
 | Time taken to execute each task                                                                                                                                                                                    | 3.3 seconds                                                      | Helps understand usage and application behaviour and helps plan and prioritise possible future features (eg. performance improvements for very large projects)                                                                                                                          |
-| Time taken to execute each step in each task (eg. pulling or building a image, creating a container, stopping a container, removing a container)                                                                   | 0.4 seconds                                                      | Helps understand usage and application behaviour and helps plan and prioritise possible future features (eg. performance improvements for certain steps)                                                                                                                                |
+| Time taken to execute each step in each task (eg. pulling or building an image, creating a container, stopping a container, removing a container)                                                                   | 0.4 seconds                                                      | Helps understand usage and application behaviour and helps plan and prioritise possible future features (eg. performance improvements for certain steps)                                                                                                                                |
 | **Exception information**                                                                                                                                                                                          |
 | Type of exception                                                                                                                                                                                                  | `IOException` or `ContainerCreationFailedException`              | Helps understand possible bugs, helps understand the frequency with which users see certain classes of errors and hepls plan and prioritise possible future features (eg. recovering from errors automatically or suggesting recovery actions to the user)                              |
 | Stack trace                                                                                                                                                                                                        |                                                                  | Helps understand possible bugs, helps understand the frequency with which users see certain classes of errors and hepls plan and prioritise possible future features (eg. recovering from errors automatically or suggesting recovery actions to the user)                              |
@@ -244,7 +247,7 @@ Aggregated, anonymous information (eg. the total number of users that used Batec
 
 When Batect starts for the first time, it prompts for permission to collect this information:
 
-```
+```text
 Batect can collect anonymous environment, usage and performance information.
 This information does not include personal or sensitive information, and is used only to help improve Batect.
 More information is available at https://batect.dev/privacy, including details of what information is collected and a formal privacy policy.
