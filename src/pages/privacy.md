@@ -126,7 +126,7 @@ to enable them to operate and improve their services, and [their privacy policy]
 
 Batect checks for updated versions and displays a reminder to the user if a newer version is available. It automatically checks for updates at most once every 36 hours.
 
-It uses a public, encrypted, unauthenticated API hosted by the Batect project on GCP and Cloudflare to check for new versions.
+It uses a public, encrypted API hosted by the Batect project on GCP and Cloudflare to check for new versions.
 A secure, private GCP project dedicated to the purpose of hosting update information hosts the API.
 
 The source code and configuration for this API is available in the [updates.batect.dev](https://github.com/batect/updates.batect.dev) GitHub repository.
@@ -140,6 +140,9 @@ No personally identifiable information or telemetry information is sent to the A
 Basic diagnostic information such as IP addresses may be collected in the API's logs. This information is used solely to administer, maintain and monitor the updates API, and is
 not combined with telemetry information or any other information source.
 
+Statistical information (date, time, user agent and performance data) is collected and used to monitor the security, stability, performance and availability of the
+service and help understand usage patterns.
+
 The API requires encrypted HTTPS connections.
 
 ### How to opt-out
@@ -147,6 +150,31 @@ The API requires encrypted HTTPS connections.
 Run Batect with `--no-update-notification` to disable checking for new versions.
 
 Note that running `./batect --upgrade` ignores `--no-update-notification` if it is set, and will always use the updates API to check for a new version.
+
+## File downloads
+
+Batect's wrapper script (`batect` / `batect.cmd`) automatically downloads the appropriate version of Batect when it has not already been downloaded.
+
+It uses a public, encrypted API hosted by the Batect project on GCP and Cloudflare to check for new versions.
+A secure, private GCP project dedicated to the purpose of hosting update information hosts the API.
+
+The source code and configuration for this API is available in the [updates.batect.dev](https://github.com/batect/updates.batect.dev) GitHub repository.
+
+### What data is collected and how it is used
+
+No personally identifiable information or telemetry information is sent to the API as part of this process.
+
+Basic diagnostic information such as IP addresses may be collected in the API's logs. This information is used solely to administer, maintain and monitor the updates API, and is
+not combined with telemetry information or any other information source.
+
+Statistical information (date, time, user agent and performance data) is collected and used to monitor the security, stability, performance and availability of the
+service and help understand usage patterns.
+
+The API requires encrypted HTTPS connections.
+
+### How to opt-out
+
+To opt-out, you must modify the wrapper script to use an alternative download server.
 
 ## In-app telemetry
 
@@ -277,6 +305,6 @@ within 14 days.
 
 ## Third-party services
 
-The Batect project uses a number of third-party services such as GitHub for code hosting, Spectrum for community chat and Bintray for artifact hosting.
+The Batect project uses a number of third-party services such as GitHub for code hosting and Bintray for artifact hosting.
 
 When you interact with these services, their respective privacy policy applies.
