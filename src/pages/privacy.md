@@ -305,6 +305,6 @@ within 14 days.
 
 ## Third-party services
 
-The Batect project uses a number of third-party services such as GitHub for code hosting and Bintray for artifact hosting.
+The Batect project uses a number of third-party services such as GitHub for code hosting.
 
 When you interact with these services, their respective privacy policy applies.

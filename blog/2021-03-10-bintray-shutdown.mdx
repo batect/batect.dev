@@ -1,0 +1,52 @@
+---
+title: Upcoming Bintray shutdown and how it affects you
+author: Charles Korn
+author_title: Maintainer
+author_url: https://github.com/charleskorn
+author_image_url: /img/charles.jpg
+tags: [announcements]
+---
+
+:::tip
+**tl;dr**: run `./batect --upgrade` to upgrade to Batect v0.69.0 or later to ensure Batect continues to work after May 1
+:::tip
+
+Bintray [announced on February 3](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) that it
+will be shutting down on May 1, 2021.
+
+Batect's wrapper script (`batect` on macOS and Linux, and `batect.cmd` on Windows) downloads Batect from Bintray if it has not
+already been cached on your machine.
+
+After Bintray's shutdown on May 1, downloading Batect from Bintray will no longer work. Batect v0.69.0 introduces a new download
+server (`updates.batect.dev`) which does not rely on Bintray.
+
+In order to continue using Batect without any issues after May 1, you must do one of the following:
+
+## Option 1: upgrade to v0.69.0 or later
+
+To switch to the new server, the easiest thing to do is to upgrade with `./batect --upgrade`. This will automatically update
+your wrapper script to the new version that uses the new download server.
+
+## Option 2: remain on an old version and switch to new server
+
+The new download server also supports old versions. If you need to remain on an older version, make the following changes
+in your project's copy of the wrapper script:
+
+```diff title="batect"
+-DOWNLOAD_URL_ROOT=${BATECT_DOWNLOAD_URL_ROOT:-"https://dl.bintray.com/batect/batect"}
+-DOWNLOAD_URL=${BATECT_DOWNLOAD_URL:-"$DOWNLOAD_URL_ROOT/$VERSION/bin/batect-$VERSION.jar"}
++DOWNLOAD_URL_ROOT=${BATECT_DOWNLOAD_URL_ROOT:-"https://updates.batect.dev/v1/files"}
++DOWNLOAD_URL=${BATECT_DOWNLOAD_URL:-"$DOWNLOAD_URL_ROOT/$VERSION/batect-$VERSION.jar"}
+```
+
+```diff title="batect.cmd"
+-$DownloadUrlRoot = getValueOrDefault $env:BATECT_DOWNLOAD_URL_ROOT "https://dl.bintray.com/batect/batect"^
++$DownloadUrlRoot = getValueOrDefault $env:BATECT_DOWNLOAD_URL_ROOT "https://updates.batect.dev/v1/files"^
+
+
+ $UrlEncodedVersion = [Uri]::EscapeDataString($Version)^
+
+
+-$DownloadUrl = getValueOrDefault $env:BATECT_DOWNLOAD_URL "$DownloadUrlRoot/$UrlEncodedVersion/bin/batect-$UrlEncodedVersion.jar"^
++$DownloadUrl = getValueOrDefault $env:BATECT_DOWNLOAD_URL "$DownloadUrlRoot/$UrlEncodedVersion/batect-$UrlEncodedVersion.jar"^
+```
