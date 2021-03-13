@@ -1,9 +1,6 @@
 {
-  "extends": ["config:base", ":prHourlyLimitNone", ":prConcurrentLimitNone"],
-  "reviewers": ["charleskorn"],
+  "extends": ["github>batect/renovate-config:default"],
   "automerge": false,
-  "labels": ["is:dependency-update"],
-  "rebaseWhen": "behind-base-branch",
   "packageRules": [
     {
       "datasources": ["npm"],
