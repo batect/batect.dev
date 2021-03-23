@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "4.19.0",
     "editorconfig-checker": "4.0.1",
     "eslint": "7.22.0",
-    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react": "7.23.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "netlify-cli": "3.13.6",
     "prettier": "2.2.1",
