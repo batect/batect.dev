@@ -479,6 +479,35 @@ Example:
 ./batect --skip-prerequisites the-task
 ```
 
+### `--tag-image`
+
+Batect automatically tags images [built](config/containers.md#build_directory) for containers with a name based on the [project name](config/overview.md#project_name) and container name.
+
+Use `--tag-image` to add additional tags to the built image. This tag can then be used to then push the image to a remote registry with `docker push`, or to ensure that subsequent task invocations
+use exactly the same image with [`--override-image`](#--override-image).
+
+Values must be in the format `<container name>=<image>`, for example:
+
+```shell
+./batect --tag-image build-env=my-build-env:v1.2.3 the-task
+```
+
+Tags can include remote registries, for example:
+
+```shell
+./batect --tag-image build-env=docker-images.mycompany.com/my-build-env:v1.2.3 the-task
+```
+
+Multiple tags can be applied to the same built image by giving `--tag-image` multiple times, for example:
+
+```shell
+./batect --tag-image build-env=my-build-env:v1 --tag-image build-env=my-build-env:v1.2.3 the-task
+```
+
+:::caution
+`--tag-image` can't be used with containers that pull images directly with [`image`](config/containers.md#image).
+:::
+
 ### `--use-network`
 
 By default, Batect will create a new Docker network for each task, as described in [the task lifecycle](../concepts/task-lifecycle.mdx).
