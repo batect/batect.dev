@@ -37,7 +37,7 @@
     "@types/react-router-dom": "5.1.7",
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "@typescript-eslint/parser": "4.20.0",
-    "editorconfig-checker": "4.0.1",
+    "editorconfig-checker": "4.0.2",
     "eslint": "7.23.0",
     "eslint-plugin-react": "7.23.1",
     "eslint-plugin-react-hooks": "4.2.0",
