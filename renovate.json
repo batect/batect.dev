@@ -10,6 +10,7 @@
         "^netlify-cli$",
         "^remark-",
         "^retext-",
+        "^prettier$",
         "^typescript$",
         "^@babel/",
         "^@typescript-eslint/",
