@@ -1,6 +1,9 @@
 {
   "extends": ["github>batect/renovate-config:default"],
   "automerge": false,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "datasources": ["npm"],
