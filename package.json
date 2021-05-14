@@ -28,8 +28,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "7.13.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.14.2",
     "@docusaurus/module-type-aliases": "2.0.0-beta.0",
     "@tsconfig/docusaurus": "1.0.2",
     "@types/react": "17.0.5",
