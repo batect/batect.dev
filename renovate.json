@@ -31,7 +31,7 @@
     },
     {
       "packagePatterns": ["^@docusaurus/"],
-      "allowedVersions": "!/\\d+\\.\\d+\\.\\d+-alpha\\.[0-9a-f]{7,}/"
+      "allowedVersions": "!/\\d+\\.\\d+\\.\\d+-(alpha|beta)\\.[0-9a-f]{7,}/"
     },
     {
       "matchManagers": ["batect"],
