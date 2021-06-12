@@ -36,6 +36,10 @@
     {
       "matchManagers": ["batect"],
       "automerge": true
+    },
+    {
+      "packagePatterns": ["^netlify-cli$"],
+      "extends": ["schedule:daily"]
     }
   ]
 }
