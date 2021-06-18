@@ -1,4 +1,4 @@
-FROM algolia/docsearch-scraper:v1.13.0@sha256:ca909fe6ac9757eb200dbf0e4eca068a9d2cd904273fb7f113264acc0635f0eb
+FROM algolia/docsearch-scraper:v1.15.0@sha256:12c543d8b13a8dd761cfd67f935f6d3a9afb16a62147f07bf5c6ab50346cf317
 
 RUN apt-get update -y && apt-get install -y jq
 
