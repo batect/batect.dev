@@ -1,3 +1,3 @@
-FROM google/dart:2.13.3@sha256:0c113b6f4d029065679337abf1f00fd78e4b76b4fc74ad59a30fcafe6a1bd72b
+FROM google/dart:2.13.4@sha256:a7f4237f214cae4eb16b2f2474fba8255cff908caf433cd2d066a8c5d25d84b1
 RUN pub global activate linkcheck 2.0.14
 ENV PATH=$PATH:/root/.pub-cache/bin
