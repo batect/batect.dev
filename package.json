@@ -2,7 +2,6 @@
   "name": "batect-dev",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -10,7 +9,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "lint": "eslint src *.js *.ts && remark . --ext md,mdx --quiet --frail && editorconfig-checker",
+    "lint": "eslint src *.js *.ts && remark . --ext md,mdx --quiet --frail --rc-path .remarkrc.mjs && editorconfig-checker",
     "lintFix": "eslint --fix src *.js *.ts",
     "checkFormat": "prettier --check .",
     "fixFormat": "prettier --write ."
