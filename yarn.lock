@@ -10079,13 +10079,13 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parse-english@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/parse-english/-/parse-english-4.2.0.tgz#037b68f34d1a1bdf3d33668b87791bdfc1f01e1e"
-  integrity sha512-jw5N6wZUZViIw3VLG/FUSeL3vDhfw5Q2g4E3nYC69Mm5ANbh9ZWd+eligQbeUoyObZM8neynTn3l14e09pjEWg==
+parse-english@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/parse-english/-/parse-english-5.0.0.tgz#baea1a4d2cba9fde9e49f51ea5b5f95df9d3f6b4"
+  integrity sha512-sMe/JmsY6g21aJCAm8KgCH90a9zCZ7aGSriSJ5B0CcGEsDN7YmiCk3+1iKPE1heDG6zYY4Xf++V8llWtCvNBSQ==
   dependencies:
     nlcst-to-string "^2.0.0"
-    parse-latin "^4.0.0"
+    parse-latin "^5.0.0"
     unist-util-modify-children "^2.0.0"
     unist-util-visit-children "^1.0.0"
 
@@ -10129,10 +10129,10 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-latin@^4.0.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/parse-latin/-/parse-latin-4.3.0.tgz#1a70fc5601743baa06c5f12253c334fc94b4a917"
-  integrity sha512-TYKL+K98dcAWoCw/Ac1yrPviU8Trk+/gmjQVaoWEFDZmVD4KRg6c/80xKqNNFQObo2mTONgF8trzAf2UTwKafw==
+parse-latin@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/parse-latin/-/parse-latin-5.0.0.tgz#a1963445f59fb9cfa3cb1ddf5f839bfeb0ee4b42"
+  integrity sha512-Ht+4/+AUySMS5HKGAiQpBmkFsHSoGrj6Y83flLCa5OIBdtsVkO3UD4OtboJ0O0vZiOznH02x8qlwg9KLUVXuNg==
   dependencies:
     nlcst-to-string "^2.0.0"
     unist-util-modify-children "^2.0.0"
@@ -12257,13 +12257,14 @@ retext-diacritics@3.0.0:
     quotation "^1.0.1"
     unist-util-position "^3.0.0"
 
-retext-english@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-3.0.4.tgz#f978828d51fbcee842bc3807a45b7f709822ea8d"
-  integrity sha512-yr1PgaBDde+25aJXrnt3p1jvT8FVLVat2Bx8XeAWX13KXo8OT+3nWGU3HWxM4YFJvmfqvJYJZG2d7xxaO774gw==
+retext-english@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-4.0.0.tgz#7f251c9eeb4cbf533af7a16cba611f491f5c2939"
+  integrity sha512-U3efC2tni184jq0Cg2LqjrI6OV7NmUVcoCDyyMG7wlR1u0KpeYsWRs8YpfrY+c5U4koQJN+9eoW7p3FBLFojxg==
   dependencies:
-    parse-english "^4.0.0"
-    unherit "^1.0.4"
+    parse-english "^5.0.0"
+    unherit "^3.0.0"
+    unified "^10.0.0"
 
 retext-indefinite-article@2.0.3:
   version "2.0.3"
@@ -13804,6 +13805,11 @@ unherit@^1.0.4:
     inherits "^2.0.0"
     xtend "^4.0.0"
 
+unherit@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unherit/-/unherit-3.0.0.tgz#83d69af9d8e3afd28fa51cff9ee84de7a1d82a6b"
+  integrity sha512-UmvIQZGEc9qdLIQ8mv8/61n6PiMgfbOoASPKHpCvII5srShCQSa6jSjBjlZOR4bxt2XnT6uo6csmPKRi+zQ0Jg==
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -13903,6 +13909,19 @@ unified@9.2.0:
     is-plain-obj "^2.0.0"
     trough "^1.0.0"
     vfile "^4.0.0"
+
+unified@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-10.0.0.tgz#e391bf4e8745422902fdbedcb59732647f5ee438"
+  integrity sha512-6d3q5HdD4GVTZU9S/9yNiziL8chISFxnZtW1lietmYfglJiPxa5oVWwkb8kA3S7A4Wqubju+uvcYjmDUASXFDw==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    bail "^2.0.0"
+    extend "^3.0.0"
+    is-buffer "^2.0.0"
+    is-plain-obj "^4.0.0"
+    trough "^2.0.0"
+    vfile "^5.0.0"
 
 unified@^8.4.2:
   version "8.4.2"
