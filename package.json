@@ -58,7 +58,7 @@
     "retext-indefinite-article": "2.0.3",
     "retext-redundant-acronyms": "3.0.0",
     "retext-repeated-words": "4.0.0",
-    "retext-sentence-spacing": "4.0.0",
+    "retext-sentence-spacing": "5.0.0",
     "retext-syntax-mentions": "2.1.1",
     "retext-syntax-urls": "3.0.0",
     "typescript": "4.3.5",
