@@ -3312,6 +3312,11 @@ array-iterate@^1.0.0:
   resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-1.1.4.tgz#add1522e9dd9749bb41152d08b845bd08d6af8b7"
   integrity sha512-sNRaPGh9nnmdC8Zf+pT3UqP8rnWj5Hf9wiFGsX3wUQ2yVSIhO2ShFwCoceIPpB41QF6i2OEmrHmCo36xronCVA==
 
+array-iterate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-2.0.0.tgz#901a2297f878c1d6ec5be4fea5e7ad16fa37c3e3"
+  integrity sha512-HNhAorCEY0NY/p+SMvcM0O2OTxZZItN0PT7pd2cXxpUlwPcQ/2ar4beOu0bS0Vkv7QRWcTfipECz/zhXUyArWg==
+
 array-union@^1.0.1, array-union@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
@@ -12326,15 +12331,17 @@ retext-syntax-mentions@2.1.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-retext-syntax-urls@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-2.0.0.tgz#fe08161d08bf8d64c52ecdda55add5c31ff7e810"
-  integrity sha512-HHm32sKKXFwlqz5yNSpSwNQZJxCfekXwtCHAoLM8b6snn/S5pNotZMJSKCUO0XCvUOgq/x0wBUTTfYBwB0vGpg==
+retext-syntax-urls@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.0.0.tgz#e983bffa8ab69c3eb5a416faae1aceb21912640b"
+  integrity sha512-wysS1jQjFsZI+LLi6ASjXlVlk5aktpnXxUvdgyBnG4yxnturzKWmI01p/gmnNQ0dJb/dENVExxFT307h+cSjHQ==
   dependencies:
-    nlcst-to-string "^2.0.0"
-    unist-util-is "^4.0.0"
-    unist-util-modify-children "^1.1.1"
-    unist-util-position "^3.0.0"
+    "@types/unist" "^2.0.0"
+    nlcst-to-string "^3.0.0"
+    unified "^10.0.0"
+    unist-util-is "^5.0.0"
+    unist-util-modify-children "^3.0.0"
+    unist-util-position "^4.0.0"
 
 retry@^0.12.0:
   version "0.12.0"
@@ -14015,19 +14022,20 @@ unist-util-map@^1.0.4:
   dependencies:
     object-assign "^4.0.1"
 
-unist-util-modify-children@^1.1.1:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-1.1.6.tgz#1587130ca0ab5c56155fa60837ff524c3fbfbfaa"
-  integrity sha512-TOA6W9QLil+BrHqIZNR4o6IA5QwGOveMbnQxnWYq+7EFORx9vz/CHrtzF36zWrW61E2UKw7sM1KPtIgeceVwXw==
-  dependencies:
-    array-iterate "^1.0.0"
-
 unist-util-modify-children@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-2.0.0.tgz#9c9c30d4e32502aabb3fde10d7872a17c86801e2"
   integrity sha512-HGrj7JQo9DwZt8XFsX8UD4gGqOsIlCih9opG6Y+N11XqkBGKzHo8cvDi+MfQQgiZ7zXRUiQREYHhjOBHERTMdg==
   dependencies:
     array-iterate "^1.0.0"
+
+unist-util-modify-children@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-3.0.0.tgz#fe2cc1b26f841100b79bf1a9a04bcae6c78c4c42"
+  integrity sha512-cbDbx+4BeR4UzJXzvOgw6M/b69dKiaezt3gvN3ZbaJnGr0q719GKQCkMhdjPQiOBH6DnQ7TfHZs2aPY3vOkPyg==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    array-iterate "^2.0.0"
 
 unist-util-position@^3.0.0, unist-util-position@^3.1.0:
   version "3.1.0"
