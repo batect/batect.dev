@@ -8834,10 +8834,10 @@ markdown-extensions@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-extensions/-/markdown-extensions-1.1.1.tgz#fea03b539faeaee9b4ef02a3769b455b189f7fc3"
   integrity sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==
 
-match-casing@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/match-casing/-/match-casing-1.0.3.tgz#cda6c33e377dbe49daff286e0d500d90766b16a4"
-  integrity sha512-oMyC3vUVCFbGu+M2Zxl212LPJThcaw7QxB5lFuJPQCgV/dsGBP0yZeCoLmX6CiBkoBcVbAKDJZrBpJVu0XcLMw==
+match-casing@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/match-casing/-/match-casing-2.0.0.tgz#76d56d1fd6ff75fc02b71f1a17c6180e12153f22"
+  integrity sha512-yWG59YBJvFZLJC9PTtpckce1JVu3j0C4Am9/AO65qmug4iHdpMdzj2BC7FGoN5kGsjr1jS8i6zdeVy05P7SjWg==
 
 maxstache-stream@^1.0.0:
   version "1.0.4"
@@ -9478,12 +9478,28 @@ nlcst-is-literal@^1.0.0:
   dependencies:
     nlcst-to-string "^2.0.0"
 
+nlcst-is-literal@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/nlcst-is-literal/-/nlcst-is-literal-2.0.0.tgz#8d8c905f7bd34b887fabd1b8575e7c78d613e362"
+  integrity sha512-VYONEPY4vaH80dHvzHv4GZpvwaz3HhhUaqv5x+/LFGt0w/JKHOhZECFBJ65ur4dQtVtDygypv9XGhMNQDOe37g==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    nlcst-to-string "^3.0.0"
+
 nlcst-normalize@^2.0.0:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/nlcst-normalize/-/nlcst-normalize-2.1.5.tgz#14d320b346a833d1ac91dfb60558b947e4444f99"
   integrity sha512-xSqTKv8IHIy3n/orD7wj81BZljLfbrTot0Pv64MYUnQUXfDbi1xDSpJR4qEmbFWyFoHsmivcOdgrK+o7ky3mcw==
   dependencies:
     nlcst-to-string "^2.0.0"
+
+nlcst-normalize@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/nlcst-normalize/-/nlcst-normalize-3.0.0.tgz#ad20269b4b6cfe0493c46ccf0914941f75f41cfa"
+  integrity sha512-c//18sLXDPB04y8cAkRX4OX8fdp6TgY4aiEamViWkxrXIVhV45DKZmL7LDl3iqDd+T2wx4MC0DQSrnRIHHHJKQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    nlcst-to-string "^3.0.0"
 
 nlcst-search@^2.0.0:
   version "2.0.0"
@@ -9493,6 +9509,16 @@ nlcst-search@^2.0.0:
     nlcst-is-literal "^1.0.0"
     nlcst-normalize "^2.0.0"
     unist-util-visit "^2.0.0"
+
+nlcst-search@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/nlcst-search/-/nlcst-search-3.0.0.tgz#671a16128784d5463c7825ee17a9bf9a96a723bf"
+  integrity sha512-QE4bLflS86Oa+Si2n8RoXE8U/IL9WxRA72mvztWFNnPqjg2uF//+d6stG0Di24S4ITDAl4+/u4Jt5MpII5I81Q==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    nlcst-is-literal "^2.0.0"
+    nlcst-normalize "^3.0.0"
+    unist-util-visit "^3.0.0"
 
 nlcst-to-string@^2.0.0:
   version "2.0.4"
@@ -10929,10 +10955,15 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-quotation@^1.0.0, quotation@^1.0.1:
+quotation@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/quotation/-/quotation-1.1.3.tgz#2a4d11f70105ad398b577883f310469367f53351"
   integrity sha512-45gUgmX/RtQOQV1kwM06boP49OYXcKCPrYwdmAvs5YqkpiobhNKKwo524JM6Ma0ko3oN9tXNcWs9+ABq3Ry7YA==
+
+quotation@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/quotation/-/quotation-2.0.1.tgz#74b09a26aec9563674625beac5fc03265336b2d0"
+  integrity sha512-a+Z+GmpL5W1rJqmltBJmQhIvlnEuXvNUsPJYHXV6TmfDYZZga268utV1/0fr09ICz3dqlJmd+Etdlqxo9iuASQ==
 
 random-bytes@~1.0.0:
   version "1.0.0"
@@ -12258,16 +12289,17 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-retext-diacritics@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-3.0.0.tgz#d98046f55d5864f53e7f1b59dcafe3352ecac71b"
-  integrity sha512-QayeY2hpQ1UEsPlderfl6k90sA+mSxnlOMqiA3N5teDPyKo3REwkm+o/fClCxjLSm6NJgqNthOZjjSBUgQvSSw==
+retext-diacritics@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-4.0.0.tgz#26955133ecfab12e24942d45096a4ec25cfa9d3e"
+  integrity sha512-8PgtOAhaDzXf0SrU6BG/lww0yPo5baDBUBF4WeD3Q5fl9rFIrX1OpgdRtrswtyA95EWbb6zun7ZXGEVbpaJgZg==
   dependencies:
-    match-casing "^1.0.0"
-    nlcst-search "^2.0.0"
-    nlcst-to-string "^2.0.0"
-    quotation "^1.0.1"
-    unist-util-position "^3.0.0"
+    match-casing "^2.0.0"
+    nlcst-search "^3.0.0"
+    nlcst-to-string "^3.0.0"
+    quotation "^2.0.0"
+    unified "^10.0.0"
+    unist-util-position "^4.0.0"
 
 retext-english@4.0.0:
   version "4.0.0"
