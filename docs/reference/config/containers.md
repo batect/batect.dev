@@ -32,6 +32,7 @@ Each container definition is made up of the following fields:
 - [`additional_hosts`](#additional_hosts): extra entries to add to `/etc/hosts` inside the container
 - [`build_args`](#build_args): list of build args to use when building the image in `build_directory`
 - [`build_directory`](#build_directory): path to a directory containing a Dockerfile to build and use for this container.
+- [`build_target`](#build_target): Dockerfile stage name to build and use for this container.
 - [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to grant to the container
 - [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to remove from the container
 - [`command`](#command): command to run when the container starts
@@ -122,6 +123,24 @@ For example, running the container `my_container` from the following configurati
 containers:
   my-container:
     build_directory: .batect/my-container
+```
+
+### `build_target`
+
+[Dockerfile stage name](https://docs.docker.com/develop/develop-images/multistage-build/#name-your-build-stages) to build and use for this container.
+
+Only supported when building an image with [`build_directory`](#build_directory).
+
+If not specified, Batect will build and use the default stage.
+
+For example, running the container `my_container` from the following configuration will first build the `my-stage` stage from the Dockerfile in the
+`.batect/my-container` directory, then run the resulting image:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: .batect/my-container
+    build_stage: my-stage
 ```
 
 ### `capabilities_to_add` and `capabilities_to_drop`
@@ -758,6 +777,7 @@ Many of the fields above have equivalent options in other tools.
 | [`additional_hosts`](#additional_hosts)                                 | `--add-host` to `docker run`                           |
 | [`build_args`](#build_args)                                             | `--build-arg` to `docker build`                        |
 | [`build_directory`](#build_directory)                                   | argument to `docker build`                             |
+| [`build_target`](#build_target)                                         | `--target` to `docker build`                             |
 | [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `--cap-add` to `docker run`                            |
 | [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `--cap-drop` to `docker run`                           |
 | [`command`](#command)                                                   | argument to `docker run`                               |
@@ -792,6 +812,7 @@ Many of the fields above have equivalent options in other tools.
 | [`additional_hosts`](#additional_hosts)                                 | `networks.aliases`               |
 | [`build_args`](#build_args)                                             | `build.args`                     |
 | [`build_directory`](#build_directory)                                   | `build` or `build.context`       |
+| [`build_target`](#build_target)                                         | `build.target`                   |
 | [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `cap_add`                        |
 | [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `cap_drop`                       |
 | [`command`](#command)                                                   | `command`                        |
