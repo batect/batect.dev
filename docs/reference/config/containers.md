@@ -777,7 +777,7 @@ Many of the fields above have equivalent options in other tools.
 | [`additional_hosts`](#additional_hosts)                                 | `--add-host` to `docker run`                           |
 | [`build_args`](#build_args)                                             | `--build-arg` to `docker build`                        |
 | [`build_directory`](#build_directory)                                   | argument to `docker build`                             |
-| [`build_target`](#build_target)                                         | `--target` to `docker build`                             |
+| [`build_target`](#build_target)                                         | `--target` to `docker build`                           |
 | [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `--cap-add` to `docker run`                            |
 | [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `--cap-drop` to `docker run`                           |
 | [`command`](#command)                                                   | argument to `docker run`                               |
