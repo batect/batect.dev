@@ -9154,15 +9154,17 @@ mdast-util-to-markdown@^1.0.0:
     parse-entities "^3.0.0"
     zwitch "^2.0.0"
 
-mdast-util-to-nlcst@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-nlcst/-/mdast-util-to-nlcst-4.0.1.tgz#ff8b5339c960b38209273fa8bf4dd7a9498f8636"
-  integrity sha512-Y4ffygj85MTt70STKnEquw6k73jYWJBaYcb4ITAKgSNokZF7fH8rEHZ1GsRY/JaxqUevMaEnsDmkVv5Z9uVRdg==
+mdast-util-to-nlcst@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-nlcst/-/mdast-util-to-nlcst-5.1.0.tgz#d511bac424ecb2092520e9c2bd5006b94f924431"
+  integrity sha512-ibh1gALXYEADyZkfXe9eMTT0g1fyUu34VCB+85SxgOHZIhKtgwy16DEePUjA1Z+48M8pzazsE9KePxGgUL9wrA==
   dependencies:
-    nlcst-to-string "^2.0.0"
-    repeat-string "^1.0.0"
-    unist-util-position "^3.0.0"
-    vfile-location "^3.1.0"
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    nlcst-to-string "^3.0.0"
+    unist-util-position "^4.0.0"
+    vfile "^5.0.0"
+    vfile-location "^4.0.0"
 
 mdast-util-to-string@^1.0.0, mdast-util-to-string@^1.0.2:
   version "1.1.0"
@@ -12503,12 +12505,15 @@ remark-preset-lint-recommended@5.0.0:
     remark-lint-no-unused-definitions "^2.0.0"
     remark-lint-ordered-list-marker-style "^2.0.0"
 
-remark-retext@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/remark-retext/-/remark-retext-4.0.0.tgz#255ed98ac3e0a68da5c6ba4f172299b8d062bb28"
-  integrity sha512-cYCchalpf25bTtfXF24ribYvqytPKq0TiEhqQDBHvVEEsApebwruPWP1cTcvTFBidmpXyqzycm+y8ng7Kmvc8Q==
+remark-retext@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/remark-retext/-/remark-retext-5.0.0.tgz#2865b12cfb42a7ff411ab02f4b20d9285bc15f38"
+  integrity sha512-R5LW3V3Ed4KzKt4FhG69AcCNaPR28qXT0BaV54ePh7EZfPwjokTVKGGAXUzAezKn+p4sjCRXRJWrYuothBMXww==
   dependencies:
-    mdast-util-to-nlcst "^4.0.0"
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    mdast-util-to-nlcst "^5.0.0"
+    unified "^10.0.0"
 
 remark-squeeze-paragraphs@4.0.0:
   version "4.0.0"
@@ -14830,6 +14835,14 @@ vfile-location@^3.0.0, vfile-location@^3.1.0, vfile-location@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-3.2.0.tgz#d8e41fbcbd406063669ebf6c33d56ae8721d0f3c"
   integrity sha512-aLEIZKv/oxuCDZ8lkJGhuhztf/BW4M+iHdCwglA/eWc+vtuRFJj8EtgceYFX4LRjOhCAAiNHsKGssC6onJ+jbA==
+
+vfile-location@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-4.0.1.tgz#06f2b9244a3565bef91f099359486a08b10d3a95"
+  integrity sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    vfile "^5.0.0"
 
 vfile-message@^2.0.0:
   version "2.0.4"
