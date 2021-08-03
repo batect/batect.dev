@@ -42,7 +42,7 @@
     "netlify-cli": "5.4.7",
     "prettier": "2.3.2",
     "raw-loader": "4.0.2",
-    "remark-cli": "9.0.0",
+    "remark-cli": "10.0.0",
     "remark-lint-match-punctuation": "0.2.1",
     "remark-lint-no-duplicate-headings-in-section": "2.0.2",
     "remark-lint-no-repeat-punctuation": "0.1.4",
