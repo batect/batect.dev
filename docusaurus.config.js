@@ -17,7 +17,6 @@ module.exports = {
     colorMode: {
       disableSwitch: true,
     },
-    sidebarCollapsible: false,
     navbar: {
       title: "", // The site title is embedded in the logo.
       logo: {
@@ -122,6 +121,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
+          sidebarCollapsible: false,
           editUrl: "https://github.com/batect/batect.dev/blob/main/",
         },
         blog: {
