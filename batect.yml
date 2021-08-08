@@ -38,7 +38,7 @@ tasks:
     group: Setup tasks
     run:
       container: node-build-env
-      command: yarn install
+      command: yarn install --frozen-lockfile
 
   shell:
     description: Start a shell in the build environment.
