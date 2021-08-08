@@ -21,16 +21,6 @@
   --ifm-h5-font-size: 1.2rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* Not sure why this isn't the default - Infima defines this variable but doesn't use it... */
-  font-family: var(--ifm-heading-font-family);
-}
-
 ol {
   list-style: none;
   counter-reset: item;
@@ -91,61 +81,8 @@ ol > li:before {
   margin-bottom: 0.1rem;
 }
 
-.alert {
-  border-left-width: 40px;
-  color: var(--ifm-font-color-base);
-  padding-bottom: calc(var(--ifm-alert-padding-vertical) - 3px);
-}
-
-.alert--secondary,
-.alert--info,
-.alert--success,
-.alert--warning,
-.alert--danger {
-  --ifm-alert-background-color: white;
-}
-
-.alert a {
-  color: var(--ifm-link-color);
-  text-decoration: var(--ifm-link-decoration);
-}
-
-.alert a:hover {
-  color: var(--ifm-link-hover-color);
-  text-decoration: var(--ifm-link-hover-decoration);
-}
-
-.admonition {
-  display: flex;
-}
-
-.admonition-icon {
-  margin-left: -47px;
-  margin-right: 25px;
-}
-
 .admonition-heading h5 {
-  font-size: 0;
-}
-
-.alert--secondary .admonition-heading {
-  color: var(--ifm-color-secondary-darkest);
-}
-
-.alert--info .admonition-heading {
-  color: var(--ifm-color-info);
-}
-
-.alert--success .admonition-heading {
-  color: var(--ifm-color-success);
-}
-
-.alert--warning .admonition-heading {
-  color: var(--ifm-color-warning);
-}
-
-.alert--danger .admonition-heading {
-  color: var(--ifm-color-danger);
+  font-size: 1rem;
 }
 
 .DocSearch-Button,
