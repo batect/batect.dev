@@ -47,8 +47,8 @@ function Home() {
       description: (
         <>
           <p>
-            Free yourself from manual setup and maintenance of tools and dependencies: run builds and integration tests with a single command whether it&rsquo;s
-            the first time you&rsquo;re using the project or the fiftieth.
+            Free yourself from manual setup and maintenance of tools and dependencies: run builds, integration tests or deployments with a single command
+            whether it&rsquo;s the first time you&rsquo;re using the project or the fiftieth.
           </p>
           <p>
             And because Batect uses Docker to create a clean, isolated environment{" "}
