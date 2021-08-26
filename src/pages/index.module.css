@@ -18,13 +18,7 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
-  }
-
-  .features,
-  .example {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem 0;
   }
 }
 
