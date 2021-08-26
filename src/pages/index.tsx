@@ -8,7 +8,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./index.module.css";
 import helloWorldExampleYaml from "./home-page-examples/hello-world/batect.yml";
 import AsciinemaPlayer from "../components/AsciinemaPlayer";
-import NewsletterSignup from "./newsletterSignup";
 
 interface FeatureDetails {
   title: string;
@@ -151,7 +150,6 @@ function Home() {
             </div>
           </div>
         </section>
-        <NewsletterSignup />
       </main>
     </Layout>
   );
