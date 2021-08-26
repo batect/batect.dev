@@ -1,0 +1,25 @@
+.newsletterSignup {
+  padding: 2rem 0;
+
+  background: var(--ifm-color-emphasis-100);
+}
+
+.newsletterSignup form {
+  display: flex;
+}
+
+.newsletterSignup input {
+  font-family: var(--ifm-font-family-base);
+  margin-top: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier));
+  margin-bottom: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier));
+}
+
+.newsletterSignup input[type="email"] {
+  font-size: var(--ifm-font-size-base) / var(--ifm-line-height-base);
+  border-radius: var(--ifm-button-border-radius);
+  border-style: none;
+  padding: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier));
+  margin-right: calc(var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier));
+  width: 100%;
+  max-width: 500px;
+}
