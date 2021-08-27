@@ -1,6 +1,6 @@
 containers:
   my-container:
-    image: alpine:3.14.1
+    image: alpine:3.14.2
 
 tasks:
   say-hello:
