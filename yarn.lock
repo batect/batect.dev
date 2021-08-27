@@ -12830,11 +12830,12 @@ retext-diacritics@4.1.0:
     unified "^10.0.0"
     unist-util-position "^4.0.0"
 
-retext-english@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-4.0.0.tgz#7f251c9eeb4cbf533af7a16cba611f491f5c2939"
-  integrity sha512-U3efC2tni184jq0Cg2LqjrI6OV7NmUVcoCDyyMG7wlR1u0KpeYsWRs8YpfrY+c5U4koQJN+9eoW7p3FBLFojxg==
+retext-english@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-4.1.0.tgz#4d4b4047a262feba316fe03537a0a00a56bfc1d4"
+  integrity sha512-Pky2idjvgkzfodO0GH9X4IU8LX/d4ULTnLf7S1WsBRlSCh/JdTFPafXZstJqZehtQWNHrgoCqVOiGugsNFYvIQ==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     parse-english "^5.0.0"
     unherit "^3.0.0"
     unified "^10.0.0"
