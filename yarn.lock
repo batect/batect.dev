@@ -12868,16 +12868,16 @@ retext-redundant-acronyms@4.1.0:
     unist-util-find-after "^4.0.0"
     unist-util-position "^4.0.0"
 
-retext-repeated-words@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-4.0.0.tgz#da36a7f996ec435cf151d2145d0fe70e9ba19906"
-  integrity sha512-adtL5/deS4mxD8d9K5sQFCeoIDWi+V8dBypAyXLSaOG1uVZ4TNuSjMPW4uZMqSYGlwDaF7Ah+odxfAb1G1UqoQ==
+retext-repeated-words@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-4.1.0.tgz#34bc9387aef5e19072fb5a75cb2fd0322f58671d"
+  integrity sha512-uMOPwX9bfUDgLcBdMAy4xweJ5lcOTKDIrVaZ+bURk4gEc5YdkyBEQCP8gs2KIQepalytA/fsvQDBrcUzzu6u4Q==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     nlcst-to-string "^3.0.0"
     unified "^10.0.0"
-    unist-util-is "^5.0.0"
     unist-util-position "^4.0.0"
-    unist-util-visit "^3.0.0"
+    unist-util-visit "^4.0.0"
 
 retext-sentence-spacing@5.0.0:
   version "5.0.0"
