@@ -12852,11 +12852,12 @@ retext-indefinite-article@3.1.0:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
 
-retext-redundant-acronyms@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/retext-redundant-acronyms/-/retext-redundant-acronyms-4.0.0.tgz#1dac4d255de8485133a0140d86e442fa7b9271ba"
-  integrity sha512-BlwzxrkM3Hhs8Ot2J9N052KAvjc9HsLF8AdCQaH5rYWzOcw6l7siwv84oaNwo1eI5Y3jJfWO2N9XnRNWmSghHA==
+retext-redundant-acronyms@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/retext-redundant-acronyms/-/retext-redundant-acronyms-4.1.0.tgz#93d10216143ccf547976ceaf2e8ec28630c78f41"
+  integrity sha512-Rs4bfuN5ylaC71BZGgV55fUv2/GrZH7DcLIb8GzLdWHXwkZyfUKfIY7l5YwrJP8uNKz2lU8NMJ7vhwknqsjzhA==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     "@types/pluralize" "^0.0.29"
     nlcst-normalize "^3.0.0"
     nlcst-search "^3.0.0"
