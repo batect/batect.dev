@@ -2730,6 +2730,13 @@
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
+"@types/nlcst@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/nlcst/-/nlcst-1.0.0.tgz#9dacd7e9a32bcf0451873be62bdc373aed735b46"
+  integrity sha512-3TGCfOcy8R8mMQ4CNSNOe3PG66HttvjcLzCoOpvXvDtfWOTi+uT/rxeOKm/qEwbM4SNe1O/PjdiBK2YcTjU4OQ==
+  dependencies:
+    "@types/unist" "*"
+
 "@types/node-fetch@^2.1.6":
   version "2.5.12"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.12.tgz#8a6f779b1d4e60b7a57fb6fd48d84fb545b9cc66"
@@ -12810,11 +12817,12 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-retext-diacritics@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-4.0.0.tgz#26955133ecfab12e24942d45096a4ec25cfa9d3e"
-  integrity sha512-8PgtOAhaDzXf0SrU6BG/lww0yPo5baDBUBF4WeD3Q5fl9rFIrX1OpgdRtrswtyA95EWbb6zun7ZXGEVbpaJgZg==
+retext-diacritics@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-4.1.0.tgz#a60e8a35aeaaf2bf1018aebf51355f3e5892744e"
+  integrity sha512-wtA4Jx4rkunMAkB06wHL3TyrPRkxdtfAfXtEjPxe5Hj+hZfzkl29t4ppF0tG9EgdEkl7CiHXwJ87I2oClFiPNQ==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     match-casing "^2.0.0"
     nlcst-search "^3.0.0"
     nlcst-to-string "^3.0.0"
