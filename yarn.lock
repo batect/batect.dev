@@ -12923,15 +12923,16 @@ retext-sentence-spacing@5.1.0:
     unist-util-is "^5.0.0"
     unist-util-visit "^4.0.0"
 
-retext-syntax-mentions@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/retext-syntax-mentions/-/retext-syntax-mentions-3.0.0.tgz#9a9bb545b76e3cb470622bbb25b6f9980e196142"
-  integrity sha512-S5CN/2OsDEoKU6icfwKUVV8jeA9dPwDxFPeywePIRfVupfFTrjNCslxNx5RHbLfkgGdpNT9Dk2uy3VeSML/cMA==
+retext-syntax-mentions@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/retext-syntax-mentions/-/retext-syntax-mentions-3.1.0.tgz#844440a7d53c9e50416261ed7caa089ae80cfd2d"
+  integrity sha512-xcHHHOm3coErzrxtXN3S75UJ1S+WUJXKes5Mpu8WyVmMMYVC5qjSoBlYLHx1+jztq+KmYYkG3rbM3it2J4y7jA==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     nlcst-to-string "^3.0.0"
     unified "^10.0.0"
     unist-util-position "^4.0.0"
-    unist-util-visit "^3.0.0"
+    unist-util-visit "^4.0.0"
 
 retext-syntax-urls@3.0.0:
   version "3.0.0"
