@@ -9072,13 +9072,6 @@ mdast-util-from-markdown@^1.0.0:
     parse-entities "^3.0.0"
     unist-util-stringify-position "^3.0.0"
 
-mdast-util-frontmatter@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/mdast-util-frontmatter/-/mdast-util-frontmatter-1.0.0.tgz#ef12469379782e4a0fd995fed60cc3b871e6c819"
-  integrity sha512-7itKvp0arEVNpCktOET/eLFAYaZ+0cNjVtFtIPxgQ5tV+3i+D4SDDTjTzPWl44LT59PC+xdx+glNTawBdF98Mw==
-  dependencies:
-    micromark-extension-frontmatter "^1.0.0"
-
 mdast-util-heading-style@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/mdast-util-heading-style/-/mdast-util-heading-style-2.0.0.tgz#19bcc14d96b4a6f24efbe1318409bd34af64bb7f"
@@ -9231,15 +9224,6 @@ micromark-core-commonmark@^1.0.1:
     micromark-util-symbol "^1.0.0"
     micromark-util-types "^1.0.1"
     parse-entities "^3.0.0"
-
-micromark-extension-frontmatter@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/micromark-extension-frontmatter/-/micromark-extension-frontmatter-1.0.0.tgz#612498e6dad87c132c95e25f0918e7cc0cd535f6"
-  integrity sha512-EXjmRnupoX6yYuUJSQhrQ9ggK0iQtQlpi6xeJzVD5xscyAI+giqco5fdymayZhJMbIFecjnE2yz85S9NzIgQpg==
-  dependencies:
-    fault "^2.0.0"
-    micromark-util-character "^1.0.0"
-    micromark-util-symbol "^1.0.0"
 
 micromark-factory-destination@^1.0.0:
   version "1.0.0"
@@ -11812,16 +11796,6 @@ remark-footnotes@2.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-2.0.0.tgz#9001c4c2ffebba55695d2dd80ffb8b82f7e6303f"
   integrity sha512-3Clt8ZMH75Ayjp9q4CorNeyjwIxHFcTkaektplKGl2A1jNGEUey8cKL0ZC5vJwfcD5GFGsNLImLG/NGzWIzoMQ==
 
-remark-frontmatter@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/remark-frontmatter/-/remark-frontmatter-4.0.0.tgz#3730cf165f49f77d2aebfe5df1eb03e80860fc25"
-  integrity sha512-0J+2czWAS9sz9baJJel4tTUnNhMI7wYgih99Hxhdeq2GpdI1Ctu0iol6zAsWw5xa+jLsZXNiwEnnJAJo3XX3hw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    mdast-util-frontmatter "^1.0.0"
-    micromark-extension-frontmatter "^1.0.0"
-    unified "^10.0.0"
-
 remark-lint-blockquote-indentation@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint-blockquote-indentation/-/remark-lint-blockquote-indentation-3.0.1.tgz#74591e6029c4c8c92bf0c1665e001b29a71522bd"
@@ -12909,15 +12883,15 @@ retext-syntax-mentions@3.1.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-retext-syntax-urls@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.0.0.tgz#e983bffa8ab69c3eb5a416faae1aceb21912640b"
-  integrity sha512-wysS1jQjFsZI+LLi6ASjXlVlk5aktpnXxUvdgyBnG4yxnturzKWmI01p/gmnNQ0dJb/dENVExxFT307h+cSjHQ==
+retext-syntax-urls@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.1.0.tgz#4594ecb54a1ddd10303b79ce5ebffe8f0dbcc7f2"
+  integrity sha512-2Tn/YdGD3OkYz/zw07Vhxx8++Ap7nUOU8qMkCDMHZZJB/idRw3Jpc+JAFc1cIXzn7Vw2PvvIKCXY4tPM+BlhjQ==
   dependencies:
+    "@types/nlcst" "^1.0.0"
     "@types/unist" "^2.0.0"
     nlcst-to-string "^3.0.0"
     unified "^10.0.0"
-    unist-util-is "^5.0.0"
     unist-util-modify-children "^3.0.0"
     unist-util-position "^4.0.0"
 
