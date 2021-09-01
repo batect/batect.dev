@@ -16,7 +16,7 @@ Docker containers, run those tasks quickly and consistently everywhere, and easi
 
 ## Why would I use Batect?
 
-Every application has a build environment - the tools and configuration needed to take the source code and produce an artifact
+Every application has a build environment - the tools and configuration needed to take the source code and produce an artefact
 ready for use.
 
 However, setting this up can be time consuming and frustrating. Too often new team members' first experience on

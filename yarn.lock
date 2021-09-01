@@ -5411,6 +5411,11 @@ detective-typescript@^7.0.0:
     node-source-walk "^4.2.0"
     typescript "^3.9.7"
 
+dictionary-en-au@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/dictionary-en-au/-/dictionary-en-au-2.3.0.tgz#261e8e8d0bd776afcf7ff49722815656438d5be9"
+  integrity sha512-KoEotpXPCyCgZ5DHlexHyzFfNwPnv9VupeCrp6r+JrtEkycPmZYbQiXF+cXz9NJr1gXy0AMEpzZ8UfxF40+8OQ==
+
 dir-glob@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.2.2.tgz#fa09f0694153c8918b18ba0deafae94769fc50c4"
@@ -9067,6 +9072,13 @@ mdast-util-from-markdown@^1.0.0:
     parse-entities "^3.0.0"
     unist-util-stringify-position "^3.0.0"
 
+mdast-util-frontmatter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-frontmatter/-/mdast-util-frontmatter-1.0.0.tgz#ef12469379782e4a0fd995fed60cc3b871e6c819"
+  integrity sha512-7itKvp0arEVNpCktOET/eLFAYaZ+0cNjVtFtIPxgQ5tV+3i+D4SDDTjTzPWl44LT59PC+xdx+glNTawBdF98Mw==
+  dependencies:
+    micromark-extension-frontmatter "^1.0.0"
+
 mdast-util-heading-style@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/mdast-util-heading-style/-/mdast-util-heading-style-2.0.0.tgz#19bcc14d96b4a6f24efbe1318409bd34af64bb7f"
@@ -9219,6 +9231,15 @@ micromark-core-commonmark@^1.0.1:
     micromark-util-symbol "^1.0.0"
     micromark-util-types "^1.0.1"
     parse-entities "^3.0.0"
+
+micromark-extension-frontmatter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/micromark-extension-frontmatter/-/micromark-extension-frontmatter-1.0.0.tgz#612498e6dad87c132c95e25f0918e7cc0cd535f6"
+  integrity sha512-EXjmRnupoX6yYuUJSQhrQ9ggK0iQtQlpi6xeJzVD5xscyAI+giqco5fdymayZhJMbIFecjnE2yz85S9NzIgQpg==
+  dependencies:
+    fault "^2.0.0"
+    micromark-util-character "^1.0.0"
+    micromark-util-symbol "^1.0.0"
 
 micromark-factory-destination@^1.0.0:
   version "1.0.0"
@@ -9996,6 +10017,13 @@ nprogress@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
+
+nspell@^2.0.0:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/nspell/-/nspell-2.1.5.tgz#85d51ef71499da72d899f261d7399ea2fc607633"
+  integrity sha512-PSStyugKMiD9mHmqI/CR5xXrSIGejUXPlo88FBRq5Og1kO5QwQ5Ilu8D8O5I/SHpoS+mibpw6uKA8rd3vXd2Sg==
+  dependencies:
+    is-buffer "^2.0.0"
 
 nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
@@ -11784,6 +11812,16 @@ remark-footnotes@2.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-2.0.0.tgz#9001c4c2ffebba55695d2dd80ffb8b82f7e6303f"
   integrity sha512-3Clt8ZMH75Ayjp9q4CorNeyjwIxHFcTkaektplKGl2A1jNGEUey8cKL0ZC5vJwfcD5GFGsNLImLG/NGzWIzoMQ==
 
+remark-frontmatter@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/remark-frontmatter/-/remark-frontmatter-4.0.0.tgz#3730cf165f49f77d2aebfe5df1eb03e80860fc25"
+  integrity sha512-0J+2czWAS9sz9baJJel4tTUnNhMI7wYgih99Hxhdeq2GpdI1Ctu0iol6zAsWw5xa+jLsZXNiwEnnJAJo3XX3hw==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    mdast-util-frontmatter "^1.0.0"
+    micromark-extension-frontmatter "^1.0.0"
+    unified "^10.0.0"
+
 remark-lint-blockquote-indentation@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint-blockquote-indentation/-/remark-lint-blockquote-indentation-3.0.1.tgz#74591e6029c4c8c92bf0c1665e001b29a71522bd"
@@ -12845,6 +12883,19 @@ retext-sentence-spacing@5.1.0:
     nlcst-to-string "^3.0.0"
     unified "^10.0.0"
     unist-util-is "^5.0.0"
+    unist-util-visit "^4.0.0"
+
+retext-spell@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/retext-spell/-/retext-spell-5.1.0.tgz#cd86003f42cc76a8a749ac7a5cb7da9b3d3a5093"
+  integrity sha512-igBEOmzOnemIWBUUfgfCOpIx9yCKP/VEclcCLwLTy2Y0ix6yPAuApFGXj78s0/zQ9vZ6CWtGEcFCrfKjEdoT0g==
+  dependencies:
+    "@types/nlcst" "^1.0.0"
+    nlcst-is-literal "^2.0.0"
+    nlcst-to-string "^3.0.0"
+    nspell "^2.0.0"
+    quotation "^2.0.0"
+    unified "^10.0.0"
     unist-util-visit "^4.0.0"
 
 retext-syntax-mentions@3.1.0:

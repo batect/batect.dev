@@ -4,7 +4,7 @@ title: GitHub Actions
 
 GitHub Actions' [Ubuntu 18.04](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu1804-README.md) and
 [Ubuntu 20.04](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md) runners come pre-installed
-with everything needed to run batect. We recommend using Ubuntu 20.04.
+with everything needed to run Batect. We recommend using Ubuntu 20.04.
 
 To use the Ubuntu 20.04 runner, specify `runs-on: ubuntu:20.04` in your configuration file. For example:
 
@@ -19,7 +19,7 @@ jobs:
         run: ./batect build
 ```
 
-You can see a full example of using Batect with CircleCI in [the TypeScript sample project](https://github.com/batect/batect-sample-typescript).
+You can see a full example of using Batect with GitHub Actions in [the TypeScript sample project](https://github.com/batect/batect-sample-typescript).
 
 ## Caching between builds
 

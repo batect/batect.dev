@@ -1,4 +1,5 @@
-import { unified } from "unified";
+import {readFileSync} from "fs";
+import {unified} from "unified";
 
 import remarkRetext from "remark-retext";
 import retextEnglish from "retext-english";
@@ -9,6 +10,8 @@ import retextIndefiniteArticle from "retext-indefinite-article";
 import retextRedundantAcronyms from "retext-redundant-acronyms";
 import retextRepeatedWords from "retext-repeated-words";
 import retextSentenceSpacing from "retext-sentence-spacing";
+import retextSpell from 'retext-spell';
+import dictionary from 'dictionary-en-au';
 
 export default {
   plugins: [
@@ -35,7 +38,12 @@ export default {
         .use(retextIndefiniteArticle)
         .use(retextRedundantAcronyms)
         .use(retextRepeatedWords)
-        .use(retextSentenceSpacing),
+        .use(retextSentenceSpacing)
+        .use(retextSpell, {
+          dictionary: dictionary,
+          personal: readFileSync('dictionary.txt')
+        })
+      ,
     ],
 
     // Rules enabled by default by presents above that we don't want

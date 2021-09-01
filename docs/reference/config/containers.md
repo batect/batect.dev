@@ -304,7 +304,7 @@ Both of these can be overridden for an individual task by specifying an [`entryp
 
 See the Docker docs for [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd) and
 [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint) for more information on how the entrypoint is used.
-batect will always convert the entrypoint provided here to the exec form when passed to Docker.
+Batect will always convert the entrypoint provided here to the exec form when passed to Docker.
 
 For example, the container `my-container` from the following configuration will use `sh -c` as its entrypoint and ignore the default entrypoint set in `my-image`:
 
@@ -345,7 +345,7 @@ Running the container `build-env` will launch a container that uses the `ruby:2.
 - The environment variable `SUPER_SECRET_VALUE` will have the value of the `SECRET_PASSWORD` environment variable on
   the host. (So, for example, if `SECRET_PASSWORD` is `abc123` on the host, then `SUPER_SECRET_VALUE` will have the value `abc123` in the container.)
 
-  If `SECRET_PASSWORD` is not set on the host, batect will show an error message and not start the task.
+  If `SECRET_PASSWORD` is not set on the host, Batect will show an error message and not start the task.
 
 - The environment variable `OPTIMISATION_LEVEL` will have the value of the `HOST_OPTIMISATION_LEVEL` environment variable on the host.
 
@@ -362,7 +362,7 @@ Proxy-related environment variables, if set on the host, are passed through to t
 
 If a proxy-related environment variable is defined on the container's configuration, it takes precedence over the host-provided value.
 
-See [this page](../../how-to/proxies.mdx) for more information on using batect with proxies.
+See [this page](../../how-to/proxies.mdx) for more information on using Batect with proxies.
 
 ### `health_check`
 
@@ -419,7 +419,7 @@ containers:
 
 Image name (in standard Docker image reference format) to use for this container. One of `image` or `build_directory` is required.
 
-If the image has not already been pulled, batect will pull it before starting the container.
+If the image has not already been pulled, Batect will pull it before starting the container.
 
 The image can be overridden from the command line when running a task with [`--override-image`](../cli.mdx#--override-image).
 
@@ -484,7 +484,7 @@ If you are running Docker 19.03 or earlier, some log drivers do not support stre
 [the limitations section of Docker's logging documentation](https://docs.docker.com/config/containers/logging/configure/#limitations-of-logging-drivers).
 
 If the selected log driver does not support streaming container output to the console, you will see error messages similar to
-`Error attaching: configured logging driver does not support reading` in batect's output. This does not affect the execution of the task, which
+`Error attaching: configured logging driver does not support reading` in Batect's output. This does not affect the execution of the task, which
 will run to completion as per normal.
 :::
 
@@ -587,8 +587,8 @@ containers:
 
 ### `run_as_current_user`
 
-Run the container with the same UID and GID as the user running batect (rather than the user the Docker daemon runs as, which is root
-on Linux). This means that any files created by the container will be owned by the user running batect, rather than root.
+Run the container with the same UID and GID as the user running Batect (rather than the user the Docker daemon runs as, which is root
+on Linux). This means that any files created by the container will be owned by the user running Batect, rather than root.
 
 This is really only useful on Linux. On macOS, the Docker daemon runs as the currently logged-in user and so any files created in the container are owned
 by that user, so this is less of an issue. However, for consistency, the same configuration changes are made on both Linux and macOS.
@@ -607,7 +607,7 @@ Directory to use as home directory for user inside container.
 
 Required if `enabled` is `true`, not allowed if `enabled` is `false`.
 
-This directory is automatically created by batect with the correct owner and group.
+This directory is automatically created by Batect with the correct owner and group.
 
 :::warning
 If the directory given by `home_directory` already exists inside the image for this container, it is overwritten.
@@ -672,7 +672,7 @@ containers:
 
 Running the container `application` will first build or pull the images for both the `database` and `application` containers.
 
-Once the image for `database` is ready, `database` will start and launch the command specified in the Dockerfile, then batect will wait for the container to report as healthy.
+Once the image for `database` is ready, `database` will start and launch the command specified in the Dockerfile, then Batect will wait for the container to report as healthy.
 Once `database` reports as healthy, it will run `./apply-migrations.sh` and wait for it to finish before then starting `application`.
 
 ### `shm_size`

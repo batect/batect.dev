@@ -148,7 +148,7 @@ Passing the [`--skip-prerequisites`](../cli.mdx#--skip-prerequisites) command li
 
 #### Wildcards
 
-Prerequisite names can include wildcards, denoted by `*`. For example, rather than listing `lint:bar` and `lint:foo`, you can give just `lint:*`, and batect will automatically run both `lint:bar` and
+Prerequisite names can include wildcards, denoted by `*`. For example, rather than listing `lint:bar` and `lint:foo`, you can give just `lint:*`, and Batect will automatically run both `lint:bar` and
 `lint:foo`.
 
 A single `*` matches zero or more characters. For example, giving `lint:*` as a prerequisite would match the tasks `lint:a`, `lint:foo` and `lint:`.
@@ -330,7 +330,7 @@ Running the task `start-app` will start the `app` container with the following e
 - The environment variables `SUPER_SECRET_VALUE` and `ANOTHER_SECRET_VALUE` will have the value of the `SECRET_PASSWORD` environment variable on
   the host. (So, for example, if `SECRET_PASSWORD` is `abc123` on the host, then `SUPER_SECRET_VALUE` will have the value `abc123` in the container.)
 
-  If `SECRET_PASSWORD` is not set on the host, batect will show an error message and not start the task.
+  If `SECRET_PASSWORD` is not set on the host, Batect will show an error message and not start the task.
 
 - The environment variable `OPTIMISATION_LEVEL` will have the value of the `HOST_OPTIMISATION_LEVEL` environment variable on the host.
 
@@ -358,7 +358,7 @@ For example, this means that if a web server is listening on port 456 within the
 
 The Dockerfile for the image used by the app container does not need to contain an `EXPOSE` instruction for ports 456 or 2000.
 
-Note that this does not affect how containers launched by batect as part of the same task access ports used by each other, just how they're exposed to the host.
+Note that this does not affect how containers launched by Batect as part of the same task access ports used by each other, just how they're exposed to the host.
 Any container started as part of a task will be able to access any port on any other container at the address `container_name:container_port`. For example,
 if a process running in another container wants to access the application running on port 456 in the `app` container, it would access it at `app:456`,
 not `app:123`

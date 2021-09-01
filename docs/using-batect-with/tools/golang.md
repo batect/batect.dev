@@ -64,7 +64,7 @@ In the [example above](#example-configuration), `GOCACHE` has been placed inside
 **tl;dr**: Mount a cache into your container at `~/.cache/golangci-lint/`, otherwise you'll experience slow performance from `golangci-lint`
 :::
 
-[`golangci-lint`](https://github.com/golangci/golangci-lint) caches build artifacts used during analysis to speed up subsequent runs.
+[`golangci-lint`](https://github.com/golangci/golangci-lint) caches build artefacts used during analysis to speed up subsequent runs.
 By default, it stores this cache at `~/.cache/golangci-lint/`.
 
 Without a mounted cache, this directory would be lost every time Batect starts a new container, causing `golangci-lint` to need to rebuild your application
