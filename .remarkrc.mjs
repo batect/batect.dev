@@ -1,14 +1,14 @@
 import { unified } from "unified";
 
-import remark_retext from "remark-retext";
-import retext_english from "retext-english";
-import retext_syntax_mentions from "retext-syntax-mentions";
-import retext_syntax_urls from "retext-syntax-urls";
-import retext_diacritics from "retext-diacritics";
-import retext_indefinite_article from "retext-indefinite-article";
-import retext_redundant_acronyms from "retext-redundant-acronyms";
-import retext_repeated_words from "retext-repeated-words";
-import retext_sentence_spacing from "retext-sentence-spacing";
+import remarkRetext from "remark-retext";
+import retextEnglish from "retext-english";
+import retextSyntaxMentions from "retext-syntax-mentions";
+import retextSyntaxUrls from "retext-syntax-urls";
+import retextDiacritics from "retext-diacritics";
+import retextIndefiniteArticle from "retext-indefinite-article";
+import retextRedundantAcronyms from "retext-redundant-acronyms";
+import retextRepeatedWords from "retext-repeated-words";
+import retextSentenceSpacing from "retext-sentence-spacing";
 
 export default {
   plugins: [
@@ -26,16 +26,16 @@ export default {
     "remark-validate-links",
 
     [
-      remark_retext,
+      remarkRetext,
       unified()
-        .use(retext_english)
-        .use(retext_syntax_mentions)
-        .use(retext_syntax_urls)
-        .use(retext_diacritics)
-        .use(retext_indefinite_article)
-        .use(retext_redundant_acronyms)
-        .use(retext_repeated_words)
-        .use(retext_sentence_spacing),
+        .use(retextEnglish)
+        .use(retextSyntaxMentions)
+        .use(retextSyntaxUrls)
+        .use(retextDiacritics)
+        .use(retextIndefiniteArticle)
+        .use(retextRedundantAcronyms)
+        .use(retextRepeatedWords)
+        .use(retextSentenceSpacing),
     ],
 
     // Rules enabled by default by presents above that we don't want
