@@ -91,6 +91,7 @@ eg
 eg.
 entrypoint
 filesystem
+gRPC
 groupId
 healthcheck
 hostname
