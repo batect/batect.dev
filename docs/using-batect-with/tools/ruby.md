@@ -13,7 +13,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
       - type: cache
         name: bundle-cache
         container: /bundle-cache

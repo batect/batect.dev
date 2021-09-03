@@ -16,7 +16,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
       - type: cache
         name: node_modules
         container: /code/node_modules

@@ -15,7 +15,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
       - type: cache
         name: go-cache
         container: /go

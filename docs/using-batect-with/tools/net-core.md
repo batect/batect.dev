@@ -11,7 +11,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
       - type: cache
         name: nuget-cache
         container: /root/.nuget/packages

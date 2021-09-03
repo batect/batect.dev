@@ -137,7 +137,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
     working_directory: /code
 ```
 
@@ -151,10 +150,10 @@ If you start a shell with `./batect shell` and run `yarn init .` and `yarn add t
 If you're using macOS or Windows, you may have noticed that `yarn add typescript` took longer than normal. This is due to the
 overhead introduced by using `node_modules` from your local machine inside the container.
 
-Unfortunately, the performance of Docker volume mounts on macOS and Windows isn't great, and even with `options: cached`, the
-difference can be noticeable.
+Unfortunately, the performance of Docker volume mounts on macOS and Windows is noticeably worse than using the filesystem directly
+on your machine.
 
-The solution is to use a Batect cache for the `node_modules` folder, for example:
+One option to improve performance is to use a Batect [cache](../concepts/caches.md) for the `node_modules` folder, for example:
 
 ```yaml title="batect.yml" {8-10}
 containers:
@@ -163,7 +162,6 @@ containers:
     volumes:
       - local: .
         container: /code
-        options: cached
       - type: cache
         container: /code/node_modules
         name: node_modules

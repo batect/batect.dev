@@ -67,8 +67,7 @@ to skip checking if the base image is up-to-date. For example, instead of using 
 ## I/O performance
 
 :::tip
-**tl;dr**: If you're seeing slow build times on macOS or Windows, using Batect's [caches](../concepts/caches.md) as well as volume mount options such
-as `cached` might help
+**tl;dr**: If you're seeing slow build times on macOS or Windows, using Batect's [caches](../concepts/caches.md) might help
 :::
 
 Docker requires features only found in the Linux kernel, and so on macOS and Windows, Docker Desktop runs a lightweight Linux virtual machine
@@ -83,10 +82,17 @@ This increased latency quickly accumulates, especially when many file operations
 and Golang that encourage distributing all dependencies as source code and breaking codebases into many small files: even a warm build with no source
 code changes still requires the compiler to examine each dependency file to ensure that the cached build result is up-to-date.
 
-There are two ways to improve the performance of file I/O when using Batect:
+The primary way to improve the performance of file I/O when using Batect is through using [a Batect cache backed by a Docker volume](#cache-volumes)
+wherever possible.
 
-- Use [a Batect cache backed by a Docker volume](#cache-volumes) wherever possible
-- Otherwise, use [the `cached` mount mode](#mounts-in-cached-mode)
+:::info
+Previously, using the `cached` mount option was recommended for non-volume mounts. This option only ever applied to macOS hosts and was silently ignored on
+other host operating systems.
+
+With the introduction of the gRPC file sharing backend in more recent versions of Docker Desktop for macOS, the `cached` mount option has been
+[deprecated and removed](https://github.com/docker/for-mac/issues/5402#issuecomment-787792192). Continuing to use it in your projects is harmless,
+but it no longer alters Docker's behaviour in any way and can be removed from your projects.
+:::
 
 ### Cache volumes
 
@@ -127,46 +133,6 @@ This is only recommended on Linux CI agents, as using mounted directories instea
 
 The performance penalty described above does not apply when mounting directories into Windows containers. Batect therefore always uses directory mounts for
 caches on Windows containers, even if `--cache-type=volume` is specified on the command line.
-
-### Mounts in `cached` mode
-
-:::info
-This section only applies to macOS-based hosts, and is only supported by Docker version 17.04 and higher.
-Enabling `cached` mode is harmless for other host operating systems.
-:::
-
-For situations where a cache is not appropriate (eg. mounting your code from the host into a build environment), specifying the `cached` volume mount option
-can result in significant performance improvements.
-
-Before you use this option in another context, you should consult the [documentation](https://docs.docker.com/docker-for-mac/osxfs-caching/) to understand the implications of it.
-
-For example, instead of defining your container like this:
-
-```yaml title="batect.yml"
-containers:
-  build-env:
-    image: "ruby:2.4.3"
-    volumes:
-      - local: .
-        container: /code
-    working_directory: /code
-```
-
-use this:
-
-```yaml title="batect.yml"
-containers:
-  build-env:
-    image: "ruby:2.4.3"
-    volumes:
-      - local: .
-        container: /code
-        options: cached # This enables 'cached' mode for the /code mount
-    working_directory: /code
-```
-
-Setting this option will not affect Linux or Windows hosts, so it's safe to commit and share this in a project where some developers use
-macOS and others use Linux or Windows.
 
 ## Database schema migrations and test data setup
 

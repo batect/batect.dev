@@ -702,10 +702,10 @@ Two formats are supported:
     my-container:
       ...
       volumes:
-        # This is equivalent to .:/code:cached
+        # This is equivalent to .:/code:ro
         - local: .
           container: /code
-          options: cached
+          options: ro
   ```
 
 In both formats, the following fields are supported:
@@ -720,8 +720,6 @@ In both formats, the following fields are supported:
 - `container`: path to mount the local file or directory at inside the container. Required.
 
 - `options`: standard Docker mount options (such as `ro` for read-only). Optional.
-
-Using `options: cached` may improve performance when running on macOS and Windows hosts - see [this page](../../how-to/performance.md#io-performance) for further explanation.
 
 #### Caches
 
