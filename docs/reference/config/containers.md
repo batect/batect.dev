@@ -52,7 +52,7 @@ Each container definition is made up of the following fields:
 - [`run_as_current_user`](#run_as_current_user): configuration for ['run as current user' mode](../../concepts/run-as-current-user-mode.md)
 - [`setup_commands`](#setup_commands): commands to run inside the container after it has become healthy but before dependent containers start
 - [`shm_size`](#shm_size): size of `/dev/shm` (shared memory for IPC) for the container
-- [`volumes`](#volumes): volume mounts to create for the container
+- [`volumes`](#volumes): cache or directory mounts to create for the container
 - [`working_directory`](#working_directory): working directory for the container's command
 
 One of [`build_directory`](#build_directory) or [`image`](#image) is required.
@@ -685,7 +685,7 @@ Accepts values such as `2000` (2000 bytes), `3k` (3 KB), `5m` (5 MB) or `1g` (1 
 
 ### `volumes`
 
-List of volume mounts to create for the container.
+List of cache or directory mounts to create for the container.
 
 Both local mounts (mounting a directory on the host into a container) and [caches](../../concepts/caches.md) are supported:
 
@@ -745,6 +745,19 @@ The following fields are supported:
 - `name`: name of the cache, must be a valid Docker volume name. The same name can be used to share a cache between multiple containers. Required.
 - `container`: path to mount the cache directory at inside the container. Required.
 - `options`: standard Docker mount options (such as `ro` for read-only). Optional.
+
+:::tip
+To make it easier to share caches between builds on ephemeral CI agents, you can instruct Batect to use directories instead of volumes, and then use these
+directories as a starting point for subsequent builds. Run Batect with [`--cache-type=directory`](../cli.mdx#--cache-type) to enable this behaviour, then save and restore the
+`.batect/caches` directory between builds.
+
+This is only recommended on Linux CI agents, as using mounted directories instead of volumes has no performance impact on Linux.
+:::
+
+:::caution
+If you mount a cache over an existing directory in the container's image and are not using directory mounts for caches with [`--cache-type`](../cli.mdx#--cache-type),
+the first time the cache is created, the cache inherits the contents of the directory from the image.
+:::
 
 ### `working_directory`
 

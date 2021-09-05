@@ -117,16 +117,17 @@ containers:
     working_directory: /code
 ```
 
-Batect uses a [cache initialisation container](https://github.com/batect/batect-cache-init-image) to prepare volumes for use as caches. This process ensures that volumes
-used as caches are readable by containers running with [run as current user mode](../concepts/run-as-current-user-mode.md) enabled, and that new caches are empty the first time they
-are used.
-
 :::tip
 To make it easier to share caches between builds on ephemeral CI agents, you can instruct Batect to use directories instead of volumes, and then use these
-directories as a starting point for subsequent builds. Run Batect with `--cache-type=directory` to enable this behaviour, then save and restore the
+directories as a starting point for subsequent builds. Run Batect with [`--cache-type=directory`](../reference/cli.mdx#--cache-type) to enable this behaviour, then save and restore the
 `.batect/caches` directory between builds.
 
 This is only recommended on Linux CI agents, as using mounted directories instead of volumes has no performance impact on Linux.
+:::
+
+:::caution
+If you mount a cache over an existing directory in the container's image and are not using directory mounts for caches with [`--cache-type`](../reference/cli.mdx#--cache-type),
+the first time the cache is created, the cache inherits the contents of the directory from the image.
 :::
 
 #### Windows containers

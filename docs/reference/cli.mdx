@@ -38,7 +38,6 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--docker-tls` and `--docker-tls-verify`](#--docker-tls-and---docker-tls-verify): Connect to Docker over TLS
 - [`--enable-buildkit`](#--enable-buildkit): Use BuildKit to build images
 - [`--help`](#--help): Get help for Batect's CLI
-- [`--linux-cache-init-image`](#--linux-cache-init-image): Set cache initialisation image
 - [`--list-tasks` or `-T`](#--list-tasks-or--t): See a list of available tasks
 - [`--log-file`](#--log-file): Create a debugging log
 - [`--max-parallelism`](#--max-parallelism): Set maximum setup and cleanup operations to run in parallel
@@ -227,20 +226,6 @@ Note that BuildKit is only supported on Docker 18.09 or later, or on earlier ver
 ### `--help`
 
 Running `./batect --help` will show a summary of the options available on the command line.
-
-### `--linux-cache-init-image`
-
-Batect uses [an image](https://github.com/batect/batect-cache-init-image) to initialise cache volumes before they are mounted.
-Use this option to override the default image. This is useful if you have cached the initialisation image on a local registry.
-
-The `BATECT_LINUX_CACHE_INIT_IMAGE` environment variable can also be used to set the default initialisation image. If both the environment
-variable and the `--linux-cache-init-image` option are set, the value given with `--linux-cache-init-image` takes precedence.
-
-Example:
-
-```shell
-./batect --linux-cache-init-image=my.registry.com/batect-cache-init-image:abcd1234 the-task
-```
 
 ### `--list-tasks` or `-T`
 

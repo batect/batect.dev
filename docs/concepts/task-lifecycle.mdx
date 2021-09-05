@@ -52,16 +52,15 @@ For our sample configuration above, prerequisite relationship between tasks and 
 
 <TasksAndContainers />
 
-Once the container dependency relationships have been determined, Batect then begins executing the task. It creates a Docker network for the task,
-and runs [cache initialisation](../how-to/performance.md#cache-volumes) if required. In parallel to setting up the network and caches, for every container that makes up the task:
+Once the container dependency relationships have been determined, Batect then begins executing the task. It creates a Docker network for the task, if required and then
+in parallel to setting up the network, for every container that makes up the task:
 
 1. It builds or pulls the image required for this container
 2. It waits for the task network to be ready
-3. It waits for cache initialisation to complete, if this container mounts any caches
-4. It waits for any containers that this container depends on to be ready - so each dependency must have reported as healthy and completed all setup commands
-5. It starts the container and the container's command
-6. It waits for the container to report as [healthy](../how-to/wait-for-dependencies.md)
-7. It runs any [setup commands](../reference/config/containers.md#setup_commands), one at a time in the order provided
+3. It waits for any containers that this container depends on to be ready - so each dependency must have reported as healthy and completed all setup commands
+4. It starts the container and the container's command
+5. It waits for the container to report as [healthy](../how-to/wait-for-dependencies.md)
+6. It runs any [setup commands](../reference/config/containers.md#setup_commands), one at a time in the order provided
 
 Once all setup commands have completed, any dependent containers can start.
 
