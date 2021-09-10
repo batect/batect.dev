@@ -12,3 +12,5 @@ critical but accessibility outside the container is less important.
 The need for this alternative mechanism stems from the fact that on macOS and Windows, ordinary Docker directory mounts like these come with a significant
 performance penalty. While acceptable for application code, this performance penalty quickly accumulates when used for many files, as is the case for cached
 packages and libraries.
+
+For details see [how to use caches with containers](../reference/config/containers.md#caches).
