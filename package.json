@@ -37,7 +37,7 @@
     "@typescript-eslint/parser": "5.0.0",
     "dictionary-en-au": "2.3.0",
     "editorconfig-checker": "4.0.2",
-    "eslint": "8.0.0",
+    "eslint": "8.0.1",
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "netlify-cli": "6.12.6",
