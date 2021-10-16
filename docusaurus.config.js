@@ -102,7 +102,7 @@ module.exports = {
         },
       ],
     },
-    googleAnalytics: {
+    gtag: {
       trackingID: "UA-63947227-2",
     },
     algolia: {
