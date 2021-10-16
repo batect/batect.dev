@@ -8,6 +8,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "lint": "eslint src *.js *.ts && remark . --ext md,mdx --quiet --frail --rc-path .remarkrc.mjs && editorconfig-checker",
     "lintFix": "eslint --fix src *.js *.ts",
