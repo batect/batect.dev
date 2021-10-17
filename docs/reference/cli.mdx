@@ -85,6 +85,19 @@ Running `./batect --clean` will remove all caches created for this project.
 
 This command respects the value of the [`--cache-type`](#--cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
 
+Use [`--clean-cache`](#--clean-cache) to remove specific caches rather than all caches.
+
+### `--clean-cache`
+
+Running `./batect --clean-cache=<cache name>` will remove the named cache for this project.
+
+This option can be provided multiple times, for example: `./batect --clean-cache=cache-1 --clean-cache=cache-2` or `./batect --clean-cache=cache-1,cache-2`
+will both remove the `cache-1` and `cache-2` caches.
+
+This command respects the value of the [`--cache-type`](#--cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
+
+Use [`--clean`](#--clean) to remove all caches.
+
 ### `--config-file` or `-f`
 
 By default, Batect will use a configuration file called `batect.yml` in the current directory.
