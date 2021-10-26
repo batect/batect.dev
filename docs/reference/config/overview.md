@@ -127,6 +127,12 @@ Task names must meet the following requirements:
 
 [Detailed reference for `tasks`](tasks.md)
 
+### `forbid_telemetry`
+
+Set to `true` to disable [telemetry collection](/privacy#in-app-telemetry) whenever this project is used.
+
+Setting this to `true` takes precedence over any consent you may have provided in the past or any of the telemetry-related command line options.
+
 ## Expressions
 
 Some fields support expressions - references to environment variables on the host or [config variables](config-variables.md).
