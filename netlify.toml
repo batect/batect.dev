@@ -10,7 +10,7 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     # Change this back to default-src 'none' once Chrome has widespread support for prefetch-src
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; img-src 'self' https://www.google-analytics.com; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.algolianet.com https://*.algolia.net; prefetch-src 'self'; report-uri https://batect.report-uri.com/r/d/csp/enforce"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; img-src 'self' https://www.google-analytics.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.algolianet.com https://*.algolia.net; prefetch-src 'self'; report-uri https://batect.report-uri.com/r/d/csp/enforce"
     Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://batect.report-uri.com/a/d/g"}],"include_subdomains":true}'
     NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
     Expect-CT = 'max-age=604800, report-uri="https://batect.report-uri.com/r/d/ct/enforce"'

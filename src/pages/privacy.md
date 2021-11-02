@@ -295,6 +295,8 @@ To opt-out after this initial run, do any of the following:
 
 - Set the `BATECT_ENABLE_TELEMETRY` environment variable to `false`
 
+- Set [`forbid_telemetry`](/docs/reference/config#forbid_telemetry) to `true` in your project's configuration file
+
 If you wish to block telemetry data uploads at the network level, block access to `api.abacus.batect.dev`. Note that the IP address of this host name
 can change at any time, so it is best to block the host name, not the IP address. (Do not block access to `batect.dev`, as that will block access to this site.)
 

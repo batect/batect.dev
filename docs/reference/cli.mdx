@@ -85,6 +85,19 @@ Running `./batect --clean` will remove all caches created for this project.
 
 This command respects the value of the [`--cache-type`](#--cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
 
+Use [`--clean-cache`](#--clean-cache) to remove specific caches rather than all caches.
+
+### `--clean-cache`
+
+Running `./batect --clean-cache=<cache name>` will remove the named cache for this project.
+
+This option can be provided multiple times, for example: `./batect --clean-cache=cache-1 --clean-cache=cache-2` or `./batect --clean-cache=cache-1,cache-2`
+will both remove the `cache-1` and `cache-2` caches.
+
+This command respects the value of the [`--cache-type`](#--cache-type) option and the `BATECT_CACHE_TYPE` environment variable.
+
+Use [`--clean`](#--clean) to remove all caches.
+
 ### `--config-file` or `-f`
 
 By default, Batect will use a configuration file called `batect.yml` in the current directory.
@@ -328,18 +341,24 @@ Example:
 
 ### `--no-telemetry`
 
+If you would like to disable [telemetry collection](/privacy#in-app-telemetry) or uploading for a single invocation of Batect, pass the `--no-telemetry` flag.
+
 By default, Batect uses the permission you granted it when it ran for the first time.
 
-If you would like to disable telemetry collection or uploading for a single invocation, pass the `--no-telemetry` flag, for example:
+Example:
 
 ```shell
 ./batect --no-telemetry the-task
 ```
 
 Note that this does not cause any data that has been collected from other invocations but not uploaded to be removed - it will be uploaded the next time
-Batect runs without the `--no-telemetry` flag.
+Batect runs without the `--no-telemetry` flag. To disable telemetry permanently and remove any collected data pending upload, use
+[`--permanently-disable-telemetry`](#--permanently-disable-telemetry).
 
-You can also set the `BATECT_ENABLE_TELEMETRY` environment variable to `false` to disable telemetry collection and uploading.
+You can also disable telemetry collection and reporting in other ways:
+
+- set the `BATECT_ENABLE_TELEMETRY` environment variable to `false`
+- set [`forbid_telemetry`](/docs/reference/config#forbid_telemetry) to `true` in your project's configuration file
 
 ### `--no-update-notification`
 
@@ -446,6 +465,12 @@ remove any data that has been collected but not yet uploaded.
 
 This also resets your telemetry user ID, ensuring that if you do ever re-enable telemetry, any previous data uploaded is not associated with any
 new data.
+
+You can also disable telemetry collection and reporting in other ways:
+
+- set the `BATECT_ENABLE_TELEMETRY` environment variable to `false`
+- set [`forbid_telemetry`](/docs/reference/config#forbid_telemetry) to `true` in your project's configuration file
+- use [`--no-telemetry`](#--no-telemetry) to disable telemetry for a single invocation of `./batect`
 
 ### `--permanently-enable-telemetry`
 

@@ -2,7 +2,8 @@
   "extends": ["github>batect/renovate-config:default"],
   "automerge": false,
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "schedule": ["before 6pm on Monday"]
   },
   "packageRules": [
     {
