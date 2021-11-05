@@ -79,5 +79,5 @@ containers:
     volumes:
       - type: cache
         name: golangci-cache
-        container: /home/container-user/.cache/golangci-lint/
+        container: /home/container-user/.cache/golangci-lint
 ```
