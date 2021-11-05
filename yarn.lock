@@ -9811,10 +9811,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@6.14.12:
-  version "6.14.12"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-6.14.12.tgz#d1662d5f59c351730a9e6320aae2e26574a1a948"
-  integrity sha512-TQAoXn801EbN+URs/Q/y6RYinUSR8QRaM6zMnm8sxZW5EdCW0VNmSEdlp7pResNAw8ONseUHzuPqq+km3VvJeA==
+netlify-cli@6.14.15:
+  version "6.14.15"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-6.14.15.tgz#11b45e3cae20758c695178670be6f494aae5ed70"
+  integrity sha512-NgvQ5thFlOyVBFN6UfVl8jB/GFIYjAGtlXSNCiZQqbdCy6DdJU9jAOWbpvZ1m+jOJUB7kR1zvh7hDp9Gc3QM3A==
   dependencies:
     "@netlify/build" "^18.21.3"
     "@netlify/config" "^15.8.2"
@@ -9889,7 +9889,7 @@ netlify-cli@6.14.12:
     memoize-one "^5.2.1"
     minimist "^1.2.5"
     multiparty "^4.2.1"
-    netlify "^8.0.3"
+    netlify "^8.0.4"
     netlify-headers-parser "^4.0.1"
     netlify-redirect-parser "^11.0.3"
     netlify-redirector "^0.2.1"
