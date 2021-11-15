@@ -37,7 +37,7 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--docker-host`](#--docker-host): Use a non-standard Docker host
 - [`--docker-tls` and `--docker-tls-verify`](#--docker-tls-and---docker-tls-verify): Connect to Docker over TLS
 - [`--enable-buildkit`](#--enable-buildkit): Use BuildKit to build images
-- [`--help`](#--help): Get help for Batect's CLI
+- [`--help`](#--help-or--h): Get help for Batect's CLI
 - [`--list-tasks` or `-T`](#--list-tasks-or--t): See a list of available tasks
 - [`--log-file`](#--log-file): Create a debugging log
 - [`--max-parallelism`](#--max-parallelism): Set maximum setup and cleanup operations to run in parallel
@@ -236,7 +236,7 @@ Batect will automatically enable this flag if the `DOCKER_BUILDKIT` environment 
 Note that BuildKit is only supported on Docker 18.09 or later, or on earlier versions when Docker is running with
 [experimental features enabled](https://docs.docker.com/engine/reference/commandline/dockerd/#description).
 
-### `--help`
+### `--help` or `-h`
 
 Running `./batect --help` will show a summary of the options available on the command line.
 
