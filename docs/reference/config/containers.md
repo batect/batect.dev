@@ -117,6 +117,9 @@ The image can be overridden when running a task with [`--override-image`](../cli
 The [Docker build cache](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache) is used during the build process,
 so if the image definition has not changed since the last build, the image will not be rebuilt, saving time.
 
+The built image is automatically tagged in the format `<project name>-<container name>`. Additional tags can be provided on the command line with
+[`--tag-image`](../cli.mdx#--tag-image).
+
 For example, running the container `my_container` from the following configuration will first build the Dockerfile in the `.batect/my-container` directory, then run the resulting image:
 
 ```yaml title="batect.yml"
