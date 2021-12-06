@@ -3,7 +3,8 @@
   "automerge": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6pm on Monday"]
+    "schedule": ["before 6pm on Monday"],
+    "automerge": true
   },
   "packageRules": [
     {
