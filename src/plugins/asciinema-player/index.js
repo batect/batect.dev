@@ -1,4 +1,4 @@
-const utils = require("@docusaurus/core/lib/webpack/utils");
+const webpackUtils = require("@docusaurus/utils");
 const paths = require("./paths");
 
 const plugin = function () {
@@ -23,7 +23,7 @@ const plugin = function () {
       };
     },
     configureWebpack() {
-      const { loaders } = utils.getFileLoaderUtils();
+      const { loaders } = webpackUtils.getFileLoaderUtils();
 
       return {
         module: {
