@@ -2005,9 +2005,9 @@
     typescript "^4.1.5"
 
 "@netlify/plugins-list@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.0.1.tgz#1ad513790b5ecdf112b77122bffb6ac97e2e809e"
-  integrity sha512-HD8YgP43GGpgSOowBIW8Yb9+IvFlRGYq+X7Ee7G0okgOjzmgLy0En6JZ1shl0lGpuO8UX5EtLwDiLst3m/UIvg==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.1.0.tgz#2cad849faf74bc755ae2949ae1948c14c0f02ea0"
+  integrity sha512-jzUWb3Xk3FBP/CFnOjVdgpC5LZJtJrh2Z84ZOTaWDmYm40JFkm3KMzVcA9iTIYyT+FfscFpPTiptxsuSljGJpg==
 
 "@netlify/routing-local-proxy-darwin-arm64@^0.34.1":
   version "0.34.1"
