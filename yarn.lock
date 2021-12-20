@@ -12509,10 +12509,10 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-retext-diacritics@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-4.1.0.tgz#a60e8a35aeaaf2bf1018aebf51355f3e5892744e"
-  integrity sha512-wtA4Jx4rkunMAkB06wHL3TyrPRkxdtfAfXtEjPxe5Hj+hZfzkl29t4ppF0tG9EgdEkl7CiHXwJ87I2oClFiPNQ==
+retext-diacritics@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/retext-diacritics/-/retext-diacritics-4.2.0.tgz#d04b644ef8e05cd5c77c6f7b85bbda5f68ffc19c"
+  integrity sha512-eag8Z8q2lJkWjOBuI0+5iHE5HZIVMqgPSo+ksV0sE2Z+1FIB3gMB1UNugNERwNL82F9bg6atfgcqyBIDpIutEg==
   dependencies:
     "@types/nlcst" "^1.0.0"
     match-casing "^2.0.0"
