@@ -12532,10 +12532,10 @@ retext-english@4.1.0:
     unherit "^3.0.0"
     unified "^10.0.0"
 
-retext-indefinite-article@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/retext-indefinite-article/-/retext-indefinite-article-3.1.0.tgz#6a25dee53cdc1f167cd577478be52de9d3beb0d3"
-  integrity sha512-EXGGYDkuPSEAlRMRYJBJFVGnA9lR6b8YK3bH4tivBWAUGWkIYHlgQKq05tOQbrLjgP0H3Y3UN4mib9mq3c54dw==
+retext-indefinite-article@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-indefinite-article/-/retext-indefinite-article-4.0.0.tgz#b59aef716a6bf4cc781f69501fbbf563f44dbf6a"
+  integrity sha512-zOm7Cl8rrEH91HTgQOKBauSFzsUvo11IFhQm0e0luZEYqEpaP4KD1NBUve1lZ3MFh3EruEP77DDvVLbjX2WJiA==
   dependencies:
     "@types/nlcst" "^1.0.0"
     format "^0.2.0"
