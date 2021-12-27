@@ -12601,10 +12601,10 @@ retext-redundant-acronyms@4.3.0:
     unist-util-find-after "^4.0.0"
     unist-util-position "^4.0.0"
 
-retext-repeated-words@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-4.1.0.tgz#34bc9387aef5e19072fb5a75cb2fd0322f58671d"
-  integrity sha512-uMOPwX9bfUDgLcBdMAy4xweJ5lcOTKDIrVaZ+bURk4gEc5YdkyBEQCP8gs2KIQepalytA/fsvQDBrcUzzu6u4Q==
+retext-repeated-words@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/retext-repeated-words/-/retext-repeated-words-4.2.0.tgz#1651c7e80356d2d9044f09eb17d6f82a327a018a"
+  integrity sha512-Tle40/5Xy6KxI94s4XRqGXcj6aWUeCoQZUGQto8OjZP98t4tKVDRVG3QGodF633hVOEiN1vYqj0Zegqoe8XOaw==
   dependencies:
     "@types/nlcst" "^1.0.0"
     nlcst-to-string "^3.0.0"
