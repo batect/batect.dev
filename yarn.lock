@@ -4173,6 +4173,11 @@ ccount@^1.0.0, ccount@^1.0.3:
   resolved "https://registry.yarnpkg.com/ccount/-/ccount-1.1.0.tgz#246687debb6014735131be8abab2d93898f8d043"
   integrity sha512-vlNK021QdI7PNeiUh/lKkC/mNHHfV0m/Ad5JoI0TYtlBnJAslM/JIkm/tGC88bkLIwO6OQ5uV6ztS6kVAtCDlg==
 
+ccount@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ccount/-/ccount-2.0.1.tgz#17a3bf82302e0870d6da43a01311a8bc02a3ecf5"
+  integrity sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==
+
 chalk@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.5.1.tgz#663b3a648b68b55d04690d49167aa837858f2174"
@@ -12641,13 +12646,14 @@ retext-syntax-mentions@3.1.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-retext-syntax-urls@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.1.1.tgz#8741b248ef5686464faf8489f84db1bb1034cb8f"
-  integrity sha512-xRYbd+DTQ9cOSfxfWHUJ81V92+AvE6k5zjF8kXWukvgFCMQULr5G6Mb1btqwId+0x62j0PU1I+WQ80X4tGh16w==
+retext-syntax-urls@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.1.2.tgz#33185f39bf7d2a17ceb9340c95f803e589c5f726"
+  integrity sha512-CFuqX1x7GPFQRMPTA88bjrD0l8jTN7Y5Zp8QVr9ToWyJRChIMqUlPq4HfOJbKdDfcwhTVZvh/jRyxLc/K6Tc4g==
   dependencies:
     "@types/nlcst" "^1.0.0"
     "@types/unist" "^2.0.0"
+    ccount "^2.0.0"
     nlcst-to-string "^3.0.0"
     unified "^10.0.0"
     unist-util-modify-children "^3.0.0"
