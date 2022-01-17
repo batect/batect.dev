@@ -1979,9 +1979,9 @@
   integrity sha512-lfNB/QYDgaP07pwm/nWEaWPvRAAGyhxvJqNzvxMijc7A4uwquMjlbYve8yYyd0LJXPwgBpGobwiQj5RA76xzUQ==
 
 "@netlify/plugin-edge-handlers@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-edge-handlers/-/plugin-edge-handlers-3.0.3.tgz#5244be82bbbd2a0b1216e4753f1866379498863c"
-  integrity sha512-Yj862RtTGXDgKEKJzfL9FNlonpxTGSVDEeRyt/Kpp7gKoW5z1Vr6h1T1Ymq7GKuFqFeGT6IKaxG6aJt24/rbTw==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-edge-handlers/-/plugin-edge-handlers-3.0.4.tgz#0150f7a110d743ab41c463e1fe11c38b67e45b8c"
+  integrity sha512-w6PkvBSsmVblPBj1QVwUDJALuYeD8SyD5YMrTF5c9XrR7tjAWqtJQcw8bsuYqdDr8sEwRjUNyydPd/Zt5kEBLA==
   dependencies:
     "@babel/core" "^7.11.4"
     "@babel/preset-env" "^7.11.5"
@@ -6721,9 +6721,9 @@ get-value@^2.0.3, get-value@^2.0.6:
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
 gh-release-fetch@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gh-release-fetch/-/gh-release-fetch-3.0.0.tgz#53cf970b3c063819abab9a329303ae09caebe5cf"
-  integrity sha512-P7Anj35Y4kI3RBoQ+M8Z2U9ittORYyRNLb55+5yGGXmm3Mazgkq4MPqsHH9S7+pNWFpE2BtAWeF6twzz6JY3Bw==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/gh-release-fetch/-/gh-release-fetch-3.0.1.tgz#6db98465e90e635f4dff90c65a3ccb56455ba897"
+  integrity sha512-gV6V6+T0kKppzh/+YXpI/jl8ZgvjMY4oyWR3DAmPsqk9ILhk8TEneLFjBBM3kO7OfZ3dWCvuQu5M0DSh/Hz21w==
   dependencies:
     "@types/download" "^8.0.0"
     "@types/node-fetch" "^2.1.6"
@@ -9573,9 +9573,9 @@ netlify-redirector@^0.2.1:
   integrity sha512-17vDR9p1Loanp+vd57y+b6WlKb5X+qb0LZ44oTYsKJbdonz4Md+Ybv1lzH1w1aKm5YWWXHR8LMpWyY9bjlAJKw==
 
 netlify@^10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/netlify/-/netlify-10.1.1.tgz#dbd8b978cc4615d3b7ffd4db26ccf469febd3c34"
-  integrity sha512-aXW+R0rhTpLWK9aa51QETcPI+U2WuMUWA7wPr0thBCsMy/q4tsuAUC3f9OXYXcR3AzRkLOTwqmAfzWb+zKmqGg==
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/netlify/-/netlify-10.1.2.tgz#11ab524f5b0344d3d304d99811eb0b0676a19427"
+  integrity sha512-xm9WUbnHCLmoPjMiZ3AuH3sHIsCQ7Y/u+QobbU2RzL9deR3OQaK0E7nJDFhUraybtO8n/mjOWnDwxb0GKtBwFQ==
   dependencies:
     "@netlify/open-api" "^2.8.0"
     lodash.camelcase "^4.3.0"
