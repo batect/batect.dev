@@ -1827,7 +1827,7 @@
     path-exists "^4.0.0"
     readdirp "^3.4.0"
 
-"@netlify/config@^17.0.0", "@netlify/config@^17.0.3":
+"@netlify/config@^17.0.0", "@netlify/config@^17.0.6":
   version "17.0.6"
   resolved "https://registry.yarnpkg.com/@netlify/config/-/config-17.0.6.tgz#31131cbd9d54e1c6c4f8fc028b85d9e2b4aa915e"
   integrity sha512-fX9C/FCsIq+8KfiHEo+PtAV7ZL8GxCzLYjAPQosdTg+CledhPtKnEvM1i20YAaJnpeV1UJ4l3tIMQ11zfTdH7g==
@@ -9405,13 +9405,13 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@8.13.0:
-  version "8.13.0"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-8.13.0.tgz#1e3231c97a9aa7aba92d95a2052489b5f5380706"
-  integrity sha512-NBFt0+qVeX8O0PVfIwVuhcnnzBA+8EH+EMcAq52pQIE3RlJMr7rprpuyWmQZoEG88luD2dmRqU8Xf0OVo//qhg==
+netlify-cli@8.13.2:
+  version "8.13.2"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-8.13.2.tgz#da04ae34ae9a875c2632d76e0f1f2f8105f3673b"
+  integrity sha512-gE/fX5Jyr9J2Bhq3NF6S7NokzKrYfaJne3IxozLQBMG/No0dnBfTo560lvC0RTZptGpRolEy1dktlfkeuC0+xw==
   dependencies:
     "@netlify/build" "^26.2.0"
-    "@netlify/config" "^17.0.3"
+    "@netlify/config" "^17.0.6"
     "@netlify/framework-info" "^9.0.0"
     "@netlify/local-functions-proxy" "^1.1.1"
     "@netlify/plugin-edge-handlers" "^3.0.4"
