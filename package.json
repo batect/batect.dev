@@ -16,8 +16,8 @@
     "fixFormat": "prettier --write ."
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.14",
-    "@docusaurus/preset-classic": "2.0.0-beta.14",
+    "@docusaurus/core": "2.0.0-beta.15",
+    "@docusaurus/preset-classic": "2.0.0-beta.15",
     "@mdx-js/react": "1.6.22",
     "clsx": "1.1.1",
     "react": "17.0.2",
@@ -29,8 +29,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.14",
-    "@docusaurus/utils": "2.0.0-beta.14",
+    "@docusaurus/module-type-aliases": "2.0.0-beta.15",
+    "@docusaurus/utils": "2.0.0-beta.15",
     "@tsconfig/docusaurus": "1.0.4",
     "@types/react": "17.0.38",
     "@types/react-helmet": "6.1.5",
