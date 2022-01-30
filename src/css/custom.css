@@ -54,7 +54,7 @@ ol > li:before {
   font-size: 200%;
 }
 
-.menu > ul.menu__list > li.menu__list-item > a {
+.menu > ul.menu__list > li.menu__list-item > .menu__list-item-collapsible > a {
   font-family: var(--ifm-heading-font-family);
   font-weight: var(--ifm-heading-font-weight);
   font-size: 130%;
@@ -64,12 +64,18 @@ ol > li:before {
   color: black;
 }
 
-.menu > ul.menu__list > li.menu__list-item:first-of-type > a {
+.menu > ul.menu__list > li.menu__list-item > .menu__list-item-collapsible:hover,
+.menu > ul.menu__list > li.menu__list-item > .menu__list-item-collapsible:active {
+  background: none;
+}
+
+.menu > ul.menu__list > li.menu__list-item:first-of-type > .menu__list-item-collapsible > a {
   margin-top: 0;
 }
 
 .menu__list .menu__list {
   margin-left: 0;
+  padding-left: 0;
 }
 
 .menu__list .menu__list .menu__list {
