@@ -102,9 +102,6 @@ module.exports = {
         },
       ],
     },
-    gtag: {
-      trackingID: "UA-63947227-2",
-    },
     algolia: {
       appId: "7ZUQMR16DB",
       apiKey: "b64eb1331543944c3e6abde8dc22c948",
@@ -134,6 +131,9 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        gtag: {
+          trackingID: "UA-63947227-2",
         },
       },
     ],
