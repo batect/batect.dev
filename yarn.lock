@@ -1998,9 +1998,9 @@
     rollup-plugin-terser "^7.0.2"
 
 "@netlify/plugins-list@^6.3.1", "@netlify/plugins-list@^6.3.2":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.4.0.tgz#0a988506e6caedaa3719cee9d7a5c6d54d900cf8"
-  integrity sha512-6za99fUFzE7Eo4j57DdE+5Y9EUIN0FzMXFnnVD9aajBh79ZO0O6bOlaEpQHvL8sCB02zTuehgJqzyfSHutH/DQ==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.4.1.tgz#9c424f179d6ca90a22ae1532f1add12cc740e329"
+  integrity sha512-163RpT0zgi82Q5x6+2Y625O6Og+NKyI6e8LX6wOSd7euhcazFFqIW9xpZhsMEPOWKnscHJeE8DudC7AOo1rkWA==
 
 "@netlify/routing-local-proxy-darwin-arm64@^0.34.1":
   version "0.34.1"
@@ -8844,11 +8844,15 @@ mdast-util-heading-style@^2.0.0:
     "@types/mdast" "^3.0.0"
 
 mdast-util-mdx-expression@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-mdx-expression/-/mdast-util-mdx-expression-1.1.1.tgz#657522e78b84f5c85cd2395776aba8dcfb7bbb0f"
-  integrity sha512-RDLRkBFmBKCJl6/fQdxxKL2BqNtoPFoNBmQAlj5ZNKOijIWRKjdhPkeufsUOaexLj+78mhJc+L7d1MYka8/LdQ==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-mdx-expression/-/mdast-util-mdx-expression-1.2.0.tgz#3e927afe27943956dc5d1c64cb949652062f71ff"
+  integrity sha512-wb36oi09XxqO9RVqgfD+xo8a7xaNgS+01+k3v0GKW0X0bYbeBmUZz22Z/IJ8SuphVlG+DNgNo9VoEaUJ3PKfJQ==
   dependencies:
     "@types/estree-jsx" "^0.0.1"
+    "@types/hast" "^2.0.0"
+    "@types/mdast" "^3.0.0"
+    mdast-util-from-markdown "^1.0.0"
+    mdast-util-to-markdown "^1.0.0"
 
 mdast-util-to-hast@10.0.1:
   version "10.0.1"
@@ -14835,9 +14839,9 @@ webpack-sources@^3.2.3:
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
 webpack@^5.61.0:
-  version "5.67.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.67.0.tgz#cb43ca2aad5f7cc81c4cd36b626e6b819805dbfd"
-  integrity sha512-LjFbfMh89xBDpUMgA1W9Ur6Rn/gnr2Cq1jjHFPo4v6a79/ypznSYbAyPgGhwsxBtMIaEmDD1oJoA7BEYw/Fbrw==
+  version "5.68.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.68.0.tgz#a653a58ed44280062e47257f260117e4be90d560"
+  integrity sha512-zUcqaUO0772UuuW2bzaES2Zjlm/y3kRBQDVFVCge+s2Y8mwuUTdperGaAv65/NtRL/1zanpSJOq/MD8u61vo6g==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.50"
