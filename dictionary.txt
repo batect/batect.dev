@@ -22,6 +22,8 @@ DocSearch
 Dockerfile
 Dockerfiles
 Dockerize
+Dockerise
+Dockerised
 Docusaurus
 Dojo
 GCP
@@ -34,6 +36,7 @@ HTTPS
 Homebrew
 IPC
 Infima
+Inny
 IntelliJ
 IntelliSense
 JVM
@@ -42,10 +45,12 @@ JetBrains
 Korn
 Kubernetes
 Leiningen
+naïve-r
 NPM
 Netlify
 NuGet
 PID
+Piechota
 PR
 PRs
 Postgres
