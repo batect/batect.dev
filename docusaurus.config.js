@@ -48,7 +48,7 @@ module.exports = {
         },
         {
           href: "https://github.com/batect/batect/discussions",
-          label: "Chat",
+          label: "Discussions",
           position: "right",
         },
       ],
@@ -86,7 +86,7 @@ module.exports = {
               to: "https://github.com/batect",
             },
             {
-              label: "Chat",
+              label: "Discussions",
               to: "https://github.com/batect/batect/discussions",
             },
           ],
