@@ -1781,9 +1781,9 @@
     glob-to-regexp "^0.3.0"
 
 "@netlify/build@^26.3.0":
-  version "26.3.0"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.3.0.tgz#43241f1844a7939d68f593ec2f4bfbee8a783070"
-  integrity sha512-65LxXR1e61msbxR77zOLhDQ0tzIPJnYIcl+4vqxVil4aXdqOTRw5EvmHQQnwo5B62vqHrkSLYyK0dUdijf/OIA==
+  version "26.3.1"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.3.1.tgz#7bbcd3f8ddc083b11055347485ecb4f44fdaec94"
+  integrity sha512-8+Npnnd3UWQYkV4IhJdI39a24YiQaeDk4arkH712l/d42M65bZiHX59Zm7smXpGm9o2VEXM+z5dTlk7fMEw1bg==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
@@ -1791,7 +1791,7 @@
     "@netlify/functions-utils" "^4.0.0"
     "@netlify/git-utils" "^4.0.0"
     "@netlify/plugin-edge-handlers" "^3.0.6"
-    "@netlify/plugins-list" "^6.10.1"
+    "@netlify/plugins-list" "^6.10.2"
     "@netlify/run-utils" "^4.0.0"
     "@netlify/zip-it-and-ship-it" "5.7.4"
     "@sindresorhus/slugify" "^2.0.0"
@@ -2027,7 +2027,7 @@
     rollup-plugin-node-polyfills "^0.2.1"
     rollup-plugin-terser "^7.0.2"
 
-"@netlify/plugins-list@^6.10.1":
+"@netlify/plugins-list@^6.10.1", "@netlify/plugins-list@^6.10.2":
   version "6.10.2"
   resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.10.2.tgz#0428ac9a63bc95f2cda140b1a83a8937fe1a221c"
   integrity sha512-Agkt26O+bBQq3iXq7tSnDqWn+Ew3M7ImtoBNy/KI2KhNGaW1Mu31F9sIJqxvTUjVjBfklSI/L9M5GBWVAgk08A==
@@ -2069,7 +2069,7 @@
   dependencies:
     execa "^6.0.0"
 
-"@netlify/zip-it-and-ship-it@5.7.4", "@netlify/zip-it-and-ship-it@^5.7.4":
+"@netlify/zip-it-and-ship-it@5.7.4":
   version "5.7.4"
   resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.7.4.tgz#57fbfc5c35019e1c89792c130c4dbb61e4d856fc"
   integrity sha512-HMPf4pX561H5d59h8Y20Qjzo+5BbFkvpnTSWnzdSjQR85dhT8CVKeX9NdLKoKHG82+M75ErfOCY5Db7VsgKAWA==
@@ -2104,6 +2104,43 @@
     tmp-promise "^3.0.2"
     toml "^3.0.0"
     typescript "^4.6.0-beta"
+    unixify "^1.0.0"
+    yargs "^16.0.0"
+
+"@netlify/zip-it-and-ship-it@^5.7.4":
+  version "5.7.5"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.7.5.tgz#3bc76ee8e9aa311edd95e23d508766a5a49e5f75"
+  integrity sha512-v3buWIrlm0+lmDwI2qHRU4t7zR3LtfU0T2JYUPGIz0D8ezsnHihj0wbBf3lMZnQmHwrqQURQYL9nQTrpwH3YoA==
+  dependencies:
+    "@babel/parser" "7.16.8"
+    "@netlify/esbuild" "^0.13.6"
+    "@vercel/nft" "^0.17.0"
+    archiver "^5.3.0"
+    common-path-prefix "^3.0.0"
+    cp-file "^9.0.0"
+    del "^6.0.0"
+    elf-cam "^0.1.1"
+    end-of-stream "^1.4.4"
+    es-module-lexer "^0.9.0"
+    execa "^5.0.0"
+    filter-obj "^2.0.1"
+    find-up "^5.0.0"
+    glob "^7.1.6"
+    is-builtin-module "^3.1.0"
+    junk "^3.1.0"
+    locate-path "^6.0.0"
+    merge-options "^3.0.4"
+    minimatch "^4.0.0"
+    p-map "^4.0.0"
+    path-exists "^4.0.0"
+    pkg-dir "^5.0.0"
+    precinct "^8.2.0"
+    read-package-json-fast "^2.0.2"
+    require-package-name "^2.0.1"
+    resolve "^2.0.0-next.1"
+    semver "^7.0.0"
+    tmp-promise "^3.0.2"
+    toml "^3.0.0"
     unixify "^1.0.0"
     yargs "^16.0.0"
 
@@ -9014,7 +9051,7 @@ map-cache@^0.2.2:
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
 
-map-obj@^4.2.0, map-obj@^4.2.1:
+map-obj@^4.2.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.3.0.tgz#9304f906e93faae70880da102a9f1df0ea8bb05a"
   integrity sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==
@@ -9546,6 +9583,13 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-4.1.1.tgz#88d8172f2e1babcc3e249538b1a46970dfea1300"
+  integrity sha512-9ObkVPP8aM2KWHw1RMAaOoEzHjcqzE1dmEQHAOq9ySRhvVMru1VKqniUs/g6Us4KSwXKk0+uLko6caynDcWEWQ==
+  dependencies:
+    brace-expansion "^1.1.7"
+
 minimist@^1.0.0, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
@@ -9842,14 +9886,14 @@ netlify-cli@9.4.0:
     write-file-atomic "^4.0.0"
 
 netlify-headers-parser@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/netlify-headers-parser/-/netlify-headers-parser-6.0.1.tgz#b6f8becb0aacc767c42ffa3308df502ed6361a9e"
-  integrity sha512-4S1WBAe7M5QwB4OZ1rq4bw2hEwhP1G4nCk2OCD7zkTQgVoWUGzgjmn2vuTaDPuoj0s26sfTLD4Es+cPHN9m/+A==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/netlify-headers-parser/-/netlify-headers-parser-6.0.2.tgz#720ca0b2e4ace3f28cb090b1dd11c4602010fee4"
+  integrity sha512-ahDNi7R+Io4iMylyFrOfRUcBUELrXCT0hNVdqPKTHhH917NHiDCH69f6IhhqbzSaZ2/zGFPBrxA3FzJ48yXs3Q==
   dependencies:
-    escape-string-regexp "^4.0.0"
-    is-plain-obj "^3.0.0"
-    map-obj "^4.2.1"
-    path-exists "^4.0.0"
+    escape-string-regexp "^5.0.0"
+    is-plain-obj "^4.0.0"
+    map-obj "^5.0.0"
+    path-exists "^5.0.0"
     toml "^3.0.0"
 
 netlify-onegraph-internal@0.0.42:
