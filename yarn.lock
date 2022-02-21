@@ -1890,17 +1890,17 @@
   integrity sha512-tiKmDcHM2riSVN79c0mJY/67EBDafXQAMitHuLiCDAMdtz3kfv+NqdVG5krgf5lWR8Uf8AeZrUW5Q9RP25REvw==
 
 "@netlify/framework-info@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@netlify/framework-info/-/framework-info-9.0.0.tgz#7a89c88288afb3c5d7125d46e974092635348bb2"
-  integrity sha512-I4TzDRKmFaagcLCwmFeSr5tPsfT/fxBBaPpDv192fb468R4WbI0TVfTAqlTGJEmc6cHllXpgbVNCRvpeJAP7Fw==
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/@netlify/framework-info/-/framework-info-9.0.2.tgz#893ad58ab59405b1546484f1448bfb9a2556c59d"
+  integrity sha512-FIHEdXfqBuDZXbp+lxzf52f2K2LsFiqiIAKIriFDQAw/BCFdVx19f28vTf6Fck+V53zgtaWPYPQmmrDgF6gnsQ==
   dependencies:
     ajv "^8.0.0"
-    filter-obj "^2.0.1"
-    is-plain-obj "^3.0.0"
-    locate-path "^6.0.0"
-    p-filter "^2.1.0"
-    p-locate "^5.0.0"
-    read-pkg-up "^7.0.1"
+    filter-obj "^3.0.0"
+    is-plain-obj "^4.0.0"
+    locate-path "^7.0.0"
+    p-filter "^3.0.0"
+    p-locate "^6.0.0"
+    read-pkg-up "^9.0.0"
     semver "^7.3.4"
 
 "@netlify/functions-utils@^4.0.0":
