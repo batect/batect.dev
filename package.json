@@ -66,6 +66,6 @@
     "retext-syntax-mentions": "3.1.0",
     "retext-syntax-urls": "3.1.2",
     "typescript": "4.6.2",
-    "unified": "10.1.1"
+    "unified": "10.1.2"
   }
 }
