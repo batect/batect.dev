@@ -21,13 +21,13 @@ jobs:
           distribution: adopt
 
       - name: Cache Batect
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.0
         with:
           path: ~/.batect/cache
           key: batect-${{ hashFiles('batect') }}
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.0
         with:
           path: .batect/caches
           key: batect-caches-${{ hashFiles('yarn.lock') }}-${{ hashFiles('batect.yml') }}
