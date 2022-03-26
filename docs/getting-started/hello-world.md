@@ -48,7 +48,7 @@ Zero to 'hello world' in five minutes:
 
 1. Open a terminal, change to the project folder and run `./batect --list-tasks`. You should see output similar to the following:
 
-   ```text title=""$ ./batect --list-tasks"
+   ```text
    Available tasks:
    - say-hello: Say hello to the nice person reading the Batect documentation
    ```
@@ -57,7 +57,7 @@ Zero to 'hello world' in five minutes:
 
 2. Now let's run the task with `./batect say-hello`. You should see output similar to the following:
 
-   ```text title="$ ./batect say-hello"
+   ```text
    Running say-hello...
    my-container: running echo 'Hello world!'
 

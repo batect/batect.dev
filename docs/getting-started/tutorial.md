@@ -59,7 +59,7 @@ tasks:
 
 Then we can run our task with `./batect hello-world`:
 
-```text title="$ ./batect hello-world"
+```text
 Running hello-world...
 build-env: running echo 'Hello world!'
 
@@ -82,7 +82,7 @@ tasks in our configuration file, including any [`description`](../reference/conf
 
 Let's try running `./batect --list-tasks` (or `./batect -T` for short) now:
 
-```text title="$ ./batect --list-tasks"
+```text
 Available tasks:
 - hello-world: Say hello to everyone
 ```
