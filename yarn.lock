@@ -1774,9 +1774,9 @@
     glob-to-regexp "^0.3.0"
 
 "@netlify/build@^26.5.1":
-  version "26.5.1"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.5.1.tgz#cce2d91740af7a46d022dd8dd5ee693bb811c45b"
-  integrity sha512-sqS/7zyJwp48f1nsKJ9XaZF8FSoJpdCp1EH2g5777rc0hGyYC1AFX0NaJnT3weN47VjsLkaxcfHBUvwo6lyEJw==
+  version "26.5.2"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.5.2.tgz#e10794bd4e144cc769d7dc3107468bf2e9878e6b"
+  integrity sha512-b/movOQmBIw9ghNDdo4jviZGQRYMBzcGTN1BcoWgK649Whj1KfqEWpL+JBeqnCCNUQpfhfE9o284o6Ql37k8jQ==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
@@ -1784,7 +1784,7 @@
     "@netlify/functions-utils" "^4.0.0"
     "@netlify/git-utils" "^4.0.0"
     "@netlify/plugin-edge-handlers" "^3.0.7"
-    "@netlify/plugins-list" "^6.17.0"
+    "@netlify/plugins-list" "^6.18.1"
     "@netlify/run-utils" "^4.0.0"
     "@netlify/zip-it-and-ship-it" "5.9.0"
     "@sindresorhus/slugify" "^2.0.0"
@@ -1848,9 +1848,9 @@
     readdirp "^3.4.0"
 
 "@netlify/config@^17.0.0", "@netlify/config@^17.0.19":
-  version "17.0.19"
-  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-17.0.19.tgz#f1d7a1bc8d005ad188c2f58d6064bfaaf36d057c"
-  integrity sha512-GH2fKuqmNt+syuQrWIejB0FqkPZWo1/M1AmiZbcYMHh9oQFnBKo+OixD0BPl66HFKd4/rPKqqwaSg/xZ3Y9mKg==
+  version "17.0.20"
+  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-17.0.20.tgz#c89c44356b9e5627d45e5d05d657ada217910b5a"
+  integrity sha512-X5dZe3ALUoxw2p9NVvraoMrZF73FlHdPhopW0nJItBmiA/y8LyKupa/KVCBxKf6R02KnYORr0YUnIeZbIO3syw==
   dependencies:
     chalk "^5.0.0"
     cron-parser "^4.1.0"
@@ -1874,7 +1874,7 @@
     path-type "^5.0.0"
     toml "^3.0.0"
     tomlify-j0.4 "^3.0.0"
-    validate-npm-package-name "^3.0.0"
+    validate-npm-package-name "^4.0.0"
     yargs "^17.3.1"
 
 "@netlify/esbuild@0.13.6":
@@ -2020,7 +2020,7 @@
     rollup-plugin-node-polyfills "^0.2.1"
     rollup-plugin-terser "^7.0.2"
 
-"@netlify/plugins-list@^6.17.0", "@netlify/plugins-list@^6.18.1":
+"@netlify/plugins-list@^6.18.1":
   version "6.18.1"
   resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.18.1.tgz#f96396c818b98c6c59c6b081b0484daff76fb4e2"
   integrity sha512-4aAF+lpoBYOIVMuTxge2YNjNKdMxnsV1equq0VtknBW6EGJ9yFiTPyL0NU0MXDWTWk7dNu8tS5+Uw7LN7+sgcg==
@@ -4044,15 +4044,17 @@ builtin-modules@^3.0.0, builtin-modules@^3.1.0:
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.2.0.tgz#45d5db99e7ee5e6bc4f362e008bf917ab5049887"
   integrity sha512-lGzLKcioL90C7wMczpkY0n/oART3MbBa8R9OFGE1rJxoVI86u4WAGfEk8Wjv10eKSyTHVGkSo3bvBylCEtk7LA==
 
-builtins@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
-  integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
-
 builtins@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-4.1.0.tgz#1edd016dd91ce771a1ed6fc3b2b71fb918953250"
   integrity sha512-1bPRZQtmKaO6h7qV1YHXNtr6nCK28k0Zo95KM4dXfILcZZwoHJBN1m3lfLv9LPkcOZlrSr+J1bzMaZFO98Yq0w==
+  dependencies:
+    semver "^7.0.0"
+
+builtins@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/builtins/-/builtins-5.0.0.tgz#20d87e7f95d46481b1abe4adc616a9cb6b492cba"
+  integrity sha512-aizhtbxgT1Udg0Fj6GssXshAVK+nxbtCV+1OtTrMNy67jffDFBY6CUBAkhO4owbleAx6fdbnWdpsmmcXydbzNw==
   dependencies:
     semver "^7.0.0"
 
@@ -14998,12 +15000,12 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validate-npm-package-name@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-3.0.0.tgz#5fa912d81eb7d0c74afc140de7317f0ca7df437e"
-  integrity sha1-X6kS2B630MdK/BQN5zF/DKffQ34=
+validate-npm-package-name@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-4.0.0.tgz#fe8f1c50ac20afdb86f177da85b3600f0ac0d747"
+  integrity sha512-mzR0L8ZDktZjpX4OB46KT+56MAhl4EIazWP/+G/HPGuvfdaqg4YsCdtOm6U9+LOFyYDoh4dpnpxZRB9MQQns5Q==
   dependencies:
-    builtins "^1.0.3"
+    builtins "^5.0.0"
 
 value-equal@^1.0.1:
   version "1.0.1"
