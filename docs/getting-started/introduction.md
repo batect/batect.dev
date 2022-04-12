@@ -8,30 +8,40 @@ title: Introduction
 Batect allows you to define your development tasks (building, running, testing, linting and more) in terms of one or more
 Docker containers, run those tasks quickly and consistently everywhere, and easily share them with your team.
 
+If you have problems like these, then Batect might be valuable for you:
+
+- "works on my machine" issues where you see different behaviour on your machine, your colleagues' machines and CI
+- manual and time-consuming setup process to get up and running with a codebase
+- missing or outdated codebase setup documentation
+- being stuck with outdated versions of tools because they're all that's available in the CI environment
+- difficulty creating a test environment for your application and its dependencies like databases and downstream services
+- flaky tests caused by environmental inconsistency
+
 ## What is Batect not?
 
-- a build tool - instead, use your chosen language's existing tooling (eg. Gradle, Rake, CMake or Cargo) from within a Batect task
-- a deployment tool - instead, use your target environment's existing tooling (eg. kubectl) from within a Batect task
-- a CI tool - instead, use your existing CI tool and have it run Batect
+Batect doesn't replace your existing build tool or deployment tool. Instead, use your chosen build tooling (eg. Gradle, Rake, CMake or Cargo)
+and deployment tooling (eg. `kubectl` or Terraform) from within a Batect task.
+
+Similarly, Batect doesn't replace your CI infrastructure. Instead, use your existing CI tool and have it run Batect.
 
 ## Why would I use Batect?
 
 Every application has a build environment - the tools and configuration needed to take the source code and produce an artefact
 ready for use.
 
-However, setting this up can be time consuming and frustrating. Too often new team members' first experience on
+However, setting this up can be time-consuming and frustrating. Too often new team members' first experience on
 a project is a few days working out which tools they need to install, and another few days of then discovering the magic
 combination of tool versions that will happily coexist. And as the application evolves and changes over time, maintaining and
 updating this environment across all developers' machines and CI agents can be incredibly painful.
 
 Similarly, most applications have external dependencies - for example, other services, databases, caches, credential storage
 systems... the list is endless. Because of this, we would like to run integration, component or journey tests where the
-application itself (or some part of it) interacts with these external dependencies.
+application itself (or some part of it) interacts with these external dependencies in a controlled, isolated environment.
 
-In some cases, we'd like to use a real instance of it (eg. a running Postgres instance), and in other cases, we'd like to use a
+In some cases, we'd like to use a real instance of a dependency (eg. a running Postgres instance), and in other cases, we'd like to use a
 fake (eg. a fake implementation of a downstream service). Either way, installing, configuring and managing all these dependencies
 takes a lot of work, and making sure they're in a known state before a test run is key to reducing test flakiness. Add in networking
-gremlins, different operating systems, personal preferences, built-up cruft and manual configuration and you end up with an enormous
+gremlins, different operating systems, personal preferences, built-up cruft and manual configuration, and you end up with an enormous
 number of variables that lead to a huge amount of wasted time spent debugging issues that are entirely preventable.
 
 Batect helps solve these problems by:
@@ -48,7 +58,7 @@ Batect helps solve these problems by:
 
 - making use of Docker to do all of this in an isolated and low-overhead way
 
-- using some smart dependency management logic, parallelism and Docker's caching features to do all of this very, very quickly
+- using some smart dependency management logic, parallelism and Docker's caching features to do all of this very quickly
 
 - taking advantage of Docker's networking features to set up an isolated network for every command
 
