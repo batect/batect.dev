@@ -5477,10 +5477,10 @@ detective-typescript@^7.0.0:
     node-source-walk "^4.2.0"
     typescript "^3.9.10"
 
-dictionary-en-au@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/dictionary-en-au/-/dictionary-en-au-2.3.0.tgz#261e8e8d0bd776afcf7ff49722815656438d5be9"
-  integrity sha512-KoEotpXPCyCgZ5DHlexHyzFfNwPnv9VupeCrp6r+JrtEkycPmZYbQiXF+cXz9NJr1gXy0AMEpzZ8UfxF40+8OQ==
+dictionary-en-au@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/dictionary-en-au/-/dictionary-en-au-2.4.0.tgz#6d7199c623bce7f9797f96aa89fbf79fd25d1f1f"
+  integrity sha512-SEETr3rqt26/Umc43gemwaH/ez4gPv7I4alifu/QLi8uxiCm6a7cn3wKb22HNB5l6j/R7/Sfkq9NTKk/QRVUHw==
 
 diff@^4.0.1:
   version "4.0.2"
