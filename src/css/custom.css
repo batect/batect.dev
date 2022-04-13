@@ -60,7 +60,7 @@ ol > li:before {
   font-size: 130%;
 
   padding-left: var(--ifm-menu-link-padding-horizontal);
-  margin-top: calc(6 * var(--ifm-menu-link-padding-vertical));
+  margin-top: calc(3 * var(--ifm-menu-link-padding-vertical));
   color: black;
 }
 

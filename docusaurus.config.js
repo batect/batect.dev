@@ -118,7 +118,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
-          sidebarCollapsible: false,
+          sidebarCollapsible: true,
           editUrl: "https://github.com/batect/batect.dev/blob/main/",
         },
         blog: {
