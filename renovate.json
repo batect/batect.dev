@@ -43,5 +43,15 @@
       "packagePatterns": ["^netlify-cli$"],
       "extends": ["schedule:daily"]
     }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.(md|mdx)$"],
+      "matchStrings": [
+        "uses:\\s+(?<depName>.*)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    }
   ]
 }
