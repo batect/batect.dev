@@ -14,7 +14,7 @@ jobs:
     name: "Build"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3.0.2
       - name: Build application
         run: ./batect build
 ```
@@ -34,10 +34,10 @@ jobs:
       BATECT_CACHE_TYPE: directory
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3.0.2
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v3.0.2
         with:
           path: .batect/caches
           key: batect-caches-${{ hashFiles('path to a file that uniquely identifies the contents of the caches') }}
