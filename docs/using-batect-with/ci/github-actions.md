@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v3.0.2
 
       - name: Validate Batect wrapper scripts
-        uses: batect/batect-wrapper-validation-action@v0.1.0
+        uses: batect/batect-wrapper-validation-action@v0.3.1
 ```
 
 :::warning
