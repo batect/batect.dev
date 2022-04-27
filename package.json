@@ -20,8 +20,8 @@
     "@docusaurus/preset-classic": "2.0.0-beta.18",
     "@mdx-js/react": "1.6.22",
     "clsx": "1.1.1",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "browserslist": [
     ">0.2%",
@@ -41,7 +41,7 @@
     "editorconfig-checker": "4.0.2",
     "eslint": "8.14.0",
     "eslint-plugin-react": "7.29.4",
-    "eslint-plugin-react-hooks": "4.4.0",
+    "eslint-plugin-react-hooks": "4.5.0",
     "netlify-cli": "10.0.0",
     "prettier": "2.6.2",
     "raw-loader": "4.0.2",
