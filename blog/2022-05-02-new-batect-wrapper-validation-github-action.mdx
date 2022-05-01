@@ -1,0 +1,40 @@
+---
+title: "New: Batect wrapper validation action"
+authors: charles
+tags: [announcements, security]
+---
+
+The [0.79.0 release](https://github.com/batect/batect/releases/tag/0.79.0) added publication of checksums for the wrapper scripts.
+These checksums make it easy to verify the integrity of the wrapper scripts used in your project.
+
+Verifying the integrity of the wrapper scripts in your project is important, as they could be maliciously modified and these modifications
+may not be immediately apparent.
+
+To make verifying your project's wrapper scripts even easier, I'm pleased to announce the release of the new
+[batect-wrapper-validation-action action](https://github.com/batect/batect-wrapper-validation-action),
+which validates the integrity of the wrapper scripts as part of a GitHub Actions workflow.
+
+The [readme](https://github.com/batect/batect-wrapper-validation-action) has more details on how the action works and how to use it.
+For most projects, it's as simple as adding the following job to an existing workflow:
+
+```yaml
+jobs:
+  validate-batect-wrapper:
+    name: Validate Batect wrapper scripts
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3.0.2
+
+      - name: Validate Batect wrapper scripts
+        uses: batect/batect-wrapper-validation-action@v0.4.0
+```
+
+You can also use the action in an existing workflow or existing job.
+
+:::warning
+This action must run before any invocations of Batect.
+
+If the action runs after an invocation of Batect and the wrapper script has been modified maliciously, the malicious version may be able to modify itself to appear genuine.
+:::
