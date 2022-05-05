@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@docusaurus/eslint-plugin": "2.0.0-beta.19",
     "@docusaurus/module-type-aliases": "2.0.0-beta.19",
     "@docusaurus/utils": "2.0.0-beta.19",
     "@tsconfig/docusaurus": "1.0.5",
