@@ -75,7 +75,7 @@ function Home() {
   ];
 
   return (
-    <Layout>
+    <Layout description="Keep your builds green and developers happy with the fast, consistent way to run your development and testing tasks everywhere.">
       <header className={clsx("hero hero--dark", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
