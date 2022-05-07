@@ -40,7 +40,7 @@
     "@typescript-eslint/parser": "5.22.0",
     "dictionary-en-au": "2.4.0",
     "editorconfig-checker": "4.0.2",
-    "eslint": "8.14.0",
+    "eslint": "8.15.0",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
     "netlify-cli": "10.2.0",
