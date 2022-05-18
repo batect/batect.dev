@@ -77,7 +77,7 @@ function Home() {
 
   return (
     <Layout description="Keep your builds green and developers happy with the fast, consistent way to run your development and testing tasks everywhere.">
-      // Temporary workaround for https://github.com/facebook/docusaurus/pull/7362
+      {/* Temporary workaround for https://github.com/facebook/docusaurus/pull/7362 */}
       <Head>
         <meta property="og:title" content={siteConfig.title} />
       </Head>
