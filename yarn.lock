@@ -13546,21 +13546,21 @@ stable@^0.1.8:
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
 stack-generator@^2.0.3:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/stack-generator/-/stack-generator-2.0.6.tgz#9ce4bf3c7853d25410041c290c2a6011ec5eb031"
-  integrity sha512-QnlEM+71/NVw7P99Rd5RwJ0B4kxZyUDfpS6Fq5xw0764PXc2cTjLZ0zf6gCLZn91RDusU1+lxg5H2hko9hNfoQ==
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/stack-generator/-/stack-generator-2.0.8.tgz#2ac292bb461ad46f2e50992510647d1e89aacc55"
+  integrity sha512-uIPeztuMJrlgu55PyPtKjXvUQV6VYB9A83ZmqV823V8M0gj8kkkiND0sDVvdmqvVAgt71OWIUqKzNU5blEoQBQ==
   dependencies:
-    stackframe "^1.3.0"
+    stackframe "^1.3.1"
 
 stack-trace@0.0.x:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
   integrity sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA=
 
-stackframe@^1.3.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.3.1.tgz#6bb22c46a7973a63f3175872b92467a01a561d58"
-  integrity sha512-tTpbH2/jS4MUFNR+yrZk5sydPlmuq2aV50C215EFo/MGtdnNl3qhiuwMW8+aDr+6AcJANOJ1amFr01f1VA6b5w==
+stackframe@^1.3.0, stackframe@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.3.2.tgz#63b41e860bd07e2606274cbd1f1fad7236f223d5"
+  integrity sha512-aPWS6K6ZVXxWB+r5TKv/iUNi7mw/f9VVEtJawrIHABGeIKQF+b2FugjRjFoGtlZVwr27Z7ZaLQGAWZ9Imjt+3A==
 
 state-toggle@^1.0.0:
   version "1.0.3"
