@@ -5816,9 +5816,9 @@ error-ex@^1.3.1, error-ex@^1.3.2:
     is-arrayish "^0.2.1"
 
 error-stack-parser@^2.0.2, error-stack-parser@^2.0.3:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.1.2.tgz#6a073eb9c30ec0a9a197c8b7e8004ab197103c32"
-  integrity sha512-SIJp3QwJ81ski8Fi3vojI8S/3fsf3rUhe0duVn9Gpf1sfO/+YUARW0Xyjx7ilS/V/hNj3nW6dVLW1OoHsyuJ4A==
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.1.3.tgz#ab877c676540507dbe6429974ea66833ae68b7cb"
+  integrity sha512-F9KypcaAvLzI4yXneZzOvzZoqakhbjuAGFK0aLy33tYaDqdu6v+lzrN/TTG/mM48Op624zZZ2RpXRx3wA0+zmg==
   dependencies:
     stackframe "^1.3.4"
 
@@ -13546,18 +13546,18 @@ stable@^0.1.8:
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
 stack-generator@^2.0.3:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/stack-generator/-/stack-generator-2.0.9.tgz#e76086ac207cc2564230a153cfb553f88237068f"
-  integrity sha512-a4Dpdjn8mIIv+qMHyA8lA8OoJxvSHUj2utNp9wVFV+llAuwOKh/rejv+MoPV2lS6JGKClkIP5eeV6phLKyfZ4g==
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/stack-generator/-/stack-generator-2.0.10.tgz#8ae171e985ed62287d4f1ed55a1633b3fb53bb4d"
+  integrity sha512-mwnua/hkqM6pF4k8SnmZ2zfETsRUpWXREfA/goT8SLCV4iOFa4bzOX2nDipWAZFPTjLvQB82f5yaodMVhK0yJQ==
   dependencies:
-    stackframe "^1.3.1"
+    stackframe "^1.3.4"
 
 stack-trace@0.0.x:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
   integrity sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA=
 
-stackframe@^1.3.1, stackframe@^1.3.4:
+stackframe@^1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.3.4.tgz#b881a004c8c149a5e8efef37d51b16e412943310"
   integrity sha512-oeVtt7eWQS+Na6F//S4kJ2K2VbRlS9D43mAlMyVpVWovy9o+jfgH8O9agzANzaiLjclA0oYzUXEM4PurhSUChw==
