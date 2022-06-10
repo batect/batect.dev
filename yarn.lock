@@ -2179,7 +2179,7 @@
   resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.9.0.tgz#3fd18a95c06e7f11aad20b15c1e525accc86369f"
   integrity sha512-XhGmVR8gldH9+3CzBg8C7aj7x/cThzlW/ob/o8ZAGMMJ7aVjs8WqzYpVsjdo4nulYi0zd0enlcuG9VwM1tsJyA==
 
-"@netlify/plugins-list@^6.25.0", "@netlify/plugins-list@^6.26.0":
+"@netlify/plugins-list@^6.25.0", "@netlify/plugins-list@^6.27.0":
   version "6.27.0"
   resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.27.0.tgz#c44d92cab92c2faa08ca6b5136e384669cd14c37"
   integrity sha512-fTmgFDxkTgrABYk0XwIgYO7r424JEWoEYHieRNLBIbyOuHiM0FArevNy0/dMi2/Ymxgs44NYrTJUoeZkIn5tdg==
@@ -2228,7 +2228,7 @@
     unixify "^1.0.0"
     yargs "^16.0.0"
 
-"@netlify/zip-it-and-ship-it@^5.9.2":
+"@netlify/zip-it-and-ship-it@^5.10.0":
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.10.0.tgz#ec97d92da788318a42499e147d19c2707b7856cd"
   integrity sha512-A8CyBm5fvrSObAMOfu62+ycfYlxhdrG/Gf9OF9bg2eWXY+BtQWG7OUnmg/QPykhU3uVNXFrX7psQ5kBa04/x5w==
@@ -9720,18 +9720,18 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
-netlify-cli@10.4.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-10.4.0.tgz#187d8a40838fbadc2a0d0a2302f12d38e634038f"
-  integrity sha512-SfkS/EgXE5H8Iucn+kwUn1qEK3QzlmQlpGy/boUyMZYQKzjC4pdgp9eZc64lor9ucZ6bs4i2UnQpmg+lZEiqzg==
+netlify-cli@10.5.0:
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-10.5.0.tgz#f18300e4f7823589cfe032de259a0b2bc82ed943"
+  integrity sha512-MMM/1RWUExl07bMGqVRhEURMhHu1WO8XrkzfIirSSf78vZHallSr5HdcwZvrizieTeumn8WSOnuwajFMji0Ptw==
   dependencies:
     "@netlify/build" "^27.1.3"
     "@netlify/config" "^18.0.1"
     "@netlify/edge-bundler" "^1.2.0"
     "@netlify/framework-info" "^9.0.2"
     "@netlify/local-functions-proxy" "^1.1.1"
-    "@netlify/plugins-list" "^6.26.0"
-    "@netlify/zip-it-and-ship-it" "^5.9.2"
+    "@netlify/plugins-list" "^6.27.0"
+    "@netlify/zip-it-and-ship-it" "^5.10.0"
     "@octokit/rest" "^18.0.0"
     "@sindresorhus/slugify" "^1.1.0"
     ansi-escapes "^5.0.0"
