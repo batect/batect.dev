@@ -2229,13 +2229,13 @@
     yargs "^16.0.0"
 
 "@netlify/zip-it-and-ship-it@^5.10.1":
-  version "5.10.1"
-  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.10.1.tgz#6a9ef4b53f06804ff2c4fb1c17ab483dbaa103f2"
-  integrity sha512-pZSSo1hv32sBUoBPrsWVdd774amYGDc0EhDQlA7OBJsGKexWvH/jNnsQmqtVPNaujNlH12S/v1Z1qMlZlX3PAQ==
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.10.2.tgz#dc43e4d0f7121e065be76b9753fed0bd50a4c2b8"
+  integrity sha512-aKKIaCxM0G0aU1YfK/epZ2XN1LOMxFtQ/tsIfYZIM69fAgkTyEJ0FeLS7jeTEjPl+t+k1pdqAZiHTxDFs6gbQA==
   dependencies:
     "@babel/parser" "7.16.8"
     "@netlify/esbuild" "0.14.25"
-    "@vercel/nft" "^0.19.0"
+    "@vercel/nft" "^0.20.0"
     archiver "^5.3.0"
     common-path-prefix "^3.0.0"
     cp-file "^9.0.0"
@@ -3153,10 +3153,10 @@
     resolve-from "^5.0.0"
     rollup-pluginutils "^2.8.2"
 
-"@vercel/nft@^0.19.0":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.19.1.tgz#dcd3c20d7ef14d2050244e7d5edcfecc7303dd46"
-  integrity sha512-klR5oN7S3WJsZz0r6Xsq7o8YlFEyU3/00VmlpZzIPVFzKfbcEjXo/sVR5lQBUqNKuOzhcbxaFtzW9aOyHjmPYA==
+"@vercel/nft@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.20.0.tgz#43b1027599f9041b27b9f6ed132f632c53bc7ea1"
+  integrity sha512-+lxsJP/sG4E8UkhfrJC6evkLLfUpZrjXxqEdunr3Q9kiECi8JYBGz6B5EpU1+MmeNnRoSphLcLh/1tI998ye4w==
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.5"
     acorn "^8.6.0"
@@ -7635,9 +7635,9 @@ image-size@^1.0.1:
     queue "6.0.2"
 
 immer@^9.0.7:
-  version "9.0.14"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.14.tgz#e05b83b63999d26382bb71676c9d827831248a48"
-  integrity sha512-ubBeqQutOSLIFCUBN03jGeOS6a3DoYlSYwYJTa+gSKEZKU5redJIqkIdZ3JVv/4RZpfcXdAWH5zCNLWPRv2WDw==
+  version "9.0.15"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.15.tgz#0b9169e5b1d22137aba7d43f8a81a495dd1b62dc"
+  integrity sha512-2eB/sswms9AEUSkOm4SbV5Y7Vmt/bKRwByd52jfLkW4OLYeaTP3EEiJ9agqU0O/tq6Dk62Zfj+TJSqfm1rLVGQ==
 
 import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1, import-fresh@^3.3.0:
   version "3.3.0"
@@ -14289,9 +14289,9 @@ type-fest@^1.0.2:
   integrity sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==
 
 type-fest@^2.0.0, type-fest@^2.11.2, type-fest@^2.5.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.13.0.tgz#d1ecee38af29eb2e863b22299a3d68ef30d2abfb"
-  integrity sha512-lPfAm42MxE4/456+QyIaaVBAwgpJb6xZ8PRu09utnhPdWwcyj9vgy6Sq0Z5yNbJ21EdxB5dRU/Qg8bsyAMtlcw==
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.13.1.tgz#621c84220df0e01a8469002594fc005714f0cfba"
+  integrity sha512-hXYyrPFwETT2swFLHeoKtJrvSF/ftG/sA15/8nGaLuaDGfVAaq8DYFpu4yOyV4tzp082WqnTEoMsm3flKMI2FQ==
 
 type-is@~1.6.18:
   version "1.6.18"
