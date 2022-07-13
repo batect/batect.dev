@@ -48,10 +48,9 @@
     {
       "fileMatch": ["\\.(md|mdx)$"],
       "matchStrings": [
-        "uses:\\s+(?<depName>.*)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "uses:\\s+(?<depName>.*)@(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "^v(?<version>.*)$"
+      "datasourceTemplate": "github-tags"
     }
   ]
 }
