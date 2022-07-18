@@ -2229,10 +2229,47 @@
   dependencies:
     execa "^6.0.0"
 
-"@netlify/zip-it-and-ship-it@5.13.0", "@netlify/zip-it-and-ship-it@^5.13.0":
+"@netlify/zip-it-and-ship-it@5.13.0":
   version "5.13.0"
   resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.13.0.tgz#815cfc2b27839dcf024f31cbc3e2a9940650e390"
   integrity sha512-JlZAWwIjs9cIYIOO1Xw/OXRvXy1VXd+h5ZKuH8Lug1JCub0hGM8XIh3TnNsqHrjwsC/Oh5UucTba4SPuIU9Xag==
+  dependencies:
+    "@babel/parser" "7.16.8"
+    "@netlify/binary-info" "^1.0.0"
+    "@netlify/esbuild" "0.14.25"
+    "@vercel/nft" "^0.20.0"
+    archiver "^5.3.0"
+    common-path-prefix "^3.0.0"
+    cp-file "^9.0.0"
+    del "^6.0.0"
+    end-of-stream "^1.4.4"
+    es-module-lexer "^0.10.0"
+    execa "^5.0.0"
+    filter-obj "^2.0.1"
+    find-up "^5.0.0"
+    glob "^8.0.3"
+    is-builtin-module "^3.1.0"
+    junk "^3.1.0"
+    locate-path "^6.0.0"
+    merge-options "^3.0.4"
+    minimatch "^5.0.0"
+    normalize-path "^3.0.0"
+    p-map "^4.0.0"
+    path-exists "^4.0.0"
+    precinct "^9.0.1"
+    read-package-json-fast "^2.0.2"
+    require-package-name "^2.0.1"
+    resolve "^2.0.0-next.1"
+    semver "^7.0.0"
+    tmp-promise "^3.0.2"
+    toml "^3.0.0"
+    unixify "^1.0.0"
+    yargs "^17.0.0"
+
+"@netlify/zip-it-and-ship-it@^5.13.0":
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.13.1.tgz#7dd156397cc0cc443f585478b842bd0fbdd72b6e"
+  integrity sha512-1lb6II3aXmuDtNvb49PZlNX51JZydmxE2C27AaqO7OI0A+hXtVf7gGhitRMKuL1lhORpD5S9IgdD/1DwAkUvCQ==
   dependencies:
     "@babel/parser" "7.16.8"
     "@netlify/binary-info" "^1.0.0"
@@ -9808,9 +9845,9 @@ node-fetch@2.6.7, node-fetch@^2.3.0, node-fetch@^2.6.0, node-fetch@^2.6.7:
     whatwg-url "^5.0.0"
 
 node-fetch@^3.0.0, node-fetch@^3.1.1:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.2.8.tgz#0d9516dcf43a758d78d6dbe538adf0b1f6a4944e"
-  integrity sha512-KtpD1YhGszhntMpBDyp5lyagk8KIMopC1LEb7cQUAh7zcosaX5uK8HnbNb2i3NTQK3sIawCItS0uFC3QzcLHdg==
+  version "3.2.9"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.2.9.tgz#3f6070bf854de20f21b9fe8479f823462e615d7d"
+  integrity sha512-/2lI+DBecVvVm9tDhjziTVjo2wmTsSxSk58saUYP0P/fRJ3xxtfMDY24+CKTkfm0Dlhyn3CSXNL0SoRiCZ8Rzg==
   dependencies:
     data-uri-to-buffer "^4.0.0"
     fetch-blob "^3.1.4"
@@ -12609,9 +12646,9 @@ responselike@1.0.2, responselike@^1.0.2:
     lowercase-keys "^1.0.0"
 
 responselike@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/responselike/-/responselike-2.0.0.tgz#26391bcc3174f750f9a79eacc40a12a5c42d7723"
-  integrity sha512-xH48u3FTB9VsZw7R+vvgaKeLKzT6jOogbQhEe/jewwnZgzPcnyWui2Av6JpoYZF/91uueC+lqhWqeURw5/qhCw==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/responselike/-/responselike-2.0.1.tgz#9a0bc8fdc252f3fb1cca68b016591059ba1422bc"
+  integrity sha512-4gl03wn3hj1HP3yzgdI7d3lCkF95F21Pz4BPGvKHinyQzALR5CapwC8yIi0Rh58DEMQ/SguC03wFj2k0M/mHhw==
   dependencies:
     lowercase-keys "^2.0.0"
 
