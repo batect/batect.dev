@@ -21,6 +21,8 @@
   --ifm-h5-font-size: 1.2rem;
 
   --ifm-menu-link-sublist-icon-filter: opacity(50%);
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 ol {
@@ -41,13 +43,6 @@ ol > li:before {
   font-weight: var(--ifm-font-weight-bold);
   width: calc(var(--ifm-list-left-padding));
   text-align: right;
-}
-
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
 }
 
 .navbar__title {
