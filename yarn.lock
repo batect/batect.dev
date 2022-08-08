@@ -1863,14 +1863,14 @@
   integrity sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==
 
 "@netlify/build@^27.8.1":
-  version "27.10.0"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.10.0.tgz#14377bc24f9142b16b6a5edb0501724ca00cadb3"
-  integrity sha512-ExUXsPgprM5/WBVBfYGLaW6mNLxucoEceiZpYXOqvSGtP8Yq8/LCENIpc/g2V/4ooBLIyANnU6Hrr8NsH581gw==
+  version "27.11.0"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.11.0.tgz#df91a661f1bd94dbdae40a1ae42ad96e2c9ba52f"
+  integrity sha512-Vrx628tiZx3gRZJI/dTQXzCeM90iYUUImSalDD989Zxtjm88xZL5THHYX8+KAm8GE+/d+i5mp4RgfqQQHed+9g==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
     "@netlify/config" "^18.1.2"
-    "@netlify/edge-bundler" "^1.9.0"
+    "@netlify/edge-bundler" "^1.10.0"
     "@netlify/functions-utils" "^4.2.2"
     "@netlify/git-utils" "^4.0.0"
     "@netlify/plugins-list" "^6.35.0"
@@ -1968,10 +1968,10 @@
     validate-npm-package-name "^4.0.0"
     yargs "^17.3.1"
 
-"@netlify/edge-bundler@^1.8.0", "@netlify/edge-bundler@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-1.9.0.tgz#bb989b766d3301250955470910efe69a78978a2d"
-  integrity sha512-mpdnoJiPevobrUrJzEFKSHwarnwCBFX/kHZbUmtzLbiBe5rb/sML27jbRgBU8e2csWOfwAiqTxMCSF6AoIy86A==
+"@netlify/edge-bundler@^1.10.0", "@netlify/edge-bundler@^1.8.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-1.10.0.tgz#5074fb6a814dd6a15a6a8f7a0fb5b5ad86036391"
+  integrity sha512-zQcp71d1fn+ucOdg6LN2LluZEjkoLuIbZbWGkHFAQJC9NIZs34qxvdjeUcKHbkCFUdk9h3EM7YHXkwBy+FMfXA==
   dependencies:
     common-path-prefix "^3.0.0"
     del "^6.0.0"
@@ -2956,9 +2956,9 @@
     form-data "^3.0.0"
 
 "@types/node@*", "@types/node@^18.0.0":
-  version "18.6.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.6.4.tgz#fd26723a8a3f8f46729812a7f9b4fc2d1608ed39"
-  integrity sha512-I4BD3L+6AWiUobfxZ49DlU43gtI+FTHSv9pE2Zekg6KjMpre4ByusaljW3vYSLJrvQ1ck1hUaeVu8HVlY3vzHg==
+  version "18.6.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.6.5.tgz#06caea822caf9e59d5034b695186ee74154d2802"
+  integrity sha512-Xjt5ZGUa5WusGZJ4WJPbOT8QOqp6nDynVFRKcUt32bOgvXEoc6o085WNkYTMO7ifAj2isEfQQ2cseE+wT6jsRw==
 
 "@types/node@^16.0.0":
   version "16.11.47"
