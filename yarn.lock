@@ -1863,14 +1863,14 @@
   integrity sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==
 
 "@netlify/build@^27.8.1":
-  version "27.9.1"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.9.1.tgz#018250e8818e9d6862508ac82cc2d72256305e24"
-  integrity sha512-HMcjmVrd9ut+2ef72r0peNu9hlnksalZbziaA0xdhrWI+Er2V8plZ0ML7BBvQBSCXpRI/Erl3bTWwLdodjjipA==
+  version "27.10.0"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.10.0.tgz#14377bc24f9142b16b6a5edb0501724ca00cadb3"
+  integrity sha512-ExUXsPgprM5/WBVBfYGLaW6mNLxucoEceiZpYXOqvSGtP8Yq8/LCENIpc/g2V/4ooBLIyANnU6Hrr8NsH581gw==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
     "@netlify/config" "^18.1.2"
-    "@netlify/edge-bundler" "^1.8.0"
+    "@netlify/edge-bundler" "^1.9.0"
     "@netlify/functions-utils" "^4.2.2"
     "@netlify/git-utils" "^4.0.0"
     "@netlify/plugins-list" "^6.35.0"
@@ -1968,7 +1968,7 @@
     validate-npm-package-name "^4.0.0"
     yargs "^17.3.1"
 
-"@netlify/edge-bundler@^1.8.0":
+"@netlify/edge-bundler@^1.8.0", "@netlify/edge-bundler@^1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-1.9.0.tgz#bb989b766d3301250955470910efe69a78978a2d"
   integrity sha512-mpdnoJiPevobrUrJzEFKSHwarnwCBFX/kHZbUmtzLbiBe5rb/sML27jbRgBU8e2csWOfwAiqTxMCSF6AoIy86A==
@@ -2278,9 +2278,9 @@
     yargs "^17.0.0"
 
 "@netlify/zip-it-and-ship-it@^5.13.3":
-  version "5.13.3"
-  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.13.3.tgz#f1450bbb1ceb0508cb6377333613de30ad9b78e8"
-  integrity sha512-CgnJ7nIgPHbi1AnFw2oZS1LOR/Av7VIZh5QF2ifKKkJ3C9TW7w77/0X1LeFj8W7+KWKAiB4dwePO1dAdyApsSw==
+  version "5.13.4"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-5.13.4.tgz#e689495557e3e01837edff28c67ad48666e96c00"
+  integrity sha512-sbjgepmvZLl4BcGBY8PUkC/zcvGcJp8YdUe2hM+7d44KzGb3GTznekNaqlVfoYi0RIK3h0S49SBI+tsBiz9jgA==
   dependencies:
     "@babel/parser" "7.16.8"
     "@netlify/binary-info" "^1.0.0"
@@ -3038,16 +3038,7 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react@*":
-  version "18.0.16"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.16.tgz#8de9bf7feebfa520777e8d30815070b39cb663c0"
-  integrity sha512-3vX1dzVucqc2nhXtzyaParTIIRZeNbisRqLE7QdeLomVybEyeiuAouzZXgz71P+2kbJOqj3dy0fzoATg2I06GQ==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@18.0.17":
+"@types/react@*", "@types/react@18.0.17":
   version "18.0.17"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.17.tgz#4583d9c322d67efe4b39a935d223edcc7050ccf4"
   integrity sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==
