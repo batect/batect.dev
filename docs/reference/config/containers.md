@@ -143,7 +143,7 @@ For example, running the container `my_container` from the following configurati
 containers:
   my-container:
     build_directory: .batect/my-container
-    build_stage: my-stage
+    build_target: my-stage
 ```
 
 ### `capabilities_to_add` and `capabilities_to_drop`
