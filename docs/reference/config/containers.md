@@ -822,8 +822,8 @@ Many of the fields above have equivalent options in other tools.
 
 | Batect container field                                                  | Docker Compose field             |
 | ----------------------------------------------------------------------- | -------------------------------- |
-| [`additional_hostnames`](#additional_hostnames)                         | `extra_hosts`                    |
-| [`additional_hosts`](#additional_hosts)                                 | `networks.aliases`               |
+| [`additional_hostnames`](#additional_hostnames)                         | `networks.aliases`               |
+| [`additional_hosts`](#additional_hosts)                                 | `extra_hosts`                    |
 | [`build_args`](#build_args)                                             | `build.args`                     |
 | [`build_directory`](#build_directory)                                   | `build` or `build.context`       |
 | [`build_target`](#build_target)                                         | `build.target`                   |
