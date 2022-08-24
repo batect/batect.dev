@@ -16,6 +16,7 @@ CSP
 CircleCI
 Cloudflare
 Cntlm
+Colima
 Cron
 Ctrl
 Dependabot
