@@ -107,3 +107,7 @@ input[type="search"] {
 .DocSearch-Button-Placeholder {
   margin-bottom: 2px;
 }
+
+code {
+  border: none;
+}
