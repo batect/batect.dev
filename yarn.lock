@@ -12578,10 +12578,10 @@ remark-stringify@^10.0.0:
     mdast-util-to-markdown "^1.0.0"
     unified "^10.0.0"
 
-remark-validate-links@12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/remark-validate-links/-/remark-validate-links-12.0.0.tgz#fb44666c8ba56bbcdf334dd9de03655054588731"
-  integrity sha512-mBNfsGBPO3A4CYnHDd3fpnr+A2Ep71moc0UlxC6lhZSJslMAU3UZypKK3DLlxUPoLy9TlJaEVEnfy6qpGQU7sg==
+remark-validate-links@12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/remark-validate-links/-/remark-validate-links-12.1.0.tgz#496da668182036fbd5015ff727f05ce754951af4"
+  integrity sha512-+QhcQmu4WhUhxSduRbSInrFAMAFyNVX7QP0OW5AX8C6NzxMweJnwPBsCfWsV77ivIpC5L6sPbZfMLoW85UoMHQ==
   dependencies:
     "@types/mdast" "^3.0.0"
     github-slugger "^1.0.0"
