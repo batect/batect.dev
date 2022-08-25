@@ -34,6 +34,7 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--disable-ports`](#--disable-ports): Disable port binding on the host machine
 - [`--docker-cert-path`, `--docker-tls-ca-cert`, `--docker-tls-cert` and `--docker-tls-key`](#--docker-cert-path---docker-tls-ca-cert---docker-tls-cert-and---docker-tls-key): Customise certificates used to provide authentication to daemon and to verify daemon's identity
 - [`--docker-config`](#--docker-config): Path to directory containing Docker client configuration files.
+- [`--docker-context`](#--docker-context): Docker CLI context to retrieve Docker daemon connection settings from
 - [`--docker-host`](#--docker-host): Use a non-standard Docker host
 - [`--docker-tls` and `--docker-tls-verify`](#--docker-tls-and---docker-tls-verify): Connect to Docker over TLS
 - [`--enable-buildkit`](#--enable-buildkit): Use BuildKit to build images
@@ -178,6 +179,11 @@ If both `--docker-cert-path` (or `DOCKER_CERT_PATH`) and a path for an individua
 
 These options mirror the behaviour of the `docker` CLI's `--tlscacert`, `--tlscert` and `--tlskey` options.
 
+:::info
+These options only apply if the `default` Docker CLI context is in use. See [Docker daemon connection settings](#docker-daemon-connection-settings)
+for further explanation.
+:::
+
 ### `--docker-config`
 
 By default, Batect will look for Docker client configuration files in the directory provided by the `DOCKER_CONFIG` environment variable,
@@ -189,6 +195,26 @@ Example:
 ./batect --docker-config ~/.my-other-docker-config the-task
 ```
 
+### `--docker-context`
+
+The Docker CLI context to retrieve Docker daemon connection settings from.
+
+By default, Batect will use the active context set with `docker context use`, or the context from the `DOCKER_CONTEXT`
+environment variable.
+
+Example:
+
+```shell
+./batect --docker-context colima the-task
+```
+
+This option mirrors the behaviour of the `docker` CLI's `--context` option.
+
+:::info
+Other Docker daemon connection options such as `--docker-host` and `--docker-tls` only apply if the `default` Docker CLI context is in use.
+See [Docker daemon connection settings](#docker-daemon-connection-settings) for further explanation.
+:::
+
 ### `--docker-host`
 
 By default, Batect will connect to the Docker daemon using the path provided in the `DOCKER_HOST` environment variable, or
@@ -199,6 +225,11 @@ Example:
 ```shell
 ./batect --docker-host unix:///var/run/other-docker.sock the-task
 ```
+
+:::info
+This option only applies if the `default` Docker CLI context is in use. See [Docker daemon connection settings](#docker-daemon-connection-settings)
+for further explanation.
+:::
 
 ### `--docker-tls` and `--docker-tls-verify`
 
@@ -213,6 +244,11 @@ Using `--docker-tls` without `--docker-tls-verify` is insecure and should only b
 :::
 
 These options mirror the behaviour of the `docker` CLI's `--tls` and `--tlsverify` options.
+
+:::info
+These options only apply if the `default` Docker CLI context is in use. See [Docker daemon connection settings](#docker-daemon-connection-settings)
+for further explanation.
+:::
 
 ### `--enable-buildkit`
 
@@ -538,3 +574,43 @@ available version.
 
 Running `./batect --version` will show a summary of the versions of Batect, Docker and your operating
 system, which can be useful when diagnosing issues with Batect.
+
+## Docker daemon connection settings
+
+In order for Batect to communicate with a Docker daemon, it needs two key pieces of information: the host and any TLS-related
+connection settings.
+
+These settings can come either from the `default` Docker CLI context, or another context. A context contains all of the information
+Batect needs to communicate with a Docker daemon.
+
+### Context precedence
+
+Batect follows the same logic as the `docker` CLI tool when determining which context to use, with scenarios at the top of
+the following list having higher precedence:
+
+- If the [`--docker-context`](#--docker-context) option is provided, that context is used
+- If the [`--docker-host`](#--docker-host) option is provided, the `default` context is used
+- If the `DOCKER_HOST` environment variable is set, the `default` context is used
+- If the `DOCKER_CONTEXT` environment variable is set, that context is used
+- If there is an active context previously selected with `docker context use`, that context is used
+- Otherwise, the `default` context is used
+
+### `default` context
+
+The `default` context is unlike other contexts in that it is dynamic: it respects options set on the command line
+or through environment variables, and falls back to Docker's default settings if neither of these sources have been
+set.
+
+For example, if the [`--docker-host`](#--docker-host) option is provided, the `default` context will use the host from
+that option. If the option is not provided, it will use the value of the `DOCKER_HOST` environment variable if set.
+Otherwise, if option is not provided and the environment variable is not set, the `default` context will fall back to
+the default value appropriate for the current operating system (eg. `unix:///var/run/docker.sock` on macOS and Linux).
+
+### Other contexts
+
+Other contexts ignore command line options and environment variables and use only the settings stored in the context.
+
+These settings can be viewed with `docker context inspect <name>` (eg. `docker context inspect colima`), and modified
+with `docker context update`.
+
+A list of available contexts can be viewed with `docker context ls`, and a new context can be created with `docker context create`.
