@@ -41,7 +41,7 @@
     "dictionary-en-au": "2.4.0",
     "editorconfig-checker": "4.0.2",
     "eslint": "8.23.0",
-    "eslint-plugin-react": "7.31.6",
+    "eslint-plugin-react": "7.31.7",
     "eslint-plugin-react-hooks": "4.6.0",
     "netlify-cli": "11.5.1",
     "prettier": "2.7.1",
