@@ -31,8 +31,8 @@ Each container definition is made up of the following fields:
 - [`additional_hostnames`](#additional_hostnames): other hostnames to associate with the container, in addition to the container's name
 - [`additional_hosts`](#additional_hosts): extra entries to add to `/etc/hosts` inside the container
 - [`build_args`](#build_args): list of build args to use when building the image in `build_directory`
-- [`build_directory`](#build_directory): path to a directory containing a Dockerfile to build and use for this container.
-- [`build_target`](#build_target): Dockerfile stage name to build and use for this container.
+- [`build_directory`](#build_directory): path to a directory containing a Dockerfile to build and use for this container
+- [`build_target`](#build_target): Dockerfile stage name to build and use for this container
 - [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to grant to the container
 - [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to remove from the container
 - [`command`](#command): command to run when the container starts
@@ -43,8 +43,9 @@ Each container definition is made up of the following fields:
 - [`entrypoint`](#entrypoint): entrypoint to use to run the container's command
 - [`environment`](#environment): environment variables for the container
 - [`health_check`](#health_check): health check configuration for the container
-- [`image`](#image): image to use for this container.
+- [`image`](#image): image to use for this container
 - [`image_pull_policy`](#image_pull_policy): when to pull the image used by this container
+- [`labels`](#labels): labels to apply to this container
 - [`log_driver`](#log_driver): Docker log driver to use when running the container
 - [`log_options`](#log_options): additional options for the log driver in use
 - [`ports`](#ports): ports to expose from the container to the host machine
@@ -52,7 +53,7 @@ Each container definition is made up of the following fields:
 - [`run_as_current_user`](#run_as_current_user): configuration for ['run as current user' mode](../../concepts/run-as-current-user-mode.md)
 - [`setup_commands`](#setup_commands): commands to run inside the container after it has become healthy but before dependent containers start
 - [`shm_size`](#shm_size): size of `/dev/shm` (shared memory for IPC) for the container
-- [`volumes`](#volumes): cache or directory mounts to create for the container
+- [`volumes`](#volumes): cache, directory or temporary mounts to create for the container
 - [`working_directory`](#working_directory): working directory for the container's command
 
 One of [`build_directory`](#build_directory) or [`image`](#image) is required.
@@ -463,6 +464,19 @@ containers:
 It is highly recommended that you use `IfNotPresent`. Using `Always` can incur a significant performance penalty.
 :::
 
+### `labels`
+
+Labels to apply to the container.
+
+For example, to add a `category` label to the `my-container` container with value `build-tools`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    labels:
+      category: build-tools
+```
+
 ### `log_driver`
 
 The Docker log driver to use when running the container.
@@ -688,9 +702,9 @@ Accepts values such as `2000` (2000 bytes), `3k` (3 KB), `5m` (5 MB) or `1g` (1 
 
 ### `volumes`
 
-List of cache or directory mounts to create for the container.
+List of cache, directory or tmpfs mounts to create for the container.
 
-Both local mounts (mounting a directory on the host into a container) and [caches](../../concepts/caches.md) are supported:
+Local mounts (mounting a directory on the host into a container), [caches](../../concepts/caches.md) and tmpfs mounts are supported:
 
 #### Local mounts
 
@@ -761,6 +775,29 @@ This is only recommended on Linux CI agents, as using mounted directories instea
 If you mount a cache over an existing directory in the container's image and are not using directory mounts for caches with [`--cache-type`](../cli.mdx#--cache-type),
 the first time the cache is created, the cache inherits the contents of the directory from the image.
 :::
+
+#### tmpfs mounts
+
+tmpfs mounts provide a temporary, in-memory filesystem for a container.
+
+When the container exits, the contents of the tmpfs mount is lost. A container can have multiple independent tmpfs mounts.
+
+The format for a tmpfs mount is:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    ...
+    volumes:
+      - type: tmpfs
+        container: /code/tmp
+```
+
+The following fields are supported:
+
+- `type`: must be set to `tmpfs`. Required.
+- `container`: path to mount the tmpfs filesystem at inside the container. Required.
+- `options`: standard [Docker tmpfs mount options](https://docs.docker.com/storage/tmpfs/#specify-tmpfs-options) (such as `ro` for read-only). Optional.
 
 ### `working_directory`
 
