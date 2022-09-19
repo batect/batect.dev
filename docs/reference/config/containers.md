@@ -845,6 +845,7 @@ Many of the fields above have equivalent options in other tools.
 | [`health_check.timeout`](#timeout)                                      | `--health-timeout` to `docker run`                     |
 | [`image`](#image)                                                       | argument to `docker run`                               |
 | [`image_pull_policy`](#image_pull_policy)                               | `--pull` to `docker build` or re-running `docker pull` |
+| [`labels`](#labels)                                                     | `--labels` to `docker run`                             |
 | [`log_driver`](#log_driver)                                             | `--log-driver` to `docker run`                         |
 | [`log_options`](#log_options)                                           | `--log-opt` to `docker run`                            |
 | [`ports`](#ports)                                                       | `--publish` to `docker run`                            |
@@ -852,7 +853,7 @@ Many of the fields above have equivalent options in other tools.
 | [`run_as_current_user`](#run_as_current_user)                           | (none)                                                 |
 | [`setup_commands`](#setup_commands)                                     | (none)                                                 |
 | [`shm_size`](#shm_size)                                                 | `--shm-size` to `docker run`                           |
-| [`volumes`](#volumes)                                                   | `--volume` to `docker run`                             |
+| [`volumes`](#volumes)                                                   | `--volume` or `--tmpfs` to `docker run`                |
 | [`working_directory`](#working_directory)                               | `--workdir` to `docker run`                            |
 
 ### Docker Compose
@@ -880,6 +881,7 @@ Many of the fields above have equivalent options in other tools.
 | [`health_check.timeout`](#timeout)                                      | `healthcheck.timeout`            |
 | [`image`](#image)                                                       | `image`                          |
 | [`image_pull_policy`](#image_pull_policy)                               | (none)                           |
+| [`labels`](#labels)                                                     | `labels`                         |
 | [`log_driver`](#log_driver)                                             | `logging.driver`                 |
 | [`log_options`](#log_options)                                           | `logging.options`                |
 | [`ports`](#ports)                                                       | `ports`                          |
@@ -887,5 +889,5 @@ Many of the fields above have equivalent options in other tools.
 | [`run_as_current_user`](#run_as_current_user)                           | (none)                           |
 | [`setup_commands`](#setup_commands)                                     | (none)                           |
 | [`shm_size`](#shm_size)                                                 | `shm_size`                       |
-| [`volumes`](#volumes)                                                   | `volumes`                        |
+| [`volumes`](#volumes)                                                   | `volumes` or `tmpfs`             |
 | [`working_directory`](#working_directory)                               | `working_dir`                    |
