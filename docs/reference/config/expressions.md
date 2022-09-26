@@ -8,6 +8,8 @@ Expressions are supported in:
 
 - [`build_args`](containers.md#build_args) on containers
 - [`build_directory`](containers.md#build_directory) on containers
+- [`build_secrets.path`](containers.md#build_secrets) on containers
+- [`build_ssh.paths`](containers.md#build_ssh) on containers
 - `environment` on [containers](containers.md#environment), [tasks](tasks.md#environment) and [customisations](tasks.md#environment-1)
 - the local path in [volume mounts](containers.md#volumes) on containers
 

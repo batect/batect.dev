@@ -33,6 +33,8 @@ Each container definition is made up of the following fields:
 - [`build_args`](#build_args): list of build args to use when building the image in `build_directory`
 - [`build_directory`](#build_directory): path to a directory containing a Dockerfile to build and use for this container
 - [`build_target`](#build_target): Dockerfile stage name to build and use for this container
+- [`build_secrets`](#build_secrets): secret values to expose to image build process
+- [`build_ssh`](#build_ssh): SSH agents or keys to expose to image build process
 - [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to grant to the container
 - [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop): additional capabilities to remove from the container
 - [`command`](#command): command to run when the container starts
@@ -146,6 +148,110 @@ containers:
     build_directory: .batect/my-container
     build_target: my-stage
 ```
+
+### `build_secrets`
+
+Secrets to expose to the image build process.
+
+Only supported when building an image with [`build_directory`](#build_directory).
+
+Files and environment variables can be exposed to the image build process. However, both files and environment variables are
+made available within the build environment as files.
+
+Files can be specified with the syntax shown in the following example, which exposes a secret named `repo-key` with the contents of the file `secret.key`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: .batect/my-container
+    build_secrets:
+      repo-key:
+        path: secret.key
+```
+
+`path` can be an [expression](expressions.md), and relative paths are resolved relative to the directory containing the configuration file.
+
+Environment variables can be specified with the syntax shown in the following example, which exposes a secret named `repo-key` with the value of the environment variable `SECRET_KEY`:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: .batect/my-container
+    build_secrets:
+      repo-key:
+        environment: SECRET_KEY
+```
+
+Both of the above examples can then be used from a Dockerfile by mounting the `repo-key` secret, for example:
+
+```dockerfile
+# syntax=docker/dockerfile:1.4.0
+FROM my-base-image:1.2.3
+
+RUN --mount=type=secret,required=true,id=repo-key cat /run/secrets/repo-key
+```
+
+The [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/#run---mounttypesecret) has more information on the syntax for `RUN --mount=type=secret`.
+
+:::note
+Image build secrets are only supported when using BuildKit.
+
+Attempting to build an image that uses secrets with the legacy image builder will result in an error.
+:::
+
+### `build_ssh`
+
+SSH agents or keys to expose to image build process.
+
+Only supported when building an image with [`build_directory`](#build_directory).
+
+`build_ssh` supports exposing either a single SSH agent from the host, or one or more SSH keys, for example:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: .batect/my-container
+    build_ssh:
+      - id: ssh-agent-from-host
+        paths:
+          - /path/to/ssh-agent.sock
+      - id: ssh-keys-from-host
+        paths:
+          - /path/to/key_1
+          - /path/to/key_2
+```
+
+The values in `paths` can be [expressions](expressions.md), and relative paths are resolved relative to the directory containing the configuration file.
+
+The host's default SSH agent (from the `SSH_AUTH_SOCK` environment variable) can be exposed by specifying an empty list of `paths`, for example:
+
+```yaml title="batect.yml"
+containers:
+  my-container:
+    build_directory: .batect/my-container
+    build_ssh:
+      - id: ssh-agent-from-host
+```
+
+If keys are provided, BuildKit starts an SSH agent with the provided keys and exposes this to the build process. If an SSH agent socket is provided,
+the agent is forwarded as-is to the build process.
+
+The exposed SSH agent can then be used from a Dockerfile by mounting it for each step that requires it, for example:
+
+```dockerfile
+# syntax=docker/dockerfile:1.4.0
+FROM my-base-image:1.2.3
+
+RUN --mount=type=ssh,required=true,id=ssh-agent-from-host ssh user@host.com ...
+```
+
+The [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/#run---mounttypessh) has more information on the syntax for `RUN --mount=type=ssh`.
+
+:::note
+SSH agent and keys forwarding is only supported when using BuildKit.
+
+Attempting to build an image that uses SSH forwarding with the legacy image builder will result in an error.
+:::
 
 ### `capabilities_to_add` and `capabilities_to_drop`
 
@@ -829,6 +935,8 @@ Many of the fields above have equivalent options in other tools.
 | [`build_args`](#build_args)                                             | `--build-arg` to `docker build`                        |
 | [`build_directory`](#build_directory)                                   | argument to `docker build`                             |
 | [`build_target`](#build_target)                                         | `--target` to `docker build`                           |
+| [`build_secrets`](#build_secrets)                                       | `--secret` to `docker build`                           |
+| [`build_ssh`](#build_ssh)                                               | `--ssh` to `docker build`                              |
 | [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `--cap-add` to `docker run`                            |
 | [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `--cap-drop` to `docker run`                           |
 | [`command`](#command)                                                   | argument to `docker run`                               |
@@ -865,6 +973,8 @@ Many of the fields above have equivalent options in other tools.
 | [`build_args`](#build_args)                                             | `build.args`                     |
 | [`build_directory`](#build_directory)                                   | `build` or `build.context`       |
 | [`build_target`](#build_target)                                         | `build.target`                   |
+| [`build_secrets`](#build_secrets)                                       | (none)                           |
+| [`build_ssh`](#build_ssh)                                               | (none)                           |
 | [`capabilities_to_add`](#capabilities_to_add-and-capabilities_to_drop)  | `cap_add`                        |
 | [`capabilities_to_drop`](#capabilities_to_add-and-capabilities_to_drop) | `cap_drop`                       |
 | [`command`](#command)                                                   | `command`                        |
