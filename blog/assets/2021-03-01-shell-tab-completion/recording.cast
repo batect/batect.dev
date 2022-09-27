@@ -1,4 +1,4 @@
-{"version": 2, "width": 204, "height": 55, "timestamp": 1614585683, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
+{"version": 2, "width": 200, "height": 19, "timestamp": 1614585683, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
 [0.131805, "o", "\u001b]0;batect-sample-ruby\u0007\u001b[30m\u001b(B\u001b[m"]
 [0.145773, "o", "\u001b[?2004h"]
 [0.153521, "o", "\u001b]0;batect-sample-ruby\u0007\u001b[30m\u001b(B\u001b[m"]

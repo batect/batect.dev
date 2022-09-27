@@ -1,4 +1,4 @@
-{"version": 2, "width": 204, "height": 50, "timestamp": 1568455901, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
+{"version": 2, "width": 204, "height": 20, "timestamp": 1568455901, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
 [1.166834, "o", "\u001b[37mRunning \u001b[0m\u001b[37m\u001b[1mintegrationTest\u001b[0m\u001b[37m...\u001b[0m\r\n"]
 [1.188356, "o", "\u001b[37m\u001b[1mdatabase\u001b[0m\u001b[37m: \u001b[0m\u001b[37mbuilding image...\u001b[0m\r\n"]
 [1.188424, "o", "\u001b[37m\u001b[1mexchange-rate-service\u001b[0m\u001b[37m: \u001b[0m\u001b[37mready to build image"]

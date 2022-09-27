@@ -11,15 +11,18 @@ Batect now supports shell tab completion in both [Zsh](https://www.zsh.org/) and
 This supports both options (eg. `./batect --out`<kbd>Tab</kbd> completes to `./batect --output`) and task names
 (eg. `./batect b`<kbd>Tab</kbd> completes to `./batect build`):
 
-<AsciinemaPlayer
-  src={
-    require("./assets/2021-03-01-shell-tab-completion/recording.cast").default
-  }
-  width={200}
-  height={19}
-  preload={true}
-  poster="npt:4"
-/>
+<p>
+  <AsciinemaPlayer
+    src={
+      require("./assets/2021-03-01-shell-tab-completion/recording.cast").default
+    }
+    width={200}
+    height={19}
+    preload={true}
+    poster="npt:4"
+    fit="none"
+  />
+</p>
 
 To get started, update your project to Batect 0.68.0, then follow
 [the installation instructions for your shell](/docs/getting-started/shell-tab-completion).

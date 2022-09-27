@@ -1,4 +1,4 @@
-{"version": 2, "width": 178, "height": 45, "timestamp": 1607226282, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
+{"version": 2, "width": 178, "height": 19, "timestamp": 1607226282, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
 [0.154084, "o", "\u001b]0;integration-testing\u0007\u001b[30m\u001b(B\u001b[m"]
 [0.154842, "o", "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                                                                                                                                 \r⏎ \r\u001b[K"]
 [0.176863, "o", "\u001b[?2004h"]

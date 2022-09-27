@@ -1,68 +1,29 @@
-import React, { Component, Ref } from "react";
-import paths from "../plugins/asciinema-player/paths";
-import useScript from "../utils/useScript";
-import styles from "./AsciinemaPlayer.module.css";
+import React, { useEffect, useRef } from "react";
+import * as AsciinemaPlayerLibrary from "asciinema-player";
+import "asciinema-player/dist/bundle/asciinema-player.css";
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
-declare namespace asciinema {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace player {
-    // eslint-disable-next-line @typescript-eslint/no-namespace
-    namespace js {
-      function CreatePlayer(ref: Ref<HTMLElement>, url: string, options: PlayerOptions);
-      function UnmountPlayer(ref: Ref<HTMLElement>);
-
-      // This is only a subset of the available options - these are the only ones that we use.
-      interface PlayerOptions {
-        width: number;
-        height: number;
-        preload: boolean;
-        poster: string;
-      }
-    }
-  }
-}
-
-interface AsciinemaPlayerProps extends asciinema.player.js.PlayerOptions {
+interface AsciinemaPlayerProps {
   src: string;
+  width: number;
+  height: number;
+  preload: boolean;
+  poster: string;
+  fit: "width" | "height" | "both" | "none" | false;
 }
 
-class AsciinemaPlayer extends Component<AsciinemaPlayerProps> {
-  private ref: Ref<HTMLDivElement>;
+const AsciinemaPlayer: React.FC<AsciinemaPlayerProps> = ({ src, ...opts }) => {
+  const ref = useRef<HTMLDivElement>(null);
 
-  bindRef = (ref) => {
-    this.ref = ref;
-  };
+  useEffect(() => {
+    const currentRef = ref.current;
+    const player = AsciinemaPlayerLibrary.create(src, currentRef, opts);
 
-  componentDidMount() {
-    asciinema.player.js.CreatePlayer(this.ref, this.props.src, this.props);
-  }
+    return () => {
+      player.dispose();
+    };
+  }, [src, opts]);
 
-  componentWillUnmount() {
-    if (!this.ref) return;
-
-    asciinema.player.js.UnmountPlayer(this.ref);
-    this.ref = null;
-  }
-
-  render() {
-    return <div ref={this.bindRef} />;
-  }
-}
-
-const AsciinemaPlayerWrapper = (props: AsciinemaPlayerProps) => {
-  const status = useScript(paths.js);
-
-  switch (status) {
-    case "ready":
-      return <AsciinemaPlayer {...props} />;
-    case "loading":
-      return <div className={styles.loading}>Loading...</div>;
-    case "error":
-      return <div className={styles.loading}>Loading player failed.</div>;
-    default:
-      throw new Error(`Unknown script status: ${status}`);
-  }
+  return <div ref={ref} />;
 };
 
-export default AsciinemaPlayerWrapper;
+export default AsciinemaPlayer;

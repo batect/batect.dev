@@ -1,4 +1,4 @@
-{"version": 2, "width": 204, "height": 50, "timestamp": 1568456008, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
+{"version": 2, "width": 204, "height": 20, "timestamp": 1568456008, "env": {"SHELL": "/usr/local/bin/fish", "TERM": "xterm-256color"}}
 [5.595385, "o", "/usr/local/bin/ruby -I/code/.bundle-cache/gems/rspec-core-3.8.2/lib:/code/.bundle-cache/gems/rspec-support-3.8.2/lib /code/.bundle-cache/gems/rspec-core-3.8.2/exe/rspec --pattern spec/integration/\\*\\*/\\*_spec.rb -I lib -I spec\r\n"]
 [7.875443, "o", "\r\nRandomized with seed 63331\r\n"]
 [7.892246, "o", "\u001b[32m.\u001b[0m"]

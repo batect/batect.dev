@@ -114,9 +114,10 @@ function Home() {
                 <AsciinemaPlayer
                   src={require("./home-page-examples/hello-world/recording.cast").default}
                   width={200}
-                  height={19}
+                  height={17}
                   preload={true}
                   poster="npt:24"
+                  fit="none"
                 />
               </div>
             </div>
@@ -133,6 +134,7 @@ function Home() {
                   height={19}
                   preload={true}
                   poster="npt:8"
+                  fit="none"
                 />
               </div>
               <div className="col col--6">
