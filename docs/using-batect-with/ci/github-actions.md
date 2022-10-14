@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v3.1.0
 
       - name: Cache dependencies
-        uses: actions/cache@v3.0.10
+        uses: actions/cache@v3.0.11
         with:
           path: .batect/caches
           key: batect-caches-${{ hashFiles('path to a file that uniquely identifies the contents of the caches') }}
