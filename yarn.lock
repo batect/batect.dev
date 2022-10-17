@@ -1993,9 +1993,9 @@
     yargs "^17.3.1"
 
 "@netlify/edge-bundler@^2.7.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-2.7.0.tgz#975c97600c99c54d62d9954d6ae168246cb01f48"
-  integrity sha512-BEIZkjSK0HyhGiTImfVHUjIMQ852YyxzNRikgOzvXDGvWVs74y7n3clSm66J55vilvEZmK6GpXZiGtaNN9kH6g==
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-2.8.0.tgz#0e1aee5ffa4507bbfe8f88cd45b3e7a395cf6441"
+  integrity sha512-MX60wBkv+KTtNzBgLwe7kwVpNj9qSdBcDOb/mqnoP+HX8Uxe5LL1ucQ5+1WRinpoHCJKG5pc1RBibbv6B+HEzQ==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     common-path-prefix "^3.0.0"
