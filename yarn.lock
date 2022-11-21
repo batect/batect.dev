@@ -1710,6 +1710,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz#af5b2691a22b44be847b0ca81641c5fb6ad0172c"
   integrity sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==
 
+"@humanwhocodes/momoa@^2.0.2":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@humanwhocodes/momoa/-/momoa-2.0.4.tgz#8b9e7a629651d15009c3587d07a222deeb829385"
+  integrity sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA==
+
 "@humanwhocodes/object-schema@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
@@ -1989,12 +1994,37 @@
     validate-npm-package-name "^4.0.0"
     yargs "^17.6.0"
 
-"@netlify/edge-bundler@4.3.2", "@netlify/edge-bundler@^4.3.2":
+"@netlify/edge-bundler@4.3.2":
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-4.3.2.tgz#15738eac10b1b07ca09820920e4ccb433d5279d3"
   integrity sha512-wHAeLe6IAxf0DB3eqW3YWcjJoIGsOT5j/GlnIGtWCSEwl0TkwUTolThcY2FWLZyPJNv0jD+4XeLy/05Yw8FNCg==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
+    common-path-prefix "^3.0.0"
+    del "^7.0.0"
+    env-paths "^3.0.0"
+    execa "^6.0.0"
+    find-up "^6.3.0"
+    get-port "^6.1.2"
+    glob-to-regexp "^0.4.1"
+    node-fetch "^3.1.1"
+    node-stream-zip "^1.15.0"
+    p-retry "^5.1.1"
+    p-wait-for "^4.1.0"
+    path-key "^4.0.0"
+    semver "^7.3.5"
+    tmp-promise "^3.0.3"
+    uuid "^9.0.0"
+
+"@netlify/edge-bundler@^4.3.2":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-4.4.0.tgz#2b38cc3e4259b220e62c8a1e3b19125f07c14dd9"
+  integrity sha512-jJvoMA4UUB8wGzEH43z6uiE4/K/D/auO7CH3f8cgNlT8V885agT21nnXapIpSfugGemfghvP6ld/Ul+nI8GIxQ==
+  dependencies:
+    "@import-maps/resolve" "^1.0.1"
+    ajv "^8.11.2"
+    ajv-errors "^3.0.0"
+    better-ajv-errors "^1.2.0"
     common-path-prefix "^3.0.0"
     del "^7.0.0"
     env-paths "^3.0.0"
@@ -2259,9 +2289,9 @@
   integrity sha512-/caRJIYmI8yZNnvqMTE3K8zI72GjzwqGF+aX77Nj653z1t5+Cs7DiV4Cnw8CsaF4nYFHAGwDU5eWTrpsCJLNhw==
 
 "@netlify/plugins-list@^6.54.0":
-  version "6.56.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.56.0.tgz#d3b3e2e383da8e4c47bfd1189c8c289608a33a87"
-  integrity sha512-Y0664AZiVHQEm1eABcv/9KyA9ehp9QzAxetHH4ZlEh80Q/9l1UKIHTQmcPmA884sSUkaH56mxZAnds8cctSgZw==
+  version "6.57.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.57.0.tgz#269be8eaf64ae6657543a653323ae6f8fc46e72f"
+  integrity sha512-PEHF5QRXiGbL5dNT61iacbzmmcEdW8miVFYm9/P0yvXaRma4d20WLq1eydpXhQhk9tXljQpBEDjB0eDmJieOqg==
 
 "@netlify/run-utils@^5.0.2":
   version "5.0.2"
@@ -3520,7 +3550,7 @@ ajv@^6.10.0, ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.0, ajv@^8.11.0, ajv@^8.8.0:
+ajv@^8.0.0, ajv@^8.11.0, ajv@^8.11.2, ajv@^8.8.0:
   version "8.11.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.11.2.tgz#aecb20b50607acf2569b6382167b65a96008bb78"
   integrity sha512-E4bfmKAhGiSTvMfL1Myyycaub+cUEU2/IvpylXkUu7CHBkBj1f/ikdzbD7YQ6FKUbixDxeYvB/xY4fvyroDlQg==
@@ -4030,6 +4060,17 @@ before-after-hook@^2.2.0:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/before-after-hook/-/before-after-hook-2.2.3.tgz#c51e809c81a4e354084422b9b26bad88249c517c"
   integrity sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==
+
+better-ajv-errors@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/better-ajv-errors/-/better-ajv-errors-1.2.0.tgz#6412d58fa4d460ff6ccbd9e65c5fef9781cc5286"
+  integrity sha512-UW+IsFycygIo7bclP9h5ugkNH8EjCSgqyFB/yQ4Hqqa1OEYDtb0uFIkYE0b6+CjkgJYVM5UKI/pJPxjYe9EZlA==
+  dependencies:
+    "@babel/code-frame" "^7.16.0"
+    "@humanwhocodes/momoa" "^2.0.2"
+    chalk "^4.1.2"
+    jsonpointer "^5.0.0"
+    leven "^3.1.0 < 4"
 
 better-opn@^3.0.0:
   version "3.0.2"
@@ -8643,6 +8684,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonpointer@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-5.0.1.tgz#2110e0af0900fd37467b5907ecd13a7884a1b559"
+  integrity sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==
+
 jsonwebtoken@^8.5.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
@@ -8801,7 +8847,7 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-leven@^3.1.0:
+leven@^3.1.0, "leven@^3.1.0 < 4":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
   integrity sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==
