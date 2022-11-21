@@ -2017,9 +2017,9 @@
     uuid "^9.0.0"
 
 "@netlify/edge-bundler@^4.3.2":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-4.4.0.tgz#2b38cc3e4259b220e62c8a1e3b19125f07c14dd9"
-  integrity sha512-jJvoMA4UUB8wGzEH43z6uiE4/K/D/auO7CH3f8cgNlT8V885agT21nnXapIpSfugGemfghvP6ld/Ul+nI8GIxQ==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-4.4.1.tgz#82e09d7bce343565889922e1967c5cb61fb3b452"
+  integrity sha512-/7LjK5OSC2Y/sKL/M3mkf+sn/uT0SeK5Lg4hG+sjAKuGW9PYL9J0wzQE+gT3DwBZj1qZUMtvjWSnKShGmxVMdQ==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     ajv "^8.11.2"
