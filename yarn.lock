@@ -1993,10 +1993,35 @@
     validate-npm-package-name "^4.0.0"
     yargs "^17.6.0"
 
-"@netlify/edge-bundler@5.0.0", "@netlify/edge-bundler@^5.0.0":
+"@netlify/edge-bundler@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-5.0.0.tgz#31275dc9e17158366aafa5fa1f72b8ce66a876b4"
   integrity sha512-6kTOzuBhdYO5/puBU87hbl5b15DMCUHynVbJMRb2AAnxB0/ggWbQpOVogQSeLF7pOO+4r5TmRGS/U30xC2CA2A==
+  dependencies:
+    "@import-maps/resolve" "^1.0.1"
+    ajv "^8.11.2"
+    ajv-errors "^3.0.0"
+    better-ajv-errors "^1.2.0"
+    common-path-prefix "^3.0.0"
+    del "^7.0.0"
+    env-paths "^3.0.0"
+    execa "^6.0.0"
+    find-up "^6.3.0"
+    get-port "^6.1.2"
+    glob-to-regexp "^0.4.1"
+    node-fetch "^3.1.1"
+    node-stream-zip "^1.15.0"
+    p-retry "^5.1.1"
+    p-wait-for "^4.1.0"
+    path-key "^4.0.0"
+    semver "^7.3.5"
+    tmp-promise "^3.0.3"
+    uuid "^9.0.0"
+
+"@netlify/edge-bundler@^5.0.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-5.1.0.tgz#fe7482d30114c921f3a85b7d750995e32b49f2aa"
+  integrity sha512-L2zKfXvss+wKelOTU80Rbi3JR5oEwndUx29NpRVY2e8uSqRjS4+qm5Bmlkb/sRsz8dl2gLRRFX5FT/IADBj7og==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     ajv "^8.11.2"
