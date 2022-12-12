@@ -2019,9 +2019,9 @@
     uuid "^9.0.0"
 
 "@netlify/edge-bundler@^5.3.1":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-5.4.0.tgz#3eff5cb4e294ab1cb3e3c6d83332426ae1d360e1"
-  integrity sha512-hCqr8/hiaW+7O5mf801tCO2uJpo8GQjEQ/u47qb49Xth9iSOlAxkhKc+phYR5DulRNO2Tf8EzuOsls81SrbRMQ==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-5.5.0.tgz#bb2ea2d95cc062b45c6f78f154bdcb425d5cbde9"
+  integrity sha512-vVW+cEyD9637MLXq10livqLB9kT5IDuOeSx8mNYPBCuXQgmkNEvmZYr4khvRosymxaDXKkWM4yiwmT12+IfWZg==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     ajv "^8.11.2"
@@ -2188,11 +2188,11 @@
     url "^0.11.0"
 
 "@netlify/functions-utils@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@netlify/functions-utils/-/functions-utils-5.0.5.tgz#e211573b9d0c80952a4a7e7c8d45284790387e90"
-  integrity sha512-C9do87XSqBE3wP463o4617hBoZqj+T48aND8gUpgrMLIZRI0Ip7lKSKO8Qyx15Lqhg2a3istkeL4ux14LX/6lg==
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@netlify/functions-utils/-/functions-utils-5.0.6.tgz#21ff066f46436afab401eb437ec8ce3772a25f77"
+  integrity sha512-36MWBFfPqh06UlQWjfGFI8YlmVH1URK7/FQpm3ADvBV6LTPQ6IJsIpgCYogJzG0ARQ4yCHDpLcQr+0gTHFGGNg==
   dependencies:
-    "@netlify/zip-it-and-ship-it" "^7.1.3"
+    "@netlify/zip-it-and-ship-it" "^8.1.0"
     cpy "^8.1.0"
     path-exists "^5.0.0"
 
