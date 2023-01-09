@@ -2024,9 +2024,9 @@
     uuid "^9.0.0"
 
 "@netlify/edge-bundler@^8.0.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-8.1.0.tgz#8d0942d601dffdb5a2f5b77c010fc4b6a02969be"
-  integrity sha512-KfBfFq3fVYWlv2Q9lmaOwdm05fBGF1bE7aon7K5pcRRT+Baql59q8ZDiP/Ez3j5zq02LGoSh2ea/xwV6r9mHSw==
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-8.1.1.tgz#c8cfd288008588fdb2f7b30f52ce1b4e8b76f1d7"
+  integrity sha512-Z16Mx0yJD2Zk3hqEg1WQenE4UWNOF4CMYZ+c3RPzc8jZsISRdaL56MOQ4lOFW1h3776yUtNyVIMRv7ueySRp8w==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     ajv "^8.11.2"
@@ -3545,9 +3545,9 @@ ajv@^8.0.0, ajv@^8.11.2, ajv@^8.8.0:
     uri-js "^4.2.2"
 
 algoliasearch-helper@^3.10.0:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.11.1.tgz#d83ab7f1a2a374440686ef7a144b3c288b01188a"
-  integrity sha512-mvsPN3eK4E0bZG0/WlWJjeqe/bUD2KOEVOl0GyL/TGXn6wcpZU8NOuztGHCUKXkyg5gq6YzUakVTmnmSSO5Yiw==
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.11.2.tgz#f42db10433e6264f1d1ba503699cbdbff7b48dff"
+  integrity sha512-eKvSM5hz5w9RcUowu8LnQ5v0KRrFLCvF4K3KF/Ab3VwCT726rWgZUWUIQUPjr9qDENUMukQ/IHZ7bGUVYRGP0g==
   dependencies:
     "@algolia/events" "^4.0.1"
 
