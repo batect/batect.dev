@@ -6056,14 +6056,10 @@ ecdsa-sig-formatter@1.0.11:
   dependencies:
     safe-buffer "^5.0.1"
 
-editorconfig-checker@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-4.0.2.tgz#d3f33c7feb954de8c6c8c0111c5bea49e5b8f727"
-  integrity sha512-tUI7ABIzMB1kfwTUQmX+gaZGCMNuUgGuRHJ+Xu4Tk9T8lV8Vy5w/EaQsSZ7NKrOgLxbekptw6MUgrzHTvhceLw==
-  dependencies:
-    https-proxy-agent "^5.0.0"
-    node-fetch "^2.6.0"
-    tar "^6.0.0"
+editorconfig-checker@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-5.0.1.tgz#cb4bf7a9b80f1b63b141b8897d7cc326fce0d3ae"
+  integrity sha512-6hXq9VVDkyCxVYKdGtIj+yhVR1fi/6W6Ykz/+kItLPARulJvr2/VXgWZ5OGWx1UYm2RD6XOzWyx1JF6DLgQ/8Q==
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -14530,7 +14526,7 @@ tar-stream@^2.2.0:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-tar@^6.0.0, tar@^6.1.11:
+tar@^6.1.11:
   version "6.1.13"
   resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.13.tgz#46e22529000f612180601a6fe0680e7da508847b"
   integrity sha512-jdIBIN6LTIe2jqzay/2vtYLlBHa3JF42ot3h1dW8Q0PaAG4v8rm0cvpVePtau5C6OKXGGcgO9q2AMNSWxiLqKw==
