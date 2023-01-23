@@ -2355,9 +2355,9 @@
     "@netlify/local-functions-proxy-win32-x64" "1.1.1"
 
 "@netlify/open-api@^2.12.0":
-  version "2.12.2"
-  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.12.2.tgz#690e3375e37addba06f0ac60781d292a6210fb82"
-  integrity sha512-yWTh9DPO4Gku0JB6DZarUq8/p2jamvVjbWyeYkHcBX6LW89F2blIx8aA9eSJVSScMgrH/FSQ1I8y1JL/SC73bg==
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.13.0.tgz#758864df7d0b26a87ee900e15b7d6913227f0fd1"
+  integrity sha512-RKImnmGwHtGH3ycQ9LnqOiyWOFmsQ+07cz8wOyOfRJzNZVOdUs5P6nu0GHed9lIsAOUs4bCCPrlB9OxwpUOCrA==
 
 "@netlify/plugins-list@^6.61.0":
   version "6.63.0"
@@ -3298,14 +3298,6 @@
     "@typescript-eslint/typescript-estree" "5.49.0"
     debug "^4.3.4"
 
-"@typescript-eslint/scope-manager@5.48.2":
-  version "5.48.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.48.2.tgz#bb7676cb78f1e94921eaab637a4b5d596f838abc"
-  integrity sha512-zEUFfonQid5KRDKoI3O+uP1GnrFd4tIHlvs+sTJXiWuypUWMuDaottkJuR612wQfOkjYbsaskSIURV9xo4f+Fw==
-  dependencies:
-    "@typescript-eslint/types" "5.48.2"
-    "@typescript-eslint/visitor-keys" "5.48.2"
-
 "@typescript-eslint/scope-manager@5.49.0":
   version "5.49.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.49.0.tgz#81b5d899cdae446c26ddf18bd47a2f5484a8af3e"
@@ -3324,30 +3316,12 @@
     debug "^4.3.4"
     tsutils "^3.21.0"
 
-"@typescript-eslint/types@5.48.2":
-  version "5.48.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.48.2.tgz#635706abb1ec164137f92148f06f794438c97b8e"
-  integrity sha512-hE7dA77xxu7ByBc6KCzikgfRyBCTst6dZQpwaTy25iMYOnbNljDT4hjhrGEJJ0QoMjrfqrx+j1l1B9/LtKeuqA==
-
 "@typescript-eslint/types@5.49.0":
   version "5.49.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.49.0.tgz#ad66766cb36ca1c89fcb6ac8b87ec2e6dac435c3"
   integrity sha512-7If46kusG+sSnEpu0yOz2xFv5nRz158nzEXnJFCGVEHWnuzolXKwrH5Bsf9zsNlOQkyZuk0BZKKoJQI+1JPBBg==
 
-"@typescript-eslint/typescript-estree@5.48.2", "@typescript-eslint/typescript-estree@^5.13.0":
-  version "5.48.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.48.2.tgz#6e206b462942b32383582a6c9251c05021cc21b0"
-  integrity sha512-bibvD3z6ilnoVxUBFEgkO0k0aFvUc4Cttt0dAreEr+nrAHhWzkO83PEVVuieK3DqcgL6VAK5dkzK8XUVja5Zcg==
-  dependencies:
-    "@typescript-eslint/types" "5.48.2"
-    "@typescript-eslint/visitor-keys" "5.48.2"
-    debug "^4.3.4"
-    globby "^11.1.0"
-    is-glob "^4.0.3"
-    semver "^7.3.7"
-    tsutils "^3.21.0"
-
-"@typescript-eslint/typescript-estree@5.49.0":
+"@typescript-eslint/typescript-estree@5.49.0", "@typescript-eslint/typescript-estree@^5.13.0":
   version "5.49.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.49.0.tgz#ebd6294c0ea97891fce6af536048181e23d729c8"
   integrity sha512-PBdx+V7deZT/3GjNYPVQv1Nc0U46dAHbIuOG8AZ3on3vuEKiPDwFE/lG1snN2eUB9IhF7EyF7K1hmTcLztNIsA==
@@ -3360,7 +3334,7 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.49.0":
+"@typescript-eslint/utils@5.49.0", "@typescript-eslint/utils@^5.30.5":
   version "5.49.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.49.0.tgz#1c07923bc55ff7834dfcde487fff8d8624a87b32"
   integrity sha512-cPJue/4Si25FViIb74sHCLtM4nTSBXtLx1d3/QT6mirQ/c65bV8arBEebBJJizfq8W2YyMoPI/WWPFWitmNqnQ==
@@ -3373,28 +3347,6 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
     semver "^7.3.7"
-
-"@typescript-eslint/utils@^5.30.5":
-  version "5.48.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.48.2.tgz#3777a91dcb22b8499a25519e06eef2e9569295a3"
-  integrity sha512-2h18c0d7jgkw6tdKTlNaM7wyopbLRBiit8oAxoP89YnuBOzCZ8g8aBCaCqq7h208qUTroL7Whgzam7UY3HVLow==
-  dependencies:
-    "@types/json-schema" "^7.0.9"
-    "@types/semver" "^7.3.12"
-    "@typescript-eslint/scope-manager" "5.48.2"
-    "@typescript-eslint/types" "5.48.2"
-    "@typescript-eslint/typescript-estree" "5.48.2"
-    eslint-scope "^5.1.1"
-    eslint-utils "^3.0.0"
-    semver "^7.3.7"
-
-"@typescript-eslint/visitor-keys@5.48.2":
-  version "5.48.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-5.48.2.tgz#c247582a0bcce467461d7b696513bf9455000060"
-  integrity sha512-z9njZLSkwmjFWUelGEwEbdf4NwKvfHxvGC0OcGN1Hp/XNDIcJ7D5DpPNPv6x6/mFvc1tQHsaWmpD/a4gOvvCJQ==
-  dependencies:
-    "@typescript-eslint/types" "5.48.2"
-    eslint-visitor-keys "^3.3.0"
 
 "@typescript-eslint/visitor-keys@5.49.0":
   version "5.49.0"
@@ -3598,9 +3550,9 @@ acorn-walk@^8.0.0, acorn-walk@^8.1.1:
   integrity sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==
 
 acorn@^8.0.4, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.6.0, acorn@^8.7.1, acorn@^8.8.0:
-  version "8.8.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
-  integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
+  version "8.8.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
+  integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
 address@^1.0.1, address@^1.1.2:
   version "1.2.2"
@@ -6434,9 +6386,9 @@ esutils@^2.0.2, esutils@^2.0.3:
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
 eta@^1.12.3:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/eta/-/eta-1.14.1.tgz#b0d8f0445c6eac07b3dcaf4aafe12feb3b53943f"
-  integrity sha512-nnmSajHBAvF7Y1MdNDX02EwGRVUrqqUI1sdcuZuOOfNpcz5rzrogXw2bXUwBqb6qEXaaVJ/+6vXN09xBSM9Hxg==
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/eta/-/eta-1.14.2.tgz#5e6181a26ec13d8444c559ce51f7b3090cebbdd1"
+  integrity sha512-wZmJAV7EFUG5W8XNXSazIdichnWEhGB1OWg4tnXWPj0CPNUcFdgorGNO6N9p6WBUgoUe4P0OziJYn1+6zxP2aQ==
 
 etag@^1.8.1, etag@~1.8.1:
   version "1.8.1"
@@ -15169,9 +15121,9 @@ unist-util-is@^4.0.0:
   integrity sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==
 
 unist-util-is@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-5.1.1.tgz#e8aece0b102fa9bc097b0fef8f870c496d4a6236"
-  integrity sha512-F5CZ68eYzuSvJjGhCLPL3cYx45IxkqXSetCcRgUXtbcm50X2L9oOWQlfUfDdAf+6Pd27YDblBfdtmsThXmwpbQ==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-5.2.0.tgz#37eed0617b76c114fd34d44c201aa96fd928b309"
+  integrity sha512-Glt17jWwZeyqrFqOK0pF1Ded5U3yzJnFr8CG1GMjCWTp9zDo2p+cmD6pWbZU8AgM5WU3IzRv6+rBwhzsGh6hBQ==
 
 unist-util-map@^1.0.4:
   version "1.0.5"
@@ -15188,9 +15140,9 @@ unist-util-modify-children@^2.0.0:
     array-iterate "^1.0.0"
 
 unist-util-modify-children@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-3.1.0.tgz#b66bfa427b392b6a2fbe43324fd317a3ab9c8b6e"
-  integrity sha512-L0UizdncPZ1NIwpmkwFdLo2NaK2Eb5LU/vaQ7lZGkAaOBZfsHp+8T/gVWPVmmMO1hj6gc+XeMoytut8jr7fdyA==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-3.1.1.tgz#c4018b86441aa3b54b3edff1151d0aa062384c82"
+  integrity sha512-yXi4Lm+TG5VG+qvokP6tpnk+r1EPwyYL04JWDxLvgvPV40jANh7nm3udk65OOWquvbMDe+PL9+LmkxDpTv/7BA==
   dependencies:
     "@types/unist" "^2.0.0"
     array-iterate "^2.0.0"
@@ -15249,9 +15201,9 @@ unist-util-visit-children@^1.0.0:
   integrity sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==
 
 unist-util-visit-children@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-2.0.1.tgz#001744210492dda572523d279d6b25bc87bd8cde"
-  integrity sha512-2cEU3dhV1hMfO9ajwb8rJsDedMfsahsm6fCfR8LxDR/w7KcB5lzHQ9dBTQIXsWGNWBFH5MPmaFP3Xh0dWLqClQ==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-2.0.2.tgz#0f00a5caff567074568da2d89c54b5ee4a8c5440"
+  integrity sha512-+LWpMFqyUwLGpsQxpumsQ9o9DG2VGLFrpz+rpVXYIEdPy57GSy5HioC0g3bg/8WP9oCLlapQtklOzQ8uLS496Q==
   dependencies:
     "@types/unist" "^2.0.0"
 
