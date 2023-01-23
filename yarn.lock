@@ -2360,9 +2360,9 @@
   integrity sha512-yWTh9DPO4Gku0JB6DZarUq8/p2jamvVjbWyeYkHcBX6LW89F2blIx8aA9eSJVSScMgrH/FSQ1I8y1JL/SC73bg==
 
 "@netlify/plugins-list@^6.61.0":
-  version "6.62.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.62.0.tgz#1efe7086dcee2b86e7ea7af7ff6cb81efee25b69"
-  integrity sha512-KKVNJd1qd+J1UJCnMgg5OadTahpN1Q9a/xhb9lt9HvcUv0tWKpQCy5RicqvsFEGmOHkfULZwVo6ooKismNUvsA==
+  version "6.63.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.63.0.tgz#287254da6ef2076c5df14ab738309dd216e7d02b"
+  integrity sha512-RHim0XWQ69z26a4u9Dyul8uUNaIFdpM1wBufpkL9tQbeCRcUvhAVS74A+T+f7M9tzSMlWkldDoMTQLtBKcQ2sA==
 
 "@netlify/run-utils@^5.1.0":
   version "5.1.0"
@@ -15181,9 +15181,9 @@ unist-util-stringify-position@^2.0.0:
     "@types/unist" "^2.0.2"
 
 unist-util-stringify-position@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-3.0.2.tgz#5c6aa07c90b1deffd9153be170dce628a869a447"
-  integrity sha512-7A6eiDCs9UtjcwZOcCpM4aPII3bAAGv13E96IkawkOAW0OhH+yRxtY0lzo8KiHpzEMfH7Q+FizUmwp8Iqy5EWg==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-3.0.3.tgz#03ad3348210c2d930772d64b489580c13a7db39d"
+  integrity sha512-k5GzIBZ/QatR8N5X2y+drfpWG8IDBzdnVj6OInRNWm1oXrzydiaAT2OQiA8DPRRZyAKb9b6I2a6PxYklZD0gKg==
   dependencies:
     "@types/unist" "^2.0.0"
 
