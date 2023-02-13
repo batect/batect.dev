@@ -2380,9 +2380,9 @@
     execa "^6.0.0"
 
 "@netlify/zip-it-and-ship-it@^8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-8.5.0.tgz#b1cb23d71e56e515e549e115db378e718cee0a7b"
-  integrity sha512-Rog5PE4e7v6WQzc9JIA9CeDnj5KaetkwYCa5abTCkbCOJo52koVDaILj1YNqMbvrMbsnsrRIvzVaBlVS1xCZGQ==
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-8.6.0.tgz#807a2fe342ba2e30fe1e7174703c14f0d9a9f10f"
+  integrity sha512-k1bykwO5h9nerPjFwjPe3dvL8XplnySxjL4BfPTOLMpfWnWurdpiFTpSY3nICz5jBvBzTjnaTGVe4mZOBNMViA==
   dependencies:
     "@babel/parser" "7.16.8"
     "@netlify/binary-info" "^1.0.0"
