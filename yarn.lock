@@ -2359,9 +2359,9 @@
     "@netlify/local-functions-proxy-win32-x64" "1.1.1"
 
 "@netlify/open-api@^2.13.0":
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.14.0.tgz#23d90c97da7a84c304ded37d4b2fe0f400410e14"
-  integrity sha512-d+XET/tlt0xiUh3rKbmvcuyL3Q/XZNjbsv0CvfVyUPXpesDEuITpyw+GtGb2Ph7SggCnPhtk6/PehI2zywFufg==
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.15.0.tgz#4384a6753e912fd45c47f4dd9a4d291ddfff8a54"
+  integrity sha512-ybrqtcIKfErgexSn1ZkyOBZ1iH10BRXpx+I+SYa65ScEpBEd8Y8lk1pNUZDYbhOiDWB8v8GYsv8obazT6k2H+Q==
 
 "@netlify/plugins-list@^6.65.0":
   version "6.65.0"
@@ -10723,9 +10723,9 @@ onetime@^6.0.0:
     mimic-fn "^4.0.0"
 
 open@^8.0.4, open@^8.0.9, open@^8.4.0:
-  version "8.4.1"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.4.1.tgz#2ab3754c07f5d1f99a7a8d6a82737c95e3101cff"
-  integrity sha512-/4b7qZNhv6Uhd7jjnREh1NjnPxlTq+XNWPG88Ydkj5AILcA5m3ajvcg57pB24EQjKv0dK62XnDqk9c/hkIG5Kg==
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"
+  integrity sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
