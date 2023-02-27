@@ -2228,9 +2228,9 @@
     "@netlify/esbuild-windows-arm64" "0.14.39"
 
 "@netlify/framework-info@^9.8.2":
-  version "9.8.2"
-  resolved "https://registry.yarnpkg.com/@netlify/framework-info/-/framework-info-9.8.2.tgz#eacbcaca3fa04a174118903fb052fa4083db7e66"
-  integrity sha512-SWmtgJk5itD2mC1oHssHllHeSVY432dJtzSaANy6Euq7V/y7HeW+P39h/5jQ1i+sIyhmu0jOStfHkqPJVxg1iA==
+  version "9.8.3"
+  resolved "https://registry.yarnpkg.com/@netlify/framework-info/-/framework-info-9.8.3.tgz#da3a63df7b9aa04972a54305e7784686f8e1a26c"
+  integrity sha512-AxCfLWnwi3oiAP5USqiqAJyKX6a0Adaj5Zpq77w5rlbu0iJoI6XaLrSsGAb3MzS4hWkcUYEn812azS+iDfaipw==
   dependencies:
     ajv "^8.12.0"
     filter-obj "^3.0.0"
