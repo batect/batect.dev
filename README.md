@@ -17,5 +17,5 @@ and checking for broken links or formatting issues.
 
 To run the site locally while editing:
 
-* Run `./batect setup` to download dependencies
-* Run `./batect start` to compile the website, then visit http://localhost:3000 to preview the site
+- Run `./batect setup` to download dependencies
+- Run `./batect start` to compile the website, then visit http://localhost:3000 to preview the site
