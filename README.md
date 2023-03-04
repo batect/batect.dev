@@ -14,3 +14,8 @@ and testing tasks.
 
 Run `./batect --list-tasks` to see available tasks such as setting up a fresh clone, building the site, serving it locally
 and checking for broken links or formatting issues.
+
+To run the site locally while editing:
+
+* Run `./batect setup` to download dependencies
+* Run `./batect start` to compile the website, then visit http://localhost:3000 to preview the site
