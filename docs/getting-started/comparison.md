@@ -66,6 +66,37 @@ There are a number of differences between Dojo and Batect:
 - Dojo lacks more advanced features that Batect provides to make working with Docker easier and faster, such as
   [cache volumes](../concepts/caches.md) and automatic configuration of [proxies](../how-to/proxies.mdx).
 
+## Batect compared to Earthly
+
+[Earthly](https://earthly.dev/) is focused on bringing CI/CD to your local
+development, and is similar to Batect in the goals but differs in particulars
+and focus.
+Earthly relies on [BuildKit](https://github.com/moby/buildkit) which is a part
+of more recent versions of Docker.
+
+Where Earthly is like Batect:
+
+- Both use Docker containers to isolate your build from the local environment
+- Both run locally the same build you have in CI (assuming you set up CI to
+  use Batect or Earthly)
+- Both have strong documentation
+
+Where Earthly is different from Batect:
+
+- Earthly is an installed program to your system (Batect is self-contained).
+  There are GitHub Actions to add Earthly to your workflow script
+- Earthly is both a commercial product, and an open-source project.
+  It provides paid-for plans to use their CI infrastructure, however it also
+  works fine as a standalone program in your local and CI environments
+- Earthly has a larger support community
+- Earthly is more focused on Docker, less abstracted from details than Batect
+- Earthly uses syntax like that of a `Dockerfile` for its configuration (called
+  `Earthfile`). Batect uses YAML for configuration syntax
+- Earthly is very verbose, and does not have options to quiet the output. (Try
+  the `-o quiet` option in Batect)
+- Configuration for Earthly can be more complex in some cases, less so in
+  others
+
 ## Batect compared to CI tools with a local runner
 
 As an example, both GitLab CI and CircleCI have CLIs that allow you to run your build on your local machine, using the same
