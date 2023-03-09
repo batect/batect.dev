@@ -79,6 +79,10 @@ Where Earthly is like Batect:
 - Both use Docker containers to isolate your build from the local environment
 - Both run locally the same build you have in CI (assuming you set up CI to
   use Batect or Earthly)
+- Both let you compose your build so everything is not in one file
+- Both offer options for parallelization and caching to speed up your builds
+  (see below on differences for caching)
+- Both let you call out to your existing build, testing, or deployment tooling
 - Both have strong documentation
 
 Where Earthly is different from Batect:
@@ -90,12 +94,18 @@ Where Earthly is different from Batect:
   works fine as a standalone program in your local and CI environments
 - Earthly has a larger support community
 - Earthly is more focused on Docker, less abstracted from details than Batect
-- Earthly uses syntax like that of a `Dockerfile` for its configuration (called
-  `Earthfile`). Batect uses YAML for configuration syntax
-- Earthly is very verbose, and does not have options to quiet the output. (Try
-  the `-o quiet` option in Batect)
-- Configuration for Earthly can be more complex in some cases, less so in
-  others
+- Caching has overlapping and dissimilar features.
+  Earthly is closer to Docker-style caching of layers
+- Earthly configuration uses syntax like that of `Dockerfile` (called
+  `Earthfile`) with some syntax borrowed from `Makefile` (but without the
+  obsession for `<TAB>`s).
+  Batect uses YAML for configuration syntax
+- Earthly and Batect cache for you in different situations.
+  Earthly tends to be more automatic for caching
+- Earthly is very verbose, and does not have options to quiet the output.
+  (Try the `-o quiet` option in Batect)
+- Configuration for Earthly can be more specific than Batect, but as a result
+  also be more flexible. Each project needs to evaluate this for themselves
 
 ## Batect compared to CI tools with a local runner
 
