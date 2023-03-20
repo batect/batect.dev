@@ -2096,10 +2096,38 @@
     validate-npm-package-name "^4.0.0"
     yargs "^17.6.0"
 
-"@netlify/edge-bundler@8.12.2", "@netlify/edge-bundler@^8.12.1":
+"@netlify/edge-bundler@8.12.2":
   version "8.12.2"
   resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-8.12.2.tgz#d8b3549259c1bfbc3c64402eb1d1a94c82bf3337"
   integrity sha512-7x0WckBmgyUezSSOM+3tp1PdSdFGXWPy1uwlmbYDz+ZX+AtNawMTiA9ddv1RYWMefkCUrmJ7IORgPLEewGFDJA==
+  dependencies:
+    "@import-maps/resolve" "^1.0.1"
+    ajv "^8.11.2"
+    ajv-errors "^3.0.0"
+    better-ajv-errors "^1.2.0"
+    common-path-prefix "^3.0.0"
+    del "^7.0.0"
+    env-paths "^3.0.0"
+    execa "^6.0.0"
+    find-up "^6.3.0"
+    get-port "^6.1.2"
+    glob-to-regexp "^0.4.1"
+    is-path-inside "^4.0.0"
+    jsonc-parser "^3.2.0"
+    node-fetch "^3.1.1"
+    node-stream-zip "^1.15.0"
+    p-retry "^5.1.1"
+    p-wait-for "^4.1.0"
+    path-key "^4.0.0"
+    regexp-tree "^0.1.24"
+    semver "^7.3.5"
+    tmp-promise "^3.0.3"
+    uuid "^9.0.0"
+
+"@netlify/edge-bundler@^8.12.1":
+  version "8.12.3"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-8.12.3.tgz#d55947d0bcad1d0710b1bb05ec9970c90668848b"
+  integrity sha512-P3moipO7Rm4yyHy+VYLSNcOGOuFqaBHel6y79ft6ZTZ4pB6TIwVeAYEZVHOdurVRafS81nJj3Rl57msvI0jL5Q==
   dependencies:
     "@import-maps/resolve" "^1.0.1"
     ajv "^8.11.2"
@@ -13999,9 +14027,9 @@ sockjs@^0.3.24:
     websocket-driver "^0.7.4"
 
 sonic-boom@^3.1.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-3.2.1.tgz#972ceab831b5840a08a002fa95a672008bda1c38"
-  integrity sha512-iITeTHxy3B9FGu8aVdiDXUVAcHMF9Ss0cCsAOo2HfCrmVGT3/DT5oYaeu0M/YKZDlKTvChEyPq0zI9Hf33EX6A==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-3.3.0.tgz#cffab6dafee3b2bcb88d08d589394198bee1838c"
+  integrity sha512-LYxp34KlZ1a2Jb8ZQgFCK3niIHzibdwtwNUWKg0qQRzsDoJ3Gfgkf8KdBTFU3SkejDEIlWwnSnpVdOZIhFMl/g==
   dependencies:
     atomic-sleep "^1.0.0"
 
