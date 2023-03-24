@@ -14,7 +14,7 @@ jobs:
     name: "Build"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.4.0
+      - uses: actions/checkout@v3.5.0
       - name: Build application
         run: ./batect build
 ```
@@ -34,7 +34,7 @@ jobs:
       BATECT_CACHE_TYPE: directory
 
     steps:
-      - uses: actions/checkout@v3.4.0
+      - uses: actions/checkout@v3.5.0
 
       - name: Cache dependencies
         uses: actions/cache@v3.3.1
@@ -64,7 +64,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3.4.0
+        uses: actions/checkout@v3.5.0
 
       - name: Validate Batect wrapper scripts
         uses: batect/batect-wrapper-validation-action@v0.4.0
