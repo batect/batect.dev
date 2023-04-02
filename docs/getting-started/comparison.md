@@ -111,8 +111,7 @@ Where Earthly is different from Batect:
   control without additional configuration.
 
 - Earthly configuration uses syntax like that of `Dockerfile` (called
-  `Earthfile`) with some syntax borrowed from `Makefile` (but without the
-  obsession for `<TAB>`s).
+  `Earthfile`) with some syntax borrowed from `Makefile`.
   Batect uses YAML for configuration syntax.
 
 - Earthly is very verbose, and does not have options to quiet the output.
