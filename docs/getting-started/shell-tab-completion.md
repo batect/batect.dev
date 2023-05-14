@@ -22,7 +22,7 @@ in the `bash-completion` repository on GitHub.
 
 If you're using [Homebrew](https://brew.sh), install support for Batect's tab completion with `brew install batect/batect/batect-fish-completion`.
 
-Otherwise, you can install support for Batect's tab completion using [Fisher](https://github.com/jorgebucaran/fisher) with `fisher add batect/batect-fish-completion`.
+Otherwise, you can install support for Batect's tab completion using [Fisher](https://github.com/jorgebucaran/fisher) with `fisher install batect/batect-fish-completion`.
 
 ## Zsh
 
