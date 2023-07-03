@@ -45,7 +45,7 @@ When run as current user mode is enabled, the following configuration changes ar
   If the directory given by `home_directory` already exists inside the image for this container, it is overwritten.
   :::
 
-- A new `/etc/passwd` file is mounted into the container with two users: `root` and the current user. The current user's home directory is set to the
+- New `/etc/passwd` and `/etc/shadow` files are mounted into the container with two users: `root` and the current user. The current user's home directory is set to the
   value of `home_directory`. (If Batect is running as `root`, then just `root` is listed and it takes the home directory provided in `home_directory`.)
 
   This means that any other users defined in the container's image are effectively lost. Under most circumstances, this is not an issue.
