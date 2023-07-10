@@ -14956,9 +14956,9 @@ trim@0.0.1:
   integrity sha512-YzQV+TZg4AxpKxaTHK3c3D+kRDCGVEE7LemdlQZoQXn0iennk10RsIoY6ikzAqJTc9Xjl9C1/waHom/J86ziAQ==
 
 triple-beam@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
-  integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.4.0.tgz#f578a44f45353bb2ca1ffb9c447798b2ec4baa48"
+  integrity sha512-rD6Q7Grj07i2PW1sQmz4KXviI+9E02EWBnAU9DafQbUueb7Esh786jop+be92KFxvxPGHuC0mR7YVcE6rScMBg==
 
 trough@^1.0.0:
   version "1.0.5"
