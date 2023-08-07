@@ -2503,9 +2503,9 @@
   integrity sha512-RkucRf8o0vYhCDXCRHWU/EdhkVE3JhkqKmZFvMW6qCPD206GV2Cfo9JGSKb0NdN+nmHSNaYmd+9dvT6I9MP4pw==
 
 "@netlify/plugins-list@^6.68.0":
-  version "6.69.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.69.0.tgz#da7090f05bbd40fefa74c92ac235372035277277"
-  integrity sha512-PZwPO20bfkVid37rahqipHJJvaTcWkAk2wkuA2qEGnbAL1LTXcwEc2ke9BuDt3ls6qjSxfQ7B/OqupnDyuxD+g==
+  version "6.70.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.70.0.tgz#1be2610b68383ceaac90e34137a6c02de81c667c"
+  integrity sha512-qgnzzA5Rpzu8BFJ2y2+YlmCClp83yW8RFq0zTVFZDrVQKLiGe5mNHBVJsKNyWDyycXxznIPAMNjCwpGEnTUoTg==
 
 "@netlify/run-utils@^5.1.1":
   version "5.1.1"
