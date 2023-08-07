@@ -2400,11 +2400,11 @@
     semver "^7.3.8"
 
 "@netlify/functions-utils@^5.2.19":
-  version "5.2.19"
-  resolved "https://registry.yarnpkg.com/@netlify/functions-utils/-/functions-utils-5.2.19.tgz#d97f3fab0c07cac009b64888bdcb1a28fb40c9fc"
-  integrity sha512-VHVNA7atuKCGHmx6OLUnBy6i+ZKxbE7OoTGNRXWFkkoJKAWU0Y9/R4BWj1eTL+w1Tp0rtQ5vlkgnTA2miOLwCg==
+  version "5.2.20"
+  resolved "https://registry.yarnpkg.com/@netlify/functions-utils/-/functions-utils-5.2.20.tgz#cf50ae253b0df67d20dd2164fc1b1fec51294c76"
+  integrity sha512-cK5ypHnn7vaANxf/ECYHWVn6apL6/SZmlCHNHJMyNEL89FcKebt6DIGnC471MgktTNHKiGW4K1zJExa7DAsspQ==
   dependencies:
-    "@netlify/zip-it-and-ship-it" "9.13.1"
+    "@netlify/zip-it-and-ship-it" "9.14.0"
     cpy "^9.0.0"
     path-exists "^5.0.0"
 
@@ -2536,6 +2536,43 @@
     execa "^6.0.0"
     filter-obj "^5.0.0"
     find-up "^6.0.0"
+    glob "^8.0.3"
+    is-builtin-module "^3.1.0"
+    is-path-inside "^4.0.0"
+    junk "^4.0.0"
+    locate-path "^7.0.0"
+    merge-options "^3.0.4"
+    minimatch "^9.0.0"
+    normalize-path "^3.0.0"
+    p-map "^5.0.0"
+    path-exists "^5.0.0"
+    precinct "^11.0.0"
+    require-package-name "^2.0.1"
+    resolve "^2.0.0-next.1"
+    semver "^7.3.8"
+    tmp-promise "^3.0.2"
+    toml "^3.0.0"
+    unixify "^1.0.0"
+    yargs "^17.0.0"
+
+"@netlify/zip-it-and-ship-it@9.14.0":
+  version "9.14.0"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-9.14.0.tgz#931a00880e33c4c12b6d4e5751e4501d16920af1"
+  integrity sha512-Ej8f0FXxA0HqKmRLxUp7lFtgf7AuAlCP1k2o+K+8eDEz1dnCn7o0Y3oPdesK94uC5FYi8I+AyddpeO8xa3kqpA==
+  dependencies:
+    "@babel/parser" "^7.22.5"
+    "@netlify/binary-info" "^1.0.0"
+    "@netlify/esbuild" "0.14.39"
+    "@netlify/serverless-functions-api" "^1.5.2"
+    "@vercel/nft" "^0.23.0"
+    archiver "^5.3.0"
+    common-path-prefix "^3.0.0"
+    cp-file "^10.0.0"
+    es-module-lexer "^1.0.0"
+    execa "^6.0.0"
+    filter-obj "^5.0.0"
+    find-up "^6.0.0"
+    get-tsconfig "^4.6.2"
     glob "^8.0.3"
     is-builtin-module "^3.1.0"
     is-path-inside "^4.0.0"
@@ -7708,6 +7745,13 @@ get-symbol-description@^1.0.0:
   dependencies:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
+
+get-tsconfig@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.6.2.tgz#831879a5e6c2aa24fe79b60340e2233a1e0f472e"
+  integrity sha512-E5XrT4CbbXcXWy+1jChlZmrmCwd5KGx502kDCXJJ7y898TtWW9FwoG5HfOLVRKmlmDGkWN2HM9Ho+/Y8F0sJDg==
+  dependencies:
+    resolve-pkg-maps "^1.0.0"
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
@@ -13508,6 +13552,11 @@ resolve-pathname@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-pathname/-/resolve-pathname-3.0.0.tgz#99d02224d3cf263689becbb393bc560313025dcd"
   integrity sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==
+
+resolve-pkg-maps@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz#616b3dc2c57056b5588c31cdf4b3d64db133720f"
+  integrity sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==
 
 resolve-url@^0.2.1:
   version "0.2.1"
