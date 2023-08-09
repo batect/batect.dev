@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   build:
     name: "Build"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       TERM: xterm-256color
       BATECT_CACHE_TYPE: directory
