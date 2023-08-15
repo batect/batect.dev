@@ -2075,10 +2075,10 @@
     yaml "^2.1.3"
     yargs "^17.6.0"
 
-"@netlify/build@29.20.2":
-  version "29.20.2"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-29.20.2.tgz#f5feb64672cccee5a2377df5849db5485606a183"
-  integrity sha512-ivkeheWbTtyloHS7IQQk0UsyH4Ozp6zUg6v6NcLobAmuT6hwgpXzBnwaAMq1GaJSTpUBbNyTx2Oga6wuuu/Nig==
+"@netlify/build@29.20.4":
+  version "29.20.4"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-29.20.4.tgz#cf27fee4fc5f571e2cb4ff9ae91ce9315f083681"
+  integrity sha512-qXht5lWE0RThGhhB5ILQv4/2Jp+p0muTDp9n+KtlqpinO1SvXicVPw+D2o3iWMsz3vQak6yX09oEvumP2Q+TVQ==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@honeycombio/opentelemetry-node" "^0.4.0"
@@ -10441,14 +10441,14 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0, nested-error-stacks@^2.1
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
-netlify-cli@16.0.2:
-  version "16.0.2"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-16.0.2.tgz#7eb5ee2627e0dc4956936ebc02f4bb2d5dd5ee4c"
-  integrity sha512-CA4upymzq315K//pkrjqvppaazB24zgt/TL9TAq/Et3oqRSnYA9dE2vNr1T/Lys/uyuZZaABdWEzR/+NZVXpFw==
+netlify-cli@16.0.3:
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-16.0.3.tgz#8f04993b6463713c8574ae7959e4d834a2328a01"
+  integrity sha512-p8L1tCALTed1nI8CrDLf1kzz0SKGYJWUFM2ZnqU5Xx14jlBhlBybDDtB4ly7ATIRpAPxvUhacii4BS87XA3jgA==
   dependencies:
     "@bugsnag/js" "7.20.2"
     "@fastify/static" "6.10.2"
-    "@netlify/build" "29.20.2"
+    "@netlify/build" "29.20.4"
     "@netlify/build-info" "7.7.3"
     "@netlify/config" "20.8.0"
     "@netlify/edge-bundler" "8.17.1"
