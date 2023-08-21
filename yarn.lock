@@ -14515,9 +14515,9 @@ statuses@2.0.1:
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
 std-env@^3.0.1:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.0.tgz#d7dc7e088016f4c22b12a699479ce6c6da31b274"
-  integrity sha512-YqHeQIIQ8r1VtUZOTOyjsAXAsjr369SplZ5rlQaiJTBsvodvPSCME7vuz8pnQltbQ0Cw0lyFo5Q8uyNwYQ58Xw==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.2.tgz#3e1dbe7b59c79b03354dbc5cd5addcca7ae9a76f"
+  integrity sha512-Cw6eJDX9AxEEL0g5pYj8Zx9KXtDf60rxwS2ze0HBanS0aKhj1sBlzcsmg+R0qYy8byFa854/yR2X5ZmBSClVmg==
 
 stdin-discarder@^0.1.0:
   version "0.1.0"
