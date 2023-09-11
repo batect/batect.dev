@@ -63,7 +63,7 @@
     "retext-redundant-acronyms": "5.0.0",
     "retext-repeated-words": "5.0.0",
     "retext-sentence-spacing": "6.0.0",
-    "retext-spell": "5.3.0",
+    "retext-spell": "6.0.0",
     "retext-syntax-mentions": "4.0.0",
     "retext-syntax-urls": "3.1.2",
     "typescript": "5.2.2",
