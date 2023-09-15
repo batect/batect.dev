@@ -133,6 +133,12 @@ Set to `true` to disable [telemetry collection](/privacy#in-app-telemetry) whene
 
 Setting this to `true` takes precedence over any consent you may have provided in the past or any of the telemetry-related command line options.
 
+:::info
+
+As of version 0.85.0, Batect no longer collects in-app telemetry.
+
+:::
+
 ## Expressions
 
 Some fields support expressions - references to environment variables on the host or [config variables](config-variables.md).

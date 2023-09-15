@@ -178,6 +178,12 @@ To opt-out, you must modify the wrapper script to use an alternative download se
 
 ## In-app telemetry
 
+:::info
+
+As of version 0.85.0, Batect no longer collects in-app telemetry.
+
+:::
+
 Batect can collect anonymous environment, usage and performance information as it runs.
 
 This information does not include personal or sensitive information such as the names of projects or tasks.

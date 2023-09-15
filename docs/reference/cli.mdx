@@ -45,13 +45,10 @@ See the [shell tab completion section](../getting-started/shell-tab-completion.m
 - [`--no-color`](#--no-color): Disable coloured output
 - [`--no-cleanup`, `--no-cleanup-after-failure` and `--no-cleanup-after-success`](#--no-cleanup---no-cleanup-after-failure-and---no-cleanup-after-success): Disable cleaning up
 - [`--no-proxy-vars`](#--no-proxy-vars): Disable propagation of proxy-related environment variables
-- [`--no-telemetry`](#--no-telemetry): Disable telemetry for this invocation
 - [`--no-update-notification`](#--no-update-notification): Disable update notification
 - [`--no-wrapper-cache-cleanup`](#--no-wrapper-cache-cleanup): Disable wrapper cache cleanup
 - [`--override-image`](#--override-image): Override the image used by a container
 - [`--output` or `-o`](#--output-or--o): Force a particular output style
-- [`--permanently-disable-telemetry`](#--permanently-disable-telemetry): Disable telemetry permanently
-- [`--permanently-enable-telemetry`](#--permanently-enable-telemetry): Enable telemetry permanently
 - [`--skip-prerequisites`](#--skip-prerequisites): Skip prerequisites
 - [`--use-network`](#--use-network): Use an existing network for tasks
 - [`--upgrade`](#--upgrade): Upgrade Batect
@@ -375,27 +372,6 @@ Example:
 ./batect --no-proxy-vars the-task
 ```
 
-### `--no-telemetry`
-
-If you would like to disable [telemetry collection](/privacy#in-app-telemetry) or uploading for a single invocation of Batect, pass the `--no-telemetry` flag.
-
-By default, Batect uses the permission you granted it when it ran for the first time.
-
-Example:
-
-```shell
-./batect --no-telemetry the-task
-```
-
-Note that this does not cause any data that has been collected from other invocations but not uploaded to be removed - it will be uploaded the next time
-Batect runs without the `--no-telemetry` flag. To disable telemetry permanently and remove any collected data pending upload, use
-[`--permanently-disable-telemetry`](#--permanently-disable-telemetry).
-
-You can also disable telemetry collection and reporting in other ways:
-
-- set the `BATECT_ENABLE_TELEMETRY` environment variable to `false`
-- set [`forbid_telemetry`](/docs/reference/config#forbid_telemetry) to `true` in your project's configuration file
-
 ### `--no-update-notification`
 
 Batect automatically checks for updates at most once every 24 hours and displays a notification if a newer version is available.
@@ -493,24 +469,6 @@ Passing `--output=quiet` implies [`--no-update-notification`](#--no-update-notif
 
 Passing `--output=quiet` also modifies the output of [`--list-tasks`](#--list-tasks-or--t)
 to make it easier to parse with other applications.
-
-### `--permanently-disable-telemetry`
-
-If you would like to opt-out of [telemetry](/privacy#in-app-telemetry), run `./batect --permanently-disable-telemetry` to disable collecting telemetry data and
-remove any data that has been collected but not yet uploaded.
-
-This also resets your telemetry user ID, ensuring that if you do ever re-enable telemetry, any previous data uploaded is not associated with any
-new data.
-
-You can also disable telemetry collection and reporting in other ways:
-
-- set the `BATECT_ENABLE_TELEMETRY` environment variable to `false`
-- set [`forbid_telemetry`](/docs/reference/config#forbid_telemetry) to `true` in your project's configuration file
-- use [`--no-telemetry`](#--no-telemetry) to disable telemetry for a single invocation of `./batect`
-
-### `--permanently-enable-telemetry`
-
-If you would like to opt-in to [telemetry](/privacy#in-app-telemetry), run `./batect --permanently-enable-telemetry` to enable collecting telemetry data.
 
 ### `--skip-prerequisites`
 
