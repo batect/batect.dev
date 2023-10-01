@@ -33,7 +33,7 @@
     "@docusaurus/module-type-aliases": "2.4.1",
     "@docusaurus/utils": "2.4.1",
     "@tsconfig/docusaurus": "2.0.0",
-    "@types/react": "18.2.23",
+    "@types/react": "18.2.24",
     "@types/react-helmet": "6.1.7",
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "6.7.3",
