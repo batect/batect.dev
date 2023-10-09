@@ -3713,7 +3713,16 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.2.25":
+"@types/react@*":
+  version "18.2.26"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.26.tgz#3bc3f33b804cbfd7d0bda6e8a014cb6ee4be74b9"
+  integrity sha512-ZaMtQo/fasHwMSRTED+u4Cjnkl0uuqEFJ2rKF0DQXji1v24DaNdSe9am4ldiDKFD/MpzbyS8UEOceh1/Oiw89g==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@18.2.25":
   version "18.2.25"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.25.tgz#99fa44154132979e870ff409dc5b6e67f06f0199"
   integrity sha512-24xqse6+VByVLIr+xWaQ9muX1B4bXJKXBbjszbld/UEDslGLY53+ZucF44HCmLbMPejTzGG9XgR+3m2/Wqu1kw==
@@ -7604,9 +7613,9 @@ find-cache-dir@^3.3.1:
     pkg-dir "^4.1.0"
 
 find-my-way@^7.6.0:
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/find-my-way/-/find-my-way-7.6.2.tgz#4dd40200d3536aeef5c7342b10028e04cf79146c"
-  integrity sha512-0OjHn1b1nCX3eVbm9ByeEHiscPYiHLfhei1wOUU9qffQkk98wE0Lo8VrVYfSGMgnSnDh86DxedduAnBf4nwUEw==
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/find-my-way/-/find-my-way-7.7.0.tgz#d7b51ca6046782bcddd5a8435e99ad057e5a8876"
+  integrity sha512-+SrHpvQ52Q6W9f3wJoJBbAQULJuNEEQwBvlvYwACDhBTLOTMiQ0HYWh4+vC3OivGP2ENcTI1oKlFA2OepJNjhQ==
   dependencies:
     fast-deep-equal "^3.1.3"
     fast-querystring "^1.0.0"
