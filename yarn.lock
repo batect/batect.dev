@@ -4930,11 +4930,6 @@ array-includes@^3.1.6:
     get-intrinsic "^1.2.1"
     is-string "^1.0.7"
 
-array-iterate@^1.0.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-1.1.4.tgz#add1522e9dd9749bb41152d08b845bd08d6af8b7"
-  integrity sha512-sNRaPGh9nnmdC8Zf+pT3UqP8rnWj5Hf9wiFGsX3wUQ2yVSIhO2ShFwCoceIPpB41QF6i2OEmrHmCo36xronCVA==
-
 array-iterate@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-2.0.1.tgz#6efd43f8295b3fee06251d3d62ead4bd9805dd24"
@@ -12288,11 +12283,6 @@ nlcst-search@^4.0.0:
     nlcst-normalize "^4.0.0"
     unist-util-visit "^5.0.0"
 
-nlcst-to-string@^2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-2.0.4.tgz#9315dfab80882bbfd86ddf1b706f53622dc400cc"
-  integrity sha512-3x3jwTd6UPG7vi5k4GEzvxJ5rDA7hVUIRNHPblKuMVP9Z3xmlsd9cgLcpAMkc5uPOBna82EeshROFhsPkbnTZg==
-
 nlcst-to-string@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-3.1.1.tgz#83b90f2e1ee2081e14701317efc26d3bbadc806e"
@@ -13016,15 +13006,16 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parse-english@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/parse-english/-/parse-english-5.0.0.tgz#baea1a4d2cba9fde9e49f51ea5b5f95df9d3f6b4"
-  integrity sha512-sMe/JmsY6g21aJCAm8KgCH90a9zCZ7aGSriSJ5B0CcGEsDN7YmiCk3+1iKPE1heDG6zYY4Xf++V8llWtCvNBSQ==
+parse-english@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/parse-english/-/parse-english-7.0.0.tgz#a67d2a9d867ef9fc95fcb8c9d073ada5813b143f"
+  integrity sha512-mxxj3DyPdvOdiUl1okNub3wwoaaZI/Z++paDg3PH96RYvfVilS63WmQOnHlGm0S05y4g9GEjNP3pylyBsJrAwQ==
   dependencies:
-    nlcst-to-string "^2.0.0"
-    parse-latin "^5.0.0"
-    unist-util-modify-children "^2.0.0"
-    unist-util-visit-children "^1.0.0"
+    "@types/nlcst" "^2.0.0"
+    nlcst-to-string "^4.0.0"
+    parse-latin "^7.0.0"
+    unist-util-modify-children "^4.0.0"
+    unist-util-visit-children "^3.0.0"
 
 parse-entities@^2.0.0:
   version "2.0.0"
@@ -13069,14 +13060,17 @@ parse-json@^7.0.0:
     lines-and-columns "^2.0.3"
     type-fest "^3.8.0"
 
-parse-latin@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/parse-latin/-/parse-latin-5.0.1.tgz#f3b4fac54d06f6a0501cf8b8ecfafa4cbb4f2f47"
-  integrity sha512-b/K8ExXaWC9t34kKeDV8kGXBkXZ1HCSAZRYE7HR14eA1GlXX5L8iWhs8USJNhQU9q5ci413jCKF0gOyovvyRBg==
+parse-latin@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/parse-latin/-/parse-latin-7.0.0.tgz#8dfacac26fa603f76417f36233fc45602a323e1d"
+  integrity sha512-mhHgobPPua5kZ98EF4HWiH167JWBfl4pvAIXXdbaVohtK7a6YBOy56kvhCqduqyo/f3yrHFWmqmiMg/BkBkYYQ==
   dependencies:
-    nlcst-to-string "^3.0.0"
-    unist-util-modify-children "^3.0.0"
-    unist-util-visit-children "^2.0.0"
+    "@types/nlcst" "^2.0.0"
+    "@types/unist" "^3.0.0"
+    nlcst-to-string "^4.0.0"
+    unist-util-modify-children "^4.0.0"
+    unist-util-visit-children "^3.0.0"
+    vfile "^6.0.0"
 
 parse-ms@^3.0.0:
   version "3.0.0"
@@ -15415,15 +15409,14 @@ retext-diacritics@5.0.0:
     unist-util-position "^5.0.0"
     vfile "^6.0.0"
 
-retext-english@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-4.1.0.tgz#4d4b4047a262feba316fe03537a0a00a56bfc1d4"
-  integrity sha512-Pky2idjvgkzfodO0GH9X4IU8LX/d4ULTnLf7S1WsBRlSCh/JdTFPafXZstJqZehtQWNHrgoCqVOiGugsNFYvIQ==
+retext-english@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/retext-english/-/retext-english-5.0.0.tgz#7e4859b4b9c42494dadd04b1200cf984c9e19e15"
+  integrity sha512-BS4Ycj2cMbxNMcXqnM+TL+aMHM0Fzalm08fHCiHaNbBs4jx1RBbpC4oeWOptBNUf8cBTi2Qrs81b9yn/KND65A==
   dependencies:
-    "@types/nlcst" "^1.0.0"
-    parse-english "^5.0.0"
-    unherit "^3.0.0"
-    unified "^10.0.0"
+    "@types/nlcst" "^2.0.0"
+    parse-english "^7.0.0"
+    unified "^11.0.0"
 
 retext-indefinite-article@5.0.0:
   version "5.0.0"
@@ -17146,11 +17139,6 @@ unherit@^1.0.4:
     inherits "^2.0.0"
     xtend "^4.0.0"
 
-unherit@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/unherit/-/unherit-3.0.1.tgz#65b98bb7cb58cee755d7ec699a49e9e8ff172e23"
-  integrity sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==
-
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz#301acdc525631670d39f6146e0e77ff6bbdebddc"
@@ -17380,19 +17368,20 @@ unist-util-map@^1.0.4:
   dependencies:
     object-assign "^4.0.1"
 
-unist-util-modify-children@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-2.0.0.tgz#9c9c30d4e32502aabb3fde10d7872a17c86801e2"
-  integrity sha512-HGrj7JQo9DwZt8XFsX8UD4gGqOsIlCih9opG6Y+N11XqkBGKzHo8cvDi+MfQQgiZ7zXRUiQREYHhjOBHERTMdg==
-  dependencies:
-    array-iterate "^1.0.0"
-
 unist-util-modify-children@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-3.1.1.tgz#c4018b86441aa3b54b3edff1151d0aa062384c82"
   integrity sha512-yXi4Lm+TG5VG+qvokP6tpnk+r1EPwyYL04JWDxLvgvPV40jANh7nm3udk65OOWquvbMDe+PL9+LmkxDpTv/7BA==
   dependencies:
     "@types/unist" "^2.0.0"
+    array-iterate "^2.0.0"
+
+unist-util-modify-children@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-4.0.0.tgz#981d6308e887b005d1f491811d3cbcc254b315e9"
+  integrity sha512-+tdN5fGNddvsQdIzUF3Xx82CU9sMM+fA0dLgR9vOmT0oPT2jH+P1nd5lSqfCfXAw+93NhcXNY2qqvTUtE4cQkw==
+  dependencies:
+    "@types/unist" "^3.0.0"
     array-iterate "^2.0.0"
 
 unist-util-position@^3.0.0:
@@ -17457,17 +17446,12 @@ unist-util-to-list-of-char@^0.1.3:
     unist-util-generated "^1.1.6"
     unist-util-visit "^1.4.0"
 
-unist-util-visit-children@^1.0.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.4.tgz#e8a087e58a33a2815f76ea1901c15dec2cb4b432"
-  integrity sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==
-
-unist-util-visit-children@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-2.0.2.tgz#0f00a5caff567074568da2d89c54b5ee4a8c5440"
-  integrity sha512-+LWpMFqyUwLGpsQxpumsQ9o9DG2VGLFrpz+rpVXYIEdPy57GSy5HioC0g3bg/8WP9oCLlapQtklOzQ8uLS496Q==
+unist-util-visit-children@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-3.0.0.tgz#4bced199b71d7f3c397543ea6cc39e7a7f37dc7e"
+  integrity sha512-RgmdTfSBOg04sdPcpTSD1jzoNBjt9a80/ZCzp5cI9n1qPzLZWF9YdvWGN2zmTumP1HWhXKdUWexjy/Wy/lJ7tA==
   dependencies:
-    "@types/unist" "^2.0.0"
+    "@types/unist" "^3.0.0"
 
 unist-util-visit-parents@^2.0.0:
   version "2.1.2"
