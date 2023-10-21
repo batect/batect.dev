@@ -15497,18 +15497,17 @@ retext-syntax-mentions@4.0.0:
     unist-util-position "^5.0.0"
     unist-util-visit "^5.0.0"
 
-retext-syntax-urls@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-3.1.2.tgz#33185f39bf7d2a17ceb9340c95f803e589c5f726"
-  integrity sha512-CFuqX1x7GPFQRMPTA88bjrD0l8jTN7Y5Zp8QVr9ToWyJRChIMqUlPq4HfOJbKdDfcwhTVZvh/jRyxLc/K6Tc4g==
+retext-syntax-urls@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/retext-syntax-urls/-/retext-syntax-urls-4.0.0.tgz#a14a0b770583cbfca095d589bf4b66dc92a26042"
+  integrity sha512-mACbwbFiV5L75EtR5C9BTTdGduHmlHee/Pw8GVoukQenue9aTItSAl7yE/OXESIi5UcKED7d/vZDCIefJMcUIQ==
   dependencies:
-    "@types/nlcst" "^1.0.0"
-    "@types/unist" "^2.0.0"
+    "@types/nlcst" "^2.0.0"
     ccount "^2.0.0"
-    nlcst-to-string "^3.0.0"
-    unified "^10.0.0"
-    unist-util-modify-children "^3.0.0"
-    unist-util-position "^4.0.0"
+    nlcst-to-string "^4.0.0"
+    unified "^11.0.0"
+    unist-util-modify-children "^4.0.0"
+    unist-util-position "^5.0.0"
 
 retry@^0.13.1:
   version "0.13.1"
@@ -17393,6 +17392,14 @@ unist-util-modify-children@^3.0.0:
   integrity sha512-yXi4Lm+TG5VG+qvokP6tpnk+r1EPwyYL04JWDxLvgvPV40jANh7nm3udk65OOWquvbMDe+PL9+LmkxDpTv/7BA==
   dependencies:
     "@types/unist" "^2.0.0"
+    array-iterate "^2.0.0"
+
+unist-util-modify-children@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-4.0.0.tgz#981d6308e887b005d1f491811d3cbcc254b315e9"
+  integrity sha512-+tdN5fGNddvsQdIzUF3Xx82CU9sMM+fA0dLgR9vOmT0oPT2jH+P1nd5lSqfCfXAw+93NhcXNY2qqvTUtE4cQkw==
+  dependencies:
+    "@types/unist" "^3.0.0"
     array-iterate "^2.0.0"
 
 unist-util-position@^3.0.0:
