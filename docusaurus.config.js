@@ -111,6 +111,11 @@ module.exports = {
       theme: require("prism-react-renderer/themes/github"),
       additionalLanguages: ["bash", "docker"],
     },
+    announcementBar: {
+      content: '⚠️ Batect is no longer maintained. <a href="/blog/2023/10/22/batect-is-no-longer-maintained">More details</a>',
+      backgroundColor: "#FAEBD7",
+      isCloseable: false,
+    },
   },
   presets: [
     [
